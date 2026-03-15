@@ -1,0 +1,64 @@
+2026-02-09 19:10:23.979 -06:00 [INF] User profile is available. Using 'C:\Users\arulg\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-02-09 19:10:24.555 -06:00 [INF] Now listening on: http://localhost:5269
+2026-02-09 19:10:24.720 -06:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-02-09 19:10:24.721 -06:00 [INF] Hosting environment: Development
+2026-02-09 19:10:24.721 -06:00 [INF] Content root path: D:\Projects\NetCore\ApiBackend\NetCoreApis\ProductApi
+2026-02-09 19:10:28.350 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/swagger - null null
+2026-02-09 19:10:28.682 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/swagger - 301 0 null 346.1507ms
+2026-02-09 19:10:28.686 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/swagger/index.html - null null
+2026-02-09 19:10:28.850 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/swagger/index.html - 200 null text/html;charset=utf-8 164.2943ms
+2026-02-09 19:10:28.865 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/swagger/swagger-ui-bundle.js - null null
+2026-02-09 19:10:28.867 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/swagger/swagger-ui.css - null null
+2026-02-09 19:10:28.870 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/_framework/aspnetcore-browser-refresh.js - null null
+2026-02-09 19:10:28.875 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/_framework/aspnetcore-browser-refresh.js - 200 13756 application/javascript; charset=utf-8 5.7352ms
+2026-02-09 19:10:28.882 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/swagger/swagger-ui-standalone-preset.js - null null
+2026-02-09 19:10:28.904 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/_vs/browserLink - null null
+2026-02-09 19:10:28.932 -06:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2026-02-09 19:10:28.933 -06:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2026-02-09 19:10:28.936 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/swagger/swagger-ui-standalone-preset.js - 200 230280 text/javascript 53.9484ms
+2026-02-09 19:10:28.937 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/swagger/swagger-ui.css - 200 152034 text/css 70.3933ms
+2026-02-09 19:10:28.991 -06:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2026-02-09 19:10:28.991 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/swagger/swagger-ui-bundle.js - 200 1456926 text/javascript 126.0054ms
+2026-02-09 19:10:29.214 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/_vs/browserLink - 200 null text/javascript; charset=UTF-8 310.2441ms
+2026-02-09 19:10:29.525 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/swagger/v1/swagger.json - null null
+2026-02-09 19:10:29.545 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/swagger/favicon-32x32.png - null null
+2026-02-09 19:10:29.546 -06:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2026-02-09 19:10:29.546 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/swagger/favicon-32x32.png - 200 628 image/png 0.616ms
+2026-02-09 19:10:29.559 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 33.8325ms
+2026-02-09 19:10:54.659 -06:00 [INF] Request starting HTTP/1.1 POST http://localhost:5269/api/v1/Login/Login - application/json 51
+2026-02-09 19:10:54.698 -06:00 [INF] CORS policy execution failed.
+2026-02-09 19:10:54.698 -06:00 [INF] Request origin http://localhost:5269 does not have permission to access the resource.
+2026-02-09 19:10:57.112 -06:00 [INF] CorrelationID: ["7b104bd0-0ff7-4868-a1b8-36d497ad8faa"] - Request Path: /api/v1/Login/Login
+2026-02-09 19:10:57.123 -06:00 [INF] Executing endpoint 'ProductApi.Controllers.LoginController.Login (ProductApi)'
+2026-02-09 19:10:57.164 -06:00 [INF] Route matched with {action = "Login", controller = "Login"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(ProductApi.DTOs.LoginDto) on controller ProductApi.Controllers.LoginController (ProductApi).
+2026-02-09 19:10:57.310 -06:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-02-09 19:10:57.323 -06:00 [INF] Executed action ProductApi.Controllers.LoginController.Login (ProductApi) in 153.5773ms
+2026-02-09 19:10:57.323 -06:00 [INF] Executed endpoint 'ProductApi.Controllers.LoginController.Login (ProductApi)'
+2026-02-09 19:10:57.325 -06:00 [INF] Session started; Key:3d88ee81-1bd7-a385-627e-a9a14b0ed5dc, Id:b96b1aab-2253-36be-5f94-e1b35a4b4cd1
+2026-02-09 19:10:57.327 -06:00 [INF] Request finished HTTP/1.1 POST http://localhost:5269/api/v1/Login/Login - 200 null application/json; charset=utf-8 2667.9228ms
+2026-02-09 19:11:48.574 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/v1/Product/GetProducts - null null
+2026-02-09 19:11:48.673 -06:00 [INF] CorrelationID: ["1070db79-cbb9-49cb-a7bf-3a52391fd6f8"] - Request Path: /api/v1/Product/GetProducts
+2026-02-09 19:11:48.675 -06:00 [INF] Executing endpoint 'ProductApi.Controllers.ProductController.GetProducts (ProductApi)'
+2026-02-09 19:11:48.679 -06:00 [INF] Route matched with {action = "GetProducts", controller = "Product"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetProducts() on controller ProductApi.Controllers.ProductController (ProductApi).
+2026-02-09 19:11:49.388 -06:00 [INF] Fetching products from database.
+2026-02-09 19:11:49.996 -06:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'ProductEntity'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-02-09 19:11:52.122 -06:00 [INF] Executed DbCommand (99ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Description], [p].[Name], [p].[Price], [p].[Stock]
+FROM [Products] AS [p]
+2026-02-09 19:11:52.237 -06:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ProductApi.DTOs.ProductDto, ProductApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-02-09 19:11:52.247 -06:00 [INF] Executed action ProductApi.Controllers.ProductController.GetProducts (ProductApi) in 3567.1848ms
+2026-02-09 19:11:52.248 -06:00 [INF] Executed endpoint 'ProductApi.Controllers.ProductController.GetProducts (ProductApi)'
+2026-02-09 19:11:52.263 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/v1/Product/GetProducts - 200 null application/json; charset=utf-8 3688.8204ms
+2026-02-09 20:08:21.142 -06:00 [INF] User profile is available. Using 'C:\Users\arulg\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-02-09 20:08:21.595 -06:00 [INF] Now listening on: http://localhost:5269
+2026-02-09 20:08:21.792 -06:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-02-09 20:08:21.793 -06:00 [INF] Hosting environment: Development
+2026-02-09 20:08:21.793 -06:00 [INF] Content root path: D:\Projects\NetCore\ApiBackend\NetCoreApis\ProductApi
+2026-02-09 20:08:22.426 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/swagger/index.html - null null
+2026-02-09 20:08:22.819 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/swagger/index.html - 200 null text/html;charset=utf-8 409.3913ms
+2026-02-09 20:08:22.869 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/_framework/aspnetcore-browser-refresh.js - null null
+2026-02-09 20:08:22.869 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/_vs/browserLink - null null
+2026-02-09 20:08:22.874 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/_framework/aspnetcore-browser-refresh.js - 200 13756 application/javascript; charset=utf-8 4.9675ms
+2026-02-09 20:08:22.990 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/_vs/browserLink - 200 null text/javascript; charset=UTF-8 121.3653ms
+2026-02-09 20:08:23.371 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/swagger/v1/swagger.json - null null
+2026-02-09 20:08:23.409 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 38.6924ms

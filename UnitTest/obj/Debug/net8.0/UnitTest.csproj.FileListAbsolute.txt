@@ -1,0 +1,14 @@
+D:\Projects\NetCore\ApiBackend\NetCoreApis\UnitTest\bin\Debug\net8.0\xunit.abstractions.dll
+D:\Projects\NetCore\ApiBackend\NetCoreApis\UnitTest\bin\Debug\net8.0\xunit.runner.visualstudio.testadapter.dll
+D:\Projects\NetCore\ApiBackend\NetCoreApis\UnitTest\bin\Debug\net8.0\UnitTest.deps.json
+D:\Projects\NetCore\ApiBackend\NetCoreApis\UnitTest\bin\Debug\net8.0\UnitTest.dll
+D:\Projects\NetCore\ApiBackend\NetCoreApis\UnitTest\bin\Debug\net8.0\UnitTest.pdb
+D:\Projects\NetCore\ApiBackend\NetCoreApis\UnitTest\obj\Debug\net8.0\UnitTest.csproj.AssemblyReference.cache
+D:\Projects\NetCore\ApiBackend\NetCoreApis\UnitTest\obj\Debug\net8.0\UnitTest.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\NetCore\ApiBackend\NetCoreApis\UnitTest\obj\Debug\net8.0\UnitTest.AssemblyInfoInputs.cache
+D:\Projects\NetCore\ApiBackend\NetCoreApis\UnitTest\obj\Debug\net8.0\UnitTest.AssemblyInfo.cs
+D:\Projects\NetCore\ApiBackend\NetCoreApis\UnitTest\obj\Debug\net8.0\UnitTest.csproj.CoreCompileInputs.cache
+D:\Projects\NetCore\ApiBackend\NetCoreApis\UnitTest\obj\Debug\net8.0\UnitTest.dll
+D:\Projects\NetCore\ApiBackend\NetCoreApis\UnitTest\obj\Debug\net8.0\refint\UnitTest.dll
+D:\Projects\NetCore\ApiBackend\NetCoreApis\UnitTest\obj\Debug\net8.0\UnitTest.pdb
+D:\Projects\NetCore\ApiBackend\NetCoreApis\UnitTest\obj\Debug\net8.0\ref\UnitTest.dll

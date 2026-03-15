@@ -1,0 +1,827 @@
+2026-01-23 13:35:17.445 -06:00 [INF] User profile is available. Using 'C:\Users\arulg\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-01-23 13:35:17.891 -06:00 [INF] Now listening on: http://localhost:5269
+2026-01-23 13:35:18.264 -06:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-01-23 13:35:18.265 -06:00 [INF] Hosting environment: Development
+2026-01-23 13:35:18.265 -06:00 [INF] Content root path: D:\Projects\NetCore\ApiBackend\NetCoreApis\ProductApi
+2026-01-23 13:35:19.152 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/swagger - null null
+2026-01-23 13:35:19.388 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/swagger - 301 0 null 252.7911ms
+2026-01-23 13:35:19.397 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/swagger/index.html - null null
+2026-01-23 13:35:19.563 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/swagger/index.html - 200 null text/html;charset=utf-8 167.0831ms
+2026-01-23 13:35:19.578 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/swagger/swagger-ui.css - null null
+2026-01-23 13:35:19.579 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/swagger/swagger-ui-bundle.js - null null
+2026-01-23 13:35:19.585 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/_framework/aspnetcore-browser-refresh.js - null null
+2026-01-23 13:35:19.586 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/swagger/swagger-ui-standalone-preset.js - null null
+2026-01-23 13:35:19.594 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/_framework/aspnetcore-browser-refresh.js - 200 13756 application/javascript; charset=utf-8 8.5884ms
+2026-01-23 13:35:19.619 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/_vs/browserLink - null null
+2026-01-23 13:35:19.661 -06:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2026-01-23 13:35:19.663 -06:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2026-01-23 13:35:19.664 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/swagger/swagger-ui.css - 200 152034 text/css 85.8374ms
+2026-01-23 13:35:19.666 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/swagger/swagger-ui-standalone-preset.js - 200 230280 text/javascript 79.5236ms
+2026-01-23 13:35:19.703 -06:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2026-01-23 13:35:19.703 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/swagger/swagger-ui-bundle.js - 200 1456926 text/javascript 123.9752ms
+2026-01-23 13:35:19.787 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/_vs/browserLink - 200 null text/javascript; charset=UTF-8 167.8144ms
+2026-01-23 13:35:20.162 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/swagger/v1/swagger.json - null null
+2026-01-23 13:35:20.165 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/swagger/favicon-32x32.png - null null
+2026-01-23 13:35:20.166 -06:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2026-01-23 13:35:20.167 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/swagger/favicon-32x32.png - 200 628 image/png 1.5226ms
+2026-01-23 13:35:20.195 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 32.7179ms
+2026-01-23 13:36:06.333 -06:00 [INF] Request starting HTTP/1.1 POST http://localhost:5269/api/v1/Login/Login - application/json 51
+2026-01-23 13:36:06.387 -06:00 [INF] CORS policy execution failed.
+2026-01-23 13:36:06.388 -06:00 [INF] Request origin http://localhost:5269 does not have permission to access the resource.
+2026-01-23 13:36:08.413 -06:00 [INF] CorrelationID: ["2780d362-488f-4850-b742-1a99a9e8ce15"] - Request Path: /api/v1/Login/Login
+2026-01-23 13:36:08.421 -06:00 [INF] Executing endpoint 'ProductApi.Controllers.LoginController.Login (ProductApi)'
+2026-01-23 13:36:08.454 -06:00 [INF] Route matched with {action = "Login", controller = "Login"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(ProductApi.DTOs.LoginDto) on controller ProductApi.Controllers.LoginController (ProductApi).
+2026-01-23 13:36:08.587 -06:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-01-23 13:36:08.601 -06:00 [INF] Executed action ProductApi.Controllers.LoginController.Login (ProductApi) in 140.7196ms
+2026-01-23 13:36:08.602 -06:00 [INF] Executed endpoint 'ProductApi.Controllers.LoginController.Login (ProductApi)'
+2026-01-23 13:36:08.604 -06:00 [INF] Session started; Key:c6d2c6b9-02c1-0e83-b842-80b41b10abf8, Id:a824e35d-ff50-fde0-8477-08542f6a126d
+2026-01-23 13:36:08.606 -06:00 [INF] Request finished HTTP/1.1 POST http://localhost:5269/api/v1/Login/Login - 200 null application/json; charset=utf-8 2273.4001ms
+2026-01-23 13:37:11.876 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/v1/Customer/GetCustomers - null null
+2026-01-23 13:37:11.899 -06:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-01-23 13:37:11.906 -06:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-01-23 13:37:11.906 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/v1/Customer/GetCustomers - 401 0 null 30.6983ms
+2026-01-23 13:37:51.649 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/v1/Customer/GetCustomers - null null
+2026-01-23 13:37:51.734 -06:00 [INF] CorrelationID: ["75a63437-8699-46f0-8b26-7c82eceab7ab"] - Request Path: /api/v1/Customer/GetCustomers
+2026-01-23 13:37:51.737 -06:00 [INF] Executing endpoint 'ProductApi.Controllers.CustomerController.GetCustomers (ProductApi)'
+2026-01-23 13:37:51.744 -06:00 [INF] Route matched with {action = "GetCustomers", controller = "Customer"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCustomers() on controller ProductApi.Controllers.CustomerController (ProductApi).
+2026-01-23 13:37:52.538 -06:00 [INF] Fetching customers from database.
+2026-01-23 13:37:53.166 -06:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'ProductEntity'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-01-23 13:37:55.196 -06:00 [INF] Executed DbCommand (78ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Email], [c].[Name], [c].[Phone]
+FROM [Customers] AS [c]
+2026-01-23 13:37:55.305 -06:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ProductApi.DTOs.CustomerDto, ProductApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-01-23 13:37:55.308 -06:00 [INF] Executed action ProductApi.Controllers.CustomerController.GetCustomers (ProductApi) in 3563.9977ms
+2026-01-23 13:37:55.309 -06:00 [INF] Executed endpoint 'ProductApi.Controllers.CustomerController.GetCustomers (ProductApi)'
+2026-01-23 13:37:55.324 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/v1/Customer/GetCustomers - 200 null application/json; charset=utf-8 3675.1861ms
+2026-01-23 13:38:20.965 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/v1/Product/GetProducts - null null
+2026-01-23 13:38:20.971 -06:00 [INF] CorrelationID: ["2e6882c2-05e0-481c-8097-02b8ee4037e9"] - Request Path: /api/v1/Product/GetProducts
+2026-01-23 13:38:20.972 -06:00 [INF] Executing endpoint 'ProductApi.Controllers.ProductController.GetProducts (ProductApi)'
+2026-01-23 13:38:20.979 -06:00 [INF] Route matched with {action = "GetProducts", controller = "Product"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetProducts() on controller ProductApi.Controllers.ProductController (ProductApi).
+2026-01-23 13:38:20.982 -06:00 [INF] Fetching products from database.
+2026-01-23 13:38:21.127 -06:00 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Description], [p].[Name], [p].[Price], [p].[Stock]
+FROM [Products] AS [p]
+2026-01-23 13:38:21.156 -06:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ProductApi.DTOs.ProductDto, ProductApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-01-23 13:38:21.168 -06:00 [INF] Executed action ProductApi.Controllers.ProductController.GetProducts (ProductApi) in 189.0468ms
+2026-01-23 13:38:21.168 -06:00 [INF] Executed endpoint 'ProductApi.Controllers.ProductController.GetProducts (ProductApi)'
+2026-01-23 13:38:21.169 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/v1/Product/GetProducts - 200 null application/json; charset=utf-8 203.5056ms
+2026-01-23 17:05:50.790 -06:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Login - null null
+2026-01-23 17:05:50.804 -06:00 [INF] CORS policy execution failed.
+2026-01-23 17:05:50.804 -06:00 [INF] Request origin http://localhost:4200 does not have permission to access the resource.
+2026-01-23 17:05:50.808 -06:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Login - 204 null null 22.2549ms
+2026-01-23 17:11:34.736 -06:00 [INF] User profile is available. Using 'C:\Users\arulg\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-01-23 17:11:35.569 -06:00 [INF] Now listening on: http://localhost:5269
+2026-01-23 17:11:35.748 -06:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-01-23 17:11:35.748 -06:00 [INF] Hosting environment: Development
+2026-01-23 17:11:35.748 -06:00 [INF] Content root path: D:\Projects\NetCore\ApiBackend\NetCoreApis\ProductApi
+2026-01-23 17:11:36.178 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/swagger/index.html - null null
+2026-01-23 17:11:36.854 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/swagger/index.html - 200 null text/html;charset=utf-8 684.659ms
+2026-01-23 17:11:36.866 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/_framework/aspnetcore-browser-refresh.js - null null
+2026-01-23 17:11:36.871 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/_framework/aspnetcore-browser-refresh.js - 200 13756 application/javascript; charset=utf-8 4.609ms
+2026-01-23 17:11:36.908 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/_vs/browserLink - null null
+2026-01-23 17:11:37.020 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/_vs/browserLink - 200 null text/javascript; charset=UTF-8 112.0508ms
+2026-01-23 17:11:37.458 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/swagger/v1/swagger.json - null null
+2026-01-23 17:11:37.489 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 31.1019ms
+2026-01-23 17:12:15.472 -06:00 [INF] Request starting HTTP/1.1 POST http://localhost:5269/api/v1/Login/Login - application/json 51
+2026-01-23 17:12:15.542 -06:00 [INF] CORS policy execution failed.
+2026-01-23 17:12:15.543 -06:00 [INF] Request origin http://localhost:5269 does not have permission to access the resource.
+2026-01-23 17:12:15.652 -06:00 [INF] CorrelationID: ["684b774a-0713-4b7d-8475-a7ce82901d26"] - Request Path: /api/v1/Login/Login
+2026-01-23 17:12:15.657 -06:00 [INF] Executing endpoint 'ProductApi.Controllers.LoginController.Login (ProductApi)'
+2026-01-23 17:12:15.687 -06:00 [INF] Route matched with {action = "Login", controller = "Login"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(ProductApi.DTOs.LoginDto) on controller ProductApi.Controllers.LoginController (ProductApi).
+2026-01-23 17:12:15.735 -06:00 [INF] Accessing expired session, Key:c6d2c6b9-02c1-0e83-b842-80b41b10abf8
+2026-01-23 17:12:15.783 -06:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-01-23 17:12:15.793 -06:00 [INF] Executed action ProductApi.Controllers.LoginController.Login (ProductApi) in 101.0094ms
+2026-01-23 17:12:15.793 -06:00 [INF] Executed endpoint 'ProductApi.Controllers.LoginController.Login (ProductApi)'
+2026-01-23 17:12:15.795 -06:00 [INF] Session started; Key:c6d2c6b9-02c1-0e83-b842-80b41b10abf8, Id:34e6ed4b-ace4-9e0a-a140-11596e20f4d3
+2026-01-23 17:12:15.797 -06:00 [INF] Request finished HTTP/1.1 POST http://localhost:5269/api/v1/Login/Login - 200 null application/json; charset=utf-8 324.8065ms
+2026-01-23 17:13:07.589 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/v1/Product/GetProducts - null null
+2026-01-23 17:13:07.653 -06:00 [INF] CorrelationID: ["f7242dc8-922a-4582-87ff-417a38ef1ddb"] - Request Path: /api/v1/Product/GetProducts
+2026-01-23 17:13:07.654 -06:00 [INF] Executing endpoint 'ProductApi.Controllers.ProductController.GetProducts (ProductApi)'
+2026-01-23 17:13:07.662 -06:00 [INF] Route matched with {action = "GetProducts", controller = "Product"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetProducts() on controller ProductApi.Controllers.ProductController (ProductApi).
+2026-01-23 17:13:07.990 -06:00 [INF] Fetching products from database.
+2026-01-23 17:13:08.681 -06:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'ProductEntity'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-01-23 17:13:09.628 -06:00 [INF] Executed DbCommand (53ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Description], [p].[Name], [p].[Price], [p].[Stock]
+FROM [Products] AS [p]
+2026-01-23 17:13:09.785 -06:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ProductApi.DTOs.ProductDto, ProductApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-01-23 17:13:09.802 -06:00 [INF] Executed action ProductApi.Controllers.ProductController.GetProducts (ProductApi) in 2139.429ms
+2026-01-23 17:13:09.803 -06:00 [INF] Executed endpoint 'ProductApi.Controllers.ProductController.GetProducts (ProductApi)'
+2026-01-23 17:13:09.827 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/v1/Product/GetProducts - 200 null application/json; charset=utf-8 2238.0167ms
+2026-01-23 17:13:30.556 -06:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Login - null null
+2026-01-23 17:13:30.559 -06:00 [INF] CORS policy execution successful.
+2026-01-23 17:13:30.562 -06:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Login - 204 null null 5.591ms
+2026-01-23 17:13:30.572 -06:00 [INF] Request starting HTTP/1.1 POST http://localhost:5269/api/v1/Login - application/json 42
+2026-01-23 17:13:30.575 -06:00 [INF] CORS policy execution successful.
+2026-01-23 17:13:30.583 -06:00 [INF] CorrelationID: ["2f01c3c5-5446-4399-9e4e-ecd3faeb2d4c"] - Request Path: /api/v1/Login
+2026-01-23 17:13:30.586 -06:00 [INF] Request finished HTTP/1.1 POST http://localhost:5269/api/v1/Login - 404 0 null 19.393ms
+2026-01-23 17:13:30.588 -06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST http://localhost:5269/api/v1/Login, Response status code: 404
+2026-01-23 17:14:56.054 -06:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Login/login - null null
+2026-01-23 17:14:56.054 -06:00 [INF] CORS policy execution successful.
+2026-01-23 17:14:56.055 -06:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Login/login - 204 null null 1.1675ms
+2026-01-23 17:14:56.057 -06:00 [INF] Request starting HTTP/1.1 POST http://localhost:5269/api/v1/Login/login - application/json 42
+2026-01-23 17:14:56.058 -06:00 [INF] CORS policy execution successful.
+2026-01-23 17:14:56.058 -06:00 [INF] CorrelationID: ["c63af1bc-c77a-49cc-aa23-b48c28cf422b"] - Request Path: /api/v1/Login/login
+2026-01-23 17:14:56.058 -06:00 [INF] Executing endpoint 'ProductApi.Controllers.LoginController.Login (ProductApi)'
+2026-01-23 17:14:56.058 -06:00 [INF] Route matched with {action = "Login", controller = "Login"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(ProductApi.DTOs.LoginDto) on controller ProductApi.Controllers.LoginController (ProductApi).
+2026-01-23 17:14:56.060 -06:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-01-23 17:14:56.063 -06:00 [INF] Executed action ProductApi.Controllers.LoginController.Login (ProductApi) in 4.8051ms
+2026-01-23 17:14:56.063 -06:00 [INF] Executed endpoint 'ProductApi.Controllers.LoginController.Login (ProductApi)'
+2026-01-23 17:14:56.064 -06:00 [INF] Session started; Key:b2ae7c35-483a-987a-24af-d3fe3033c3dc, Id:7fe9c17e-0481-a92b-2306-cc7df805cc80
+2026-01-23 17:14:56.064 -06:00 [INF] Request finished HTTP/1.1 POST http://localhost:5269/api/v1/Login/login - 200 null application/json; charset=utf-8 6.9236ms
+2026-01-23 20:12:39.475 -06:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/getProducts - null null
+2026-01-23 20:12:39.477 -06:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/getProducts - null null
+2026-01-23 20:12:39.493 -06:00 [INF] CORS policy execution successful.
+2026-01-23 20:12:39.493 -06:00 [INF] CORS policy execution successful.
+2026-01-23 20:12:39.500 -06:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/getProducts - 204 null null 21.9997ms
+2026-01-23 20:12:39.504 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/v1/Product/getProducts - null null
+2026-01-23 20:12:39.505 -06:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/getProducts - 204 null null 31.4159ms
+2026-01-23 20:12:39.507 -06:00 [INF] CORS policy execution successful.
+2026-01-23 20:12:39.525 -06:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '12/5/2025 9:28:58 PM', Current time (UTC): '1/24/2026 2:12:39 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2026-01-23 20:12:39.637 -06:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '12/5/2025 9:28:58 PM', Current time (UTC): '1/24/2026 2:12:39 AM'.
+2026-01-23 20:12:39.646 -06:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-01-23 20:12:39.660 -06:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-01-23 20:12:39.660 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/v1/Product/getProducts - 401 0 null 156.438ms
+2026-01-23 20:12:39.662 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/v1/Product/getProducts - null null
+2026-01-23 20:12:39.663 -06:00 [INF] CORS policy execution successful.
+2026-01-23 20:12:39.663 -06:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '12/5/2025 9:28:58 PM', Current time (UTC): '1/24/2026 2:12:39 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2026-01-23 20:12:39.664 -06:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '12/5/2025 9:28:58 PM', Current time (UTC): '1/24/2026 2:12:39 AM'.
+2026-01-23 20:12:39.668 -06:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-01-23 20:12:39.669 -06:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-01-23 20:12:39.669 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/v1/Product/getProducts - 401 0 null 7.2936ms
+2026-01-23 20:14:08.606 -06:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/Login - null null
+2026-01-23 20:14:08.606 -06:00 [INF] CORS policy execution failed.
+2026-01-23 20:14:08.606 -06:00 [INF] Request origin http://192.168.1.211:3000 does not have permission to access the resource.
+2026-01-23 20:14:08.606 -06:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/Login - 204 null null 0.4602ms
+2026-01-23 20:14:08.607 -06:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/Login - null null
+2026-01-23 20:14:08.607 -06:00 [INF] CORS policy execution failed.
+2026-01-23 20:14:08.607 -06:00 [INF] Request origin http://192.168.1.211:3000 does not have permission to access the resource.
+2026-01-23 20:14:08.607 -06:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/Login - 204 null null 0.2825ms
+2026-01-23 20:14:08.623 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/v1/Product/getProducts - null null
+2026-01-23 20:14:08.623 -06:00 [INF] CORS policy execution failed.
+2026-01-23 20:14:08.623 -06:00 [INF] Request origin http://192.168.1.211:3000 does not have permission to access the resource.
+2026-01-23 20:14:08.623 -06:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-01-23 20:14:08.623 -06:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-01-23 20:14:08.624 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/v1/Product/getProducts - 401 0 null 0.9528ms
+2026-01-23 20:14:08.674 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/v1/Product/getProducts - null null
+2026-01-23 20:14:08.674 -06:00 [INF] CORS policy execution failed.
+2026-01-23 20:14:08.674 -06:00 [INF] Request origin http://192.168.1.211:3000 does not have permission to access the resource.
+2026-01-23 20:14:08.674 -06:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-01-23 20:14:08.676 -06:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-01-23 20:14:08.676 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/v1/Product/getProducts - 401 0 null 1.9192ms
+2026-01-23 20:15:09.433 -06:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/Login - null null
+2026-01-23 20:15:09.433 -06:00 [INF] CORS policy execution successful.
+2026-01-23 20:15:09.434 -06:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/Login - 204 null null 1.2024ms
+2026-01-23 20:15:09.435 -06:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/Login - null null
+2026-01-23 20:15:09.436 -06:00 [INF] CORS policy execution successful.
+2026-01-23 20:15:09.459 -06:00 [INF] Request starting HTTP/1.1 POST http://localhost:5269/api/v1/Product/Login - application/json 42
+2026-01-23 20:15:09.459 -06:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/Login - 204 null null 24.8932ms
+2026-01-23 20:15:09.460 -06:00 [INF] CORS policy execution successful.
+2026-01-23 20:15:09.463 -06:00 [INF] CorrelationID: ["c290f708-66fa-4fc9-985f-0327f9f84464"] - Request Path: /api/v1/Product/Login
+2026-01-23 20:15:09.465 -06:00 [INF] Request starting HTTP/1.1 POST http://localhost:5269/api/v1/Product/Login - application/json 42
+2026-01-23 20:15:09.468 -06:00 [INF] CORS policy execution successful.
+2026-01-23 20:15:09.468 -06:00 [INF] CorrelationID: ["b383fa57-8ee6-4a9e-a057-dcbf6d8aab6c"] - Request Path: /api/v1/Product/Login
+2026-01-23 20:15:09.468 -06:00 [INF] Request finished HTTP/1.1 POST http://localhost:5269/api/v1/Product/Login - 404 0 null 3.5513ms
+2026-01-23 20:15:09.468 -06:00 [INF] Request finished HTTP/1.1 POST http://localhost:5269/api/v1/Product/Login - 404 0 null 32.2485ms
+2026-01-23 20:15:09.468 -06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST http://localhost:5269/api/v1/Product/Login, Response status code: 404
+2026-01-23 20:15:09.468 -06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST http://localhost:5269/api/v1/Product/Login, Response status code: 404
+2026-01-23 20:15:09.478 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/v1/Product/getProducts - null null
+2026-01-23 20:15:09.481 -06:00 [INF] CORS policy execution successful.
+2026-01-23 20:15:09.481 -06:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-01-23 20:15:09.482 -06:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-01-23 20:15:09.482 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/v1/Product/getProducts - 401 0 null 3.6173ms
+2026-01-23 20:15:09.484 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/v1/Product/getProducts - null null
+2026-01-23 20:15:09.484 -06:00 [INF] CORS policy execution successful.
+2026-01-23 20:15:09.484 -06:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-01-23 20:15:09.484 -06:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-01-23 20:15:09.484 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/v1/Product/getProducts - 401 0 null 0.7488ms
+2026-01-23 20:15:29.709 -06:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/Login - null null
+2026-01-23 20:15:29.710 -06:00 [INF] CORS policy execution successful.
+2026-01-23 20:15:29.710 -06:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/Login - 204 null null 0.5285ms
+2026-01-23 20:15:29.712 -06:00 [INF] Request starting HTTP/1.1 POST http://localhost:5269/api/v1/Product/Login - application/json 42
+2026-01-23 20:15:29.712 -06:00 [INF] CORS policy execution successful.
+2026-01-23 20:15:29.713 -06:00 [INF] CorrelationID: ["1a2e99dc-6356-4cfd-bc9d-78ddce099989"] - Request Path: /api/v1/Product/Login
+2026-01-23 20:15:29.713 -06:00 [INF] Request finished HTTP/1.1 POST http://localhost:5269/api/v1/Product/Login - 404 0 null 0.9297ms
+2026-01-23 20:15:29.713 -06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST http://localhost:5269/api/v1/Product/Login, Response status code: 404
+2026-01-23 20:15:29.718 -06:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/createProduct/ - null null
+2026-01-23 20:15:29.718 -06:00 [INF] CORS policy execution successful.
+2026-01-23 20:15:29.718 -06:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/createProduct/ - 204 null null 0.2791ms
+2026-01-23 20:15:29.719 -06:00 [INF] Request starting HTTP/1.1 POST http://localhost:5269/api/v1/Product/createProduct/ - application/json 71
+2026-01-23 20:15:29.720 -06:00 [INF] CORS policy execution successful.
+2026-01-23 20:15:29.720 -06:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-01-23 20:15:29.720 -06:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-01-23 20:15:29.721 -06:00 [INF] Request finished HTTP/1.1 POST http://localhost:5269/api/v1/Product/createProduct/ - 401 0 null 1.0848ms
+2026-01-23 20:16:14.262 -06:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/Login - null null
+2026-01-23 20:16:14.263 -06:00 [INF] CORS policy execution successful.
+2026-01-23 20:16:14.263 -06:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/Login - 204 null null 0.5727ms
+2026-01-23 20:16:14.265 -06:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/Login - null null
+2026-01-23 20:16:14.265 -06:00 [INF] CORS policy execution successful.
+2026-01-23 20:16:14.265 -06:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/Login - 204 null null 0.3593ms
+2026-01-23 20:16:14.315 -06:00 [INF] Request starting HTTP/1.1 POST http://localhost:5269/api/v1/Product/Login - application/json 42
+2026-01-23 20:16:14.315 -06:00 [INF] CORS policy execution successful.
+2026-01-23 20:16:14.315 -06:00 [INF] CorrelationID: ["fefb1b74-be61-4a3a-b3bb-1a7156a849cb"] - Request Path: /api/v1/Product/Login
+2026-01-23 20:16:14.316 -06:00 [INF] Request finished HTTP/1.1 POST http://localhost:5269/api/v1/Product/Login - 404 0 null 0.7709ms
+2026-01-23 20:16:14.316 -06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST http://localhost:5269/api/v1/Product/Login, Response status code: 404
+2026-01-23 20:16:14.316 -06:00 [INF] Request starting HTTP/1.1 POST http://localhost:5269/api/v1/Product/Login - application/json 42
+2026-01-23 20:16:14.316 -06:00 [INF] CORS policy execution successful.
+2026-01-23 20:16:14.316 -06:00 [INF] CorrelationID: ["5daed123-6653-4338-b6cc-5f5a78ef9a19"] - Request Path: /api/v1/Product/Login
+2026-01-23 20:16:14.316 -06:00 [INF] Request finished HTTP/1.1 POST http://localhost:5269/api/v1/Product/Login - 404 0 null 0.4151ms
+2026-01-23 20:16:14.316 -06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST http://localhost:5269/api/v1/Product/Login, Response status code: 404
+2026-01-23 20:16:14.330 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/v1/Product/getProducts - null null
+2026-01-23 20:16:14.330 -06:00 [INF] CORS policy execution successful.
+2026-01-23 20:16:14.330 -06:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-01-23 20:16:14.330 -06:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-01-23 20:16:14.331 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/v1/Product/getProducts - 401 0 null 0.8012ms
+2026-01-23 20:16:14.347 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/v1/Product/getProducts - null null
+2026-01-23 20:16:14.348 -06:00 [INF] CORS policy execution successful.
+2026-01-23 20:16:14.348 -06:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-01-23 20:16:14.348 -06:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-01-23 20:16:14.349 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/v1/Product/getProducts - 401 0 null 1.0632ms
+2026-01-23 20:16:41.078 -06:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/Login - null null
+2026-01-23 20:16:41.078 -06:00 [INF] CORS policy execution successful.
+2026-01-23 20:16:41.079 -06:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/Login - 204 null null 1.4853ms
+2026-01-23 20:16:41.081 -06:00 [INF] Request starting HTTP/1.1 POST http://localhost:5269/api/v1/Product/Login - application/json 42
+2026-01-23 20:16:41.081 -06:00 [INF] CORS policy execution successful.
+2026-01-23 20:16:41.081 -06:00 [INF] CorrelationID: ["c9bea8f7-28f4-41fa-bc26-5ec6eadfb46d"] - Request Path: /api/v1/Product/Login
+2026-01-23 20:16:41.081 -06:00 [INF] Request finished HTTP/1.1 POST http://localhost:5269/api/v1/Product/Login - 404 0 null 0.5097ms
+2026-01-23 20:16:41.081 -06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST http://localhost:5269/api/v1/Product/Login, Response status code: 404
+2026-01-23 20:16:41.084 -06:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/createProduct/ - null null
+2026-01-23 20:16:41.084 -06:00 [INF] CORS policy execution successful.
+2026-01-23 20:16:41.084 -06:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/createProduct/ - 204 null null 0.2944ms
+2026-01-23 20:16:41.085 -06:00 [INF] Request starting HTTP/1.1 POST http://localhost:5269/api/v1/Product/createProduct/ - application/json 69
+2026-01-23 20:16:41.086 -06:00 [INF] CORS policy execution successful.
+2026-01-23 20:16:41.086 -06:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-01-23 20:16:41.086 -06:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-01-23 20:16:41.086 -06:00 [INF] Request finished HTTP/1.1 POST http://localhost:5269/api/v1/Product/createProduct/ - 401 0 null 0.6257ms
+2026-01-23 20:19:28.477 -06:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/Login - null null
+2026-01-23 20:19:28.478 -06:00 [INF] CORS policy execution successful.
+2026-01-23 20:19:28.478 -06:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/Login - 204 null null 0.8927ms
+2026-01-23 20:19:28.480 -06:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/Login - null null
+2026-01-23 20:19:28.481 -06:00 [INF] CORS policy execution successful.
+2026-01-23 20:19:28.481 -06:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/Login - 204 null null 0.746ms
+2026-01-23 20:19:28.490 -06:00 [INF] Request starting HTTP/1.1 POST http://localhost:5269/api/v1/Product/Login - application/json 42
+2026-01-23 20:19:28.490 -06:00 [INF] Request starting HTTP/1.1 POST http://localhost:5269/api/v1/Product/Login - application/json 42
+2026-01-23 20:19:28.490 -06:00 [INF] CORS policy execution successful.
+2026-01-23 20:19:28.490 -06:00 [INF] CORS policy execution successful.
+2026-01-23 20:19:28.491 -06:00 [INF] CorrelationID: ["873c0f56-fcb5-4b35-b9ca-e1f1c5371a80"] - Request Path: /api/v1/Product/Login
+2026-01-23 20:19:28.491 -06:00 [INF] CorrelationID: ["df66c295-241e-4564-a6b6-c8f840d66d41"] - Request Path: /api/v1/Product/Login
+2026-01-23 20:19:28.491 -06:00 [INF] Request finished HTTP/1.1 POST http://localhost:5269/api/v1/Product/Login - 404 0 null 8.7373ms
+2026-01-23 20:19:28.491 -06:00 [INF] Request finished HTTP/1.1 POST http://localhost:5269/api/v1/Product/Login - 404 0 null 0.7512ms
+2026-01-23 20:19:28.491 -06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST http://localhost:5269/api/v1/Product/Login, Response status code: 404
+2026-01-23 20:19:28.491 -06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST http://localhost:5269/api/v1/Product/Login, Response status code: 404
+2026-01-23 20:19:28.507 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/v1/Product/getProducts - null null
+2026-01-23 20:19:28.507 -06:00 [INF] CORS policy execution successful.
+2026-01-23 20:19:28.508 -06:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-01-23 20:19:28.508 -06:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-01-23 20:19:28.508 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/v1/Product/getProducts - 401 0 null 6.9902ms
+2026-01-23 20:19:28.549 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/v1/Product/getProducts - null null
+2026-01-23 20:19:28.550 -06:00 [INF] CORS policy execution successful.
+2026-01-23 20:19:28.550 -06:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-01-23 20:19:28.550 -06:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-01-23 20:19:28.550 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/v1/Product/getProducts - 401 0 null 0.6286ms
+2026-01-23 20:20:22.723 -06:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/Login - null null
+2026-01-23 20:20:22.724 -06:00 [INF] CORS policy execution successful.
+2026-01-23 20:20:22.724 -06:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/Login - 204 null null 0.3628ms
+2026-01-23 20:20:22.725 -06:00 [INF] Request starting HTTP/1.1 POST http://localhost:5269/api/v1/Product/Login - application/json 42
+2026-01-23 20:20:22.726 -06:00 [INF] CORS policy execution successful.
+2026-01-23 20:20:22.726 -06:00 [INF] CorrelationID: ["81b3aecc-fab5-4e1b-96e7-7ddb2addd3bb"] - Request Path: /api/v1/Product/Login
+2026-01-23 20:20:22.726 -06:00 [INF] Request finished HTTP/1.1 POST http://localhost:5269/api/v1/Product/Login - 404 0 null 0.9388ms
+2026-01-23 20:20:22.726 -06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST http://localhost:5269/api/v1/Product/Login, Response status code: 404
+2026-01-23 20:20:24.722 -06:00 [INF] Request starting HTTP/1.1 POST http://localhost:5269/api/v1/Product/Login - application/json 42
+2026-01-23 20:20:24.724 -06:00 [INF] CORS policy execution successful.
+2026-01-23 20:20:24.724 -06:00 [INF] CorrelationID: ["32a01823-66f9-4886-8483-ec27eb815351"] - Request Path: /api/v1/Product/Login
+2026-01-23 20:20:24.725 -06:00 [INF] Request finished HTTP/1.1 POST http://localhost:5269/api/v1/Product/Login - 404 0 null 3.4668ms
+2026-01-23 20:20:24.726 -06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST http://localhost:5269/api/v1/Product/Login, Response status code: 404
+2026-01-23 20:20:25.866 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/v1/Product/getProducts - null null
+2026-01-23 20:20:25.867 -06:00 [INF] CORS policy execution successful.
+2026-01-23 20:20:25.868 -06:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-01-23 20:20:25.868 -06:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-01-23 20:20:25.868 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/v1/Product/getProducts - 401 0 null 1.7731ms
+2026-01-23 20:20:26.562 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/v1/Product/getProducts - null null
+2026-01-23 20:20:26.563 -06:00 [INF] CORS policy execution successful.
+2026-01-23 20:20:26.563 -06:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-01-23 20:20:26.564 -06:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-01-23 20:20:26.564 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/v1/Product/getProducts - 401 0 null 1.3894ms
+2026-01-23 20:23:39.923 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/v1/Product/GetProducts - null null
+2026-01-23 20:23:39.925 -06:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '1/24/2026 1:12:15 AM', Current time (UTC): '1/24/2026 2:23:39 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2026-01-23 20:23:39.925 -06:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '1/24/2026 1:12:15 AM', Current time (UTC): '1/24/2026 2:23:39 AM'.
+2026-01-23 20:23:39.927 -06:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-01-23 20:23:39.927 -06:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-01-23 20:23:39.927 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/v1/Product/GetProducts - 401 0 null 4.0487ms
+2026-01-23 20:23:45.034 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/swagger/index.html - null null
+2026-01-23 20:23:45.057 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/swagger/index.html - 200 null text/html;charset=utf-8 22.8559ms
+2026-01-23 20:23:45.104 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/_framework/aspnetcore-browser-refresh.js - null null
+2026-01-23 20:23:45.104 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/_framework/aspnetcore-browser-refresh.js - 200 13756 application/javascript; charset=utf-8 0.5842ms
+2026-01-23 20:23:45.111 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/_vs/browserLink - null null
+2026-01-23 20:23:45.152 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/_vs/browserLink - 200 null text/javascript; charset=UTF-8 40.8194ms
+2026-01-23 20:23:45.577 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/swagger/v1/swagger.json - null null
+2026-01-23 20:23:45.612 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/swagger/favicon-32x32.png - null null
+2026-01-23 20:23:45.619 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 41.3911ms
+2026-01-23 20:23:45.641 -06:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2026-01-23 20:23:45.641 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/swagger/favicon-32x32.png - 200 628 image/png 29.0233ms
+2026-01-23 20:24:10.088 -06:00 [INF] Request starting HTTP/1.1 POST http://localhost:5269/api/v1/Login/Login - application/json 51
+2026-01-23 20:24:10.089 -06:00 [INF] CORS policy execution failed.
+2026-01-23 20:24:10.089 -06:00 [INF] Request origin http://localhost:5269 does not have permission to access the resource.
+2026-01-23 20:24:10.089 -06:00 [INF] CorrelationID: ["f8d766a5-7e97-409a-8ee2-4a0a9296f52c"] - Request Path: /api/v1/Login/Login
+2026-01-23 20:24:10.089 -06:00 [INF] Executing endpoint 'ProductApi.Controllers.LoginController.Login (ProductApi)'
+2026-01-23 20:24:10.090 -06:00 [INF] Route matched with {action = "Login", controller = "Login"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(ProductApi.DTOs.LoginDto) on controller ProductApi.Controllers.LoginController (ProductApi).
+2026-01-23 20:24:10.091 -06:00 [INF] Accessing expired session, Key:c6d2c6b9-02c1-0e83-b842-80b41b10abf8
+2026-01-23 20:24:10.093 -06:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-01-23 20:24:10.093 -06:00 [INF] Executed action ProductApi.Controllers.LoginController.Login (ProductApi) in 2.8748ms
+2026-01-23 20:24:10.093 -06:00 [INF] Executed endpoint 'ProductApi.Controllers.LoginController.Login (ProductApi)'
+2026-01-23 20:24:10.093 -06:00 [INF] Session started; Key:c6d2c6b9-02c1-0e83-b842-80b41b10abf8, Id:f0877db9-c76e-9c45-6ffd-3a2e3ead5c26
+2026-01-23 20:24:10.093 -06:00 [INF] Request finished HTTP/1.1 POST http://localhost:5269/api/v1/Login/Login - 200 null application/json; charset=utf-8 4.9188ms
+2026-01-23 20:24:53.041 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/v1/Product/GetProducts - null null
+2026-01-23 20:24:53.054 -06:00 [INF] CorrelationID: ["1ef0b3cb-75db-44d4-a048-1b34e77c3ce3"] - Request Path: /api/v1/Product/GetProducts
+2026-01-23 20:24:53.054 -06:00 [INF] Executing endpoint 'ProductApi.Controllers.ProductController.GetProducts (ProductApi)'
+2026-01-23 20:24:53.054 -06:00 [INF] Route matched with {action = "GetProducts", controller = "Product"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetProducts() on controller ProductApi.Controllers.ProductController (ProductApi).
+2026-01-23 20:24:53.059 -06:00 [INF] Fetching products from database.
+2026-01-23 20:24:53.180 -06:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Description], [p].[Name], [p].[Price], [p].[Stock]
+FROM [Products] AS [p]
+2026-01-23 20:24:53.182 -06:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ProductApi.DTOs.ProductDto, ProductApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-01-23 20:24:53.183 -06:00 [INF] Executed action ProductApi.Controllers.ProductController.GetProducts (ProductApi) in 128.2067ms
+2026-01-23 20:24:53.183 -06:00 [INF] Executed endpoint 'ProductApi.Controllers.ProductController.GetProducts (ProductApi)'
+2026-01-23 20:24:53.183 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/v1/Product/GetProducts - 200 null application/json; charset=utf-8 142.1466ms
+2026-01-23 20:27:06.476 -06:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/Login - null null
+2026-01-23 20:27:06.476 -06:00 [INF] CORS policy execution successful.
+2026-01-23 20:27:06.477 -06:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/Login - 204 null null 0.4092ms
+2026-01-23 20:27:06.479 -06:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/Login - null null
+2026-01-23 20:27:06.479 -06:00 [INF] CORS policy execution successful.
+2026-01-23 20:27:06.479 -06:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/Login - 204 null null 0.3035ms
+2026-01-23 20:27:06.482 -06:00 [INF] Request starting HTTP/1.1 POST http://localhost:5269/api/v1/Product/Login - application/json 42
+2026-01-23 20:27:06.482 -06:00 [INF] CORS policy execution successful.
+2026-01-23 20:27:06.482 -06:00 [INF] CorrelationID: ["5d921200-a45e-4e79-802a-7844fd5dec82"] - Request Path: /api/v1/Product/Login
+2026-01-23 20:27:06.483 -06:00 [INF] Request finished HTTP/1.1 POST http://localhost:5269/api/v1/Product/Login - 404 0 null 0.8969ms
+2026-01-23 20:27:06.483 -06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST http://localhost:5269/api/v1/Product/Login, Response status code: 404
+2026-01-23 20:27:06.484 -06:00 [INF] Request starting HTTP/1.1 POST http://localhost:5269/api/v1/Product/Login - application/json 42
+2026-01-23 20:27:06.484 -06:00 [INF] CORS policy execution successful.
+2026-01-23 20:27:06.484 -06:00 [INF] CorrelationID: ["05e824f8-53d2-46fb-8764-d48a87904af5"] - Request Path: /api/v1/Product/Login
+2026-01-23 20:27:06.485 -06:00 [INF] Request finished HTTP/1.1 POST http://localhost:5269/api/v1/Product/Login - 404 0 null 1.2606ms
+2026-01-23 20:27:06.485 -06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST http://localhost:5269/api/v1/Product/Login, Response status code: 404
+2026-01-23 20:27:06.490 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/v1/Product/getProducts - null null
+2026-01-23 20:27:06.490 -06:00 [INF] CORS policy execution successful.
+2026-01-23 20:27:06.490 -06:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-01-23 20:27:06.490 -06:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-01-23 20:27:06.491 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/v1/Product/getProducts - 401 0 null 0.6332ms
+2026-01-23 20:27:06.492 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/v1/Product/getProducts - null null
+2026-01-23 20:27:06.492 -06:00 [INF] CORS policy execution successful.
+2026-01-23 20:27:06.493 -06:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-01-23 20:27:06.493 -06:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-01-23 20:27:06.493 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/v1/Product/getProducts - 401 0 null 0.7116ms
+2026-01-23 20:27:28.883 -06:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/Login - null null
+2026-01-23 20:27:28.883 -06:00 [INF] CORS policy execution successful.
+2026-01-23 20:27:28.883 -06:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/Login - 204 null null 1.1368ms
+2026-01-23 20:27:28.885 -06:00 [INF] Request starting HTTP/1.1 POST http://localhost:5269/api/v1/Product/Login - application/json 42
+2026-01-23 20:27:28.886 -06:00 [INF] CORS policy execution successful.
+2026-01-23 20:27:28.886 -06:00 [INF] CorrelationID: ["96f935de-876a-4425-a42f-9e06b4fd7c8a"] - Request Path: /api/v1/Product/Login
+2026-01-23 20:27:28.886 -06:00 [INF] Request finished HTTP/1.1 POST http://localhost:5269/api/v1/Product/Login - 404 0 null 0.8702ms
+2026-01-23 20:27:28.886 -06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST http://localhost:5269/api/v1/Product/Login, Response status code: 404
+2026-01-23 20:27:28.890 -06:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/createProduct - null null
+2026-01-23 20:27:28.890 -06:00 [INF] CORS policy execution successful.
+2026-01-23 20:27:28.890 -06:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/createProduct - 204 null null 0.3135ms
+2026-01-23 20:27:28.891 -06:00 [INF] Request starting HTTP/1.1 POST http://localhost:5269/api/v1/Product/createProduct - application/json 67
+2026-01-23 20:27:28.892 -06:00 [INF] CORS policy execution successful.
+2026-01-23 20:27:28.892 -06:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-01-23 20:27:28.892 -06:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-01-23 20:27:28.892 -06:00 [INF] Request finished HTTP/1.1 POST http://localhost:5269/api/v1/Product/createProduct - 401 0 null 0.55ms
+2026-01-23 20:29:43.968 -06:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/Login/login - null null
+2026-01-23 20:29:43.969 -06:00 [INF] CORS policy execution successful.
+2026-01-23 20:29:43.969 -06:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/Login/login - 204 null null 1.6439ms
+2026-01-23 20:29:43.975 -06:00 [INF] Request starting HTTP/1.1 POST http://localhost:5269/api/v1/Product/Login/login - application/json 42
+2026-01-23 20:29:43.976 -06:00 [INF] CORS policy execution successful.
+2026-01-23 20:29:43.976 -06:00 [INF] CorrelationID: ["375adddc-d1f4-4446-a3af-4b4c31a7584c"] - Request Path: /api/v1/Product/Login/login
+2026-01-23 20:29:43.976 -06:00 [INF] Request finished HTTP/1.1 POST http://localhost:5269/api/v1/Product/Login/login - 404 0 null 0.7338ms
+2026-01-23 20:29:43.976 -06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST http://localhost:5269/api/v1/Product/Login/login, Response status code: 404
+2026-01-23 20:29:43.983 -06:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/Login/login - null null
+2026-01-23 20:29:43.984 -06:00 [INF] CORS policy execution successful.
+2026-01-23 20:29:43.984 -06:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/Login/login - 204 null null 0.2822ms
+2026-01-23 20:29:43.985 -06:00 [INF] Request starting HTTP/1.1 POST http://localhost:5269/api/v1/Product/Login/login - application/json 42
+2026-01-23 20:29:43.985 -06:00 [INF] CORS policy execution successful.
+2026-01-23 20:29:43.985 -06:00 [INF] CorrelationID: ["dabf44f9-6806-47aa-80ce-866970b0e74b"] - Request Path: /api/v1/Product/Login/login
+2026-01-23 20:29:43.987 -06:00 [INF] Request finished HTTP/1.1 POST http://localhost:5269/api/v1/Product/Login/login - 404 0 null 2.0958ms
+2026-01-23 20:29:43.987 -06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST http://localhost:5269/api/v1/Product/Login/login, Response status code: 404
+2026-01-23 20:29:44.032 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/v1/Product/getProducts - null null
+2026-01-23 20:29:44.032 -06:00 [INF] CORS policy execution successful.
+2026-01-23 20:29:44.033 -06:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-01-23 20:29:44.033 -06:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-01-23 20:29:44.033 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/v1/Product/getProducts - 401 0 null 0.6996ms
+2026-01-23 20:29:44.037 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/v1/Product/getProducts - null null
+2026-01-23 20:29:44.038 -06:00 [INF] CORS policy execution successful.
+2026-01-23 20:29:44.038 -06:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-01-23 20:29:44.038 -06:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-01-23 20:29:44.038 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/v1/Product/getProducts - 401 0 null 0.6697ms
+2026-01-23 20:30:21.119 -06:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Login/login - null null
+2026-01-23 20:30:21.119 -06:00 [INF] CORS policy execution successful.
+2026-01-23 20:30:21.119 -06:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Login/login - 204 null null 0.1975ms
+2026-01-23 20:30:21.120 -06:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Login/login - null null
+2026-01-23 20:30:21.120 -06:00 [INF] CORS policy execution successful.
+2026-01-23 20:30:21.120 -06:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Login/login - 204 null null 0.1119ms
+2026-01-23 20:30:21.160 -06:00 [INF] Request starting HTTP/1.1 POST http://localhost:5269/api/v1/Login/login - application/json 42
+2026-01-23 20:30:21.160 -06:00 [INF] CORS policy execution successful.
+2026-01-23 20:30:21.161 -06:00 [INF] CorrelationID: ["47d75847-c940-4078-8428-9d653729c545"] - Request Path: /api/v1/Login/login
+2026-01-23 20:30:21.161 -06:00 [INF] Executing endpoint 'ProductApi.Controllers.LoginController.Login (ProductApi)'
+2026-01-23 20:30:21.161 -06:00 [INF] Route matched with {action = "Login", controller = "Login"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(ProductApi.DTOs.LoginDto) on controller ProductApi.Controllers.LoginController (ProductApi).
+2026-01-23 20:30:21.163 -06:00 [INF] Request starting HTTP/1.1 POST http://localhost:5269/api/v1/Login/login - application/json 42
+2026-01-23 20:30:21.164 -06:00 [INF] CORS policy execution successful.
+2026-01-23 20:30:21.164 -06:00 [INF] CorrelationID: ["6808a13f-ec46-4938-8651-349d6fd38456"] - Request Path: /api/v1/Login/login
+2026-01-23 20:30:21.164 -06:00 [INF] Executing endpoint 'ProductApi.Controllers.LoginController.Login (ProductApi)'
+2026-01-23 20:30:21.164 -06:00 [INF] Route matched with {action = "Login", controller = "Login"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(ProductApi.DTOs.LoginDto) on controller ProductApi.Controllers.LoginController (ProductApi).
+2026-01-23 20:30:21.167 -06:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-01-23 20:30:21.168 -06:00 [INF] Executed action ProductApi.Controllers.LoginController.Login (ProductApi) in 6.6526ms
+2026-01-23 20:30:21.168 -06:00 [INF] Executed endpoint 'ProductApi.Controllers.LoginController.Login (ProductApi)'
+2026-01-23 20:30:21.168 -06:00 [INF] Session started; Key:dfe5a61e-0f4e-7349-3cca-36c012a805fb, Id:64492be8-bf24-fc35-416b-fae49bea84e5
+2026-01-23 20:30:21.168 -06:00 [INF] Request finished HTTP/1.1 POST http://localhost:5269/api/v1/Login/login - 200 null application/json; charset=utf-8 9.098ms
+2026-01-23 20:30:21.172 -06:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-01-23 20:30:21.173 -06:00 [INF] Executed action ProductApi.Controllers.LoginController.Login (ProductApi) in 8.4548ms
+2026-01-23 20:30:21.173 -06:00 [INF] Executed endpoint 'ProductApi.Controllers.LoginController.Login (ProductApi)'
+2026-01-23 20:30:21.173 -06:00 [INF] Session started; Key:569d3b48-31ab-6328-1b68-4055be1a3ac1, Id:b2112756-40dd-6c4b-7c58-daec6d7dee59
+2026-01-23 20:30:21.173 -06:00 [INF] Request finished HTTP/1.1 POST http://localhost:5269/api/v1/Login/login - 200 null application/json; charset=utf-8 9.3562ms
+2026-01-23 20:30:21.175 -06:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/getProducts - null null
+2026-01-23 20:30:21.175 -06:00 [INF] CORS policy execution successful.
+2026-01-23 20:30:21.175 -06:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/getProducts - 204 null null 0.6111ms
+2026-01-23 20:30:21.179 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/v1/Product/getProducts - null null
+2026-01-23 20:30:21.179 -06:00 [INF] CORS policy execution successful.
+2026-01-23 20:30:21.179 -06:00 [INF] CorrelationID: ["ef8b28e6-906e-478e-9d2f-d37464b84a11"] - Request Path: /api/v1/Product/getProducts
+2026-01-23 20:30:21.180 -06:00 [INF] Executing endpoint 'ProductApi.Controllers.ProductController.GetProducts (ProductApi)'
+2026-01-23 20:30:21.180 -06:00 [INF] Route matched with {action = "GetProducts", controller = "Product"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetProducts() on controller ProductApi.Controllers.ProductController (ProductApi).
+2026-01-23 20:30:21.186 -06:00 [INF] Fetching products from database.
+2026-01-23 20:30:21.234 -06:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Description], [p].[Name], [p].[Price], [p].[Stock]
+FROM [Products] AS [p]
+2026-01-23 20:30:21.235 -06:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ProductApi.DTOs.ProductDto, ProductApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-01-23 20:30:21.235 -06:00 [INF] Executed action ProductApi.Controllers.ProductController.GetProducts (ProductApi) in 54.9916ms
+2026-01-23 20:30:21.235 -06:00 [INF] Executed endpoint 'ProductApi.Controllers.ProductController.GetProducts (ProductApi)'
+2026-01-23 20:30:21.235 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/v1/Product/getProducts - 200 null application/json; charset=utf-8 56.704ms
+2026-01-23 20:30:21.239 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/v1/Product/getProducts - null null
+2026-01-23 20:30:21.239 -06:00 [INF] CORS policy execution successful.
+2026-01-23 20:30:21.239 -06:00 [INF] CorrelationID: ["66cb9512-dfc5-43ad-98f4-23e2c6c4fc6f"] - Request Path: /api/v1/Product/getProducts
+2026-01-23 20:30:21.239 -06:00 [INF] Executing endpoint 'ProductApi.Controllers.ProductController.GetProducts (ProductApi)'
+2026-01-23 20:30:21.240 -06:00 [INF] Route matched with {action = "GetProducts", controller = "Product"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetProducts() on controller ProductApi.Controllers.ProductController (ProductApi).
+2026-01-23 20:30:21.240 -06:00 [INF] Fetching products from database.
+2026-01-23 20:30:21.330 -06:00 [INF] Executed DbCommand (87ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Description], [p].[Name], [p].[Price], [p].[Stock]
+FROM [Products] AS [p]
+2026-01-23 20:30:21.331 -06:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ProductApi.DTOs.ProductDto, ProductApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-01-23 20:30:21.331 -06:00 [INF] Executed action ProductApi.Controllers.ProductController.GetProducts (ProductApi) in 91.6335ms
+2026-01-23 20:30:21.331 -06:00 [INF] Executed endpoint 'ProductApi.Controllers.ProductController.GetProducts (ProductApi)'
+2026-01-23 20:30:21.332 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/v1/Product/getProducts - 200 null application/json; charset=utf-8 93.0723ms
+2026-01-23 20:30:47.186 -06:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/createProduct - null null
+2026-01-23 20:30:47.186 -06:00 [INF] CORS policy execution successful.
+2026-01-23 20:30:47.186 -06:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/createProduct - 204 null null 0.7315ms
+2026-01-23 20:30:47.188 -06:00 [INF] Request starting HTTP/1.1 POST http://localhost:5269/api/v1/Product/createProduct - application/json 67
+2026-01-23 20:30:47.189 -06:00 [INF] CORS policy execution successful.
+2026-01-23 20:30:47.193 -06:00 [INF] CorrelationID: ["2534aee1-b057-47e3-98f1-40f266d953ad"] - Request Path: /api/v1/Product/createProduct
+2026-01-23 20:30:47.197 -06:00 [INF] Executing endpoint 'ProductApi.Controllers.ProductController.CreateProduct (ProductApi)'
+2026-01-23 20:30:47.207 -06:00 [INF] Route matched with {action = "CreateProduct", controller = "Product"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateProduct(ProductApi.DTOs.ProductDto) on controller ProductApi.Controllers.ProductController (ProductApi).
+2026-01-23 20:30:47.222 -06:00 [INF] Creating Product
+2026-01-23 20:30:47.671 -06:00 [INF] Executed DbCommand (301ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p3='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Products] ([Description], [Name], [Price], [Stock])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3);
+2026-01-23 20:30:47.700 -06:00 [INF] Executing CreatedAtActionResult, writing value of type 'ProductApi.DTOs.ProductDto'.
+2026-01-23 20:30:47.729 -06:00 [INF] Executed action ProductApi.Controllers.ProductController.CreateProduct (ProductApi) in 522.0987ms
+2026-01-23 20:30:47.729 -06:00 [INF] Executed endpoint 'ProductApi.Controllers.ProductController.CreateProduct (ProductApi)'
+2026-01-23 20:30:47.730 -06:00 [INF] Request finished HTTP/1.1 POST http://localhost:5269/api/v1/Product/createProduct - 201 null application/json; charset=utf-8 541.3636ms
+2026-01-23 20:30:50.503 -06:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/getProducts - null null
+2026-01-23 20:30:50.503 -06:00 [INF] CORS policy execution successful.
+2026-01-23 20:30:50.504 -06:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/getProducts - 204 null null 0.2423ms
+2026-01-23 20:30:50.504 -06:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/getProducts - null null
+2026-01-23 20:30:50.504 -06:00 [INF] CORS policy execution successful.
+2026-01-23 20:30:50.504 -06:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/getProducts - 204 null null 0.1409ms
+2026-01-23 20:30:50.506 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/v1/Product/getProducts - null null
+2026-01-23 20:30:50.506 -06:00 [INF] CORS policy execution successful.
+2026-01-23 20:30:50.507 -06:00 [INF] CorrelationID: ["69ac9c0f-044c-41cb-9eb3-a6bc3610b016"] - Request Path: /api/v1/Product/getProducts
+2026-01-23 20:30:50.507 -06:00 [INF] Executing endpoint 'ProductApi.Controllers.ProductController.GetProducts (ProductApi)'
+2026-01-23 20:30:50.507 -06:00 [INF] Route matched with {action = "GetProducts", controller = "Product"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetProducts() on controller ProductApi.Controllers.ProductController (ProductApi).
+2026-01-23 20:30:50.507 -06:00 [INF] Fetching products from database.
+2026-01-23 20:30:50.516 -06:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Description], [p].[Name], [p].[Price], [p].[Stock]
+FROM [Products] AS [p]
+2026-01-23 20:30:50.517 -06:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ProductApi.DTOs.ProductDto, ProductApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-01-23 20:30:50.517 -06:00 [INF] Executed action ProductApi.Controllers.ProductController.GetProducts (ProductApi) in 10.0381ms
+2026-01-23 20:30:50.517 -06:00 [INF] Executed endpoint 'ProductApi.Controllers.ProductController.GetProducts (ProductApi)'
+2026-01-23 20:30:50.517 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/v1/Product/getProducts - 200 null application/json; charset=utf-8 11.6206ms
+2026-01-23 20:30:50.520 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/v1/Product/getProducts - null null
+2026-01-23 20:30:50.520 -06:00 [INF] CORS policy execution successful.
+2026-01-23 20:30:50.521 -06:00 [INF] CorrelationID: ["0bc676f6-432e-49dc-8d51-d0183b22978e"] - Request Path: /api/v1/Product/getProducts
+2026-01-23 20:30:50.521 -06:00 [INF] Executing endpoint 'ProductApi.Controllers.ProductController.GetProducts (ProductApi)'
+2026-01-23 20:30:50.521 -06:00 [INF] Route matched with {action = "GetProducts", controller = "Product"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetProducts() on controller ProductApi.Controllers.ProductController (ProductApi).
+2026-01-23 20:30:50.522 -06:00 [INF] Fetching products from database.
+2026-01-23 20:30:50.524 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Description], [p].[Name], [p].[Price], [p].[Stock]
+FROM [Products] AS [p]
+2026-01-23 20:30:50.527 -06:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ProductApi.DTOs.ProductDto, ProductApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-01-23 20:30:50.528 -06:00 [INF] Executed action ProductApi.Controllers.ProductController.GetProducts (ProductApi) in 6.6114ms
+2026-01-23 20:30:50.528 -06:00 [INF] Executed endpoint 'ProductApi.Controllers.ProductController.GetProducts (ProductApi)'
+2026-01-23 20:30:50.532 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/v1/Product/getProducts - 200 null application/json; charset=utf-8 11.942ms
+2026-01-23 20:30:57.300 -06:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/getProduct/19 - null null
+2026-01-23 20:30:57.300 -06:00 [INF] CORS policy execution successful.
+2026-01-23 20:30:57.300 -06:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/getProduct/19 - 204 null null 0.2052ms
+2026-01-23 20:30:57.301 -06:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/getProduct/19 - null null
+2026-01-23 20:30:57.301 -06:00 [INF] CORS policy execution successful.
+2026-01-23 20:30:57.301 -06:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/getProduct/19 - 204 null null 0.3032ms
+2026-01-23 20:30:57.302 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/v1/Product/getProduct/19 - null null
+2026-01-23 20:30:57.303 -06:00 [INF] CORS policy execution successful.
+2026-01-23 20:30:57.303 -06:00 [INF] CorrelationID: ["2cfb80c9-0ad8-498f-95ed-b338ae063ca0"] - Request Path: /api/v1/Product/getProduct/19
+2026-01-23 20:30:57.303 -06:00 [INF] Executing endpoint 'ProductApi.Controllers.ProductController.GetProduct (ProductApi)'
+2026-01-23 20:30:57.310 -06:00 [INF] Route matched with {action = "GetProduct", controller = "Product"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetProduct(Int32) on controller ProductApi.Controllers.ProductController (ProductApi).
+2026-01-23 20:30:57.314 -06:00 [INF]  Fetching Product by Id : 19
+2026-01-23 20:30:57.464 -06:00 [INF] Executed DbCommand (6ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[Description], [p].[Name], [p].[Price], [p].[Stock]
+FROM [Products] AS [p]
+WHERE [p].[Id] = @__p_0
+2026-01-23 20:30:57.466 -06:00 [INF] Executing OkObjectResult, writing value of type 'ProductApi.DTOs.ProductDto'.
+2026-01-23 20:30:57.466 -06:00 [INF] Executed action ProductApi.Controllers.ProductController.GetProduct (ProductApi) in 155.3859ms
+2026-01-23 20:30:57.466 -06:00 [INF] Executed endpoint 'ProductApi.Controllers.ProductController.GetProduct (ProductApi)'
+2026-01-23 20:30:57.466 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/v1/Product/getProduct/19 - 200 null application/json; charset=utf-8 163.9628ms
+2026-01-23 20:30:57.467 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/v1/Product/getProduct/19 - null null
+2026-01-23 20:30:57.467 -06:00 [INF] CORS policy execution successful.
+2026-01-23 20:30:57.468 -06:00 [INF] CorrelationID: ["5f9f1757-00eb-42e2-b8d4-1515f764876a"] - Request Path: /api/v1/Product/getProduct/19
+2026-01-23 20:30:57.468 -06:00 [INF] Executing endpoint 'ProductApi.Controllers.ProductController.GetProduct (ProductApi)'
+2026-01-23 20:30:57.468 -06:00 [INF] Route matched with {action = "GetProduct", controller = "Product"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetProduct(Int32) on controller ProductApi.Controllers.ProductController (ProductApi).
+2026-01-23 20:30:57.469 -06:00 [INF]  Fetching Product by Id : 19
+2026-01-23 20:30:57.477 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[Description], [p].[Name], [p].[Price], [p].[Stock]
+FROM [Products] AS [p]
+WHERE [p].[Id] = @__p_0
+2026-01-23 20:30:57.479 -06:00 [INF] Executing OkObjectResult, writing value of type 'ProductApi.DTOs.ProductDto'.
+2026-01-23 20:30:57.479 -06:00 [INF] Executed action ProductApi.Controllers.ProductController.GetProduct (ProductApi) in 11.276ms
+2026-01-23 20:30:57.480 -06:00 [INF] Executed endpoint 'ProductApi.Controllers.ProductController.GetProduct (ProductApi)'
+2026-01-23 20:30:57.480 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/v1/Product/getProduct/19 - 200 null application/json; charset=utf-8 12.5659ms
+2026-01-23 20:30:59.050 -06:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/getProducts - null null
+2026-01-23 20:30:59.050 -06:00 [INF] CORS policy execution successful.
+2026-01-23 20:30:59.050 -06:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/getProducts - 204 null null 0.3339ms
+2026-01-23 20:30:59.050 -06:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/getProducts - null null
+2026-01-23 20:30:59.050 -06:00 [INF] CORS policy execution successful.
+2026-01-23 20:30:59.050 -06:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/getProducts - 204 null null 0.1811ms
+2026-01-23 20:30:59.053 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/v1/Product/getProducts - null null
+2026-01-23 20:30:59.053 -06:00 [INF] CORS policy execution successful.
+2026-01-23 20:30:59.054 -06:00 [INF] CorrelationID: ["aefd317c-1e0a-4682-bc13-25a5dd23e829"] - Request Path: /api/v1/Product/getProducts
+2026-01-23 20:30:59.054 -06:00 [INF] Executing endpoint 'ProductApi.Controllers.ProductController.GetProducts (ProductApi)'
+2026-01-23 20:30:59.054 -06:00 [INF] Route matched with {action = "GetProducts", controller = "Product"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetProducts() on controller ProductApi.Controllers.ProductController (ProductApi).
+2026-01-23 20:30:59.055 -06:00 [INF] Fetching products from database.
+2026-01-23 20:30:59.065 -06:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Description], [p].[Name], [p].[Price], [p].[Stock]
+FROM [Products] AS [p]
+2026-01-23 20:30:59.066 -06:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ProductApi.DTOs.ProductDto, ProductApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-01-23 20:30:59.066 -06:00 [INF] Executed action ProductApi.Controllers.ProductController.GetProducts (ProductApi) in 11.7554ms
+2026-01-23 20:30:59.066 -06:00 [INF] Executed endpoint 'ProductApi.Controllers.ProductController.GetProducts (ProductApi)'
+2026-01-23 20:30:59.067 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/v1/Product/getProducts - 200 null application/json; charset=utf-8 13.6867ms
+2026-01-23 20:30:59.079 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/v1/Product/getProducts - null null
+2026-01-23 20:30:59.079 -06:00 [INF] CORS policy execution successful.
+2026-01-23 20:30:59.079 -06:00 [INF] CorrelationID: ["710cc88c-6df0-4862-9155-0f7b5784c9a5"] - Request Path: /api/v1/Product/getProducts
+2026-01-23 20:30:59.079 -06:00 [INF] Executing endpoint 'ProductApi.Controllers.ProductController.GetProducts (ProductApi)'
+2026-01-23 20:30:59.079 -06:00 [INF] Route matched with {action = "GetProducts", controller = "Product"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetProducts() on controller ProductApi.Controllers.ProductController (ProductApi).
+2026-01-23 20:30:59.080 -06:00 [INF] Fetching products from database.
+2026-01-23 20:30:59.096 -06:00 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Description], [p].[Name], [p].[Price], [p].[Stock]
+FROM [Products] AS [p]
+2026-01-23 20:30:59.097 -06:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ProductApi.DTOs.ProductDto, ProductApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-01-23 20:30:59.097 -06:00 [INF] Executed action ProductApi.Controllers.ProductController.GetProducts (ProductApi) in 18.0291ms
+2026-01-23 20:30:59.098 -06:00 [INF] Executed endpoint 'ProductApi.Controllers.ProductController.GetProducts (ProductApi)'
+2026-01-23 20:30:59.098 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/v1/Product/getProducts - 200 null application/json; charset=utf-8 19.33ms
+2026-01-23 20:31:01.941 -06:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/deleteProduct/19 - null null
+2026-01-23 20:31:01.941 -06:00 [INF] CORS policy execution successful.
+2026-01-23 20:31:01.941 -06:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/deleteProduct/19 - 204 null null 0.2648ms
+2026-01-23 20:31:01.943 -06:00 [INF] Request starting HTTP/1.1 DELETE http://localhost:5269/api/v1/Product/deleteProduct/19 - null null
+2026-01-23 20:31:01.943 -06:00 [INF] CORS policy execution successful.
+2026-01-23 20:31:01.945 -06:00 [INF] CorrelationID: ["27e02861-e5b7-4237-b6c3-5581efc496ab"] - Request Path: /api/v1/Product/deleteProduct/19
+2026-01-23 20:31:01.945 -06:00 [INF] Executing endpoint 'ProductApi.Controllers.ProductController.DeleteProduct (ProductApi)'
+2026-01-23 20:31:01.950 -06:00 [INF] Route matched with {action = "DeleteProduct", controller = "Product"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DeleteProduct(Int32) on controller ProductApi.Controllers.ProductController (ProductApi).
+2026-01-23 20:31:01.958 -06:00 [INF] Executed DbCommand (4ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[Description], [p].[Name], [p].[Price], [p].[Stock]
+FROM [Products] AS [p]
+WHERE [p].[Id] = @__p_0
+2026-01-23 20:31:01.984 -06:00 [INF] Executed DbCommand (7ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+DELETE FROM [Products]
+OUTPUT 1
+WHERE [Id] = @p0;
+2026-01-23 20:31:02.000 -06:00 [INF] Executing StatusCodeResult, setting HTTP status code 204
+2026-01-23 20:31:02.000 -06:00 [INF] Executed action ProductApi.Controllers.ProductController.DeleteProduct (ProductApi) in 49.4663ms
+2026-01-23 20:31:02.000 -06:00 [INF] Executed endpoint 'ProductApi.Controllers.ProductController.DeleteProduct (ProductApi)'
+2026-01-23 20:31:02.000 -06:00 [INF] Request finished HTTP/1.1 DELETE http://localhost:5269/api/v1/Product/deleteProduct/19 - 204 null null 57.208ms
+2026-01-23 20:34:16.210 -06:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5269/api/v1/product/getProducts - null null
+2026-01-23 20:34:16.210 -06:00 [INF] CORS policy execution successful.
+2026-01-23 20:34:16.210 -06:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5269/api/v1/product/getProducts - 204 null null 0.286ms
+2026-01-23 20:34:16.229 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/v1/product/getProducts - null null
+2026-01-23 20:34:16.229 -06:00 [INF] CORS policy execution successful.
+2026-01-23 20:34:16.230 -06:00 [INF] CorrelationID: ["4591fa19-bbb2-4a6f-acf2-bf2c453912aa"] - Request Path: /api/v1/product/getProducts
+2026-01-23 20:34:16.230 -06:00 [INF] Executing endpoint 'ProductApi.Controllers.ProductController.GetProducts (ProductApi)'
+2026-01-23 20:34:16.230 -06:00 [INF] Route matched with {action = "GetProducts", controller = "Product"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetProducts() on controller ProductApi.Controllers.ProductController (ProductApi).
+2026-01-23 20:34:16.230 -06:00 [INF] Fetching products from database.
+2026-01-23 20:34:16.238 -06:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Description], [p].[Name], [p].[Price], [p].[Stock]
+FROM [Products] AS [p]
+2026-01-23 20:34:16.238 -06:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ProductApi.DTOs.ProductDto, ProductApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-01-23 20:34:16.239 -06:00 [INF] Executed action ProductApi.Controllers.ProductController.GetProducts (ProductApi) in 8.4949ms
+2026-01-23 20:34:16.239 -06:00 [INF] Executed endpoint 'ProductApi.Controllers.ProductController.GetProducts (ProductApi)'
+2026-01-23 20:34:16.239 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/v1/product/getProducts - 200 null application/json; charset=utf-8 10.3761ms
+2026-01-23 20:34:35.511 -06:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5269/api/v1/product/createProduct/ - null null
+2026-01-23 20:34:35.511 -06:00 [INF] CORS policy execution successful.
+2026-01-23 20:34:35.511 -06:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5269/api/v1/product/createProduct/ - 204 null null 0.2134ms
+2026-01-23 20:34:35.514 -06:00 [INF] Request starting HTTP/1.1 POST http://localhost:5269/api/v1/product/createProduct/ - application/json 62
+2026-01-23 20:34:35.514 -06:00 [INF] CORS policy execution successful.
+2026-01-23 20:34:35.515 -06:00 [INF] CorrelationID: ["93e93d9a-9298-40b0-811b-695c2ff1944a"] - Request Path: /api/v1/product/createProduct/
+2026-01-23 20:34:35.515 -06:00 [INF] Executing endpoint 'ProductApi.Controllers.ProductController.CreateProduct (ProductApi)'
+2026-01-23 20:34:35.515 -06:00 [INF] Route matched with {action = "CreateProduct", controller = "Product"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateProduct(ProductApi.DTOs.ProductDto) on controller ProductApi.Controllers.ProductController (ProductApi).
+2026-01-23 20:34:35.515 -06:00 [INF] Creating Product
+2026-01-23 20:34:35.528 -06:00 [INF] Executed DbCommand (8ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p3='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Products] ([Description], [Name], [Price], [Stock])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3);
+2026-01-23 20:34:35.529 -06:00 [INF] Executing CreatedAtActionResult, writing value of type 'ProductApi.DTOs.ProductDto'.
+2026-01-23 20:34:35.530 -06:00 [INF] Executed action ProductApi.Controllers.ProductController.CreateProduct (ProductApi) in 15.2224ms
+2026-01-23 20:34:35.530 -06:00 [INF] Executed endpoint 'ProductApi.Controllers.ProductController.CreateProduct (ProductApi)'
+2026-01-23 20:34:35.530 -06:00 [INF] Request finished HTTP/1.1 POST http://localhost:5269/api/v1/product/createProduct/ - 201 null application/json; charset=utf-8 16.9275ms
+2026-01-23 20:38:11.236 -06:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/getProducts - null null
+2026-01-23 20:38:11.240 -06:00 [INF] CORS policy execution successful.
+2026-01-23 20:38:11.240 -06:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/getProducts - 204 null null 3.9058ms
+2026-01-23 20:38:11.240 -06:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/getProducts - null null
+2026-01-23 20:38:11.240 -06:00 [INF] CORS policy execution successful.
+2026-01-23 20:38:11.240 -06:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/getProducts - 204 null null 0.1458ms
+2026-01-23 20:38:11.260 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/v1/Product/getProducts - null null
+2026-01-23 20:38:11.263 -06:00 [INF] CORS policy execution successful.
+2026-01-23 20:38:11.263 -06:00 [INF] CorrelationID: ["c46f49f5-57f0-4474-b466-65b7cffb04d2"] - Request Path: /api/v1/Product/getProducts
+2026-01-23 20:38:11.264 -06:00 [INF] Executing endpoint 'ProductApi.Controllers.ProductController.GetProducts (ProductApi)'
+2026-01-23 20:38:11.264 -06:00 [INF] Route matched with {action = "GetProducts", controller = "Product"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetProducts() on controller ProductApi.Controllers.ProductController (ProductApi).
+2026-01-23 20:38:11.264 -06:00 [INF] Fetching products from database.
+2026-01-23 20:38:11.270 -06:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Description], [p].[Name], [p].[Price], [p].[Stock]
+FROM [Products] AS [p]
+2026-01-23 20:38:11.272 -06:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ProductApi.DTOs.ProductDto, ProductApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-01-23 20:38:11.272 -06:00 [INF] Executed action ProductApi.Controllers.ProductController.GetProducts (ProductApi) in 8.5388ms
+2026-01-23 20:38:11.273 -06:00 [INF] Executed endpoint 'ProductApi.Controllers.ProductController.GetProducts (ProductApi)'
+2026-01-23 20:38:11.273 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/v1/Product/getProducts - 200 null application/json; charset=utf-8 12.9761ms
+2026-01-23 20:38:11.280 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/v1/Product/getProducts - null null
+2026-01-23 20:38:11.281 -06:00 [INF] CORS policy execution successful.
+2026-01-23 20:38:11.281 -06:00 [INF] CorrelationID: ["b3557053-c6dc-4079-a1fd-e2aa1d97f9c9"] - Request Path: /api/v1/Product/getProducts
+2026-01-23 20:38:11.281 -06:00 [INF] Executing endpoint 'ProductApi.Controllers.ProductController.GetProducts (ProductApi)'
+2026-01-23 20:38:11.281 -06:00 [INF] Route matched with {action = "GetProducts", controller = "Product"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetProducts() on controller ProductApi.Controllers.ProductController (ProductApi).
+2026-01-23 20:38:11.282 -06:00 [INF] Fetching products from database.
+2026-01-23 20:38:11.290 -06:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Description], [p].[Name], [p].[Price], [p].[Stock]
+FROM [Products] AS [p]
+2026-01-23 20:38:11.291 -06:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ProductApi.DTOs.ProductDto, ProductApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-01-23 20:38:11.291 -06:00 [INF] Executed action ProductApi.Controllers.ProductController.GetProducts (ProductApi) in 9.9272ms
+2026-01-23 20:38:11.291 -06:00 [INF] Executed endpoint 'ProductApi.Controllers.ProductController.GetProducts (ProductApi)'
+2026-01-23 20:38:11.292 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/v1/Product/getProducts - 200 null application/json; charset=utf-8 11.6331ms
+2026-01-23 20:38:42.576 -06:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/createProduct/ - null null
+2026-01-23 20:38:42.576 -06:00 [INF] CORS policy execution successful.
+2026-01-23 20:38:42.577 -06:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/createProduct/ - 204 null null 0.7319ms
+2026-01-23 20:38:42.578 -06:00 [INF] Request starting HTTP/1.1 POST http://localhost:5269/api/v1/Product/createProduct/ - application/json 78
+2026-01-23 20:38:42.579 -06:00 [INF] CORS policy execution successful.
+2026-01-23 20:38:42.580 -06:00 [INF] CorrelationID: ["6ccab0b3-b9b1-4cfd-b730-164d69a5cb53"] - Request Path: /api/v1/Product/createProduct/
+2026-01-23 20:38:42.581 -06:00 [INF] Executing endpoint 'ProductApi.Controllers.ProductController.CreateProduct (ProductApi)'
+2026-01-23 20:38:42.581 -06:00 [INF] Route matched with {action = "CreateProduct", controller = "Product"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateProduct(ProductApi.DTOs.ProductDto) on controller ProductApi.Controllers.ProductController (ProductApi).
+2026-01-23 20:38:42.583 -06:00 [INF] Creating Product
+2026-01-23 20:38:42.592 -06:00 [INF] Executed DbCommand (7ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p3='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Products] ([Description], [Name], [Price], [Stock])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3);
+2026-01-23 20:38:42.593 -06:00 [INF] Executing CreatedAtActionResult, writing value of type 'ProductApi.DTOs.ProductDto'.
+2026-01-23 20:38:42.593 -06:00 [INF] Executed action ProductApi.Controllers.ProductController.CreateProduct (ProductApi) in 11.5264ms
+2026-01-23 20:38:42.593 -06:00 [INF] Executed endpoint 'ProductApi.Controllers.ProductController.CreateProduct (ProductApi)'
+2026-01-23 20:38:42.594 -06:00 [INF] Request finished HTTP/1.1 POST http://localhost:5269/api/v1/Product/createProduct/ - 201 null application/json; charset=utf-8 15.3106ms
+2026-01-23 20:38:42.597 -06:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/getProducts - null null
+2026-01-23 20:38:42.598 -06:00 [INF] CORS policy execution successful.
+2026-01-23 20:38:42.598 -06:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/getProducts - 204 null null 1.1956ms
+2026-01-23 20:38:42.602 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/v1/Product/getProducts - null null
+2026-01-23 20:38:42.603 -06:00 [INF] CORS policy execution successful.
+2026-01-23 20:38:42.606 -06:00 [INF] CorrelationID: ["1e3a9cd2-74e1-4689-bac8-0ec610152a8d"] - Request Path: /api/v1/Product/getProducts
+2026-01-23 20:38:42.606 -06:00 [INF] Executing endpoint 'ProductApi.Controllers.ProductController.GetProducts (ProductApi)'
+2026-01-23 20:38:42.606 -06:00 [INF] Route matched with {action = "GetProducts", controller = "Product"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetProducts() on controller ProductApi.Controllers.ProductController (ProductApi).
+2026-01-23 20:38:42.607 -06:00 [INF] Fetching products from database.
+2026-01-23 20:38:42.609 -06:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Description], [p].[Name], [p].[Price], [p].[Stock]
+FROM [Products] AS [p]
+2026-01-23 20:38:42.611 -06:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ProductApi.DTOs.ProductDto, ProductApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-01-23 20:38:42.611 -06:00 [INF] Executed action ProductApi.Controllers.ProductController.GetProducts (ProductApi) in 4.63ms
+2026-01-23 20:38:42.611 -06:00 [INF] Executed endpoint 'ProductApi.Controllers.ProductController.GetProducts (ProductApi)'
+2026-01-23 20:38:42.611 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/v1/Product/getProducts - 200 null application/json; charset=utf-8 9.4318ms
+2026-01-23 20:38:45.285 -06:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/deleteProduct/21 - null null
+2026-01-23 20:38:45.285 -06:00 [INF] CORS policy execution successful.
+2026-01-23 20:38:45.285 -06:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/deleteProduct/21 - 204 null null 0.2372ms
+2026-01-23 20:38:45.286 -06:00 [INF] Request starting HTTP/1.1 DELETE http://localhost:5269/api/v1/Product/deleteProduct/21 - null null
+2026-01-23 20:38:45.287 -06:00 [INF] CORS policy execution successful.
+2026-01-23 20:38:45.287 -06:00 [INF] CorrelationID: ["dd69e8cd-f456-465a-8540-b4bb659b9967"] - Request Path: /api/v1/Product/deleteProduct/21
+2026-01-23 20:38:45.287 -06:00 [INF] Executing endpoint 'ProductApi.Controllers.ProductController.DeleteProduct (ProductApi)'
+2026-01-23 20:38:45.287 -06:00 [INF] Route matched with {action = "DeleteProduct", controller = "Product"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DeleteProduct(Int32) on controller ProductApi.Controllers.ProductController (ProductApi).
+2026-01-23 20:38:45.292 -06:00 [INF] Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[Description], [p].[Name], [p].[Price], [p].[Stock]
+FROM [Products] AS [p]
+WHERE [p].[Id] = @__p_0
+2026-01-23 20:38:45.298 -06:00 [INF] Executed DbCommand (4ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+DELETE FROM [Products]
+OUTPUT 1
+WHERE [Id] = @p0;
+2026-01-23 20:38:45.299 -06:00 [INF] Executing StatusCodeResult, setting HTTP status code 204
+2026-01-23 20:38:45.299 -06:00 [INF] Executed action ProductApi.Controllers.ProductController.DeleteProduct (ProductApi) in 11.6795ms
+2026-01-23 20:38:45.299 -06:00 [INF] Executed endpoint 'ProductApi.Controllers.ProductController.DeleteProduct (ProductApi)'
+2026-01-23 20:38:45.300 -06:00 [INF] Request finished HTTP/1.1 DELETE http://localhost:5269/api/v1/Product/deleteProduct/21 - 204 null null 13.1ms
+2026-01-23 20:38:45.303 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/v1/Product/getProducts - null null
+2026-01-23 20:38:45.303 -06:00 [INF] CORS policy execution successful.
+2026-01-23 20:38:45.303 -06:00 [INF] CorrelationID: ["6b7e590b-1ea4-4eee-90bf-b3e4747a9825"] - Request Path: /api/v1/Product/getProducts
+2026-01-23 20:38:45.303 -06:00 [INF] Executing endpoint 'ProductApi.Controllers.ProductController.GetProducts (ProductApi)'
+2026-01-23 20:38:45.304 -06:00 [INF] Route matched with {action = "GetProducts", controller = "Product"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetProducts() on controller ProductApi.Controllers.ProductController (ProductApi).
+2026-01-23 20:38:45.304 -06:00 [INF] Fetching products from database.
+2026-01-23 20:38:45.306 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Description], [p].[Name], [p].[Price], [p].[Stock]
+FROM [Products] AS [p]
+2026-01-23 20:38:45.309 -06:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ProductApi.DTOs.ProductDto, ProductApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-01-23 20:38:45.309 -06:00 [INF] Executed action ProductApi.Controllers.ProductController.GetProducts (ProductApi) in 5.2041ms
+2026-01-23 20:38:45.309 -06:00 [INF] Executed endpoint 'ProductApi.Controllers.ProductController.GetProducts (ProductApi)'
+2026-01-23 20:38:45.309 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/v1/Product/getProducts - 200 null application/json; charset=utf-8 6.2552ms
+2026-01-23 20:42:02.158 -06:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/getProducts - null null
+2026-01-23 20:42:02.158 -06:00 [INF] CORS policy execution successful.
+2026-01-23 20:42:02.158 -06:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/getProducts - 204 null null 0.233ms
+2026-01-23 20:42:02.158 -06:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/getProducts - null null
+2026-01-23 20:42:02.158 -06:00 [INF] CORS policy execution successful.
+2026-01-23 20:42:02.158 -06:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/getProducts - 204 null null 0.0884ms
+2026-01-23 20:42:02.162 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/v1/Product/getProducts - null null
+2026-01-23 20:42:02.162 -06:00 [INF] CORS policy execution successful.
+2026-01-23 20:42:02.163 -06:00 [INF] CorrelationID: ["71a3d18d-7917-4f78-aa69-336a49e9ccd9"] - Request Path: /api/v1/Product/getProducts
+2026-01-23 20:42:02.163 -06:00 [INF] Executing endpoint 'ProductApi.Controllers.ProductController.GetProducts (ProductApi)'
+2026-01-23 20:42:02.163 -06:00 [INF] Route matched with {action = "GetProducts", controller = "Product"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetProducts() on controller ProductApi.Controllers.ProductController (ProductApi).
+2026-01-23 20:42:02.163 -06:00 [INF] Fetching products from database.
+2026-01-23 20:42:02.171 -06:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Description], [p].[Name], [p].[Price], [p].[Stock]
+FROM [Products] AS [p]
+2026-01-23 20:42:02.172 -06:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ProductApi.DTOs.ProductDto, ProductApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-01-23 20:42:02.173 -06:00 [INF] Executed action ProductApi.Controllers.ProductController.GetProducts (ProductApi) in 9.6583ms
+2026-01-23 20:42:02.173 -06:00 [INF] Executed endpoint 'ProductApi.Controllers.ProductController.GetProducts (ProductApi)'
+2026-01-23 20:42:02.174 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/v1/Product/getProducts - 200 null application/json; charset=utf-8 12.0578ms
+2026-01-23 20:42:02.184 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/v1/Product/getProducts - null null
+2026-01-23 20:42:02.184 -06:00 [INF] CORS policy execution successful.
+2026-01-23 20:42:02.185 -06:00 [INF] CorrelationID: ["b602a765-f34c-4065-8fa5-2fc4b23f19fe"] - Request Path: /api/v1/Product/getProducts
+2026-01-23 20:42:02.185 -06:00 [INF] Executing endpoint 'ProductApi.Controllers.ProductController.GetProducts (ProductApi)'
+2026-01-23 20:42:02.188 -06:00 [INF] Route matched with {action = "GetProducts", controller = "Product"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetProducts() on controller ProductApi.Controllers.ProductController (ProductApi).
+2026-01-23 20:42:02.189 -06:00 [INF] Fetching products from database.
+2026-01-23 20:42:02.193 -06:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Description], [p].[Name], [p].[Price], [p].[Stock]
+FROM [Products] AS [p]
+2026-01-23 20:42:02.195 -06:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ProductApi.DTOs.ProductDto, ProductApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-01-23 20:42:02.195 -06:00 [INF] Executed action ProductApi.Controllers.ProductController.GetProducts (ProductApi) in 6.4252ms
+2026-01-23 20:42:02.195 -06:00 [INF] Executed endpoint 'ProductApi.Controllers.ProductController.GetProducts (ProductApi)'
+2026-01-23 20:42:02.195 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/v1/Product/getProducts - 200 null application/json; charset=utf-8 12.5803ms
+2026-01-23 20:44:34.293 -06:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Login/login - null null
+2026-01-23 20:44:34.293 -06:00 [INF] CORS policy execution successful.
+2026-01-23 20:44:34.293 -06:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Login/login - 204 null null 0.3348ms
+2026-01-23 20:44:34.295 -06:00 [INF] Request starting HTTP/1.1 POST http://localhost:5269/api/v1/Login/login - application/json 42
+2026-01-23 20:44:34.296 -06:00 [INF] CORS policy execution successful.
+2026-01-23 20:44:34.303 -06:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '1/24/2026 1:14:56 AM', Current time (UTC): '1/24/2026 2:44:34 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2026-01-23 20:44:34.304 -06:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '1/24/2026 1:14:56 AM', Current time (UTC): '1/24/2026 2:44:34 AM'.
+2026-01-23 20:44:34.304 -06:00 [INF] CorrelationID: ["a72d5e91-2a80-4f6b-9c86-4fd9ae0273b3"] - Request Path: /api/v1/Login/login
+2026-01-23 20:44:34.304 -06:00 [INF] Executing endpoint 'ProductApi.Controllers.LoginController.Login (ProductApi)'
+2026-01-23 20:44:34.304 -06:00 [INF] Route matched with {action = "Login", controller = "Login"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(ProductApi.DTOs.LoginDto) on controller ProductApi.Controllers.LoginController (ProductApi).
+2026-01-23 20:44:34.305 -06:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-01-23 20:44:34.305 -06:00 [INF] Executed action ProductApi.Controllers.LoginController.Login (ProductApi) in 0.9515ms
+2026-01-23 20:44:34.305 -06:00 [INF] Executed endpoint 'ProductApi.Controllers.LoginController.Login (ProductApi)'
+2026-01-23 20:44:34.305 -06:00 [INF] Session started; Key:4132aff8-eea0-7499-cf6a-c9bd1ecd0008, Id:418a8259-50e4-adb9-8cac-6e828177c291
+2026-01-23 20:44:34.305 -06:00 [INF] Request finished HTTP/1.1 POST http://localhost:5269/api/v1/Login/login - 200 null application/json; charset=utf-8 10.1883ms

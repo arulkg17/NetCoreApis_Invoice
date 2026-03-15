@@ -1,0 +1,1116 @@
+2025-11-23 11:58:16.683 -06:00 [INF] User profile is available. Using 'C:\Users\arulg\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-11-23 11:58:17.432 -06:00 [INF] Now listening on: http://localhost:5269
+2025-11-23 11:58:17.691 -06:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-23 11:58:17.692 -06:00 [INF] Hosting environment: Development
+2025-11-23 11:58:17.692 -06:00 [INF] Content root path: D:\Projects\NetCore\ApiBackend\NetCoreApis\ProductApi
+2025-11-23 11:58:18.883 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/swagger/index.html - null null
+2025-11-23 11:58:19.433 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/swagger/index.html - 200 null text/html;charset=utf-8 563.3966ms
+2025-11-23 11:58:19.480 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/_framework/aspnetcore-browser-refresh.js - null null
+2025-11-23 11:58:19.481 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/_vs/browserLink - null null
+2025-11-23 11:58:19.489 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/_framework/aspnetcore-browser-refresh.js - 200 13756 application/javascript; charset=utf-8 9.8552ms
+2025-11-23 11:58:19.601 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/_vs/browserLink - 200 null text/javascript; charset=UTF-8 120.8801ms
+2025-11-23 11:58:19.772 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/swagger/v1/swagger.json - null null
+2025-11-23 11:58:20.057 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 284.8534ms
+2025-11-23 11:58:46.203 -06:00 [INF] Request starting HTTP/1.1 POST http://localhost:5269/api/v1/Product/Login - application/json 51
+2025-11-23 11:58:46.240 -06:00 [INF] CORS policy execution failed.
+2025-11-23 11:58:46.240 -06:00 [INF] Request origin http://localhost:5269 does not have permission to access the resource.
+2025-11-23 11:58:47.974 -06:00 [INF] Executing endpoint 'ProductApi.Controllers.ProductController.Login (ProductApi)'
+2025-11-23 11:58:48.005 -06:00 [INF] Route matched with {action = "Login", controller = "Product"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(ProductApi.DTOs.LoginDto) on controller ProductApi.Controllers.ProductController (ProductApi).
+2025-11-23 11:58:48.741 -06:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-11-23 11:58:48.753 -06:00 [INF] Executed action ProductApi.Controllers.ProductController.Login (ProductApi) in 742.9878ms
+2025-11-23 11:58:48.753 -06:00 [INF] Executed endpoint 'ProductApi.Controllers.ProductController.Login (ProductApi)'
+2025-11-23 11:58:48.756 -06:00 [INF] Request finished HTTP/1.1 POST http://localhost:5269/api/v1/Product/Login - 200 null application/json; charset=utf-8 2554.1831ms
+2025-11-23 11:59:17.027 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/v1/Product/GetProducts - null null
+2025-11-23 11:59:17.199 -06:00 [INF] Executing endpoint 'ProductApi.Controllers.ProductController.GetProducts (ProductApi)'
+2025-11-23 11:59:17.207 -06:00 [INF] Route matched with {action = "GetProducts", controller = "Product"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetProducts() on controller ProductApi.Controllers.ProductController (ProductApi).
+2025-11-23 11:59:17.234 -06:00 [INF] Fetching products from database.
+2025-11-23 11:59:18.890 -06:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'ProductEntity'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-11-23 11:59:21.410 -06:00 [INF] Executed DbCommand (42ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Description], [p].[Name], [p].[Price], [p].[Stock]
+FROM [Products] AS [p]
+2025-11-23 11:59:21.563 -06:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ProductApi.DTOs.ProductDto, ProductApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-23 11:59:21.575 -06:00 [INF] Executed action ProductApi.Controllers.ProductController.GetProducts (ProductApi) in 4367.4631ms
+2025-11-23 11:59:21.576 -06:00 [INF] Executed endpoint 'ProductApi.Controllers.ProductController.GetProducts (ProductApi)'
+2025-11-23 11:59:21.592 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/v1/Product/GetProducts - 200 null application/json; charset=utf-8 4565.7012ms
+2025-11-23 12:00:28.637 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/v1/Product/GetProducts - null null
+2025-11-23 12:00:28.650 -06:00 [INF] Executing endpoint 'ProductApi.Controllers.ProductController.GetProducts (ProductApi)'
+2025-11-23 12:00:28.651 -06:00 [INF] Route matched with {action = "GetProducts", controller = "Product"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetProducts() on controller ProductApi.Controllers.ProductController (ProductApi).
+2025-11-23 12:00:28.657 -06:00 [INF] Retrieve product from Cache
+2025-11-23 12:00:28.657 -06:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ProductApi.DTOs.ProductDto, ProductApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-23 12:00:28.657 -06:00 [INF] Executed action ProductApi.Controllers.ProductController.GetProducts (ProductApi) in 6.3372ms
+2025-11-23 12:00:28.657 -06:00 [INF] Executed endpoint 'ProductApi.Controllers.ProductController.GetProducts (ProductApi)'
+2025-11-23 12:00:28.658 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/v1/Product/GetProducts - 200 null application/json; charset=utf-8 21.0561ms
+2025-11-23 12:26:03.938 -06:00 [INF] User profile is available. Using 'C:\Users\arulg\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-11-23 12:26:04.213 -06:00 [INF] Now listening on: http://localhost:5269
+2025-11-23 12:26:04.303 -06:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-23 12:26:04.304 -06:00 [INF] Hosting environment: Development
+2025-11-23 12:26:04.304 -06:00 [INF] Content root path: D:\Projects\NetCore\ApiBackend\NetCoreApis\ProductApi
+2025-11-23 12:26:05.050 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/swagger/index.html - null null
+2025-11-23 12:26:05.755 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/swagger/index.html - 200 null text/html;charset=utf-8 727.5069ms
+2025-11-23 12:26:05.869 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/_framework/aspnetcore-browser-refresh.js - null null
+2025-11-23 12:26:05.869 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/_vs/browserLink - null null
+2025-11-23 12:26:05.876 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/_framework/aspnetcore-browser-refresh.js - 200 13756 application/javascript; charset=utf-8 7.2746ms
+2025-11-23 12:26:06.022 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/_vs/browserLink - 200 null text/javascript; charset=UTF-8 153.0831ms
+2025-11-23 12:26:06.198 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/swagger/v1/swagger.json - null null
+2025-11-23 12:26:06.530 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 332.3819ms
+2025-11-23 12:26:23.770 -06:00 [INF] Request starting HTTP/1.1 POST http://localhost:5269/api/v1/Product/Login - application/json 51
+2025-11-23 12:26:23.797 -06:00 [INF] CORS policy execution failed.
+2025-11-23 12:26:23.798 -06:00 [INF] Request origin http://localhost:5269 does not have permission to access the resource.
+2025-11-23 12:26:23.806 -06:00 [INF] CorrelationID: ["ecdf8626-5fec-461d-bf44-0d0f45bc7628"] - Request Path: /api/v1/Product/Login
+2025-11-23 12:26:25.506 -06:00 [INF] Executing endpoint 'ProductApi.Controllers.ProductController.Login (ProductApi)'
+2025-11-23 12:26:25.539 -06:00 [INF] Route matched with {action = "Login", controller = "Product"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(ProductApi.DTOs.LoginDto) on controller ProductApi.Controllers.ProductController (ProductApi).
+2025-11-23 12:26:26.346 -06:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-11-23 12:26:26.356 -06:00 [INF] Executed action ProductApi.Controllers.ProductController.Login (ProductApi) in 813.3295ms
+2025-11-23 12:26:26.357 -06:00 [INF] Executed endpoint 'ProductApi.Controllers.ProductController.Login (ProductApi)'
+2025-11-23 12:26:26.359 -06:00 [INF] Request finished HTTP/1.1 POST http://localhost:5269/api/v1/Product/Login - 200 null application/json; charset=utf-8 2589.9886ms
+2025-11-23 12:27:03.222 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/v1/Product/GetProducts - null null
+2025-11-23 12:27:03.227 -06:00 [INF] CorrelationID: ["5f2a5b0d-0a4a-4540-9abd-5c4e18d6b64e"] - Request Path: /api/v1/Product/GetProducts
+2025-11-23 12:27:03.509 -06:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException: IDX10503: Signature validation failed. Token does not have a kid. Keys tried: '[PII of type 'System.Text.StringBuilder' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'. 
+Exceptions caught:
+ '[PII of type 'System.Text.StringBuilder' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateSignature(JsonWebToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateSignatureAndIssuerSecurityKey(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-11-23 12:27:03.511 -06:00 [INF] Bearer was not authenticated. Failure message: IDX10503: Signature validation failed. Token does not have a kid. Keys tried: '[PII of type 'System.Text.StringBuilder' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'. 
+Exceptions caught:
+ '[PII of type 'System.Text.StringBuilder' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+2025-11-23 12:27:03.522 -06:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-11-23 12:27:03.535 -06:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-11-23 12:27:03.535 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/v1/Product/GetProducts - 401 0 null 313.1596ms
+2025-11-23 12:27:38.579 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/v1/Product/GetProducts - null null
+2025-11-23 12:27:38.581 -06:00 [INF] CorrelationID: ["80d15ac5-2bfd-43d2-be33-de5afe1fc928"] - Request Path: /api/v1/Product/GetProducts
+2025-11-23 12:27:38.621 -06:00 [INF] Executing endpoint 'ProductApi.Controllers.ProductController.GetProducts (ProductApi)'
+2025-11-23 12:27:38.632 -06:00 [INF] Route matched with {action = "GetProducts", controller = "Product"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetProducts() on controller ProductApi.Controllers.ProductController (ProductApi).
+2025-11-23 12:27:38.651 -06:00 [INF] Fetching products from database.
+2025-11-23 12:27:39.486 -06:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'ProductEntity'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-11-23 12:27:41.505 -06:00 [INF] Executed DbCommand (51ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Description], [p].[Name], [p].[Price], [p].[Stock]
+FROM [Products] AS [p]
+2025-11-23 12:27:41.606 -06:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ProductApi.DTOs.ProductDto, ProductApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-23 12:27:41.616 -06:00 [INF] Executed action ProductApi.Controllers.ProductController.GetProducts (ProductApi) in 2984.383ms
+2025-11-23 12:27:41.617 -06:00 [INF] Executed endpoint 'ProductApi.Controllers.ProductController.GetProducts (ProductApi)'
+2025-11-23 12:27:41.629 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/v1/Product/GetProducts - 200 null application/json; charset=utf-8 3049.8256ms
+2025-11-23 14:50:08.049 -06:00 [INF] User profile is available. Using 'C:\Users\arulg\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-11-23 14:50:08.342 -06:00 [INF] Now listening on: http://localhost:5269
+2025-11-23 14:50:08.426 -06:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-23 14:50:08.426 -06:00 [INF] Hosting environment: Development
+2025-11-23 14:50:08.426 -06:00 [INF] Content root path: D:\Projects\NetCore\ApiBackend\NetCoreApis\ProductApi
+2025-11-23 14:50:09.008 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/swagger/index.html - null null
+2025-11-23 14:50:09.512 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/swagger/index.html - 200 null text/html;charset=utf-8 516.1385ms
+2025-11-23 14:50:09.527 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/_framework/aspnetcore-browser-refresh.js - null null
+2025-11-23 14:50:09.533 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/_framework/aspnetcore-browser-refresh.js - 200 13756 application/javascript; charset=utf-8 6.6549ms
+2025-11-23 14:50:09.552 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/_vs/browserLink - null null
+2025-11-23 14:50:09.665 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/_vs/browserLink - 200 null text/javascript; charset=UTF-8 113.0005ms
+2025-11-23 14:50:09.858 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/swagger/v1/swagger.json - null null
+2025-11-23 14:50:10.108 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 250.0024ms
+2025-11-23 14:50:26.894 -06:00 [INF] Request starting HTTP/1.1 POST http://localhost:5269/api/v1/Product/Login - application/json 51
+2025-11-23 14:50:26.919 -06:00 [INF] CORS policy execution failed.
+2025-11-23 14:50:26.919 -06:00 [INF] Request origin http://localhost:5269 does not have permission to access the resource.
+2025-11-23 14:50:26.925 -06:00 [INF] CorrelationID: ["e85c5ecb-9516-4f2e-986d-4abc12886669"] - Request Path: /api/v1/Product/Login
+2025-11-23 14:50:28.677 -06:00 [INF] Executing endpoint 'ProductApi.Controllers.ProductController.Login (ProductApi)'
+2025-11-23 14:50:28.710 -06:00 [INF] Route matched with {action = "Login", controller = "Product"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(ProductApi.DTOs.LoginDto) on controller ProductApi.Controllers.ProductController (ProductApi).
+2025-11-23 14:50:29.484 -06:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-11-23 14:50:29.507 -06:00 [INF] Executed action ProductApi.Controllers.ProductController.Login (ProductApi) in 792.0157ms
+2025-11-23 14:50:29.507 -06:00 [INF] Executed endpoint 'ProductApi.Controllers.ProductController.Login (ProductApi)'
+2025-11-23 14:50:29.509 -06:00 [INF] Session started; Key:440c42d0-7bc4-b05f-787d-7e5b2dc3fae6, Id:0e1c1995-edaf-33fb-a238-e1c2a675ba21
+2025-11-23 14:50:29.512 -06:00 [INF] Request finished HTTP/1.1 POST http://localhost:5269/api/v1/Product/Login - 200 null application/json; charset=utf-8 2618.2253ms
+2025-11-23 14:51:03.786 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/v1/Product/GetProducts - null null
+2025-11-23 14:51:03.798 -06:00 [INF] CorrelationID: ["ea8d1b5b-38ad-4c06-8892-b1a0b22085f9"] - Request Path: /api/v1/Product/GetProducts
+2025-11-23 14:51:03.918 -06:00 [INF] Executing endpoint 'ProductApi.Controllers.ProductController.GetProducts (ProductApi)'
+2025-11-23 14:51:03.924 -06:00 [INF] Route matched with {action = "GetProducts", controller = "Product"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetProducts() on controller ProductApi.Controllers.ProductController (ProductApi).
+2025-11-23 14:51:03.943 -06:00 [INF] Fetching products from database.
+2025-11-23 14:51:04.779 -06:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'ProductEntity'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-11-23 14:51:06.674 -06:00 [INF] Executed DbCommand (56ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Description], [p].[Name], [p].[Price], [p].[Stock]
+FROM [Products] AS [p]
+2025-11-23 14:51:06.830 -06:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ProductApi.DTOs.ProductDto, ProductApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-23 14:51:06.841 -06:00 [INF] Executed action ProductApi.Controllers.ProductController.GetProducts (ProductApi) in 2916.1612ms
+2025-11-23 14:51:06.842 -06:00 [INF] Executed endpoint 'ProductApi.Controllers.ProductController.GetProducts (ProductApi)'
+2025-11-23 14:51:06.854 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/v1/Product/GetProducts - 200 null application/json; charset=utf-8 3068.2455ms
+2025-11-23 15:30:22.294 -06:00 [INF] User profile is available. Using 'C:\Users\arulg\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-11-23 15:30:22.586 -06:00 [INF] Now listening on: http://localhost:5269
+2025-11-23 15:30:22.670 -06:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-23 15:30:22.671 -06:00 [INF] Hosting environment: Development
+2025-11-23 15:30:22.671 -06:00 [INF] Content root path: D:\Projects\NetCore\ApiBackend\NetCoreApis\ProductApi
+2025-11-23 15:30:23.834 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/swagger/index.html - null null
+2025-11-23 15:30:24.397 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/swagger/index.html - 200 null text/html;charset=utf-8 567.5528ms
+2025-11-23 15:30:24.441 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/_framework/aspnetcore-browser-refresh.js - null null
+2025-11-23 15:30:24.450 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/_framework/aspnetcore-browser-refresh.js - 200 13756 application/javascript; charset=utf-8 9.8859ms
+2025-11-23 15:30:24.488 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/_vs/browserLink - null null
+2025-11-23 15:30:24.735 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/_vs/browserLink - 200 null text/javascript; charset=UTF-8 247.1428ms
+2025-11-23 15:30:24.905 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/swagger/v1/swagger.json - null null
+2025-11-23 15:30:25.222 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 316.7967ms
+2025-11-23 15:30:43.931 -06:00 [INF] Request starting HTTP/1.1 POST http://localhost:5269/api/v1/Product/Login - application/json 51
+2025-11-23 15:30:43.957 -06:00 [INF] CORS policy execution failed.
+2025-11-23 15:30:43.958 -06:00 [INF] Request origin http://localhost:5269 does not have permission to access the resource.
+2025-11-23 15:30:43.966 -06:00 [INF] CorrelationID: ["d25a66bf-41f8-4ce2-8cc5-967fb04a04d6"] - Request Path: /api/v1/Product/Login
+2025-11-23 15:30:44.080 -06:00 [INF] Executing endpoint 'ProductApi.Controllers.ProductController.Login (ProductApi)'
+2025-11-23 15:30:44.114 -06:00 [INF] Route matched with {action = "Login", controller = "Product"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(ProductApi.DTOs.LoginDto) on controller ProductApi.Controllers.ProductController (ProductApi).
+2025-11-23 15:30:44.453 -06:00 [INF] Accessing expired session, Key:440c42d0-7bc4-b05f-787d-7e5b2dc3fae6
+2025-11-23 15:30:44.495 -06:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-11-23 15:30:44.508 -06:00 [INF] Executed action ProductApi.Controllers.ProductController.Login (ProductApi) in 387.1044ms
+2025-11-23 15:30:44.508 -06:00 [INF] Executed endpoint 'ProductApi.Controllers.ProductController.Login (ProductApi)'
+2025-11-23 15:30:44.510 -06:00 [INF] Session started; Key:440c42d0-7bc4-b05f-787d-7e5b2dc3fae6, Id:db0b5ee3-ba1a-341f-6dcd-8e38a3fa14b9
+2025-11-23 15:30:44.515 -06:00 [INF] Request finished HTTP/1.1 POST http://localhost:5269/api/v1/Product/Login - 200 null application/json; charset=utf-8 584.4077ms
+2025-11-23 15:31:10.714 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/v1/Product/GetProducts - null null
+2025-11-23 15:31:10.719 -06:00 [INF] CorrelationID: ["5ba84880-895a-46ef-9398-bc6e7ad16f6c"] - Request Path: /api/v1/Product/GetProducts
+2025-11-23 15:31:10.844 -06:00 [INF] Executing endpoint 'ProductApi.Controllers.ProductController.GetProducts (ProductApi)'
+2025-11-23 15:31:10.854 -06:00 [INF] Route matched with {action = "GetProducts", controller = "Product"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetProducts() on controller ProductApi.Controllers.ProductController (ProductApi).
+2025-11-23 15:31:10.873 -06:00 [INF] Fetching products from database.
+2025-11-23 15:31:11.638 -06:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'ProductEntity'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-11-23 15:31:12.775 -06:00 [INF] Executed DbCommand (62ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Description], [p].[Name], [p].[Price], [p].[Stock]
+FROM [Products] AS [p]
+2025-11-23 15:31:12.898 -06:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ProductApi.DTOs.ProductDto, ProductApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-23 15:31:12.910 -06:00 [INF] Executed action ProductApi.Controllers.ProductController.GetProducts (ProductApi) in 2056.2369ms
+2025-11-23 15:31:12.912 -06:00 [INF] Executed endpoint 'ProductApi.Controllers.ProductController.GetProducts (ProductApi)'
+2025-11-23 15:31:12.929 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/v1/Product/GetProducts - 200 null application/json; charset=utf-8 2215.1357ms
+2025-11-23 15:39:50.323 -06:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/GetProducts - null null
+2025-11-23 15:39:50.331 -06:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/GetProducts - null null
+2025-11-23 15:39:50.332 -06:00 [INF] CORS policy execution successful.
+2025-11-23 15:39:50.335 -06:00 [INF] CORS policy execution successful.
+2025-11-23 15:39:50.337 -06:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/GetProducts - 204 null null 13.8248ms
+2025-11-23 15:39:50.337 -06:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/GetProducts - 204 null null 14.8059ms
+2025-11-23 15:39:50.344 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/v1/Product/GetProducts - null null
+2025-11-23 15:39:50.346 -06:00 [INF] CORS policy execution successful.
+2025-11-23 15:39:50.346 -06:00 [INF] CorrelationID: ["0824df56-548f-4540-a8be-9596b40bd8a1"] - Request Path: /api/v1/Product/GetProducts
+2025-11-23 15:39:50.357 -06:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/23/2025 4:52:13 AM', Current time (UTC): '11/23/2025 9:39:50 PM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-11-23 15:39:50.392 -06:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/23/2025 4:52:13 AM', Current time (UTC): '11/23/2025 9:39:50 PM'.
+2025-11-23 15:39:50.396 -06:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-11-23 15:39:50.402 -06:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-11-23 15:39:50.403 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/v1/Product/GetProducts - 401 0 null 63.2715ms
+2025-11-23 15:39:50.404 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/v1/Product/GetProducts - null null
+2025-11-23 15:39:50.405 -06:00 [INF] CORS policy execution successful.
+2025-11-23 15:39:50.405 -06:00 [INF] CorrelationID: ["7103baf4-8f93-402f-8adf-1e0bf0baf3c5"] - Request Path: /api/v1/Product/GetProducts
+2025-11-23 15:39:50.415 -06:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/23/2025 4:52:13 AM', Current time (UTC): '11/23/2025 9:39:50 PM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-11-23 15:39:50.416 -06:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/23/2025 4:52:13 AM', Current time (UTC): '11/23/2025 9:39:50 PM'.
+2025-11-23 15:39:50.419 -06:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-11-23 15:39:50.420 -06:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-11-23 15:39:50.420 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/v1/Product/GetProducts - 401 0 null 15.533ms
+2025-11-23 15:41:38.097 -06:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/GetProducts - null null
+2025-11-23 15:41:38.097 -06:00 [INF] CORS policy execution successful.
+2025-11-23 15:41:38.098 -06:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/GetProducts - 204 null null 1.0866ms
+2025-11-23 15:41:38.098 -06:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/GetProducts - null null
+2025-11-23 15:41:38.102 -06:00 [INF] CORS policy execution successful.
+2025-11-23 15:41:38.102 -06:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/GetProducts - 204 null null 3.9259ms
+2025-11-23 15:41:38.113 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/v1/Product/GetProducts - null null
+2025-11-23 15:41:38.113 -06:00 [INF] CORS policy execution successful.
+2025-11-23 15:41:38.113 -06:00 [INF] CorrelationID: ["340ecd14-f20a-48c3-b821-5b2fc28e9d77"] - Request Path: /api/v1/Product/GetProducts
+2025-11-23 15:41:38.114 -06:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/23/2025 4:52:13 AM', Current time (UTC): '11/23/2025 9:41:38 PM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-11-23 15:41:38.115 -06:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/23/2025 4:52:13 AM', Current time (UTC): '11/23/2025 9:41:38 PM'.
+2025-11-23 15:41:38.115 -06:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-11-23 15:41:38.115 -06:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-11-23 15:41:38.115 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/v1/Product/GetProducts - 401 0 null 2.6061ms
+2025-11-23 15:41:38.117 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/v1/Product/GetProducts - null null
+2025-11-23 15:41:38.117 -06:00 [INF] CORS policy execution successful.
+2025-11-23 15:41:38.117 -06:00 [INF] CorrelationID: ["d705e965-4fb9-4884-922c-18acfcb74483"] - Request Path: /api/v1/Product/GetProducts
+2025-11-23 15:41:38.118 -06:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/23/2025 4:52:13 AM', Current time (UTC): '11/23/2025 9:41:38 PM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-11-23 15:41:38.119 -06:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/23/2025 4:52:13 AM', Current time (UTC): '11/23/2025 9:41:38 PM'.
+2025-11-23 15:41:38.119 -06:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-11-23 15:41:38.119 -06:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-11-23 15:41:38.120 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/v1/Product/GetProducts - 401 0 null 2.6131ms
+2025-11-23 15:45:28.577 -06:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/GetProducts - null null
+2025-11-23 15:45:28.577 -06:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/GetProducts - null null
+2025-11-23 15:45:28.578 -06:00 [INF] CORS policy execution successful.
+2025-11-23 15:45:28.578 -06:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/GetProducts - 204 null null 1.1065ms
+2025-11-23 15:45:28.579 -06:00 [INF] CORS policy execution successful.
+2025-11-23 15:45:28.579 -06:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/GetProducts - 204 null null 1.7866ms
+2025-11-23 15:45:28.582 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/v1/Product/GetProducts - null null
+2025-11-23 15:45:28.582 -06:00 [INF] CORS policy execution successful.
+2025-11-23 15:45:28.582 -06:00 [INF] CorrelationID: ["dbef33a4-8334-42b6-ad37-b07674e12b8c"] - Request Path: /api/v1/Product/GetProducts
+2025-11-23 15:45:28.583 -06:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/23/2025 4:52:13 AM', Current time (UTC): '11/23/2025 9:45:28 PM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-11-23 15:45:28.584 -06:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/23/2025 4:52:13 AM', Current time (UTC): '11/23/2025 9:45:28 PM'.
+2025-11-23 15:45:28.584 -06:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-11-23 15:45:28.584 -06:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-11-23 15:45:28.584 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/v1/Product/GetProducts - 401 0 null 2.6269ms
+2025-11-23 15:45:28.587 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/v1/Product/GetProducts - null null
+2025-11-23 15:45:28.587 -06:00 [INF] CORS policy execution successful.
+2025-11-23 15:45:28.588 -06:00 [INF] CorrelationID: ["ceeb93c7-4cc8-4e42-b56b-9088a9cff1f7"] - Request Path: /api/v1/Product/GetProducts
+2025-11-23 15:45:28.593 -06:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/23/2025 4:52:13 AM', Current time (UTC): '11/23/2025 9:45:28 PM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-11-23 15:45:28.593 -06:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/23/2025 4:52:13 AM', Current time (UTC): '11/23/2025 9:45:28 PM'.
+2025-11-23 15:45:28.593 -06:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-11-23 15:45:28.593 -06:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-11-23 15:45:28.594 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/v1/Product/GetProducts - 401 0 null 6.869ms
+2025-11-23 15:46:20.328 -06:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/GetProducts - null null
+2025-11-23 15:46:20.329 -06:00 [INF] CORS policy execution successful.
+2025-11-23 15:46:20.333 -06:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/GetProducts - 204 null null 5.2573ms
+2025-11-23 15:46:20.334 -06:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/GetProducts - null null
+2025-11-23 15:46:20.334 -06:00 [INF] CORS policy execution successful.
+2025-11-23 15:46:20.335 -06:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/GetProducts - 204 null null 0.3543ms
+2025-11-23 15:46:20.367 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/v1/Product/GetProducts - null null
+2025-11-23 15:46:20.376 -06:00 [INF] CORS policy execution successful.
+2025-11-23 15:46:20.376 -06:00 [INF] CorrelationID: ["30b81c54-c90a-43da-9429-2de79bbd3c8d"] - Request Path: /api/v1/Product/GetProducts
+2025-11-23 15:46:20.394 -06:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/23/2025 4:52:13 AM', Current time (UTC): '11/23/2025 9:46:20 PM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-11-23 15:46:20.395 -06:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/23/2025 4:52:13 AM', Current time (UTC): '11/23/2025 9:46:20 PM'.
+2025-11-23 15:46:20.395 -06:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-11-23 15:46:20.395 -06:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-11-23 15:46:20.395 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/v1/Product/GetProducts - 401 0 null 28.2278ms
+2025-11-23 15:46:20.411 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/v1/Product/GetProducts - null null
+2025-11-23 15:46:20.411 -06:00 [INF] CORS policy execution successful.
+2025-11-23 15:46:20.412 -06:00 [INF] CorrelationID: ["ba6abbf2-8519-4ddf-9555-38ce3041f277"] - Request Path: /api/v1/Product/GetProducts
+2025-11-23 15:46:20.435 -06:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/23/2025 4:52:13 AM', Current time (UTC): '11/23/2025 9:46:20 PM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-11-23 15:46:20.435 -06:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/23/2025 4:52:13 AM', Current time (UTC): '11/23/2025 9:46:20 PM'.
+2025-11-23 15:46:20.435 -06:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-11-23 15:46:20.435 -06:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-11-23 15:46:20.436 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/v1/Product/GetProducts - 401 0 null 24.789ms
+2025-11-23 15:48:51.329 -06:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/GetProducts - null null
+2025-11-23 15:48:51.329 -06:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/GetProducts - null null
+2025-11-23 15:48:51.329 -06:00 [INF] CORS policy execution successful.
+2025-11-23 15:48:51.329 -06:00 [INF] CORS policy execution successful.
+2025-11-23 15:48:51.330 -06:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/GetProducts - 204 null null 0.6514ms
+2025-11-23 15:48:51.331 -06:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/GetProducts - 204 null null 1.2413ms
+2025-11-23 15:48:51.332 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/v1/Product/GetProducts - null null
+2025-11-23 15:48:51.333 -06:00 [INF] CORS policy execution successful.
+2025-11-23 15:48:51.333 -06:00 [INF] CorrelationID: ["ed28f7b3-b4cc-4c03-b7b0-80b471b4d1da"] - Request Path: /api/v1/Product/GetProducts
+2025-11-23 15:48:51.334 -06:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/23/2025 4:52:13 AM', Current time (UTC): '11/23/2025 9:48:51 PM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-11-23 15:48:51.334 -06:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/23/2025 4:52:13 AM', Current time (UTC): '11/23/2025 9:48:51 PM'.
+2025-11-23 15:48:51.334 -06:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-11-23 15:48:51.334 -06:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-11-23 15:48:51.335 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/v1/Product/GetProducts - 401 0 null 2.3639ms
+2025-11-23 15:48:51.364 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/v1/Product/GetProducts - null null
+2025-11-23 15:48:51.365 -06:00 [INF] CORS policy execution successful.
+2025-11-23 15:48:51.365 -06:00 [INF] CorrelationID: ["524ec553-c08e-4c13-b263-e60f5a0c2d94"] - Request Path: /api/v1/Product/GetProducts
+2025-11-23 15:48:51.391 -06:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/23/2025 4:52:13 AM', Current time (UTC): '11/23/2025 9:48:51 PM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-11-23 15:48:51.392 -06:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/23/2025 4:52:13 AM', Current time (UTC): '11/23/2025 9:48:51 PM'.
+2025-11-23 15:48:51.392 -06:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-11-23 15:48:51.392 -06:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-11-23 15:48:51.392 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/v1/Product/GetProducts - 401 0 null 27.5981ms
+2025-11-23 15:49:24.862 -06:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/GetProducts - null null
+2025-11-23 15:49:24.862 -06:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/GetProducts - null null
+2025-11-23 15:49:24.862 -06:00 [INF] CORS policy execution successful.
+2025-11-23 15:49:24.862 -06:00 [INF] CORS policy execution successful.
+2025-11-23 15:49:24.863 -06:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/GetProducts - 204 null null 0.4344ms
+2025-11-23 15:49:24.863 -06:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/GetProducts - 204 null null 0.644ms
+2025-11-23 15:49:24.871 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/v1/Product/GetProducts - null null
+2025-11-23 15:49:24.895 -06:00 [INF] CORS policy execution successful.
+2025-11-23 15:49:24.897 -06:00 [INF] CorrelationID: ["1258e629-09c7-4e66-93e5-f46c1edffb6f"] - Request Path: /api/v1/Product/GetProducts
+2025-11-23 15:49:24.899 -06:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/23/2025 4:52:13 AM', Current time (UTC): '11/23/2025 9:49:24 PM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-11-23 15:49:24.900 -06:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/23/2025 4:52:13 AM', Current time (UTC): '11/23/2025 9:49:24 PM'.
+2025-11-23 15:49:24.900 -06:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-11-23 15:49:24.900 -06:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-11-23 15:49:24.900 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/v1/Product/GetProducts - 401 0 null 29.4656ms
+2025-11-23 15:49:24.902 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/v1/Product/GetProducts - null null
+2025-11-23 15:49:24.902 -06:00 [INF] CORS policy execution successful.
+2025-11-23 15:49:24.902 -06:00 [INF] CorrelationID: ["a1387214-7584-48f8-b94b-10b3949d95f6"] - Request Path: /api/v1/Product/GetProducts
+2025-11-23 15:49:24.904 -06:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/23/2025 4:52:13 AM', Current time (UTC): '11/23/2025 9:49:24 PM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-11-23 15:49:24.905 -06:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/23/2025 4:52:13 AM', Current time (UTC): '11/23/2025 9:49:24 PM'.
+2025-11-23 15:49:24.905 -06:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-11-23 15:49:24.906 -06:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-11-23 15:49:24.906 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/v1/Product/GetProducts - 401 0 null 4.5203ms
+2025-11-23 15:49:26.632 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/v1/Product/GetProducts - null null
+2025-11-23 15:49:26.632 -06:00 [INF] CORS policy execution successful.
+2025-11-23 15:49:26.633 -06:00 [INF] CorrelationID: ["f33f9a5c-bac4-4569-863e-831965b231fe"] - Request Path: /api/v1/Product/GetProducts
+2025-11-23 15:49:26.634 -06:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/23/2025 4:52:13 AM', Current time (UTC): '11/23/2025 9:49:26 PM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-11-23 15:49:26.634 -06:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/23/2025 4:52:13 AM', Current time (UTC): '11/23/2025 9:49:26 PM'.
+2025-11-23 15:49:26.635 -06:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-11-23 15:49:26.635 -06:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-11-23 15:49:26.635 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/v1/Product/GetProducts - 401 0 null 3.4283ms
+2025-11-23 15:49:26.636 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/v1/Product/GetProducts - null null
+2025-11-23 15:49:26.641 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/v1/Product/GetProducts - 429 null null 5.2058ms
+2025-11-23 15:49:27.624 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/v1/Product/GetProducts - null null
+2025-11-23 15:49:27.625 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/v1/Product/GetProducts - 429 null null 0.5847ms
+2025-11-23 15:49:27.627 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/v1/Product/GetProducts - null null
+2025-11-23 15:49:27.628 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/v1/Product/GetProducts - 429 null null 0.9396ms
+2025-11-23 15:49:29.058 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/v1/Product/GetProducts - null null
+2025-11-23 15:49:29.059 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/v1/Product/GetProducts - 429 null null 0.6144ms
+2025-11-23 15:49:29.060 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/v1/Product/GetProducts - null null
+2025-11-23 15:49:29.064 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/v1/Product/GetProducts - 429 null null 3.0985ms
+2025-11-23 15:49:31.243 -06:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/GetProducts - null null
+2025-11-23 15:49:31.243 -06:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/GetProducts - null null
+2025-11-23 15:49:31.243 -06:00 [INF] CORS policy execution successful.
+2025-11-23 15:49:31.243 -06:00 [INF] CORS policy execution successful.
+2025-11-23 15:49:31.243 -06:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/GetProducts - 204 null null 0.682ms
+2025-11-23 15:49:31.246 -06:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/GetProducts - 204 null null 2.7808ms
+2025-11-23 15:49:31.251 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/v1/Product/GetProducts - null null
+2025-11-23 15:49:31.251 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/v1/Product/GetProducts - 429 null null 0.4314ms
+2025-11-23 15:49:31.257 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/v1/Product/GetProducts - null null
+2025-11-23 15:49:31.257 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/v1/Product/GetProducts - 429 null null 0.6972ms
+2025-11-23 15:50:01.682 -06:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/GetProducts - null null
+2025-11-23 15:50:01.683 -06:00 [INF] CORS policy execution successful.
+2025-11-23 15:50:01.683 -06:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/GetProducts - 204 null null 0.3323ms
+2025-11-23 15:50:01.684 -06:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/GetProducts - null null
+2025-11-23 15:50:01.684 -06:00 [INF] CORS policy execution successful.
+2025-11-23 15:50:01.686 -06:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/GetProducts - 204 null null 0.2928ms
+2025-11-23 15:50:01.687 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/v1/Product/GetProducts - null null
+2025-11-23 15:50:01.691 -06:00 [INF] CORS policy execution successful.
+2025-11-23 15:50:01.691 -06:00 [INF] CorrelationID: ["bc56c890-3963-4ef7-a129-95d99ceb4ff9"] - Request Path: /api/v1/Product/GetProducts
+2025-11-23 15:50:01.692 -06:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/23/2025 4:52:13 AM', Current time (UTC): '11/23/2025 9:50:01 PM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-11-23 15:50:01.692 -06:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/23/2025 4:52:13 AM', Current time (UTC): '11/23/2025 9:50:01 PM'.
+2025-11-23 15:50:01.693 -06:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-11-23 15:50:01.693 -06:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-11-23 15:50:01.693 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/v1/Product/GetProducts - 401 0 null 5.3483ms
+2025-11-23 15:50:01.703 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/v1/Product/GetProducts - null null
+2025-11-23 15:50:01.704 -06:00 [INF] CORS policy execution successful.
+2025-11-23 15:50:01.704 -06:00 [INF] CorrelationID: ["319d3927-310b-4efd-9607-f946b3c10544"] - Request Path: /api/v1/Product/GetProducts
+2025-11-23 15:50:01.712 -06:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/23/2025 4:52:13 AM', Current time (UTC): '11/23/2025 9:50:01 PM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-11-23 15:50:01.713 -06:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/23/2025 4:52:13 AM', Current time (UTC): '11/23/2025 9:50:01 PM'.
+2025-11-23 15:50:01.713 -06:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-11-23 15:50:01.714 -06:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-11-23 15:50:01.714 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/v1/Product/GetProducts - 401 0 null 10.4333ms
+2025-11-23 15:50:12.162 -06:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/CreateProduct/ - null null
+2025-11-23 15:50:12.162 -06:00 [INF] CORS policy execution successful.
+2025-11-23 15:50:12.162 -06:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/CreateProduct/ - 204 null null 0.8902ms
+2025-11-23 15:50:12.164 -06:00 [INF] Request starting HTTP/1.1 POST http://localhost:5269/api/v1/Product/CreateProduct/ - application/json 54
+2025-11-23 15:50:12.164 -06:00 [INF] CORS policy execution successful.
+2025-11-23 15:50:12.164 -06:00 [INF] CorrelationID: ["07dc9f2e-81cb-4514-84b2-92cc7edbe0b1"] - Request Path: /api/v1/Product/CreateProduct/
+2025-11-23 15:50:12.165 -06:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/23/2025 4:52:13 AM', Current time (UTC): '11/23/2025 9:50:12 PM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-11-23 15:50:12.165 -06:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/23/2025 4:52:13 AM', Current time (UTC): '11/23/2025 9:50:12 PM'.
+2025-11-23 15:50:12.166 -06:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-11-23 15:50:12.166 -06:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-11-23 15:50:12.166 -06:00 [INF] Request finished HTTP/1.1 POST http://localhost:5269/api/v1/Product/CreateProduct/ - 401 0 null 2.3316ms
+2025-11-23 15:54:07.688 -06:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/GetProducts - null null
+2025-11-23 15:54:07.688 -06:00 [INF] CORS policy execution successful.
+2025-11-23 15:54:07.689 -06:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/GetProducts - 204 null null 0.4371ms
+2025-11-23 15:54:07.689 -06:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/GetProducts - null null
+2025-11-23 15:54:07.689 -06:00 [INF] CORS policy execution successful.
+2025-11-23 15:54:07.689 -06:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/GetProducts - 204 null null 0.3547ms
+2025-11-23 15:54:07.692 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/v1/Product/GetProducts - null null
+2025-11-23 15:54:07.692 -06:00 [INF] CORS policy execution successful.
+2025-11-23 15:54:07.692 -06:00 [INF] CorrelationID: ["e1419c59-6232-4b16-b8be-4f7f9d4396b0"] - Request Path: /api/v1/Product/GetProducts
+2025-11-23 15:54:07.700 -06:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/23/2025 4:52:13 AM', Current time (UTC): '11/23/2025 9:54:07 PM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-11-23 15:54:07.701 -06:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/23/2025 4:52:13 AM', Current time (UTC): '11/23/2025 9:54:07 PM'.
+2025-11-23 15:54:07.701 -06:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-11-23 15:54:07.701 -06:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-11-23 15:54:07.701 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/v1/Product/GetProducts - 401 0 null 9.2086ms
+2025-11-23 15:54:07.709 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/v1/Product/GetProducts - null null
+2025-11-23 15:54:07.711 -06:00 [INF] CORS policy execution successful.
+2025-11-23 15:54:07.711 -06:00 [INF] CorrelationID: ["45cf379f-2218-4bf3-ab67-c0b63a68549b"] - Request Path: /api/v1/Product/GetProducts
+2025-11-23 15:54:07.712 -06:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/23/2025 4:52:13 AM', Current time (UTC): '11/23/2025 9:54:07 PM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-11-23 15:54:07.712 -06:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/23/2025 4:52:13 AM', Current time (UTC): '11/23/2025 9:54:07 PM'.
+2025-11-23 15:54:07.712 -06:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-11-23 15:54:07.713 -06:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-11-23 15:54:07.713 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/v1/Product/GetProducts - 401 0 null 3.4636ms
+2025-11-23 15:58:45.843 -06:00 [INF] User profile is available. Using 'C:\Users\arulg\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-11-23 15:58:46.136 -06:00 [INF] Now listening on: http://localhost:5269
+2025-11-23 15:58:46.222 -06:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-23 15:58:46.223 -06:00 [INF] Hosting environment: Development
+2025-11-23 15:58:46.223 -06:00 [INF] Content root path: D:\Projects\NetCore\ApiBackend\NetCoreApis\ProductApi
+2025-11-23 15:58:47.107 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/swagger/index.html - null null
+2025-11-23 15:58:47.601 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/swagger/index.html - 200 null text/html;charset=utf-8 502.8579ms
+2025-11-23 15:58:47.663 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/_framework/aspnetcore-browser-refresh.js - null null
+2025-11-23 15:58:47.675 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/_framework/aspnetcore-browser-refresh.js - 200 13756 application/javascript; charset=utf-8 13.1354ms
+2025-11-23 15:58:47.684 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/_vs/browserLink - null null
+2025-11-23 15:58:47.954 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/_vs/browserLink - 200 null text/javascript; charset=UTF-8 269.9765ms
+2025-11-23 15:58:48.139 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/swagger/v1/swagger.json - null null
+2025-11-23 15:58:48.429 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 289.4139ms
+2025-11-23 15:59:04.279 -06:00 [INF] Request starting HTTP/1.1 POST http://localhost:5269/api/v1/Product/Login - application/json 51
+2025-11-23 15:59:04.329 -06:00 [INF] CORS policy execution failed.
+2025-11-23 15:59:04.329 -06:00 [INF] Request origin http://localhost:5269 does not have permission to access the resource.
+2025-11-23 15:59:04.338 -06:00 [INF] CorrelationID: ["f2fa9a9d-38dc-42dd-8516-3be74ef5c4a4"] - Request Path: /api/v1/Product/Login
+2025-11-23 15:59:04.494 -06:00 [INF] Executing endpoint 'ProductApi.Controllers.ProductController.Login (ProductApi)'
+2025-11-23 15:59:04.531 -06:00 [INF] Route matched with {action = "Login", controller = "Product"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(ProductApi.DTOs.LoginDto) on controller ProductApi.Controllers.ProductController (ProductApi).
+2025-11-23 15:59:04.910 -06:00 [INF] Accessing expired session, Key:440c42d0-7bc4-b05f-787d-7e5b2dc3fae6
+2025-11-23 15:59:04.953 -06:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-11-23 15:59:04.965 -06:00 [INF] Executed action ProductApi.Controllers.ProductController.Login (ProductApi) in 428.3459ms
+2025-11-23 15:59:04.965 -06:00 [INF] Executed endpoint 'ProductApi.Controllers.ProductController.Login (ProductApi)'
+2025-11-23 15:59:04.966 -06:00 [INF] Session started; Key:440c42d0-7bc4-b05f-787d-7e5b2dc3fae6, Id:10c4200f-5436-6149-9191-299e47511ef6
+2025-11-23 15:59:04.972 -06:00 [INF] Request finished HTTP/1.1 POST http://localhost:5269/api/v1/Product/Login - 200 null application/json; charset=utf-8 692.3389ms
+2025-11-23 15:59:42.275 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/v1/Product/GetProducts - null null
+2025-11-23 15:59:42.281 -06:00 [INF] CorrelationID: ["736d98e3-d330-45e1-8181-809c3360e7ab"] - Request Path: /api/v1/Product/GetProducts
+2025-11-23 15:59:42.359 -06:00 [INF] Executing endpoint 'ProductApi.Controllers.ProductController.GetProducts (ProductApi)'
+2025-11-23 15:59:42.367 -06:00 [INF] Route matched with {action = "GetProducts", controller = "Product"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetProducts() on controller ProductApi.Controllers.ProductController (ProductApi).
+2025-11-23 15:59:48.972 -06:00 [INF] Fetching products from database.
+2025-11-23 15:59:49.617 -06:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'ProductEntity'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-11-23 15:59:50.956 -06:00 [INF] Executed DbCommand (102ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Description], [p].[Name], [p].[Price], [p].[Stock]
+FROM [Products] AS [p]
+2025-11-23 15:59:51.132 -06:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ProductApi.DTOs.ProductDto, ProductApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-23 15:59:51.146 -06:00 [INF] Executed action ProductApi.Controllers.ProductController.GetProducts (ProductApi) in 8779.1689ms
+2025-11-23 15:59:51.150 -06:00 [INF] Executed endpoint 'ProductApi.Controllers.ProductController.GetProducts (ProductApi)'
+2025-11-23 15:59:51.168 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/v1/Product/GetProducts - 200 null application/json; charset=utf-8 8893.7398ms
+2025-11-23 16:00:04.584 -06:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/GetProducts - null null
+2025-11-23 16:00:04.589 -06:00 [INF] CORS policy execution successful.
+2025-11-23 16:00:04.592 -06:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/GetProducts - 204 null null 9.4671ms
+2025-11-23 16:00:04.603 -06:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/GetProducts - null null
+2025-11-23 16:00:04.603 -06:00 [INF] CORS policy execution successful.
+2025-11-23 16:00:04.603 -06:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/GetProducts - 204 null null 0.5393ms
+2025-11-23 16:00:04.610 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/v1/Product/GetProducts - null null
+2025-11-23 16:00:04.611 -06:00 [INF] CORS policy execution successful.
+2025-11-23 16:00:04.611 -06:00 [INF] CorrelationID: ["42c8bfc2-fc50-4b71-abaf-b012c1abfb4f"] - Request Path: /api/v1/Product/GetProducts
+2025-11-23 16:00:04.624 -06:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/23/2025 4:52:13 AM', Current time (UTC): '11/23/2025 10:00:04 PM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-11-23 16:00:04.705 -06:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/23/2025 4:52:13 AM', Current time (UTC): '11/23/2025 10:00:04 PM'.
+2025-11-23 16:00:04.713 -06:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-11-23 16:00:04.728 -06:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-11-23 16:00:04.729 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/v1/Product/GetProducts - 401 0 null 118.6394ms
+2025-11-23 16:00:04.744 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/v1/Product/GetProducts - null null
+2025-11-23 16:00:04.744 -06:00 [INF] CORS policy execution successful.
+2025-11-23 16:00:04.745 -06:00 [INF] CorrelationID: ["76a241fd-83f2-4bdc-98e7-c14b94c01122"] - Request Path: /api/v1/Product/GetProducts
+2025-11-23 16:00:04.755 -06:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/23/2025 4:52:13 AM', Current time (UTC): '11/23/2025 10:00:04 PM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-11-23 16:00:04.755 -06:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/23/2025 4:52:13 AM', Current time (UTC): '11/23/2025 10:00:04 PM'.
+2025-11-23 16:00:04.758 -06:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-11-23 16:00:04.759 -06:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-11-23 16:00:04.760 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/v1/Product/GetProducts - 401 0 null 16.2334ms
+2025-11-23 16:12:20.852 -06:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/GetProducts - null null
+2025-11-23 16:12:20.852 -06:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/GetProducts - null null
+2025-11-23 16:12:20.853 -06:00 [INF] CORS policy execution successful.
+2025-11-23 16:12:20.853 -06:00 [INF] CORS policy execution successful.
+2025-11-23 16:12:20.853 -06:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/GetProducts - 204 null null 1.104ms
+2025-11-23 16:12:20.853 -06:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/GetProducts - 204 null null 1.2288ms
+2025-11-23 16:12:20.913 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/v1/Product/GetProducts - null null
+2025-11-23 16:12:20.920 -06:00 [INF] CORS policy execution successful.
+2025-11-23 16:12:20.921 -06:00 [INF] CorrelationID: ["acf78307-7434-4442-96d8-b2895e0a77f7"] - Request Path: /api/v1/Product/GetProducts
+2025-11-23 16:12:20.928 -06:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/23/2025 4:52:13 AM', Current time (UTC): '11/23/2025 10:12:20 PM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-11-23 16:12:20.929 -06:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/23/2025 4:52:13 AM', Current time (UTC): '11/23/2025 10:12:20 PM'.
+2025-11-23 16:12:20.929 -06:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-11-23 16:12:20.929 -06:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-11-23 16:12:20.929 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/v1/Product/GetProducts - 401 0 null 15.8278ms
+2025-11-23 16:12:20.985 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/v1/Product/GetProducts - null null
+2025-11-23 16:12:20.985 -06:00 [INF] CORS policy execution successful.
+2025-11-23 16:12:20.985 -06:00 [INF] CorrelationID: ["1f6ec7b6-9dba-4596-bd05-858d8b5079b9"] - Request Path: /api/v1/Product/GetProducts
+2025-11-23 16:12:20.991 -06:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/23/2025 4:52:13 AM', Current time (UTC): '11/23/2025 10:12:20 PM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-11-23 16:12:20.992 -06:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/23/2025 4:52:13 AM', Current time (UTC): '11/23/2025 10:12:20 PM'.
+2025-11-23 16:12:20.992 -06:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-11-23 16:12:20.993 -06:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-11-23 16:12:20.993 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/v1/Product/GetProducts - 401 0 null 8.2993ms
+2025-11-23 16:15:25.697 -06:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/getProducts - null null
+2025-11-23 16:15:25.697 -06:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/getProducts - null null
+2025-11-23 16:15:25.707 -06:00 [INF] CORS policy execution successful.
+2025-11-23 16:15:25.707 -06:00 [INF] CORS policy execution successful.
+2025-11-23 16:15:25.707 -06:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/getProducts - 204 null null 10.6091ms
+2025-11-23 16:15:25.707 -06:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/getProducts - 204 null null 10.6094ms
+2025-11-23 16:15:25.739 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/v1/Product/getProducts - null null
+2025-11-23 16:15:25.739 -06:00 [INF] CORS policy execution successful.
+2025-11-23 16:15:25.739 -06:00 [INF] CorrelationID: ["00c99a88-1168-4f7d-8604-b7707c7a04b3"] - Request Path: /api/v1/Product/getProducts
+2025-11-23 16:15:25.742 -06:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/23/2025 4:52:13 AM', Current time (UTC): '11/23/2025 10:15:25 PM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-11-23 16:15:25.743 -06:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/23/2025 4:52:13 AM', Current time (UTC): '11/23/2025 10:15:25 PM'.
+2025-11-23 16:15:25.743 -06:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-11-23 16:15:25.743 -06:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-11-23 16:15:25.744 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/v1/Product/getProducts - 401 0 null 5.0356ms
+2025-11-23 16:15:25.787 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/v1/Product/getProducts - null null
+2025-11-23 16:15:25.787 -06:00 [INF] CORS policy execution successful.
+2025-11-23 16:15:25.788 -06:00 [INF] CorrelationID: ["0d9a6cd1-85df-4306-b18c-9c1948f7cbf7"] - Request Path: /api/v1/Product/getProducts
+2025-11-23 16:15:25.792 -06:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/23/2025 4:52:13 AM', Current time (UTC): '11/23/2025 10:15:25 PM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-11-23 16:15:25.792 -06:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/23/2025 4:52:13 AM', Current time (UTC): '11/23/2025 10:15:25 PM'.
+2025-11-23 16:15:25.793 -06:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-11-23 16:15:25.793 -06:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-11-23 16:15:25.793 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/v1/Product/getProducts - 401 0 null 6.1027ms
+2025-11-23 16:20:05.788 -06:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/getProducts - null null
+2025-11-23 16:20:05.789 -06:00 [INF] CORS policy execution successful.
+2025-11-23 16:20:05.790 -06:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/getProducts - 204 null null 1.9927ms
+2025-11-23 16:20:05.790 -06:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/getProducts - null null
+2025-11-23 16:20:05.790 -06:00 [INF] CORS policy execution successful.
+2025-11-23 16:20:05.791 -06:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/getProducts - 204 null null 0.5379ms
+2025-11-23 16:20:05.815 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/v1/Product/getProducts - null null
+2025-11-23 16:20:05.815 -06:00 [INF] CORS policy execution successful.
+2025-11-23 16:20:05.820 -06:00 [INF] CorrelationID: ["b7995de7-0a92-4bb5-a76b-e6208689cbfe"] - Request Path: /api/v1/Product/getProducts
+2025-11-23 16:20:05.829 -06:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/23/2025 4:52:13 AM', Current time (UTC): '11/23/2025 10:20:05 PM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-11-23 16:20:05.830 -06:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/23/2025 4:52:13 AM', Current time (UTC): '11/23/2025 10:20:05 PM'.
+2025-11-23 16:20:05.831 -06:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-11-23 16:20:05.831 -06:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-11-23 16:20:05.831 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/v1/Product/getProducts - 401 0 null 18.8118ms
+2025-11-23 16:20:05.834 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/v1/Product/getProducts - null null
+2025-11-23 16:20:05.834 -06:00 [INF] CORS policy execution successful.
+2025-11-23 16:20:05.834 -06:00 [INF] CorrelationID: ["44e04ede-c3bf-4267-a86e-0a45a344b8b4"] - Request Path: /api/v1/Product/getProducts
+2025-11-23 16:20:05.835 -06:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/23/2025 4:52:13 AM', Current time (UTC): '11/23/2025 10:20:05 PM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-11-23 16:20:05.837 -06:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/23/2025 4:52:13 AM', Current time (UTC): '11/23/2025 10:20:05 PM'.
+2025-11-23 16:20:05.837 -06:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-11-23 16:20:05.837 -06:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-11-23 16:20:05.838 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/v1/Product/getProducts - 401 0 null 4.0374ms
+2025-11-23 16:32:23.848 -06:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/GetProducts - null null
+2025-11-23 16:32:23.848 -06:00 [INF] CORS policy execution successful.
+2025-11-23 16:32:23.849 -06:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/GetProducts - 204 null null 1.2049ms
+2025-11-23 16:32:23.852 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/v1/Product/GetProducts - null null
+2025-11-23 16:32:23.853 -06:00 [INF] CORS policy execution successful.
+2025-11-23 16:32:23.853 -06:00 [INF] CorrelationID: ["c02cb2ae-47e1-4b9f-b6d8-a47dcc48a60c"] - Request Path: /api/v1/Product/GetProducts
+2025-11-23 16:32:23.854 -06:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/23/2025 4:52:13 AM', Current time (UTC): '11/23/2025 10:32:23 PM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-11-23 16:32:23.855 -06:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/23/2025 4:52:13 AM', Current time (UTC): '11/23/2025 10:32:23 PM'.
+2025-11-23 16:32:23.855 -06:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-11-23 16:32:23.855 -06:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-11-23 16:32:23.855 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/v1/Product/GetProducts - 401 0 null 3.0285ms
+2025-11-23 16:32:23.857 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/v1/Product/GetProducts - null null
+2025-11-23 16:32:23.857 -06:00 [INF] CORS policy execution successful.
+2025-11-23 16:32:23.857 -06:00 [INF] CorrelationID: ["8d34cfd3-6544-47da-892b-f83a89fa3e8b"] - Request Path: /api/v1/Product/GetProducts
+2025-11-23 16:32:23.858 -06:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/23/2025 4:52:13 AM', Current time (UTC): '11/23/2025 10:32:23 PM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-11-23 16:32:23.858 -06:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/23/2025 4:52:13 AM', Current time (UTC): '11/23/2025 10:32:23 PM'.
+2025-11-23 16:32:23.858 -06:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-11-23 16:32:23.858 -06:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-11-23 16:32:23.858 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/v1/Product/GetProducts - 401 0 null 2.0029ms
+2025-11-23 16:34:09.780 -06:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/products - null null
+2025-11-23 16:34:09.781 -06:00 [INF] CORS policy execution successful.
+2025-11-23 16:34:09.783 -06:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/products - 204 null null 2.5938ms
+2025-11-23 16:34:09.786 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/v1/Product/products - null null
+2025-11-23 16:34:09.786 -06:00 [INF] CORS policy execution successful.
+2025-11-23 16:34:09.786 -06:00 [INF] CorrelationID: ["200b1569-e7d9-4c05-8088-849b284f3bed"] - Request Path: /api/v1/Product/products
+2025-11-23 16:34:09.787 -06:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/23/2025 4:52:13 AM', Current time (UTC): '11/23/2025 10:34:09 PM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-11-23 16:34:09.787 -06:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/23/2025 4:52:13 AM', Current time (UTC): '11/23/2025 10:34:09 PM'.
+2025-11-23 16:34:09.788 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/v1/Product/products - 404 0 null 2.4244ms
+2025-11-23 16:34:09.791 -06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5269/api/v1/Product/products, Response status code: 404
+2025-11-23 16:34:18.199 -06:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/products - null null
+2025-11-23 16:34:18.199 -06:00 [INF] CORS policy execution successful.
+2025-11-23 16:34:18.199 -06:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/products - 204 null null 0.3989ms
+2025-11-23 16:34:18.199 -06:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/products - null null
+2025-11-23 16:34:18.199 -06:00 [INF] CORS policy execution successful.
+2025-11-23 16:34:18.199 -06:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/products - 204 null null 0.2316ms
+2025-11-23 16:34:18.209 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/v1/Product/products - null null
+2025-11-23 16:34:18.209 -06:00 [INF] CORS policy execution successful.
+2025-11-23 16:34:18.209 -06:00 [INF] CorrelationID: ["91c22402-4fc1-438e-a552-8fc344de5f06"] - Request Path: /api/v1/Product/products
+2025-11-23 16:34:18.217 -06:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/23/2025 4:52:13 AM', Current time (UTC): '11/23/2025 10:34:18 PM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-11-23 16:34:18.218 -06:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/23/2025 4:52:13 AM', Current time (UTC): '11/23/2025 10:34:18 PM'.
+2025-11-23 16:34:18.218 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/v1/Product/products - 404 0 null 9.4537ms
+2025-11-23 16:34:18.218 -06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5269/api/v1/Product/products, Response status code: 404
+2025-11-23 16:34:18.220 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/v1/Product/products - null null
+2025-11-23 16:34:18.220 -06:00 [INF] CORS policy execution successful.
+2025-11-23 16:34:18.220 -06:00 [INF] CorrelationID: ["915b837e-0950-4c3e-9dd3-980b9d5b68a3"] - Request Path: /api/v1/Product/products
+2025-11-23 16:34:18.221 -06:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/23/2025 4:52:13 AM', Current time (UTC): '11/23/2025 10:34:18 PM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-11-23 16:34:18.222 -06:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/23/2025 4:52:13 AM', Current time (UTC): '11/23/2025 10:34:18 PM'.
+2025-11-23 16:34:18.222 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/v1/Product/products - 404 0 null 2.2827ms
+2025-11-23 16:34:18.222 -06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5269/api/v1/Product/products, Response status code: 404
+2025-11-23 16:36:37.834 -06:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/products - null null
+2025-11-23 16:36:37.835 -06:00 [INF] CORS policy execution successful.
+2025-11-23 16:36:37.836 -06:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/products - 204 null null 3.9311ms
+2025-11-23 16:36:37.841 -06:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/products - null null
+2025-11-23 16:36:37.841 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/v1/Product/products - null null
+2025-11-23 16:36:37.842 -06:00 [INF] CORS policy execution successful.
+2025-11-23 16:36:37.842 -06:00 [INF] CORS policy execution successful.
+2025-11-23 16:36:37.842 -06:00 [INF] CorrelationID: ["b3d60b11-1b49-4d0a-beef-7ae1ed034dc2"] - Request Path: /api/v1/Product/products
+2025-11-23 16:36:37.842 -06:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/products - 204 null null 0.4667ms
+2025-11-23 16:36:37.845 -06:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/23/2025 4:52:13 AM', Current time (UTC): '11/23/2025 10:36:37 PM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-11-23 16:36:37.845 -06:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/23/2025 4:52:13 AM', Current time (UTC): '11/23/2025 10:36:37 PM'.
+2025-11-23 16:36:37.845 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/v1/Product/products - 404 0 null 4.1233ms
+2025-11-23 16:36:37.846 -06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5269/api/v1/Product/products, Response status code: 404
+2025-11-23 16:36:37.850 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/v1/Product/products - null null
+2025-11-23 16:36:37.850 -06:00 [INF] CORS policy execution successful.
+2025-11-23 16:36:37.851 -06:00 [INF] CorrelationID: ["3112a5ce-b20e-4b3e-86cf-b30722ab281a"] - Request Path: /api/v1/Product/products
+2025-11-23 16:36:37.852 -06:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/23/2025 4:52:13 AM', Current time (UTC): '11/23/2025 10:36:37 PM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-11-23 16:36:37.852 -06:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/23/2025 4:52:13 AM', Current time (UTC): '11/23/2025 10:36:37 PM'.
+2025-11-23 16:36:37.852 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/v1/Product/products - 404 0 null 2.1699ms
+2025-11-23 16:36:37.852 -06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5269/api/v1/Product/products, Response status code: 404
+2025-11-23 16:37:10.834 -06:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/products - null null
+2025-11-23 16:37:10.834 -06:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/products - null null
+2025-11-23 16:37:10.834 -06:00 [INF] CORS policy execution successful.
+2025-11-23 16:37:10.834 -06:00 [INF] CORS policy execution successful.
+2025-11-23 16:37:10.835 -06:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/products - 204 null null 0.6745ms
+2025-11-23 16:37:10.835 -06:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/products - 204 null null 0.2957ms
+2025-11-23 16:37:10.837 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/v1/Product/products - null null
+2025-11-23 16:37:10.837 -06:00 [INF] CORS policy execution successful.
+2025-11-23 16:37:10.837 -06:00 [INF] CorrelationID: ["95002f74-e945-40da-bf78-b70b764a526b"] - Request Path: /api/v1/Product/products
+2025-11-23 16:37:10.838 -06:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/23/2025 4:52:13 AM', Current time (UTC): '11/23/2025 10:37:10 PM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-11-23 16:37:10.839 -06:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/23/2025 4:52:13 AM', Current time (UTC): '11/23/2025 10:37:10 PM'.
+2025-11-23 16:37:10.839 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/v1/Product/products - 404 0 null 1.9137ms
+2025-11-23 16:37:10.839 -06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5269/api/v1/Product/products, Response status code: 404
+2025-11-23 16:37:10.841 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/v1/Product/products - null null
+2025-11-23 16:37:10.841 -06:00 [INF] CORS policy execution successful.
+2025-11-23 16:37:10.841 -06:00 [INF] CorrelationID: ["0dc3a416-e10b-426d-bc49-327760ba5098"] - Request Path: /api/v1/Product/products
+2025-11-23 16:37:10.842 -06:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/23/2025 4:52:13 AM', Current time (UTC): '11/23/2025 10:37:10 PM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-11-23 16:37:10.843 -06:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/23/2025 4:52:13 AM', Current time (UTC): '11/23/2025 10:37:10 PM'.
+2025-11-23 16:37:10.843 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/v1/Product/products - 404 0 null 2.2969ms
+2025-11-23 16:37:10.843 -06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5269/api/v1/Product/products, Response status code: 404
+2025-11-23 16:38:45.321 -06:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/getProducts - null null
+2025-11-23 16:38:45.321 -06:00 [INF] CORS policy execution successful.
+2025-11-23 16:38:45.321 -06:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/getProducts - 204 null null 1.4913ms
+2025-11-23 16:38:45.322 -06:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/getProducts - null null
+2025-11-23 16:38:45.322 -06:00 [INF] CORS policy execution successful.
+2025-11-23 16:38:45.323 -06:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/getProducts - 204 null null 0.615ms
+2025-11-23 16:38:45.327 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/v1/Product/getProducts - null null
+2025-11-23 16:38:45.328 -06:00 [INF] CORS policy execution successful.
+2025-11-23 16:38:45.328 -06:00 [INF] CorrelationID: ["f8a1bc55-55ee-40ab-b4e2-98fb70360c7b"] - Request Path: /api/v1/Product/getProducts
+2025-11-23 16:38:45.329 -06:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/23/2025 4:52:13 AM', Current time (UTC): '11/23/2025 10:38:45 PM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-11-23 16:38:45.329 -06:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/23/2025 4:52:13 AM', Current time (UTC): '11/23/2025 10:38:45 PM'.
+2025-11-23 16:38:45.329 -06:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-11-23 16:38:45.329 -06:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-11-23 16:38:45.330 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/v1/Product/getProducts - 401 0 null 2.2707ms
+2025-11-23 16:38:45.334 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/v1/Product/getProducts - null null
+2025-11-23 16:38:45.334 -06:00 [INF] CORS policy execution successful.
+2025-11-23 16:38:45.334 -06:00 [INF] CorrelationID: ["90abc7ff-e69b-4bdf-aff2-5ed813900ed4"] - Request Path: /api/v1/Product/getProducts
+2025-11-23 16:38:45.335 -06:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/23/2025 4:52:13 AM', Current time (UTC): '11/23/2025 10:38:45 PM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-11-23 16:38:45.335 -06:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/23/2025 4:52:13 AM', Current time (UTC): '11/23/2025 10:38:45 PM'.
+2025-11-23 16:38:45.335 -06:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-11-23 16:38:45.336 -06:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-11-23 16:38:45.336 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/v1/Product/getProducts - 401 0 null 2.4053ms
+2025-11-23 16:39:03.450 -06:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/getProducts - null null
+2025-11-23 16:39:03.450 -06:00 [INF] CORS policy execution successful.
+2025-11-23 16:39:03.450 -06:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/getProducts - 204 null null 0.2936ms
+2025-11-23 16:39:03.450 -06:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/getProducts - null null
+2025-11-23 16:39:03.451 -06:00 [INF] CORS policy execution successful.
+2025-11-23 16:39:03.451 -06:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/getProducts - 204 null null 0.2079ms
+2025-11-23 16:39:03.458 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/v1/Product/getProducts - null null
+2025-11-23 16:39:03.458 -06:00 [INF] CORS policy execution successful.
+2025-11-23 16:39:03.458 -06:00 [INF] CorrelationID: ["444dd283-64e3-45dd-973f-45ec5d6cdd1b"] - Request Path: /api/v1/Product/getProducts
+2025-11-23 16:39:03.461 -06:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/23/2025 4:52:13 AM', Current time (UTC): '11/23/2025 10:39:03 PM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-11-23 16:39:03.461 -06:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/23/2025 4:52:13 AM', Current time (UTC): '11/23/2025 10:39:03 PM'.
+2025-11-23 16:39:03.462 -06:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-11-23 16:39:03.462 -06:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-11-23 16:39:03.462 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/v1/Product/getProducts - 401 0 null 3.9984ms
+2025-11-23 16:39:03.472 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/v1/Product/getProducts - null null
+2025-11-23 16:39:03.472 -06:00 [INF] CORS policy execution successful.
+2025-11-23 16:39:03.472 -06:00 [INF] CorrelationID: ["bf764a65-79cc-4d65-9e0f-0531c3c9f957"] - Request Path: /api/v1/Product/getProducts
+2025-11-23 16:39:03.473 -06:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/23/2025 4:52:13 AM', Current time (UTC): '11/23/2025 10:39:03 PM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-11-23 16:39:03.474 -06:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/23/2025 4:52:13 AM', Current time (UTC): '11/23/2025 10:39:03 PM'.
+2025-11-23 16:39:03.474 -06:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-11-23 16:39:03.474 -06:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-11-23 16:39:03.474 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/v1/Product/getProducts - 401 0 null 2.3506ms
+2025-11-23 16:44:09.468 -06:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/getProducts - null null
+2025-11-23 16:44:09.468 -06:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/getProducts - null null
+2025-11-23 16:44:09.468 -06:00 [INF] CORS policy execution successful.
+2025-11-23 16:44:09.468 -06:00 [INF] CORS policy execution successful.
+2025-11-23 16:44:09.469 -06:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/getProducts - 204 null null 0.6272ms
+2025-11-23 16:44:09.469 -06:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/getProducts - 204 null null 0.6499ms
+2025-11-23 16:44:09.473 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/v1/Product/getProducts - null null
+2025-11-23 16:44:09.473 -06:00 [INF] CORS policy execution successful.
+2025-11-23 16:44:09.473 -06:00 [INF] CorrelationID: ["724088ec-3c9e-4991-814f-c0c99da1489e"] - Request Path: /api/v1/Product/getProducts
+2025-11-23 16:44:09.475 -06:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/23/2025 4:52:13 AM', Current time (UTC): '11/23/2025 10:44:09 PM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-11-23 16:44:09.477 -06:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/23/2025 4:52:13 AM', Current time (UTC): '11/23/2025 10:44:09 PM'.
+2025-11-23 16:44:09.478 -06:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-11-23 16:44:09.478 -06:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-11-23 16:44:09.478 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/v1/Product/getProducts - 401 0 null 5.2523ms
+2025-11-23 16:44:09.505 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/v1/Product/getProducts - null null
+2025-11-23 16:44:09.506 -06:00 [INF] CORS policy execution successful.
+2025-11-23 16:44:09.506 -06:00 [INF] CorrelationID: ["9d6f240e-2a57-414d-89ac-e28866697983"] - Request Path: /api/v1/Product/getProducts
+2025-11-23 16:44:09.507 -06:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/23/2025 4:52:13 AM', Current time (UTC): '11/23/2025 10:44:09 PM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-11-23 16:44:09.507 -06:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/23/2025 4:52:13 AM', Current time (UTC): '11/23/2025 10:44:09 PM'.
+2025-11-23 16:44:09.508 -06:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-11-23 16:44:09.508 -06:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-11-23 16:44:09.508 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/v1/Product/getProducts - 401 0 null 3.2386ms
+2025-11-23 16:44:27.493 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/v1/Product/getProducts - null null
+2025-11-23 16:44:27.509 -06:00 [INF] CorrelationID: ["f43d9ee6-6bc7-4bc9-b464-69f4a9196f40"] - Request Path: /api/v1/Product/getProducts
+2025-11-23 16:44:27.510 -06:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-11-23 16:44:27.510 -06:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-11-23 16:44:27.510 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/v1/Product/getProducts - 401 0 null 17.1757ms
+2025-11-23 16:44:46.503 -06:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/getProducts - null null
+2025-11-23 16:44:46.504 -06:00 [INF] CORS policy execution successful.
+2025-11-23 16:44:46.504 -06:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/getProducts - 204 null null 1.4432ms
+2025-11-23 16:44:46.504 -06:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/getProducts - null null
+2025-11-23 16:44:46.504 -06:00 [INF] CORS policy execution successful.
+2025-11-23 16:44:46.504 -06:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/getProducts - 204 null null 0.2838ms
+2025-11-23 16:44:46.512 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/v1/Product/getProducts - null null
+2025-11-23 16:44:46.512 -06:00 [INF] CORS policy execution successful.
+2025-11-23 16:44:46.512 -06:00 [INF] CorrelationID: ["68458feb-a336-4b5a-96c8-c78fc31ab3e5"] - Request Path: /api/v1/Product/getProducts
+2025-11-23 16:44:46.513 -06:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/23/2025 4:52:13 AM', Current time (UTC): '11/23/2025 10:44:46 PM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-11-23 16:44:46.514 -06:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/23/2025 4:52:13 AM', Current time (UTC): '11/23/2025 10:44:46 PM'.
+2025-11-23 16:44:46.514 -06:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-11-23 16:44:46.514 -06:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-11-23 16:44:46.514 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/v1/Product/getProducts - 401 0 null 2.4131ms
+2025-11-23 16:44:46.518 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/v1/Product/getProducts - null null
+2025-11-23 16:44:46.518 -06:00 [INF] CORS policy execution successful.
+2025-11-23 16:44:46.519 -06:00 [INF] CorrelationID: ["b02021d6-8c64-4129-b8fa-5b46d41d666d"] - Request Path: /api/v1/Product/getProducts
+2025-11-23 16:44:46.522 -06:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/23/2025 4:52:13 AM', Current time (UTC): '11/23/2025 10:44:46 PM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-11-23 16:44:46.523 -06:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/23/2025 4:52:13 AM', Current time (UTC): '11/23/2025 10:44:46 PM'.
+2025-11-23 16:44:46.523 -06:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-11-23 16:44:46.523 -06:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-11-23 16:44:46.523 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/v1/Product/getProducts - 401 0 null 4.8044ms
+2025-11-23 16:45:59.042 -06:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/GetProducts - null null
+2025-11-23 16:45:59.042 -06:00 [INF] CORS policy execution successful.
+2025-11-23 16:45:59.042 -06:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/GetProducts - 204 null null 0.3462ms
+2025-11-23 16:45:59.043 -06:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/GetProducts - null null
+2025-11-23 16:45:59.043 -06:00 [INF] CORS policy execution successful.
+2025-11-23 16:45:59.045 -06:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/GetProducts - 204 null null 2.5709ms
+2025-11-23 16:45:59.052 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/v1/Product/GetProducts - null null
+2025-11-23 16:45:59.053 -06:00 [INF] CORS policy execution successful.
+2025-11-23 16:45:59.053 -06:00 [INF] CorrelationID: ["9f3a2f2c-a5c8-4576-8534-deb3aa035090"] - Request Path: /api/v1/Product/GetProducts
+2025-11-23 16:45:59.054 -06:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/23/2025 4:52:13 AM', Current time (UTC): '11/23/2025 10:45:59 PM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-11-23 16:45:59.054 -06:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/23/2025 4:52:13 AM', Current time (UTC): '11/23/2025 10:45:59 PM'.
+2025-11-23 16:45:59.054 -06:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-11-23 16:45:59.054 -06:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-11-23 16:45:59.055 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/v1/Product/GetProducts - 401 0 null 2.8384ms
+2025-11-23 16:45:59.057 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/v1/Product/GetProducts - null null
+2025-11-23 16:45:59.057 -06:00 [INF] CORS policy execution successful.
+2025-11-23 16:45:59.057 -06:00 [INF] CorrelationID: ["fb99bd71-1bf9-4215-8842-563ee46149cd"] - Request Path: /api/v1/Product/GetProducts
+2025-11-23 16:45:59.058 -06:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/23/2025 4:52:13 AM', Current time (UTC): '11/23/2025 10:45:59 PM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-11-23 16:45:59.059 -06:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/23/2025 4:52:13 AM', Current time (UTC): '11/23/2025 10:45:59 PM'.
+2025-11-23 16:45:59.059 -06:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-11-23 16:45:59.059 -06:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-11-23 16:45:59.059 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/v1/Product/GetProducts - 401 0 null 2.2335ms
+2025-11-23 16:46:12.982 -06:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/createProduct - null null
+2025-11-23 16:46:12.982 -06:00 [INF] CORS policy execution successful.
+2025-11-23 16:46:12.986 -06:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/createProduct - 204 null null 5.111ms
+2025-11-23 16:46:12.990 -06:00 [INF] Request starting HTTP/1.1 POST http://localhost:5269/api/v1/Product/createProduct - application/json 65
+2025-11-23 16:46:12.990 -06:00 [INF] CORS policy execution successful.
+2025-11-23 16:46:12.991 -06:00 [INF] CorrelationID: ["98c83182-38e7-4309-8988-c89079738a34"] - Request Path: /api/v1/Product/createProduct
+2025-11-23 16:46:12.992 -06:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/23/2025 4:52:13 AM', Current time (UTC): '11/23/2025 10:46:12 PM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-11-23 16:46:12.993 -06:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/23/2025 4:52:13 AM', Current time (UTC): '11/23/2025 10:46:12 PM'.
+2025-11-23 16:46:12.993 -06:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-11-23 16:46:12.994 -06:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-11-23 16:46:12.994 -06:00 [INF] Request finished HTTP/1.1 POST http://localhost:5269/api/v1/Product/createProduct - 401 0 null 4.0511ms
+2025-11-23 16:50:39.683 -06:00 [INF] User profile is available. Using 'C:\Users\arulg\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-11-23 16:50:40.026 -06:00 [INF] Now listening on: http://localhost:5269
+2025-11-23 16:50:40.133 -06:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-23 16:50:40.134 -06:00 [INF] Hosting environment: Development
+2025-11-23 16:50:40.134 -06:00 [INF] Content root path: D:\Projects\NetCore\ApiBackend\NetCoreApis\ProductApi
+2025-11-23 16:50:41.036 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/swagger/index.html - null null
+2025-11-23 16:50:41.510 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/swagger/index.html - 200 null text/html;charset=utf-8 490.2229ms
+2025-11-23 16:50:41.598 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/_framework/aspnetcore-browser-refresh.js - null null
+2025-11-23 16:50:41.598 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/_vs/browserLink - null null
+2025-11-23 16:50:41.604 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/_framework/aspnetcore-browser-refresh.js - 200 13756 application/javascript; charset=utf-8 6.5055ms
+2025-11-23 16:50:41.856 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/_vs/browserLink - 200 null text/javascript; charset=UTF-8 257.9933ms
+2025-11-23 16:50:42.096 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/swagger/v1/swagger.json - null null
+2025-11-23 16:50:42.408 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 312.7232ms
+2025-11-23 16:51:00.058 -06:00 [INF] Request starting HTTP/1.1 POST http://localhost:5269/api/v1/Product/Login - application/json 51
+2025-11-23 16:51:00.108 -06:00 [INF] CORS policy execution failed.
+2025-11-23 16:51:00.108 -06:00 [INF] Request origin http://localhost:5269 does not have permission to access the resource.
+2025-11-23 16:51:00.114 -06:00 [INF] CorrelationID: ["5a2c0360-2368-48da-b22f-a49ced6578e9"] - Request Path: /api/v1/Product/Login
+2025-11-23 16:51:00.246 -06:00 [INF] Executing endpoint 'ProductApi.Controllers.ProductController.Login (ProductApi)'
+2025-11-23 16:51:00.281 -06:00 [INF] Route matched with {action = "Login", controller = "Product"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(ProductApi.DTOs.LoginDto) on controller ProductApi.Controllers.ProductController (ProductApi).
+2025-11-23 16:51:00.632 -06:00 [INF] Accessing expired session, Key:440c42d0-7bc4-b05f-787d-7e5b2dc3fae6
+2025-11-23 16:51:00.677 -06:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-11-23 16:51:00.688 -06:00 [INF] Executed action ProductApi.Controllers.ProductController.Login (ProductApi) in 402.7722ms
+2025-11-23 16:51:00.689 -06:00 [INF] Executed endpoint 'ProductApi.Controllers.ProductController.Login (ProductApi)'
+2025-11-23 16:51:00.690 -06:00 [INF] Session started; Key:440c42d0-7bc4-b05f-787d-7e5b2dc3fae6, Id:65378188-2223-b616-7f9e-0e8775e25c93
+2025-11-23 16:51:00.695 -06:00 [INF] Request finished HTTP/1.1 POST http://localhost:5269/api/v1/Product/Login - 200 null application/json; charset=utf-8 637.5294ms
+2025-11-23 16:51:44.716 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/v1/Product/GetProducts - null null
+2025-11-23 16:51:44.721 -06:00 [INF] CorrelationID: ["2ae8322d-3624-4172-ad95-eb117473d8c1"] - Request Path: /api/v1/Product/GetProducts
+2025-11-23 16:51:44.816 -06:00 [INF] Executing endpoint 'ProductApi.Controllers.ProductController.GetProducts (ProductApi)'
+2025-11-23 16:51:44.821 -06:00 [INF] Route matched with {action = "GetProducts", controller = "Product"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetProducts() on controller ProductApi.Controllers.ProductController (ProductApi).
+2025-11-23 16:51:48.208 -06:00 [INF] Fetching products from database.
+2025-11-23 16:51:48.802 -06:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'ProductEntity'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-11-23 16:51:50.018 -06:00 [INF] Executed DbCommand (63ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Description], [p].[Name], [p].[Price], [p].[Stock]
+FROM [Products] AS [p]
+2025-11-23 16:51:50.147 -06:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ProductApi.DTOs.ProductDto, ProductApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-23 16:51:50.157 -06:00 [INF] Executed action ProductApi.Controllers.ProductController.GetProducts (ProductApi) in 5335.7553ms
+2025-11-23 16:51:50.158 -06:00 [INF] Executed endpoint 'ProductApi.Controllers.ProductController.GetProducts (ProductApi)'
+2025-11-23 16:51:50.172 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/v1/Product/GetProducts - 200 null application/json; charset=utf-8 5456.6075ms
+2025-11-23 16:52:58.823 -06:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/getProducts - null null
+2025-11-23 16:52:58.823 -06:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/getProducts - null null
+2025-11-23 16:52:58.828 -06:00 [INF] CORS policy execution successful.
+2025-11-23 16:52:58.828 -06:00 [INF] CORS policy execution successful.
+2025-11-23 16:52:58.829 -06:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/getProducts - 204 null null 6.0946ms
+2025-11-23 16:52:58.829 -06:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/getProducts - 204 null null 6.0946ms
+2025-11-23 16:52:58.835 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/v1/Product/getProducts - null null
+2025-11-23 16:52:58.837 -06:00 [INF] CORS policy execution successful.
+2025-11-23 16:52:58.838 -06:00 [INF] CorrelationID: ["0835f384-5f45-4a89-a4f6-16bd05c22e90"] - Request Path: /api/v1/Product/getProducts
+2025-11-23 16:52:58.849 -06:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/23/2025 4:52:13 AM', Current time (UTC): '11/23/2025 10:52:58 PM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-11-23 16:52:58.869 -06:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/23/2025 4:52:13 AM', Current time (UTC): '11/23/2025 10:52:58 PM'.
+2025-11-23 16:52:58.872 -06:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-11-23 16:52:58.877 -06:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-11-23 16:52:58.878 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/v1/Product/getProducts - 401 0 null 42.3372ms
+2025-11-23 16:52:58.879 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/v1/Product/getProducts - null null
+2025-11-23 16:52:58.879 -06:00 [INF] CORS policy execution successful.
+2025-11-23 16:52:58.879 -06:00 [INF] CorrelationID: ["fc9e1bf7-9334-4924-a982-688e94900bba"] - Request Path: /api/v1/Product/getProducts
+2025-11-23 16:52:58.880 -06:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/23/2025 4:52:13 AM', Current time (UTC): '11/23/2025 10:52:58 PM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-11-23 16:52:58.881 -06:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/23/2025 4:52:13 AM', Current time (UTC): '11/23/2025 10:52:58 PM'.
+2025-11-23 16:52:58.882 -06:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-11-23 16:52:58.882 -06:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-11-23 16:52:58.882 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/v1/Product/getProducts - 401 0 null 3.5769ms
+2025-11-23 16:53:03.983 -06:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/getProducts - null null
+2025-11-23 16:53:03.984 -06:00 [INF] CORS policy execution successful.
+2025-11-23 16:53:03.985 -06:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/getProducts - 204 null null 1.2969ms
+2025-11-23 16:53:03.987 -06:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/getProducts - null null
+2025-11-23 16:53:03.988 -06:00 [INF] CORS policy execution successful.
+2025-11-23 16:53:03.988 -06:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/getProducts - 204 null null 0.8404ms
+2025-11-23 16:53:03.990 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/v1/Product/getProducts - null null
+2025-11-23 16:53:03.990 -06:00 [INF] CORS policy execution successful.
+2025-11-23 16:53:03.990 -06:00 [INF] CorrelationID: ["0802c59a-116a-41c2-93f1-302b58a653c6"] - Request Path: /api/v1/Product/getProducts
+2025-11-23 16:53:03.991 -06:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/23/2025 4:52:13 AM', Current time (UTC): '11/23/2025 10:53:03 PM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-11-23 16:53:03.991 -06:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/23/2025 4:52:13 AM', Current time (UTC): '11/23/2025 10:53:03 PM'.
+2025-11-23 16:53:03.991 -06:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-11-23 16:53:03.992 -06:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-11-23 16:53:03.992 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/v1/Product/getProducts - 401 0 null 2.2335ms
+2025-11-23 16:53:03.994 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/v1/Product/getProducts - null null
+2025-11-23 16:53:03.994 -06:00 [INF] CORS policy execution successful.
+2025-11-23 16:53:03.994 -06:00 [INF] CorrelationID: ["d800315c-b2d3-482b-883f-11a5bddb20a5"] - Request Path: /api/v1/Product/getProducts
+2025-11-23 16:53:03.996 -06:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/23/2025 4:52:13 AM', Current time (UTC): '11/23/2025 10:53:03 PM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-11-23 16:53:03.996 -06:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/23/2025 4:52:13 AM', Current time (UTC): '11/23/2025 10:53:03 PM'.
+2025-11-23 16:53:03.996 -06:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-11-23 16:53:03.996 -06:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-11-23 16:53:03.997 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/v1/Product/getProducts - 401 0 null 2.7063ms
+2025-11-23 16:54:40.953 -06:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/getProducts - null null
+2025-11-23 16:54:40.954 -06:00 [INF] CORS policy execution successful.
+2025-11-23 16:54:40.954 -06:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/getProducts - 204 null null 0.535ms
+2025-11-23 16:54:40.955 -06:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/getProducts - null null
+2025-11-23 16:54:40.955 -06:00 [INF] CORS policy execution successful.
+2025-11-23 16:54:40.955 -06:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/getProducts - 204 null null 0.5243ms
+2025-11-23 16:54:40.957 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/v1/Product/getProducts - null null
+2025-11-23 16:54:40.958 -06:00 [INF] CORS policy execution successful.
+2025-11-23 16:54:40.958 -06:00 [INF] CorrelationID: ["9f8e6f6b-b8f6-472c-9d80-07c61c74954f"] - Request Path: /api/v1/Product/getProducts
+2025-11-23 16:54:40.960 -06:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/23/2025 4:52:13 AM', Current time (UTC): '11/23/2025 10:54:40 PM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-11-23 16:54:40.961 -06:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/23/2025 4:52:13 AM', Current time (UTC): '11/23/2025 10:54:40 PM'.
+2025-11-23 16:54:40.961 -06:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-11-23 16:54:40.961 -06:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-11-23 16:54:40.961 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/v1/Product/getProducts - 401 0 null 3.9259ms
+2025-11-23 16:54:40.973 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/v1/Product/getProducts - null null
+2025-11-23 16:54:40.976 -06:00 [INF] CORS policy execution successful.
+2025-11-23 16:54:40.977 -06:00 [INF] CorrelationID: ["8dacba82-180e-40c8-a25d-6af851873257"] - Request Path: /api/v1/Product/getProducts
+2025-11-23 16:54:40.978 -06:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/23/2025 4:52:13 AM', Current time (UTC): '11/23/2025 10:54:40 PM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-11-23 16:54:40.979 -06:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/23/2025 4:52:13 AM', Current time (UTC): '11/23/2025 10:54:40 PM'.
+2025-11-23 16:54:40.979 -06:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-11-23 16:54:40.979 -06:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-11-23 16:54:40.980 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/v1/Product/getProducts - 401 0 null 6.6569ms
+2025-11-23 16:56:14.666 -06:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/getProducts - null null
+2025-11-23 16:56:14.666 -06:00 [INF] CORS policy execution successful.
+2025-11-23 16:56:14.667 -06:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Product/getProducts - 204 null null 1.0576ms
+2025-11-23 16:56:14.670 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/v1/Product/getProducts - null null
+2025-11-23 16:56:14.670 -06:00 [INF] CORS policy execution successful.
+2025-11-23 16:56:14.670 -06:00 [INF] CorrelationID: ["a30d0843-6ea3-41c1-a1f7-4dcaea92ad80"] - Request Path: /api/v1/Product/getProducts
+2025-11-23 16:56:14.671 -06:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/23/2025 4:52:13 AM', Current time (UTC): '11/23/2025 10:56:14 PM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-11-23 16:56:14.672 -06:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/23/2025 4:52:13 AM', Current time (UTC): '11/23/2025 10:56:14 PM'.
+2025-11-23 16:56:14.672 -06:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-11-23 16:56:14.672 -06:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-11-23 16:56:14.672 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/v1/Product/getProducts - 401 0 null 2.5389ms
+2025-11-23 16:56:14.686 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/v1/Product/getProducts - null null
+2025-11-23 16:56:14.686 -06:00 [INF] CORS policy execution successful.
+2025-11-23 16:56:14.687 -06:00 [INF] CorrelationID: ["8b4267ac-cfa4-4f2d-bc1f-4a4edf47eeea"] - Request Path: /api/v1/Product/getProducts
+2025-11-23 16:56:14.688 -06:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/23/2025 4:52:13 AM', Current time (UTC): '11/23/2025 10:56:14 PM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-11-23 16:56:14.690 -06:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/23/2025 4:52:13 AM', Current time (UTC): '11/23/2025 10:56:14 PM'.
+2025-11-23 16:56:14.690 -06:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-11-23 16:56:14.690 -06:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-11-23 16:56:14.691 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/v1/Product/getProducts - 401 0 null 4.5871ms
