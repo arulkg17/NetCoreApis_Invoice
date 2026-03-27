@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using ProductApi.Contracts;
 using ProductApi.Data;
+using ProductApi.DTOs;
 using ProductApi.Entities;
 
 namespace ProductApi.Repositories;
@@ -98,4 +99,32 @@ public class ItemmasterRepository : IItemmasterRepository
 
         return affectedRows > 0;
     }
+    public async Task<PagedResultDto<Itemmaster>> GetAllPagedAsync(
+    string? catCode,
+    string? itemName,
+    string? uom,
+    int pageNumber,
+    int pageSize)
+    {
+        var catParam = new SqlParameter("@CatCode", (object?)catCode ?? DBNull.Value);
+        var itemParam = new SqlParameter("@ItemName", (object?)itemName ?? DBNull.Value);
+        var uomParam = new SqlParameter("@Uom", (object?)uom ?? DBNull.Value);
+        var pageParam = new SqlParameter("@PageNumber", pageNumber);
+        var sizeParam = new SqlParameter("@PageSize", pageSize);
+
+        var data = await _dbContext.Itemmasters
+            .FromSqlRaw("EXEC sp_Itemmaster_GetPaged @CatCode, @ItemName, @Uom, @PageNumber, @PageSize",
+                catParam, itemParam, uomParam, pageParam, sizeParam)
+            .ToListAsync();
+
+        // 🔥 total count (separate SP or simple query)
+        var totalRecords = await _dbContext.Itemmasters.CountAsync();
+
+        return new PagedResultDto<Itemmaster>
+        {
+            Data = data,
+            TotalRecords = totalRecords
+        };
+    }
+
 }

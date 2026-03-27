@@ -1,0 +1,90 @@
+2026-03-27 13:52:39.081 -05:00 [INF] User profile is available. Using 'C:\Users\arulg\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-03-27 13:52:40.054 -05:00 [INF] Now listening on: http://localhost:5269
+2026-03-27 13:52:40.288 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-27 13:52:40.288 -05:00 [INF] Hosting environment: Development
+2026-03-27 13:52:40.289 -05:00 [INF] Content root path: D:\Projects\NetCore\ApiBackend\NetCoreApis_Invoice\ProductApi
+2026-03-27 13:52:41.415 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/swagger - null null
+2026-03-27 13:52:41.816 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/swagger - 301 0 null 413.7198ms
+2026-03-27 13:52:41.820 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/swagger/index.html - null null
+2026-03-27 13:52:41.972 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/swagger/index.html - 200 null text/html;charset=utf-8 148.0241ms
+2026-03-27 13:52:41.995 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/swagger/swagger-ui-bundle.js - null null
+2026-03-27 13:52:41.994 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/swagger/swagger-ui.css - null null
+2026-03-27 13:52:42.012 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/swagger/swagger-ui-standalone-preset.js - null null
+2026-03-27 13:52:42.016 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/_framework/aspnetcore-browser-refresh.js - null null
+2026-03-27 13:52:42.021 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/_framework/aspnetcore-browser-refresh.js - 200 13756 application/javascript; charset=utf-8 4.6373ms
+2026-03-27 13:52:42.035 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/_vs/browserLink - null null
+2026-03-27 13:52:42.090 -05:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2026-03-27 13:52:42.100 -05:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2026-03-27 13:52:42.102 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/swagger/swagger-ui.css - 200 152034 text/css 108.1801ms
+2026-03-27 13:52:42.102 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/swagger/swagger-ui-standalone-preset.js - 200 230280 text/javascript 90.5271ms
+2026-03-27 13:52:42.203 -05:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2026-03-27 13:52:42.203 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/swagger/swagger-ui-bundle.js - 200 1456926 text/javascript 208.2308ms
+2026-03-27 13:52:42.389 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/_vs/browserLink - 200 null text/javascript; charset=UTF-8 354.2719ms
+2026-03-27 13:52:42.666 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/swagger/v1/swagger.json - null null
+2026-03-27 13:52:42.729 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 63.411ms
+2026-03-27 13:53:06.755 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/Itemmaster/GetAllPaged?catCode=s&pageNumber=1&pageSize=10 - null null
+2026-03-27 13:53:08.875 -05:00 [INF] CorrelationID: ["dab44b15-cd7d-47a8-b9a7-96f64f64a587"] - Request Path: /api/Itemmaster/GetAllPaged
+2026-03-27 13:53:08.883 -05:00 [INF] Executing endpoint 'ProductApi.Controllers.ItemmasterController.GetAllPaged (ProductApi)'
+2026-03-27 13:53:08.922 -05:00 [INF] Route matched with {action = "GetAllPaged", controller = "Itemmaster"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllPaged(System.String, System.String, System.String, Int32, Int32) on controller ProductApi.Controllers.ItemmasterController (ProductApi).
+2026-03-27 13:53:10.577 -05:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'ProductEntity'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-03-27 13:53:12.319 -05:00 [INF] Executed DbCommand (153ms) [Parameters=[@CatCode='?' (Size = 1), @ItemName='?', @Uom='?', @PageNumber='?' (DbType = Int32), @PageSize='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+EXEC sp_Itemmaster_GetPaged @CatCode, @ItemName, @Uom, @PageNumber, @PageSize
+2026-03-27 13:53:12.545 -05:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Itemmaster] AS [i]
+2026-03-27 13:53:12.580 -05:00 [INF] Executing OkObjectResult, writing value of type 'ProductApi.Models.ApiResponse`1[[ProductApi.DTOs.PagedResultDto`1[[ProductApi.DTOs.ItemmasterDto, ProductApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], ProductApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-03-27 13:53:12.620 -05:00 [INF] Executed action ProductApi.Controllers.ItemmasterController.GetAllPaged (ProductApi) in 3693.0022ms
+2026-03-27 13:53:12.620 -05:00 [INF] Executed endpoint 'ProductApi.Controllers.ItemmasterController.GetAllPaged (ProductApi)'
+2026-03-27 13:53:12.634 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/Itemmaster/GetAllPaged?catCode=s&pageNumber=1&pageSize=10 - 200 null application/json; charset=utf-8 5879.1007ms
+2026-03-27 13:53:24.454 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/Itemmaster/GetAllPaged?catCode=s&itemName=b&pageNumber=1&pageSize=10 - null null
+2026-03-27 13:53:24.463 -05:00 [INF] CorrelationID: ["9f975dba-c953-438c-ab82-856e30188ea9"] - Request Path: /api/Itemmaster/GetAllPaged
+2026-03-27 13:53:24.464 -05:00 [INF] Executing endpoint 'ProductApi.Controllers.ItemmasterController.GetAllPaged (ProductApi)'
+2026-03-27 13:53:24.467 -05:00 [INF] Route matched with {action = "GetAllPaged", controller = "Itemmaster"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllPaged(System.String, System.String, System.String, Int32, Int32) on controller ProductApi.Controllers.ItemmasterController (ProductApi).
+2026-03-27 13:53:24.572 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[@CatCode='?' (Size = 1), @ItemName='?' (Size = 1), @Uom='?', @PageNumber='?' (DbType = Int32), @PageSize='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+EXEC sp_Itemmaster_GetPaged @CatCode, @ItemName, @Uom, @PageNumber, @PageSize
+2026-03-27 13:53:24.578 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Itemmaster] AS [i]
+2026-03-27 13:53:24.579 -05:00 [INF] Executing OkObjectResult, writing value of type 'ProductApi.Models.ApiResponse`1[[ProductApi.DTOs.PagedResultDto`1[[ProductApi.DTOs.ItemmasterDto, ProductApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], ProductApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-03-27 13:53:24.580 -05:00 [INF] Executed action ProductApi.Controllers.ItemmasterController.GetAllPaged (ProductApi) in 113.0424ms
+2026-03-27 13:53:24.580 -05:00 [INF] Executed endpoint 'ProductApi.Controllers.ItemmasterController.GetAllPaged (ProductApi)'
+2026-03-27 13:53:24.581 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/Itemmaster/GetAllPaged?catCode=s&itemName=b&pageNumber=1&pageSize=10 - 200 null application/json; charset=utf-8 127.3596ms
+2026-03-27 13:53:39.040 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/Itemmaster/GetAllPaged?catCode=s&itemName=b&uom=n&pageNumber=1&pageSize=10 - null null
+2026-03-27 13:53:39.045 -05:00 [INF] CorrelationID: ["cdf5aec9-3723-474e-8db3-d2d97273841f"] - Request Path: /api/Itemmaster/GetAllPaged
+2026-03-27 13:53:39.046 -05:00 [INF] Executing endpoint 'ProductApi.Controllers.ItemmasterController.GetAllPaged (ProductApi)'
+2026-03-27 13:53:39.046 -05:00 [INF] Route matched with {action = "GetAllPaged", controller = "Itemmaster"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllPaged(System.String, System.String, System.String, Int32, Int32) on controller ProductApi.Controllers.ItemmasterController (ProductApi).
+2026-03-27 13:53:39.088 -05:00 [INF] Executed DbCommand (11ms) [Parameters=[@CatCode='?' (Size = 1), @ItemName='?' (Size = 1), @Uom='?' (Size = 1), @PageNumber='?' (DbType = Int32), @PageSize='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+EXEC sp_Itemmaster_GetPaged @CatCode, @ItemName, @Uom, @PageNumber, @PageSize
+2026-03-27 13:53:39.091 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Itemmaster] AS [i]
+2026-03-27 13:53:39.100 -05:00 [INF] Executing OkObjectResult, writing value of type 'ProductApi.Models.ApiResponse`1[[ProductApi.DTOs.PagedResultDto`1[[ProductApi.DTOs.ItemmasterDto, ProductApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], ProductApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-03-27 13:53:39.101 -05:00 [INF] Executed action ProductApi.Controllers.ItemmasterController.GetAllPaged (ProductApi) in 54.3913ms
+2026-03-27 13:53:39.101 -05:00 [INF] Executed endpoint 'ProductApi.Controllers.ItemmasterController.GetAllPaged (ProductApi)'
+2026-03-27 13:53:39.101 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/Itemmaster/GetAllPaged?catCode=s&itemName=b&uom=n&pageNumber=1&pageSize=10 - 200 null application/json; charset=utf-8 61.3395ms
+2026-03-27 13:53:48.353 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/Itemmaster/GetAllPaged?catCode=s&uom=n&pageNumber=1&pageSize=10 - null null
+2026-03-27 13:53:48.354 -05:00 [INF] CorrelationID: ["ed7356c1-61b3-43d2-8f76-a2997ce99722"] - Request Path: /api/Itemmaster/GetAllPaged
+2026-03-27 13:53:48.354 -05:00 [INF] Executing endpoint 'ProductApi.Controllers.ItemmasterController.GetAllPaged (ProductApi)'
+2026-03-27 13:53:48.354 -05:00 [INF] Route matched with {action = "GetAllPaged", controller = "Itemmaster"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllPaged(System.String, System.String, System.String, Int32, Int32) on controller ProductApi.Controllers.ItemmasterController (ProductApi).
+2026-03-27 13:53:48.361 -05:00 [INF] Executed DbCommand (4ms) [Parameters=[@CatCode='?' (Size = 1), @ItemName='?', @Uom='?' (Size = 1), @PageNumber='?' (DbType = Int32), @PageSize='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+EXEC sp_Itemmaster_GetPaged @CatCode, @ItemName, @Uom, @PageNumber, @PageSize
+2026-03-27 13:53:48.365 -05:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Itemmaster] AS [i]
+2026-03-27 13:53:48.366 -05:00 [INF] Executing OkObjectResult, writing value of type 'ProductApi.Models.ApiResponse`1[[ProductApi.DTOs.PagedResultDto`1[[ProductApi.DTOs.ItemmasterDto, ProductApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], ProductApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-03-27 13:53:48.366 -05:00 [INF] Executed action ProductApi.Controllers.ItemmasterController.GetAllPaged (ProductApi) in 11.8558ms
+2026-03-27 13:53:48.366 -05:00 [INF] Executed endpoint 'ProductApi.Controllers.ItemmasterController.GetAllPaged (ProductApi)'
+2026-03-27 13:53:48.387 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/Itemmaster/GetAllPaged?catCode=s&uom=n&pageNumber=1&pageSize=10 - 200 null application/json; charset=utf-8 33.4988ms
+2026-03-27 13:58:05.185 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/Itemmaster/GetAllPaged?catCode=s&uom=n&pageNumber=1&pageSize=10 - null null
+2026-03-27 13:58:05.192 -05:00 [INF] CorrelationID: ["7f92707c-0cc7-46d3-b194-e11effc5d438"] - Request Path: /api/Itemmaster/GetAllPaged
+2026-03-27 13:58:05.192 -05:00 [INF] Executing endpoint 'ProductApi.Controllers.ItemmasterController.GetAllPaged (ProductApi)'
+2026-03-27 13:58:05.192 -05:00 [INF] Route matched with {action = "GetAllPaged", controller = "Itemmaster"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllPaged(System.String, System.String, System.String, Int32, Int32) on controller ProductApi.Controllers.ItemmasterController (ProductApi).
+2026-03-27 13:58:05.212 -05:00 [INF] Executed DbCommand (17ms) [Parameters=[@CatCode='?' (Size = 1), @ItemName='?', @Uom='?' (Size = 1), @PageNumber='?' (DbType = Int32), @PageSize='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+EXEC sp_Itemmaster_GetPaged @CatCode, @ItemName, @Uom, @PageNumber, @PageSize
+2026-03-27 13:58:05.216 -05:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Itemmaster] AS [i]
+2026-03-27 13:58:05.217 -05:00 [INF] Executing OkObjectResult, writing value of type 'ProductApi.Models.ApiResponse`1[[ProductApi.DTOs.PagedResultDto`1[[ProductApi.DTOs.ItemmasterDto, ProductApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], ProductApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-03-27 13:58:05.218 -05:00 [INF] Executed action ProductApi.Controllers.ItemmasterController.GetAllPaged (ProductApi) in 25.2052ms
+2026-03-27 13:58:05.218 -05:00 [INF] Executed endpoint 'ProductApi.Controllers.ItemmasterController.GetAllPaged (ProductApi)'
+2026-03-27 13:58:05.218 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/Itemmaster/GetAllPaged?catCode=s&uom=n&pageNumber=1&pageSize=10 - 200 null application/json; charset=utf-8 33.5653ms

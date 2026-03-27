@@ -38,4 +38,21 @@ public class ItemmasterService:IItemmasterService
     {
         return await _repository.DeleteAsync(id);
     }
+    public async Task<PagedResultDto<ItemmasterDto>> GetAllPagedAsync(
+    string? catCode,
+    string? itemName,
+    string? uom,
+    int pageNumber,
+    int pageSize)
+    {
+        var result = await _repository.GetAllPagedAsync(
+            catCode, itemName, uom, pageNumber, pageSize);
+
+        return new PagedResultDto<ItemmasterDto>
+        {
+            Data = _mapper.Map<IEnumerable<ItemmasterDto>>(result.Data),
+            TotalRecords = result.TotalRecords
+        };
+    }
+
 }

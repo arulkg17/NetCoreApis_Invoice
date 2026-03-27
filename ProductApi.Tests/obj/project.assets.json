@@ -9991,11 +9991,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Projects\\NetCore\\ApiBackend\\NetCoreApis\\ProductApi.Tests\\ProductApi.Tests.csproj",
+      "projectUniqueName": "D:\\Projects\\NetCore\\ApiBackend\\NetCoreApis_Invoice\\ProductApi.Tests\\ProductApi.Tests.csproj",
       "projectName": "ProductApi.Tests",
-      "projectPath": "D:\\Projects\\NetCore\\ApiBackend\\NetCoreApis\\ProductApi.Tests\\ProductApi.Tests.csproj",
+      "projectPath": "D:\\Projects\\NetCore\\ApiBackend\\NetCoreApis_Invoice\\ProductApi.Tests\\ProductApi.Tests.csproj",
       "packagesPath": "C:\\Users\\arulg\\.nuget\\packages\\",
-      "outputPath": "D:\\Projects\\NetCore\\ApiBackend\\NetCoreApis\\ProductApi.Tests\\obj\\",
+      "outputPath": "D:\\Projects\\NetCore\\ApiBackend\\NetCoreApis_Invoice\\ProductApi.Tests\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -10017,8 +10017,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\Projects\\NetCore\\ApiBackend\\NetCoreApis\\ProductApi\\ProductApi.csproj": {
-              "projectPath": "D:\\Projects\\NetCore\\ApiBackend\\NetCoreApis\\ProductApi\\ProductApi.csproj"
+            "D:\\Projects\\NetCore\\ApiBackend\\NetCoreApis_Invoice\\ProductApi\\ProductApi.csproj": {
+              "projectPath": "D:\\Projects\\NetCore\\ApiBackend\\NetCoreApis_Invoice\\ProductApi\\ProductApi.csproj"
             }
           }
         }

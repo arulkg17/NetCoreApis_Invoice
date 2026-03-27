@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "75Aos63W1BM=",
+  "dgSpecHash": "PYEuuxHkQMM=",
   "success": true,
-  "projectFilePath": "D:\\Projects\\NetCore\\ApiBackend\\NetCoreApis\\ProductApi.Tests\\ProductApi.Tests.csproj",
+  "projectFilePath": "D:\\Projects\\NetCore\\ApiBackend\\NetCoreApis_Invoice\\ProductApi.Tests\\ProductApi.Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\arulg\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\arulg\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",

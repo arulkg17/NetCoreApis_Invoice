@@ -9713,11 +9713,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Projects\\NetCore\\ApiBackend\\NetCoreApis\\ProductApi\\ProductApi.csproj",
+      "projectUniqueName": "D:\\Projects\\NetCore\\ApiBackend\\NetCoreApis_Invoice\\ProductApi\\ProductApi.csproj",
       "projectName": "ProductApi",
-      "projectPath": "D:\\Projects\\NetCore\\ApiBackend\\NetCoreApis\\ProductApi\\ProductApi.csproj",
+      "projectPath": "D:\\Projects\\NetCore\\ApiBackend\\NetCoreApis_Invoice\\ProductApi\\ProductApi.csproj",
       "packagesPath": "C:\\Users\\arulg\\.nuget\\packages\\",
-      "outputPath": "D:\\Projects\\NetCore\\ApiBackend\\NetCoreApis\\ProductApi\\obj\\",
+      "outputPath": "D:\\Projects\\NetCore\\ApiBackend\\NetCoreApis_Invoice\\ProductApi\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

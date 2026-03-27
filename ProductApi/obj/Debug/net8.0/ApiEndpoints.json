@@ -59,6 +59,47 @@
   },
   {
     "ContainingType": "ProductApi.Controllers.ItemmasterController",
+    "Method": "GetAllPaged",
+    "RelativePath": "api/Itemmaster/GetAllPaged",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "catCode",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "itemName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "uom",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageNumber",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "api-version",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProductApi.Controllers.ItemmasterController",
     "Method": "GetById",
     "RelativePath": "api/Itemmaster/GetById/{id}",
     "HttpMethod": "GET",

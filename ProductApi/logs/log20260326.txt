@@ -1,0 +1,891 @@
+2026-03-26 15:37:19.963 -05:00 [INF] User profile is available. Using 'C:\Users\arulg\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-03-26 15:37:20.555 -05:00 [INF] Now listening on: http://localhost:5269
+2026-03-26 15:37:20.716 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-26 15:37:20.717 -05:00 [INF] Hosting environment: Development
+2026-03-26 15:37:20.717 -05:00 [INF] Content root path: D:\Projects\NetCore\ApiBackend\NetCoreApis_Invoice\ProductApi
+2026-03-26 15:37:24.583 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/swagger - null null
+2026-03-26 15:37:24.984 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/swagger - 301 0 null 416.7339ms
+2026-03-26 15:37:24.990 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/swagger/index.html - null null
+2026-03-26 15:37:25.143 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/swagger/index.html - 200 null text/html;charset=utf-8 152.8529ms
+2026-03-26 15:37:25.186 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/swagger/swagger-ui.css - null null
+2026-03-26 15:37:25.186 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/swagger/swagger-ui-bundle.js - null null
+2026-03-26 15:37:25.187 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/swagger/swagger-ui-standalone-preset.js - null null
+2026-03-26 15:37:25.197 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/_framework/aspnetcore-browser-refresh.js - null null
+2026-03-26 15:37:25.198 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/_vs/browserLink - null null
+2026-03-26 15:37:25.203 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/_framework/aspnetcore-browser-refresh.js - 200 13756 application/javascript; charset=utf-8 5.8608ms
+2026-03-26 15:37:25.332 -05:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2026-03-26 15:37:25.338 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/swagger/swagger-ui.css - 200 152034 text/css 151.9813ms
+2026-03-26 15:37:25.370 -05:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2026-03-26 15:37:25.371 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/swagger/swagger-ui-bundle.js - 200 1456926 text/javascript 184.3711ms
+2026-03-26 15:37:25.377 -05:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2026-03-26 15:37:25.378 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/swagger/swagger-ui-standalone-preset.js - 200 230280 text/javascript 190.7272ms
+2026-03-26 15:37:25.497 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/_vs/browserLink - 200 null text/javascript; charset=UTF-8 299.2304ms
+2026-03-26 15:37:25.808 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/swagger/v1/swagger.json - null null
+2026-03-26 15:37:25.876 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 67.5981ms
+2026-03-26 15:40:38.761 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/Itemmaster/GetAll - null null
+2026-03-26 15:40:38.826 -05:00 [INF] CORS policy execution successful.
+2026-03-26 15:40:40.990 -05:00 [INF] CorrelationID: ["efc0472a-e4a3-4ff3-93b6-b4182f77b254"] - Request Path: /api/Itemmaster/GetAll
+2026-03-26 15:40:41.002 -05:00 [INF] Executing endpoint 'ProductApi.Controllers.ItemmasterController.GetAll (ProductApi)'
+2026-03-26 15:40:41.048 -05:00 [INF] Route matched with {action = "GetAll", controller = "Itemmaster"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller ProductApi.Controllers.ItemmasterController (ProductApi).
+2026-03-26 15:40:42.472 -05:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'ProductEntity'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-03-26 15:40:44.512 -05:00 [INF] Executed DbCommand (68ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC sp_Itemmaster_GetALL
+2026-03-26 15:40:44.711 -05:00 [INF] Executing OkObjectResult, writing value of type 'ProductApi.Models.ApiResponse`1[[System.Collections.Generic.IEnumerable`1[[ProductApi.DTOs.ItemmasterDto, ProductApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-26 15:40:44.755 -05:00 [INF] Executed action ProductApi.Controllers.ItemmasterController.GetAll (ProductApi) in 3702.0689ms
+2026-03-26 15:40:44.755 -05:00 [INF] Executed endpoint 'ProductApi.Controllers.ItemmasterController.GetAll (ProductApi)'
+2026-03-26 15:40:44.768 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/Itemmaster/GetAll - 200 null application/json; charset=utf-8 6006.9398ms
+2026-03-26 15:51:09.586 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/Itemmaster/GetAll - null null
+2026-03-26 15:51:09.592 -05:00 [INF] CORS policy execution successful.
+2026-03-26 15:51:09.594 -05:00 [INF] CorrelationID: ["019ee74f-c4eb-4001-90c2-c5aa01b416b8"] - Request Path: /api/Itemmaster/GetAll
+2026-03-26 15:51:09.597 -05:00 [INF] Executing endpoint 'ProductApi.Controllers.ItemmasterController.GetAll (ProductApi)'
+2026-03-26 15:51:09.598 -05:00 [INF] Route matched with {action = "GetAll", controller = "Itemmaster"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller ProductApi.Controllers.ItemmasterController (ProductApi).
+2026-03-26 15:51:09.740 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC sp_Itemmaster_GetALL
+2026-03-26 15:51:09.744 -05:00 [INF] Executing OkObjectResult, writing value of type 'ProductApi.Models.ApiResponse`1[[System.Collections.Generic.IEnumerable`1[[ProductApi.DTOs.ItemmasterDto, ProductApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-26 15:51:09.747 -05:00 [INF] Executed action ProductApi.Controllers.ItemmasterController.GetAll (ProductApi) in 148.8943ms
+2026-03-26 15:51:09.748 -05:00 [INF] Executed endpoint 'ProductApi.Controllers.ItemmasterController.GetAll (ProductApi)'
+2026-03-26 15:51:09.748 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/Itemmaster/GetAll - 200 null application/json; charset=utf-8 161.9939ms
+2026-03-26 15:55:09.112 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/Itemmaster/GetAll - null null
+2026-03-26 15:55:09.113 -05:00 [INF] CORS policy execution successful.
+2026-03-26 15:55:09.116 -05:00 [INF] CorrelationID: ["0130baa1-1673-45b5-8c17-868d9b5862e5"] - Request Path: /api/Itemmaster/GetAll
+2026-03-26 15:55:09.117 -05:00 [INF] Executing endpoint 'ProductApi.Controllers.ItemmasterController.GetAll (ProductApi)'
+2026-03-26 15:55:09.117 -05:00 [INF] Route matched with {action = "GetAll", controller = "Itemmaster"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller ProductApi.Controllers.ItemmasterController (ProductApi).
+2026-03-26 15:55:09.148 -05:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC sp_Itemmaster_GetALL
+2026-03-26 15:55:09.149 -05:00 [INF] Executing OkObjectResult, writing value of type 'ProductApi.Models.ApiResponse`1[[System.Collections.Generic.IEnumerable`1[[ProductApi.DTOs.ItemmasterDto, ProductApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-26 15:55:09.150 -05:00 [INF] Executed action ProductApi.Controllers.ItemmasterController.GetAll (ProductApi) in 33.0125ms
+2026-03-26 15:55:09.150 -05:00 [INF] Executed endpoint 'ProductApi.Controllers.ItemmasterController.GetAll (ProductApi)'
+2026-03-26 15:55:09.151 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/Itemmaster/GetAll - 200 null application/json; charset=utf-8 38.6632ms
+2026-03-26 15:56:50.820 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/Itemmaster/GetAll - null null
+2026-03-26 15:56:50.821 -05:00 [INF] CORS policy execution successful.
+2026-03-26 15:56:50.821 -05:00 [INF] CorrelationID: ["895abea3-592a-46b5-8f19-67807c64a068"] - Request Path: /api/Itemmaster/GetAll
+2026-03-26 15:56:50.821 -05:00 [INF] Executing endpoint 'ProductApi.Controllers.ItemmasterController.GetAll (ProductApi)'
+2026-03-26 15:56:50.821 -05:00 [INF] Route matched with {action = "GetAll", controller = "Itemmaster"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller ProductApi.Controllers.ItemmasterController (ProductApi).
+2026-03-26 15:56:50.844 -05:00 [INF] Executed DbCommand (21ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC sp_Itemmaster_GetALL
+2026-03-26 15:56:50.845 -05:00 [INF] Executing OkObjectResult, writing value of type 'ProductApi.Models.ApiResponse`1[[System.Collections.Generic.IEnumerable`1[[ProductApi.DTOs.ItemmasterDto, ProductApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-26 15:56:50.846 -05:00 [INF] Executed action ProductApi.Controllers.ItemmasterController.GetAll (ProductApi) in 24.5927ms
+2026-03-26 15:56:50.846 -05:00 [INF] Executed endpoint 'ProductApi.Controllers.ItemmasterController.GetAll (ProductApi)'
+2026-03-26 15:56:50.847 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/Itemmaster/GetAll - 200 null application/json; charset=utf-8 26.6903ms
+2026-03-26 15:57:40.450 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/Itemmaster/GetAll - null null
+2026-03-26 15:57:40.451 -05:00 [INF] CORS policy execution successful.
+2026-03-26 15:57:40.451 -05:00 [INF] CorrelationID: ["2fa5dfdf-93fd-4d8d-89ad-c5a3d9f79a0a"] - Request Path: /api/Itemmaster/GetAll
+2026-03-26 15:57:40.451 -05:00 [INF] Executing endpoint 'ProductApi.Controllers.ItemmasterController.GetAll (ProductApi)'
+2026-03-26 15:57:40.452 -05:00 [INF] Route matched with {action = "GetAll", controller = "Itemmaster"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller ProductApi.Controllers.ItemmasterController (ProductApi).
+2026-03-26 15:57:40.457 -05:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC sp_Itemmaster_GetALL
+2026-03-26 15:57:40.458 -05:00 [INF] Executing OkObjectResult, writing value of type 'ProductApi.Models.ApiResponse`1[[System.Collections.Generic.IEnumerable`1[[ProductApi.DTOs.ItemmasterDto, ProductApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-26 15:57:40.459 -05:00 [INF] Executed action ProductApi.Controllers.ItemmasterController.GetAll (ProductApi) in 7.1ms
+2026-03-26 15:57:40.459 -05:00 [INF] Executed endpoint 'ProductApi.Controllers.ItemmasterController.GetAll (ProductApi)'
+2026-03-26 15:57:40.459 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/Itemmaster/GetAll - 200 null application/json; charset=utf-8 9.3543ms
+2026-03-26 16:08:06.323 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/Itemmaster/GetAll - null null
+2026-03-26 16:08:06.323 -05:00 [INF] CORS policy execution successful.
+2026-03-26 16:08:06.324 -05:00 [INF] CorrelationID: ["105ae4c3-8ede-4563-8a2f-26cd030bb7ab"] - Request Path: /api/Itemmaster/GetAll
+2026-03-26 16:08:06.324 -05:00 [INF] Executing endpoint 'ProductApi.Controllers.ItemmasterController.GetAll (ProductApi)'
+2026-03-26 16:08:06.324 -05:00 [INF] Route matched with {action = "GetAll", controller = "Itemmaster"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller ProductApi.Controllers.ItemmasterController (ProductApi).
+2026-03-26 16:08:06.349 -05:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC sp_Itemmaster_GetALL
+2026-03-26 16:08:06.350 -05:00 [INF] Executing OkObjectResult, writing value of type 'ProductApi.Models.ApiResponse`1[[System.Collections.Generic.IEnumerable`1[[ProductApi.DTOs.ItemmasterDto, ProductApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-26 16:08:06.350 -05:00 [INF] Executed action ProductApi.Controllers.ItemmasterController.GetAll (ProductApi) in 26.0989ms
+2026-03-26 16:08:06.350 -05:00 [INF] Executed endpoint 'ProductApi.Controllers.ItemmasterController.GetAll (ProductApi)'
+2026-03-26 16:08:06.351 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/Itemmaster/GetAll - 200 null application/json; charset=utf-8 28.0553ms
+2026-03-26 16:11:41.366 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/Itemmaster/GetAll - null null
+2026-03-26 16:11:41.366 -05:00 [INF] CORS policy execution successful.
+2026-03-26 16:11:41.367 -05:00 [INF] CorrelationID: ["32daf83c-7616-406d-a0b2-6b432789c03f"] - Request Path: /api/Itemmaster/GetAll
+2026-03-26 16:11:41.367 -05:00 [INF] Executing endpoint 'ProductApi.Controllers.ItemmasterController.GetAll (ProductApi)'
+2026-03-26 16:11:41.367 -05:00 [INF] Route matched with {action = "GetAll", controller = "Itemmaster"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller ProductApi.Controllers.ItemmasterController (ProductApi).
+2026-03-26 16:11:41.374 -05:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC sp_Itemmaster_GetALL
+2026-03-26 16:11:41.376 -05:00 [INF] Executing OkObjectResult, writing value of type 'ProductApi.Models.ApiResponse`1[[System.Collections.Generic.IEnumerable`1[[ProductApi.DTOs.ItemmasterDto, ProductApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-26 16:11:41.376 -05:00 [INF] Executed action ProductApi.Controllers.ItemmasterController.GetAll (ProductApi) in 8.9015ms
+2026-03-26 16:11:41.376 -05:00 [INF] Executed endpoint 'ProductApi.Controllers.ItemmasterController.GetAll (ProductApi)'
+2026-03-26 16:11:41.377 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/Itemmaster/GetAll - 200 null application/json; charset=utf-8 10.6955ms
+2026-03-26 16:11:52.006 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/Itemmaster/GetAll - null null
+2026-03-26 16:11:52.008 -05:00 [INF] CORS policy execution successful.
+2026-03-26 16:11:52.008 -05:00 [INF] CorrelationID: ["ff1155d2-50e2-4f2d-a863-3dabe2a4c0fe"] - Request Path: /api/Itemmaster/GetAll
+2026-03-26 16:11:52.008 -05:00 [INF] Executing endpoint 'ProductApi.Controllers.ItemmasterController.GetAll (ProductApi)'
+2026-03-26 16:11:52.008 -05:00 [INF] Route matched with {action = "GetAll", controller = "Itemmaster"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller ProductApi.Controllers.ItemmasterController (ProductApi).
+2026-03-26 16:11:52.016 -05:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC sp_Itemmaster_GetALL
+2026-03-26 16:11:52.019 -05:00 [INF] Executing OkObjectResult, writing value of type 'ProductApi.Models.ApiResponse`1[[System.Collections.Generic.IEnumerable`1[[ProductApi.DTOs.ItemmasterDto, ProductApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-26 16:11:52.020 -05:00 [INF] Executed action ProductApi.Controllers.ItemmasterController.GetAll (ProductApi) in 11.1686ms
+2026-03-26 16:11:52.020 -05:00 [INF] Executed endpoint 'ProductApi.Controllers.ItemmasterController.GetAll (ProductApi)'
+2026-03-26 16:11:52.020 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/Itemmaster/GetAll - 200 null application/json; charset=utf-8 13.7102ms
+2026-03-26 16:13:57.270 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/Itemmaster/GetAll - null null
+2026-03-26 16:13:57.270 -05:00 [INF] CORS policy execution successful.
+2026-03-26 16:13:57.270 -05:00 [INF] CorrelationID: ["e0189cda-0fc3-473a-ba5d-c7963b19d391"] - Request Path: /api/Itemmaster/GetAll
+2026-03-26 16:13:57.271 -05:00 [INF] Executing endpoint 'ProductApi.Controllers.ItemmasterController.GetAll (ProductApi)'
+2026-03-26 16:13:57.271 -05:00 [INF] Route matched with {action = "GetAll", controller = "Itemmaster"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller ProductApi.Controllers.ItemmasterController (ProductApi).
+2026-03-26 16:13:57.277 -05:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC sp_Itemmaster_GetALL
+2026-03-26 16:13:57.281 -05:00 [INF] Executing OkObjectResult, writing value of type 'ProductApi.Models.ApiResponse`1[[System.Collections.Generic.IEnumerable`1[[ProductApi.DTOs.ItemmasterDto, ProductApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-26 16:13:57.287 -05:00 [INF] Executed action ProductApi.Controllers.ItemmasterController.GetAll (ProductApi) in 15.9776ms
+2026-03-26 16:13:57.287 -05:00 [INF] Executed endpoint 'ProductApi.Controllers.ItemmasterController.GetAll (ProductApi)'
+2026-03-26 16:13:57.287 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/Itemmaster/GetAll - 200 null application/json; charset=utf-8 17.8223ms
+2026-03-26 16:14:03.499 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/Itemmaster/GetAll - null null
+2026-03-26 16:14:03.500 -05:00 [INF] CORS policy execution successful.
+2026-03-26 16:14:03.500 -05:00 [INF] CorrelationID: ["221b7437-3865-420d-837b-833a00d1352b"] - Request Path: /api/Itemmaster/GetAll
+2026-03-26 16:14:03.501 -05:00 [INF] Executing endpoint 'ProductApi.Controllers.ItemmasterController.GetAll (ProductApi)'
+2026-03-26 16:14:03.501 -05:00 [INF] Route matched with {action = "GetAll", controller = "Itemmaster"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller ProductApi.Controllers.ItemmasterController (ProductApi).
+2026-03-26 16:14:03.508 -05:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC sp_Itemmaster_GetALL
+2026-03-26 16:14:03.509 -05:00 [INF] Executing OkObjectResult, writing value of type 'ProductApi.Models.ApiResponse`1[[System.Collections.Generic.IEnumerable`1[[ProductApi.DTOs.ItemmasterDto, ProductApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-26 16:14:03.510 -05:00 [INF] Executed action ProductApi.Controllers.ItemmasterController.GetAll (ProductApi) in 8.4894ms
+2026-03-26 16:14:03.510 -05:00 [INF] Executed endpoint 'ProductApi.Controllers.ItemmasterController.GetAll (ProductApi)'
+2026-03-26 16:14:03.510 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/Itemmaster/GetAll - 200 null application/json; charset=utf-8 11.4458ms
+2026-03-26 16:15:11.058 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/Itemmaster/GetAll - null null
+2026-03-26 16:15:11.059 -05:00 [INF] CORS policy execution successful.
+2026-03-26 16:15:11.059 -05:00 [INF] CorrelationID: ["e2bfe7a8-7c7c-4f71-9f33-66ecb83e6c6e"] - Request Path: /api/Itemmaster/GetAll
+2026-03-26 16:15:11.059 -05:00 [INF] Executing endpoint 'ProductApi.Controllers.ItemmasterController.GetAll (ProductApi)'
+2026-03-26 16:15:11.059 -05:00 [INF] Route matched with {action = "GetAll", controller = "Itemmaster"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller ProductApi.Controllers.ItemmasterController (ProductApi).
+2026-03-26 16:15:11.067 -05:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC sp_Itemmaster_GetALL
+2026-03-26 16:15:11.075 -05:00 [INF] Executing OkObjectResult, writing value of type 'ProductApi.Models.ApiResponse`1[[System.Collections.Generic.IEnumerable`1[[ProductApi.DTOs.ItemmasterDto, ProductApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-26 16:15:11.076 -05:00 [INF] Executed action ProductApi.Controllers.ItemmasterController.GetAll (ProductApi) in 16.1319ms
+2026-03-26 16:15:11.076 -05:00 [INF] Executed endpoint 'ProductApi.Controllers.ItemmasterController.GetAll (ProductApi)'
+2026-03-26 16:15:11.077 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/Itemmaster/GetAll - 200 null application/json; charset=utf-8 18.1286ms
+2026-03-26 16:17:50.913 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/Itemmaster/GetAll - null null
+2026-03-26 16:17:50.913 -05:00 [INF] CORS policy execution successful.
+2026-03-26 16:17:50.913 -05:00 [INF] CorrelationID: ["ce0fa84e-afea-431a-a52b-02507d35ad61"] - Request Path: /api/Itemmaster/GetAll
+2026-03-26 16:17:50.914 -05:00 [INF] Executing endpoint 'ProductApi.Controllers.ItemmasterController.GetAll (ProductApi)'
+2026-03-26 16:17:50.914 -05:00 [INF] Route matched with {action = "GetAll", controller = "Itemmaster"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller ProductApi.Controllers.ItemmasterController (ProductApi).
+2026-03-26 16:17:50.919 -05:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC sp_Itemmaster_GetALL
+2026-03-26 16:17:50.924 -05:00 [INF] Executing OkObjectResult, writing value of type 'ProductApi.Models.ApiResponse`1[[System.Collections.Generic.IEnumerable`1[[ProductApi.DTOs.ItemmasterDto, ProductApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-26 16:17:50.927 -05:00 [INF] Executed action ProductApi.Controllers.ItemmasterController.GetAll (ProductApi) in 13.2255ms
+2026-03-26 16:17:50.927 -05:00 [INF] Executed endpoint 'ProductApi.Controllers.ItemmasterController.GetAll (ProductApi)'
+2026-03-26 16:17:50.927 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/Itemmaster/GetAll - 200 null application/json; charset=utf-8 14.7576ms
+2026-03-26 16:19:16.951 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/Itemmaster/GetAll - null null
+2026-03-26 16:19:16.952 -05:00 [INF] CORS policy execution successful.
+2026-03-26 16:19:16.953 -05:00 [INF] CorrelationID: ["9496a9f7-8f11-40e7-ae51-6cf8b9ff4211"] - Request Path: /api/Itemmaster/GetAll
+2026-03-26 16:19:16.953 -05:00 [INF] Executing endpoint 'ProductApi.Controllers.ItemmasterController.GetAll (ProductApi)'
+2026-03-26 16:19:16.953 -05:00 [INF] Route matched with {action = "GetAll", controller = "Itemmaster"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller ProductApi.Controllers.ItemmasterController (ProductApi).
+2026-03-26 16:19:16.957 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC sp_Itemmaster_GetALL
+2026-03-26 16:19:16.959 -05:00 [INF] Executing OkObjectResult, writing value of type 'ProductApi.Models.ApiResponse`1[[System.Collections.Generic.IEnumerable`1[[ProductApi.DTOs.ItemmasterDto, ProductApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-26 16:19:16.959 -05:00 [INF] Executed action ProductApi.Controllers.ItemmasterController.GetAll (ProductApi) in 6.0805ms
+2026-03-26 16:19:16.959 -05:00 [INF] Executed endpoint 'ProductApi.Controllers.ItemmasterController.GetAll (ProductApi)'
+2026-03-26 16:19:16.959 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/Itemmaster/GetAll - 200 null application/json; charset=utf-8 8.2037ms
+2026-03-26 16:34:52.062 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/Itemmaster/GetAll - null null
+2026-03-26 16:34:52.062 -05:00 [INF] CORS policy execution successful.
+2026-03-26 16:34:52.063 -05:00 [INF] CorrelationID: ["a9a0fcf8-4bfa-4fb0-9040-f204f3a514e9"] - Request Path: /api/Itemmaster/GetAll
+2026-03-26 16:34:52.063 -05:00 [INF] Executing endpoint 'ProductApi.Controllers.ItemmasterController.GetAll (ProductApi)'
+2026-03-26 16:34:52.063 -05:00 [INF] Route matched with {action = "GetAll", controller = "Itemmaster"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller ProductApi.Controllers.ItemmasterController (ProductApi).
+2026-03-26 16:34:52.088 -05:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC sp_Itemmaster_GetALL
+2026-03-26 16:34:52.088 -05:00 [INF] Executing OkObjectResult, writing value of type 'ProductApi.Models.ApiResponse`1[[System.Collections.Generic.IEnumerable`1[[ProductApi.DTOs.ItemmasterDto, ProductApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-26 16:34:52.089 -05:00 [INF] Executed action ProductApi.Controllers.ItemmasterController.GetAll (ProductApi) in 25.5332ms
+2026-03-26 16:34:52.089 -05:00 [INF] Executed endpoint 'ProductApi.Controllers.ItemmasterController.GetAll (ProductApi)'
+2026-03-26 16:34:52.089 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/Itemmaster/GetAll - 200 null application/json; charset=utf-8 27.4071ms
+2026-03-26 16:36:31.935 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/Itemmaster/GetAll - null null
+2026-03-26 16:36:31.935 -05:00 [INF] CORS policy execution successful.
+2026-03-26 16:36:31.936 -05:00 [INF] CorrelationID: ["665d66e7-0a46-4400-8cb4-be5bdb961cc6"] - Request Path: /api/Itemmaster/GetAll
+2026-03-26 16:36:31.936 -05:00 [INF] Executing endpoint 'ProductApi.Controllers.ItemmasterController.GetAll (ProductApi)'
+2026-03-26 16:36:31.936 -05:00 [INF] Route matched with {action = "GetAll", controller = "Itemmaster"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller ProductApi.Controllers.ItemmasterController (ProductApi).
+2026-03-26 16:36:31.941 -05:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC sp_Itemmaster_GetALL
+2026-03-26 16:36:31.948 -05:00 [INF] Executing OkObjectResult, writing value of type 'ProductApi.Models.ApiResponse`1[[System.Collections.Generic.IEnumerable`1[[ProductApi.DTOs.ItemmasterDto, ProductApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-26 16:36:31.948 -05:00 [INF] Executed action ProductApi.Controllers.ItemmasterController.GetAll (ProductApi) in 12.1361ms
+2026-03-26 16:36:31.949 -05:00 [INF] Executed endpoint 'ProductApi.Controllers.ItemmasterController.GetAll (ProductApi)'
+2026-03-26 16:36:31.949 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/Itemmaster/GetAll - 200 null application/json; charset=utf-8 14.3917ms
+2026-03-26 16:36:48.206 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/Itemmaster/GetAll - null null
+2026-03-26 16:36:48.206 -05:00 [INF] CORS policy execution successful.
+2026-03-26 16:36:48.208 -05:00 [INF] CorrelationID: ["4c6d9e9f-338d-45e3-859d-9359c4a94b74"] - Request Path: /api/Itemmaster/GetAll
+2026-03-26 16:36:48.208 -05:00 [INF] Executing endpoint 'ProductApi.Controllers.ItemmasterController.GetAll (ProductApi)'
+2026-03-26 16:36:48.209 -05:00 [INF] Route matched with {action = "GetAll", controller = "Itemmaster"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller ProductApi.Controllers.ItemmasterController (ProductApi).
+2026-03-26 16:36:48.218 -05:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC sp_Itemmaster_GetALL
+2026-03-26 16:36:48.224 -05:00 [INF] Executing OkObjectResult, writing value of type 'ProductApi.Models.ApiResponse`1[[System.Collections.Generic.IEnumerable`1[[ProductApi.DTOs.ItemmasterDto, ProductApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-26 16:36:48.228 -05:00 [INF] Executed action ProductApi.Controllers.ItemmasterController.GetAll (ProductApi) in 19.3915ms
+2026-03-26 16:36:48.228 -05:00 [INF] Executed endpoint 'ProductApi.Controllers.ItemmasterController.GetAll (ProductApi)'
+2026-03-26 16:36:48.229 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/Itemmaster/GetAll - 200 null application/json; charset=utf-8 23.1285ms
+2026-03-26 16:39:02.756 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/Itemmaster/GetAll - null null
+2026-03-26 16:39:02.757 -05:00 [INF] CORS policy execution successful.
+2026-03-26 16:39:02.757 -05:00 [INF] CorrelationID: ["f6e82c47-0743-410a-b027-88026c748664"] - Request Path: /api/Itemmaster/GetAll
+2026-03-26 16:39:02.757 -05:00 [INF] Executing endpoint 'ProductApi.Controllers.ItemmasterController.GetAll (ProductApi)'
+2026-03-26 16:39:02.757 -05:00 [INF] Route matched with {action = "GetAll", controller = "Itemmaster"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller ProductApi.Controllers.ItemmasterController (ProductApi).
+2026-03-26 16:39:02.767 -05:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC sp_Itemmaster_GetALL
+2026-03-26 16:39:02.772 -05:00 [INF] Executing OkObjectResult, writing value of type 'ProductApi.Models.ApiResponse`1[[System.Collections.Generic.IEnumerable`1[[ProductApi.DTOs.ItemmasterDto, ProductApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-26 16:39:02.775 -05:00 [INF] Executed action ProductApi.Controllers.ItemmasterController.GetAll (ProductApi) in 17.8443ms
+2026-03-26 16:39:02.775 -05:00 [INF] Executed endpoint 'ProductApi.Controllers.ItemmasterController.GetAll (ProductApi)'
+2026-03-26 16:39:02.776 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/Itemmaster/GetAll - 200 null application/json; charset=utf-8 19.5617ms
+2026-03-26 16:39:47.422 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/Itemmaster/GetAll - null null
+2026-03-26 16:39:47.423 -05:00 [INF] CORS policy execution successful.
+2026-03-26 16:39:47.423 -05:00 [INF] CorrelationID: ["bcaa9fb7-e207-43f9-8aab-5d078b0452ff"] - Request Path: /api/Itemmaster/GetAll
+2026-03-26 16:39:47.423 -05:00 [INF] Executing endpoint 'ProductApi.Controllers.ItemmasterController.GetAll (ProductApi)'
+2026-03-26 16:39:47.423 -05:00 [INF] Route matched with {action = "GetAll", controller = "Itemmaster"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller ProductApi.Controllers.ItemmasterController (ProductApi).
+2026-03-26 16:39:47.431 -05:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC sp_Itemmaster_GetALL
+2026-03-26 16:39:47.440 -05:00 [INF] Executing OkObjectResult, writing value of type 'ProductApi.Models.ApiResponse`1[[System.Collections.Generic.IEnumerable`1[[ProductApi.DTOs.ItemmasterDto, ProductApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-26 16:39:47.440 -05:00 [INF] Executed action ProductApi.Controllers.ItemmasterController.GetAll (ProductApi) in 16.3687ms
+2026-03-26 16:39:47.440 -05:00 [INF] Executed endpoint 'ProductApi.Controllers.ItemmasterController.GetAll (ProductApi)'
+2026-03-26 16:39:47.440 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/Itemmaster/GetAll - 200 null application/json; charset=utf-8 18.7479ms
+2026-03-26 16:46:02.509 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/Itemmaster/GetAll - null null
+2026-03-26 16:46:02.510 -05:00 [INF] CORS policy execution successful.
+2026-03-26 16:46:02.510 -05:00 [INF] CorrelationID: ["99626d3a-269a-418e-a84b-f079b2fa4fce"] - Request Path: /api/Itemmaster/GetAll
+2026-03-26 16:46:02.510 -05:00 [INF] Executing endpoint 'ProductApi.Controllers.ItemmasterController.GetAll (ProductApi)'
+2026-03-26 16:46:02.510 -05:00 [INF] Route matched with {action = "GetAll", controller = "Itemmaster"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller ProductApi.Controllers.ItemmasterController (ProductApi).
+2026-03-26 16:46:02.540 -05:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC sp_Itemmaster_GetALL
+2026-03-26 16:46:02.542 -05:00 [INF] Executing OkObjectResult, writing value of type 'ProductApi.Models.ApiResponse`1[[System.Collections.Generic.IEnumerable`1[[ProductApi.DTOs.ItemmasterDto, ProductApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-26 16:46:02.543 -05:00 [INF] Executed action ProductApi.Controllers.ItemmasterController.GetAll (ProductApi) in 32.1534ms
+2026-03-26 16:46:02.543 -05:00 [INF] Executed endpoint 'ProductApi.Controllers.ItemmasterController.GetAll (ProductApi)'
+2026-03-26 16:46:02.543 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/Itemmaster/GetAll - 200 null application/json; charset=utf-8 34.0866ms
+2026-03-26 16:46:33.092 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/Itemmaster/GetAll - null null
+2026-03-26 16:46:33.092 -05:00 [INF] CORS policy execution successful.
+2026-03-26 16:46:33.092 -05:00 [INF] CorrelationID: ["3e56fcfb-8da7-49eb-aa0a-62375647582e"] - Request Path: /api/Itemmaster/GetAll
+2026-03-26 16:46:33.093 -05:00 [INF] Executing endpoint 'ProductApi.Controllers.ItemmasterController.GetAll (ProductApi)'
+2026-03-26 16:46:33.093 -05:00 [INF] Route matched with {action = "GetAll", controller = "Itemmaster"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller ProductApi.Controllers.ItemmasterController (ProductApi).
+2026-03-26 16:46:33.098 -05:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC sp_Itemmaster_GetALL
+2026-03-26 16:46:33.102 -05:00 [INF] Executing OkObjectResult, writing value of type 'ProductApi.Models.ApiResponse`1[[System.Collections.Generic.IEnumerable`1[[ProductApi.DTOs.ItemmasterDto, ProductApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-26 16:46:33.106 -05:00 [INF] Executed action ProductApi.Controllers.ItemmasterController.GetAll (ProductApi) in 12.778ms
+2026-03-26 16:46:33.106 -05:00 [INF] Executed endpoint 'ProductApi.Controllers.ItemmasterController.GetAll (ProductApi)'
+2026-03-26 16:46:33.106 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/Itemmaster/GetAll - 200 null application/json; charset=utf-8 14.8161ms
+2026-03-26 16:52:13.184 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/Itemmaster/GetAll - null null
+2026-03-26 16:52:13.184 -05:00 [INF] CORS policy execution successful.
+2026-03-26 16:52:13.190 -05:00 [INF] CorrelationID: ["244eb377-99ef-4035-9d11-eefb6d642338"] - Request Path: /api/Itemmaster/GetAll
+2026-03-26 16:52:13.190 -05:00 [INF] Executing endpoint 'ProductApi.Controllers.ItemmasterController.GetAll (ProductApi)'
+2026-03-26 16:52:13.191 -05:00 [INF] Route matched with {action = "GetAll", controller = "Itemmaster"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller ProductApi.Controllers.ItemmasterController (ProductApi).
+2026-03-26 16:52:13.228 -05:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC sp_Itemmaster_GetALL
+2026-03-26 16:52:13.229 -05:00 [INF] Executing OkObjectResult, writing value of type 'ProductApi.Models.ApiResponse`1[[System.Collections.Generic.IEnumerable`1[[ProductApi.DTOs.ItemmasterDto, ProductApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-26 16:52:13.230 -05:00 [INF] Executed action ProductApi.Controllers.ItemmasterController.GetAll (ProductApi) in 38.7305ms
+2026-03-26 16:52:13.230 -05:00 [INF] Executed endpoint 'ProductApi.Controllers.ItemmasterController.GetAll (ProductApi)'
+2026-03-26 16:52:13.230 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/Itemmaster/GetAll - 200 null application/json; charset=utf-8 46.5038ms
+2026-03-26 16:52:38.494 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/Itemmaster/GetAll - null null
+2026-03-26 16:52:38.495 -05:00 [INF] CORS policy execution successful.
+2026-03-26 16:52:38.495 -05:00 [INF] CorrelationID: ["c6a74190-bdb4-4632-a76e-90b0f0eff965"] - Request Path: /api/Itemmaster/GetAll
+2026-03-26 16:52:38.496 -05:00 [INF] Executing endpoint 'ProductApi.Controllers.ItemmasterController.GetAll (ProductApi)'
+2026-03-26 16:52:38.496 -05:00 [INF] Route matched with {action = "GetAll", controller = "Itemmaster"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller ProductApi.Controllers.ItemmasterController (ProductApi).
+2026-03-26 16:52:38.501 -05:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC sp_Itemmaster_GetALL
+2026-03-26 16:52:38.502 -05:00 [INF] Executing OkObjectResult, writing value of type 'ProductApi.Models.ApiResponse`1[[System.Collections.Generic.IEnumerable`1[[ProductApi.DTOs.ItemmasterDto, ProductApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-26 16:52:38.502 -05:00 [INF] Executed action ProductApi.Controllers.ItemmasterController.GetAll (ProductApi) in 6.6312ms
+2026-03-26 16:52:38.503 -05:00 [INF] Executed endpoint 'ProductApi.Controllers.ItemmasterController.GetAll (ProductApi)'
+2026-03-26 16:52:38.503 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/Itemmaster/GetAll - 200 null application/json; charset=utf-8 9.5833ms
+2026-03-26 16:57:10.118 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/Itemmaster/GetAll - null null
+2026-03-26 16:57:10.119 -05:00 [INF] CORS policy execution successful.
+2026-03-26 16:57:10.119 -05:00 [INF] CorrelationID: ["8abafdf0-f4f2-4da2-a940-2d52543df6c0"] - Request Path: /api/Itemmaster/GetAll
+2026-03-26 16:57:10.119 -05:00 [INF] Executing endpoint 'ProductApi.Controllers.ItemmasterController.GetAll (ProductApi)'
+2026-03-26 16:57:10.119 -05:00 [INF] Route matched with {action = "GetAll", controller = "Itemmaster"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller ProductApi.Controllers.ItemmasterController (ProductApi).
+2026-03-26 16:57:10.150 -05:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC sp_Itemmaster_GetALL
+2026-03-26 16:57:10.150 -05:00 [INF] Executing OkObjectResult, writing value of type 'ProductApi.Models.ApiResponse`1[[System.Collections.Generic.IEnumerable`1[[ProductApi.DTOs.ItemmasterDto, ProductApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-26 16:57:10.151 -05:00 [INF] Executed action ProductApi.Controllers.ItemmasterController.GetAll (ProductApi) in 31.3354ms
+2026-03-26 16:57:10.151 -05:00 [INF] Executed endpoint 'ProductApi.Controllers.ItemmasterController.GetAll (ProductApi)'
+2026-03-26 16:57:10.151 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/Itemmaster/GetAll - 200 null application/json; charset=utf-8 33.0432ms
+2026-03-26 16:58:54.485 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/Itemmaster/GetAll - null null
+2026-03-26 16:58:54.486 -05:00 [INF] CORS policy execution successful.
+2026-03-26 16:58:54.486 -05:00 [INF] CorrelationID: ["a588250a-d11a-441e-93c4-6d067698878f"] - Request Path: /api/Itemmaster/GetAll
+2026-03-26 16:58:54.486 -05:00 [INF] Executing endpoint 'ProductApi.Controllers.ItemmasterController.GetAll (ProductApi)'
+2026-03-26 16:58:54.486 -05:00 [INF] Route matched with {action = "GetAll", controller = "Itemmaster"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller ProductApi.Controllers.ItemmasterController (ProductApi).
+2026-03-26 16:58:54.491 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC sp_Itemmaster_GetALL
+2026-03-26 16:58:54.492 -05:00 [INF] Executing OkObjectResult, writing value of type 'ProductApi.Models.ApiResponse`1[[System.Collections.Generic.IEnumerable`1[[ProductApi.DTOs.ItemmasterDto, ProductApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-26 16:58:54.493 -05:00 [INF] Executed action ProductApi.Controllers.ItemmasterController.GetAll (ProductApi) in 6.2722ms
+2026-03-26 16:58:54.493 -05:00 [INF] Executed endpoint 'ProductApi.Controllers.ItemmasterController.GetAll (ProductApi)'
+2026-03-26 16:58:54.493 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/Itemmaster/GetAll - 200 null application/json; charset=utf-8 8.1223ms
+2026-03-26 16:59:06.142 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/Itemmaster/GetAll - null null
+2026-03-26 16:59:06.143 -05:00 [INF] CORS policy execution successful.
+2026-03-26 16:59:06.143 -05:00 [INF] CorrelationID: ["e10c78d5-1ff2-43f7-ab44-5df3b01bf15d"] - Request Path: /api/Itemmaster/GetAll
+2026-03-26 16:59:06.143 -05:00 [INF] Executing endpoint 'ProductApi.Controllers.ItemmasterController.GetAll (ProductApi)'
+2026-03-26 16:59:06.144 -05:00 [INF] Route matched with {action = "GetAll", controller = "Itemmaster"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller ProductApi.Controllers.ItemmasterController (ProductApi).
+2026-03-26 16:59:06.149 -05:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC sp_Itemmaster_GetALL
+2026-03-26 16:59:06.151 -05:00 [INF] Executing OkObjectResult, writing value of type 'ProductApi.Models.ApiResponse`1[[System.Collections.Generic.IEnumerable`1[[ProductApi.DTOs.ItemmasterDto, ProductApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-26 16:59:06.151 -05:00 [INF] Executed action ProductApi.Controllers.ItemmasterController.GetAll (ProductApi) in 7.2094ms
+2026-03-26 16:59:06.151 -05:00 [INF] Executed endpoint 'ProductApi.Controllers.ItemmasterController.GetAll (ProductApi)'
+2026-03-26 16:59:06.151 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/Itemmaster/GetAll - 200 null application/json; charset=utf-8 8.9882ms
+2026-03-26 17:03:54.297 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/Itemmaster/GetAll - null null
+2026-03-26 17:03:54.298 -05:00 [INF] CORS policy execution successful.
+2026-03-26 17:03:54.299 -05:00 [INF] CorrelationID: ["6a85fec8-a7b9-432a-b8f7-1f4ff5e55aec"] - Request Path: /api/Itemmaster/GetAll
+2026-03-26 17:03:54.299 -05:00 [INF] Executing endpoint 'ProductApi.Controllers.ItemmasterController.GetAll (ProductApi)'
+2026-03-26 17:03:54.299 -05:00 [INF] Route matched with {action = "GetAll", controller = "Itemmaster"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller ProductApi.Controllers.ItemmasterController (ProductApi).
+2026-03-26 17:03:54.304 -05:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC sp_Itemmaster_GetALL
+2026-03-26 17:03:54.305 -05:00 [INF] Executing OkObjectResult, writing value of type 'ProductApi.Models.ApiResponse`1[[System.Collections.Generic.IEnumerable`1[[ProductApi.DTOs.ItemmasterDto, ProductApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-26 17:03:54.305 -05:00 [INF] Executed action ProductApi.Controllers.ItemmasterController.GetAll (ProductApi) in 6.3763ms
+2026-03-26 17:03:54.306 -05:00 [INF] Executed endpoint 'ProductApi.Controllers.ItemmasterController.GetAll (ProductApi)'
+2026-03-26 17:03:54.306 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/Itemmaster/GetAll - 200 null application/json; charset=utf-8 9.0886ms
+2026-03-26 17:05:36.605 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/Itemmaster/GetAll - null null
+2026-03-26 17:05:36.611 -05:00 [INF] CORS policy execution successful.
+2026-03-26 17:05:36.612 -05:00 [INF] CorrelationID: ["3a610abc-98ad-4ad3-b495-4dc5a4e83f57"] - Request Path: /api/Itemmaster/GetAll
+2026-03-26 17:05:36.612 -05:00 [INF] Executing endpoint 'ProductApi.Controllers.ItemmasterController.GetAll (ProductApi)'
+2026-03-26 17:05:36.614 -05:00 [INF] Route matched with {action = "GetAll", controller = "Itemmaster"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller ProductApi.Controllers.ItemmasterController (ProductApi).
+2026-03-26 17:05:36.844 -05:00 [INF] Executed DbCommand (228ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC sp_Itemmaster_GetALL
+2026-03-26 17:05:36.845 -05:00 [INF] Executing OkObjectResult, writing value of type 'ProductApi.Models.ApiResponse`1[[System.Collections.Generic.IEnumerable`1[[ProductApi.DTOs.ItemmasterDto, ProductApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-26 17:05:36.845 -05:00 [INF] Executed action ProductApi.Controllers.ItemmasterController.GetAll (ProductApi) in 231.3458ms
+2026-03-26 17:05:36.845 -05:00 [INF] Executed endpoint 'ProductApi.Controllers.ItemmasterController.GetAll (ProductApi)'
+2026-03-26 17:05:36.846 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/Itemmaster/GetAll - 200 null application/json; charset=utf-8 240.8997ms
+2026-03-26 17:21:29.620 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/Itemmaster/GetAll - null null
+2026-03-26 17:21:29.620 -05:00 [INF] CORS policy execution successful.
+2026-03-26 17:21:29.621 -05:00 [INF] CorrelationID: ["998f1aa4-d519-4dd2-ace8-bfe8442eb488"] - Request Path: /api/Itemmaster/GetAll
+2026-03-26 17:21:29.621 -05:00 [INF] Executing endpoint 'ProductApi.Controllers.ItemmasterController.GetAll (ProductApi)'
+2026-03-26 17:21:29.621 -05:00 [INF] Route matched with {action = "GetAll", controller = "Itemmaster"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller ProductApi.Controllers.ItemmasterController (ProductApi).
+2026-03-26 17:21:29.655 -05:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC sp_Itemmaster_GetALL
+2026-03-26 17:21:29.656 -05:00 [INF] Executing OkObjectResult, writing value of type 'ProductApi.Models.ApiResponse`1[[System.Collections.Generic.IEnumerable`1[[ProductApi.DTOs.ItemmasterDto, ProductApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-26 17:21:29.656 -05:00 [INF] Executed action ProductApi.Controllers.ItemmasterController.GetAll (ProductApi) in 34.774ms
+2026-03-26 17:21:29.656 -05:00 [INF] Executed endpoint 'ProductApi.Controllers.ItemmasterController.GetAll (ProductApi)'
+2026-03-26 17:21:29.656 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/Itemmaster/GetAll - 200 null application/json; charset=utf-8 36.7293ms
+2026-03-26 17:21:43.740 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/Itemmaster/GetAll - null null
+2026-03-26 17:21:43.740 -05:00 [INF] CORS policy execution successful.
+2026-03-26 17:21:43.740 -05:00 [INF] CorrelationID: ["57ff9555-bc87-45eb-aa20-de627ad7df60"] - Request Path: /api/Itemmaster/GetAll
+2026-03-26 17:21:43.740 -05:00 [INF] Executing endpoint 'ProductApi.Controllers.ItemmasterController.GetAll (ProductApi)'
+2026-03-26 17:21:43.741 -05:00 [INF] Route matched with {action = "GetAll", controller = "Itemmaster"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller ProductApi.Controllers.ItemmasterController (ProductApi).
+2026-03-26 17:21:43.746 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC sp_Itemmaster_GetALL
+2026-03-26 17:21:43.748 -05:00 [INF] Executing OkObjectResult, writing value of type 'ProductApi.Models.ApiResponse`1[[System.Collections.Generic.IEnumerable`1[[ProductApi.DTOs.ItemmasterDto, ProductApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-26 17:21:43.748 -05:00 [INF] Executed action ProductApi.Controllers.ItemmasterController.GetAll (ProductApi) in 6.7709ms
+2026-03-26 17:21:43.748 -05:00 [INF] Executed endpoint 'ProductApi.Controllers.ItemmasterController.GetAll (ProductApi)'
+2026-03-26 17:21:43.748 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/Itemmaster/GetAll - 200 null application/json; charset=utf-8 8.9372ms
+2026-03-26 17:23:11.664 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/Itemmaster/GetAll - null null
+2026-03-26 17:23:11.673 -05:00 [INF] CORS policy execution successful.
+2026-03-26 17:23:11.673 -05:00 [INF] CorrelationID: ["4b282213-0a4e-4598-9ec5-4b03be331085"] - Request Path: /api/Itemmaster/GetAll
+2026-03-26 17:23:11.673 -05:00 [INF] Executing endpoint 'ProductApi.Controllers.ItemmasterController.GetAll (ProductApi)'
+2026-03-26 17:23:11.673 -05:00 [INF] Route matched with {action = "GetAll", controller = "Itemmaster"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller ProductApi.Controllers.ItemmasterController (ProductApi).
+2026-03-26 17:23:11.678 -05:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC sp_Itemmaster_GetALL
+2026-03-26 17:23:11.679 -05:00 [INF] Executing OkObjectResult, writing value of type 'ProductApi.Models.ApiResponse`1[[System.Collections.Generic.IEnumerable`1[[ProductApi.DTOs.ItemmasterDto, ProductApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-26 17:23:11.679 -05:00 [INF] Executed action ProductApi.Controllers.ItemmasterController.GetAll (ProductApi) in 5.9882ms
+2026-03-26 17:23:11.679 -05:00 [INF] Executed endpoint 'ProductApi.Controllers.ItemmasterController.GetAll (ProductApi)'
+2026-03-26 17:23:11.679 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/Itemmaster/GetAll - 200 null application/json; charset=utf-8 15.4298ms
+2026-03-26 17:23:54.254 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/Itemmaster/GetAll - null null
+2026-03-26 17:23:54.281 -05:00 [INF] CORS policy execution successful.
+2026-03-26 17:23:54.281 -05:00 [INF] CorrelationID: ["6bee498f-f4f1-41db-ab0c-cbc1f59fc3b8"] - Request Path: /api/Itemmaster/GetAll
+2026-03-26 17:23:54.282 -05:00 [INF] Executing endpoint 'ProductApi.Controllers.ItemmasterController.GetAll (ProductApi)'
+2026-03-26 17:23:54.282 -05:00 [INF] Route matched with {action = "GetAll", controller = "Itemmaster"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller ProductApi.Controllers.ItemmasterController (ProductApi).
+2026-03-26 17:23:54.291 -05:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC sp_Itemmaster_GetALL
+2026-03-26 17:23:54.292 -05:00 [INF] Executing OkObjectResult, writing value of type 'ProductApi.Models.ApiResponse`1[[System.Collections.Generic.IEnumerable`1[[ProductApi.DTOs.ItemmasterDto, ProductApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-26 17:23:54.293 -05:00 [INF] Executed action ProductApi.Controllers.ItemmasterController.GetAll (ProductApi) in 7.8296ms
+2026-03-26 17:23:54.294 -05:00 [INF] Executed endpoint 'ProductApi.Controllers.ItemmasterController.GetAll (ProductApi)'
+2026-03-26 17:23:54.294 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/Itemmaster/GetAll - 200 null application/json; charset=utf-8 40.2971ms
+2026-03-26 17:24:39.933 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/Itemmaster/GetAll - null null
+2026-03-26 17:24:39.933 -05:00 [INF] CORS policy execution successful.
+2026-03-26 17:24:39.934 -05:00 [INF] CorrelationID: ["d104c333-6f11-4393-bc3a-2f6a7411ef9f"] - Request Path: /api/Itemmaster/GetAll
+2026-03-26 17:24:39.934 -05:00 [INF] Executing endpoint 'ProductApi.Controllers.ItemmasterController.GetAll (ProductApi)'
+2026-03-26 17:24:39.934 -05:00 [INF] Route matched with {action = "GetAll", controller = "Itemmaster"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller ProductApi.Controllers.ItemmasterController (ProductApi).
+2026-03-26 17:24:39.945 -05:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC sp_Itemmaster_GetALL
+2026-03-26 17:24:39.949 -05:00 [INF] Executing OkObjectResult, writing value of type 'ProductApi.Models.ApiResponse`1[[System.Collections.Generic.IEnumerable`1[[ProductApi.DTOs.ItemmasterDto, ProductApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-26 17:24:39.950 -05:00 [INF] Executed action ProductApi.Controllers.ItemmasterController.GetAll (ProductApi) in 15.5215ms
+2026-03-26 17:24:39.950 -05:00 [INF] Executed endpoint 'ProductApi.Controllers.ItemmasterController.GetAll (ProductApi)'
+2026-03-26 17:24:39.950 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/Itemmaster/GetAll - 200 null application/json; charset=utf-8 17.6893ms
+2026-03-26 17:25:45.474 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5269/api/Itemmaster/update/11 - null null
+2026-03-26 17:25:45.475 -05:00 [INF] CORS policy execution successful.
+2026-03-26 17:25:45.475 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5269/api/Itemmaster/update/11 - 204 null null 1.5698ms
+2026-03-26 17:25:45.479 -05:00 [INF] Request starting HTTP/1.1 PUT http://localhost:5269/api/Itemmaster/update/11 - application/json 195
+2026-03-26 17:25:45.479 -05:00 [INF] CORS policy execution successful.
+2026-03-26 17:25:45.480 -05:00 [INF] CorrelationID: ["85aad838-d840-46bc-8993-fcf6a69cdbfb"] - Request Path: /api/Itemmaster/update/11
+2026-03-26 17:25:45.480 -05:00 [INF] Executing endpoint 'ProductApi.Controllers.ItemmasterController.Update (ProductApi)'
+2026-03-26 17:25:45.499 -05:00 [INF] Route matched with {action = "Update", controller = "Itemmaster"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Update(ProductApi.DTOs.ItemmasterDto, Int32) on controller ProductApi.Controllers.ItemmasterController (ProductApi).
+2026-03-26 17:25:45.818 -05:00 [INF] Executed DbCommand (247ms) [Parameters=[@Id='?' (DbType = Int32), @CatCode='?' (Size = 4), @ItemBarCode='?' (Size = 7), @Itemcode='?' (Size = 8), @Itemname='?' (Size = 9), @Description='?' (Size = 14), @Uom='?' (Size = 3), @Rate='?' (DbType = Decimal), @Minimumstock='?' (DbType = Decimal), @Maximumstock='?' (DbType = Decimal), @IsActive='?' (DbType = Boolean)], CommandType='"Text"', CommandTimeout='30']
+EXEC sp_Itemmaster_Update
+                @Id,
+                @CatCode,
+                @ItemBarCode,
+                @Itemcode,
+                @Itemname,
+                @Description,
+                @Uom,
+                @Rate,
+                @Minimumstock,
+                @Maximumstock,
+                @IsActive
+2026-03-26 17:25:45.820 -05:00 [INF] Executing OkObjectResult, writing value of type 'ProductApi.Models.ApiResponse`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-26 17:25:45.822 -05:00 [INF] Executed action ProductApi.Controllers.ItemmasterController.Update (ProductApi) in 323.3564ms
+2026-03-26 17:25:45.822 -05:00 [INF] Executed endpoint 'ProductApi.Controllers.ItemmasterController.Update (ProductApi)'
+2026-03-26 17:25:45.822 -05:00 [INF] Request finished HTTP/1.1 PUT http://localhost:5269/api/Itemmaster/update/11 - 200 null application/json; charset=utf-8 343.6391ms
+2026-03-26 17:25:45.926 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/Itemmaster/GetAll - null null
+2026-03-26 17:25:45.926 -05:00 [INF] CORS policy execution successful.
+2026-03-26 17:25:45.926 -05:00 [INF] CorrelationID: ["1ebdf9ea-59ad-4e8c-beda-82fcbca15a69"] - Request Path: /api/Itemmaster/GetAll
+2026-03-26 17:25:45.926 -05:00 [INF] Executing endpoint 'ProductApi.Controllers.ItemmasterController.GetAll (ProductApi)'
+2026-03-26 17:25:45.926 -05:00 [INF] Route matched with {action = "GetAll", controller = "Itemmaster"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller ProductApi.Controllers.ItemmasterController (ProductApi).
+2026-03-26 17:25:45.934 -05:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC sp_Itemmaster_GetALL
+2026-03-26 17:25:45.935 -05:00 [INF] Executing OkObjectResult, writing value of type 'ProductApi.Models.ApiResponse`1[[System.Collections.Generic.IEnumerable`1[[ProductApi.DTOs.ItemmasterDto, ProductApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-26 17:25:45.936 -05:00 [INF] Executed action ProductApi.Controllers.ItemmasterController.GetAll (ProductApi) in 9.4599ms
+2026-03-26 17:25:45.936 -05:00 [INF] Executed endpoint 'ProductApi.Controllers.ItemmasterController.GetAll (ProductApi)'
+2026-03-26 17:25:45.936 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/Itemmaster/GetAll - 200 null application/json; charset=utf-8 10.3113ms
+2026-03-26 17:29:13.199 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/Itemmaster/GetAll - null null
+2026-03-26 17:29:13.199 -05:00 [INF] CORS policy execution successful.
+2026-03-26 17:29:13.199 -05:00 [INF] CorrelationID: ["7eb79c0a-c063-4c5b-b51c-310dfbc1692d"] - Request Path: /api/Itemmaster/GetAll
+2026-03-26 17:29:13.199 -05:00 [INF] Executing endpoint 'ProductApi.Controllers.ItemmasterController.GetAll (ProductApi)'
+2026-03-26 17:29:13.199 -05:00 [INF] Route matched with {action = "GetAll", controller = "Itemmaster"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller ProductApi.Controllers.ItemmasterController (ProductApi).
+2026-03-26 17:29:13.209 -05:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC sp_Itemmaster_GetALL
+2026-03-26 17:29:13.210 -05:00 [INF] Executing OkObjectResult, writing value of type 'ProductApi.Models.ApiResponse`1[[System.Collections.Generic.IEnumerable`1[[ProductApi.DTOs.ItemmasterDto, ProductApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-26 17:29:13.210 -05:00 [INF] Executed action ProductApi.Controllers.ItemmasterController.GetAll (ProductApi) in 10.9814ms
+2026-03-26 17:29:13.211 -05:00 [INF] Executed endpoint 'ProductApi.Controllers.ItemmasterController.GetAll (ProductApi)'
+2026-03-26 17:29:13.211 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/Itemmaster/GetAll - 200 null application/json; charset=utf-8 12.5017ms
+2026-03-26 17:29:25.596 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/Itemmaster/GetAll - null null
+2026-03-26 17:29:25.597 -05:00 [INF] CORS policy execution successful.
+2026-03-26 17:29:25.597 -05:00 [INF] CorrelationID: ["709837ef-c616-45d1-bf43-45a9711595d4"] - Request Path: /api/Itemmaster/GetAll
+2026-03-26 17:29:25.602 -05:00 [INF] Executing endpoint 'ProductApi.Controllers.ItemmasterController.GetAll (ProductApi)'
+2026-03-26 17:29:25.602 -05:00 [INF] Route matched with {action = "GetAll", controller = "Itemmaster"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller ProductApi.Controllers.ItemmasterController (ProductApi).
+2026-03-26 17:29:25.608 -05:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC sp_Itemmaster_GetALL
+2026-03-26 17:29:25.615 -05:00 [INF] Executing OkObjectResult, writing value of type 'ProductApi.Models.ApiResponse`1[[System.Collections.Generic.IEnumerable`1[[ProductApi.DTOs.ItemmasterDto, ProductApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-26 17:29:25.618 -05:00 [INF] Executed action ProductApi.Controllers.ItemmasterController.GetAll (ProductApi) in 16.1847ms
+2026-03-26 17:29:25.618 -05:00 [INF] Executed endpoint 'ProductApi.Controllers.ItemmasterController.GetAll (ProductApi)'
+2026-03-26 17:29:25.619 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/Itemmaster/GetAll - 200 null application/json; charset=utf-8 22.6128ms
+2026-03-26 17:29:42.831 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5269/api/Itemmaster/update/11 - null null
+2026-03-26 17:29:42.832 -05:00 [INF] CORS policy execution successful.
+2026-03-26 17:29:42.832 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5269/api/Itemmaster/update/11 - 204 null null 0.3801ms
+2026-03-26 17:29:42.834 -05:00 [INF] Request starting HTTP/1.1 PUT http://localhost:5269/api/Itemmaster/update/11 - application/json 194
+2026-03-26 17:29:42.835 -05:00 [INF] CORS policy execution successful.
+2026-03-26 17:29:42.835 -05:00 [INF] CorrelationID: ["bfb149bd-51a7-421a-b0e6-01458c63ed1e"] - Request Path: /api/Itemmaster/update/11
+2026-03-26 17:29:42.835 -05:00 [INF] Executing endpoint 'ProductApi.Controllers.ItemmasterController.Update (ProductApi)'
+2026-03-26 17:29:42.835 -05:00 [INF] Route matched with {action = "Update", controller = "Itemmaster"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Update(ProductApi.DTOs.ItemmasterDto, Int32) on controller ProductApi.Controllers.ItemmasterController (ProductApi).
+2026-03-26 17:29:42.846 -05:00 [INF] Executed DbCommand (5ms) [Parameters=[@Id='?' (DbType = Int32), @CatCode='?' (Size = 4), @ItemBarCode='?' (Size = 7), @Itemcode='?' (Size = 8), @Itemname='?' (Size = 9), @Description='?' (Size = 14), @Uom='?' (Size = 3), @Rate='?' (DbType = Decimal), @Minimumstock='?' (DbType = Decimal), @Maximumstock='?' (DbType = Decimal), @IsActive='?' (DbType = Boolean)], CommandType='"Text"', CommandTimeout='30']
+EXEC sp_Itemmaster_Update
+                @Id,
+                @CatCode,
+                @ItemBarCode,
+                @Itemcode,
+                @Itemname,
+                @Description,
+                @Uom,
+                @Rate,
+                @Minimumstock,
+                @Maximumstock,
+                @IsActive
+2026-03-26 17:29:42.846 -05:00 [INF] Executing OkObjectResult, writing value of type 'ProductApi.Models.ApiResponse`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-26 17:29:42.846 -05:00 [INF] Executed action ProductApi.Controllers.ItemmasterController.Update (ProductApi) in 10.9398ms
+2026-03-26 17:29:42.846 -05:00 [INF] Executed endpoint 'ProductApi.Controllers.ItemmasterController.Update (ProductApi)'
+2026-03-26 17:29:42.846 -05:00 [INF] Request finished HTTP/1.1 PUT http://localhost:5269/api/Itemmaster/update/11 - 200 null application/json; charset=utf-8 11.9479ms
+2026-03-26 17:29:42.953 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/Itemmaster/GetAll - null null
+2026-03-26 17:29:42.953 -05:00 [INF] CORS policy execution successful.
+2026-03-26 17:29:42.953 -05:00 [INF] CorrelationID: ["0d925ff6-86d3-4921-8b91-486df763d19c"] - Request Path: /api/Itemmaster/GetAll
+2026-03-26 17:29:42.954 -05:00 [INF] Executing endpoint 'ProductApi.Controllers.ItemmasterController.GetAll (ProductApi)'
+2026-03-26 17:29:42.954 -05:00 [INF] Route matched with {action = "GetAll", controller = "Itemmaster"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller ProductApi.Controllers.ItemmasterController (ProductApi).
+2026-03-26 17:29:42.979 -05:00 [INF] Executed DbCommand (19ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC sp_Itemmaster_GetALL
+2026-03-26 17:29:42.983 -05:00 [INF] Executing OkObjectResult, writing value of type 'ProductApi.Models.ApiResponse`1[[System.Collections.Generic.IEnumerable`1[[ProductApi.DTOs.ItemmasterDto, ProductApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-26 17:29:42.983 -05:00 [INF] Executed action ProductApi.Controllers.ItemmasterController.GetAll (ProductApi) in 29.2064ms
+2026-03-26 17:29:42.983 -05:00 [INF] Executed endpoint 'ProductApi.Controllers.ItemmasterController.GetAll (ProductApi)'
+2026-03-26 17:29:42.983 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/Itemmaster/GetAll - 200 null application/json; charset=utf-8 30.0285ms
+2026-03-26 17:37:12.097 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/Itemmaster/GetAll - null null
+2026-03-26 17:37:12.097 -05:00 [INF] CORS policy execution successful.
+2026-03-26 17:37:12.097 -05:00 [INF] CorrelationID: ["d9133730-8e85-4f13-8c11-b7ba2156a877"] - Request Path: /api/Itemmaster/GetAll
+2026-03-26 17:37:12.098 -05:00 [INF] Executing endpoint 'ProductApi.Controllers.ItemmasterController.GetAll (ProductApi)'
+2026-03-26 17:37:12.098 -05:00 [INF] Route matched with {action = "GetAll", controller = "Itemmaster"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller ProductApi.Controllers.ItemmasterController (ProductApi).
+2026-03-26 17:37:12.125 -05:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC sp_Itemmaster_GetALL
+2026-03-26 17:37:12.126 -05:00 [INF] Executing OkObjectResult, writing value of type 'ProductApi.Models.ApiResponse`1[[System.Collections.Generic.IEnumerable`1[[ProductApi.DTOs.ItemmasterDto, ProductApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-26 17:37:12.126 -05:00 [INF] Executed action ProductApi.Controllers.ItemmasterController.GetAll (ProductApi) in 28.6216ms
+2026-03-26 17:37:12.126 -05:00 [INF] Executed endpoint 'ProductApi.Controllers.ItemmasterController.GetAll (ProductApi)'
+2026-03-26 17:37:12.127 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/Itemmaster/GetAll - 200 null application/json; charset=utf-8 30.2281ms
+2026-03-26 17:37:33.442 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5269/api/Itemmaster/update/1 - null null
+2026-03-26 17:37:33.443 -05:00 [INF] CORS policy execution successful.
+2026-03-26 17:37:33.443 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5269/api/Itemmaster/update/1 - 204 null null 0.9109ms
+2026-03-26 17:37:33.447 -05:00 [INF] Request starting HTTP/1.1 PUT http://localhost:5269/api/Itemmaster/update/1 - application/json 190
+2026-03-26 17:37:33.453 -05:00 [INF] CORS policy execution successful.
+2026-03-26 17:37:33.454 -05:00 [INF] CorrelationID: ["d0d3f077-837f-48cd-ac0b-540db8d74e86"] - Request Path: /api/Itemmaster/update/1
+2026-03-26 17:37:33.454 -05:00 [INF] Executing endpoint 'ProductApi.Controllers.ItemmasterController.Update (ProductApi)'
+2026-03-26 17:37:33.457 -05:00 [INF] Route matched with {action = "Update", controller = "Itemmaster"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Update(ProductApi.DTOs.ItemmasterDto, Int32) on controller ProductApi.Controllers.ItemmasterController (ProductApi).
+2026-03-26 17:37:33.479 -05:00 [INF] Executed DbCommand (8ms) [Parameters=[@Id='?' (DbType = Int32), @CatCode='?' (Size = 5), @ItemBarCode='?' (Size = 6), @Itemcode='?' (Size = 10), @Itemname='?' (Size = 5), @Description='?' (Size = 9), @Uom='?' (Size = 3), @Rate='?' (DbType = Decimal), @Minimumstock='?' (DbType = Decimal), @Maximumstock='?' (DbType = Decimal), @IsActive='?' (DbType = Boolean)], CommandType='"Text"', CommandTimeout='30']
+EXEC sp_Itemmaster_Update
+                @Id,
+                @CatCode,
+                @ItemBarCode,
+                @Itemcode,
+                @Itemname,
+                @Description,
+                @Uom,
+                @Rate,
+                @Minimumstock,
+                @Maximumstock,
+                @IsActive
+2026-03-26 17:37:33.480 -05:00 [INF] Executing OkObjectResult, writing value of type 'ProductApi.Models.ApiResponse`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-26 17:37:33.480 -05:00 [INF] Executed action ProductApi.Controllers.ItemmasterController.Update (ProductApi) in 22.7444ms
+2026-03-26 17:37:33.480 -05:00 [INF] Executed endpoint 'ProductApi.Controllers.ItemmasterController.Update (ProductApi)'
+2026-03-26 17:37:33.480 -05:00 [INF] Request finished HTTP/1.1 PUT http://localhost:5269/api/Itemmaster/update/1 - 200 null application/json; charset=utf-8 33.6688ms
+2026-03-26 17:37:33.589 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/Itemmaster/GetAll - null null
+2026-03-26 17:37:33.590 -05:00 [INF] CORS policy execution successful.
+2026-03-26 17:37:33.590 -05:00 [INF] CorrelationID: ["02b7f51d-8004-45f4-8363-bfe04e4dc004"] - Request Path: /api/Itemmaster/GetAll
+2026-03-26 17:37:33.590 -05:00 [INF] Executing endpoint 'ProductApi.Controllers.ItemmasterController.GetAll (ProductApi)'
+2026-03-26 17:37:33.590 -05:00 [INF] Route matched with {action = "GetAll", controller = "Itemmaster"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller ProductApi.Controllers.ItemmasterController (ProductApi).
+2026-03-26 17:37:33.598 -05:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC sp_Itemmaster_GetALL
+2026-03-26 17:37:33.599 -05:00 [INF] Executing OkObjectResult, writing value of type 'ProductApi.Models.ApiResponse`1[[System.Collections.Generic.IEnumerable`1[[ProductApi.DTOs.ItemmasterDto, ProductApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-26 17:37:33.599 -05:00 [INF] Executed action ProductApi.Controllers.ItemmasterController.GetAll (ProductApi) in 8.8938ms
+2026-03-26 17:37:33.599 -05:00 [INF] Executed endpoint 'ProductApi.Controllers.ItemmasterController.GetAll (ProductApi)'
+2026-03-26 17:37:33.600 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/Itemmaster/GetAll - 200 null application/json; charset=utf-8 10.0532ms
+2026-03-26 17:45:49.108 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/Itemmaster/GetAll - null null
+2026-03-26 17:45:49.122 -05:00 [INF] CORS policy execution successful.
+2026-03-26 17:45:49.122 -05:00 [INF] CorrelationID: ["2daa7322-4bb9-48f5-8155-3c47dd2926c1"] - Request Path: /api/Itemmaster/GetAll
+2026-03-26 17:45:49.122 -05:00 [INF] Executing endpoint 'ProductApi.Controllers.ItemmasterController.GetAll (ProductApi)'
+2026-03-26 17:45:49.122 -05:00 [INF] Route matched with {action = "GetAll", controller = "Itemmaster"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller ProductApi.Controllers.ItemmasterController (ProductApi).
+2026-03-26 17:45:49.161 -05:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC sp_Itemmaster_GetALL
+2026-03-26 17:45:49.162 -05:00 [INF] Executing OkObjectResult, writing value of type 'ProductApi.Models.ApiResponse`1[[System.Collections.Generic.IEnumerable`1[[ProductApi.DTOs.ItemmasterDto, ProductApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-26 17:45:49.162 -05:00 [INF] Executed action ProductApi.Controllers.ItemmasterController.GetAll (ProductApi) in 39.6432ms
+2026-03-26 17:45:49.162 -05:00 [INF] Executed endpoint 'ProductApi.Controllers.ItemmasterController.GetAll (ProductApi)'
+2026-03-26 17:45:49.162 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/Itemmaster/GetAll - 200 null application/json; charset=utf-8 54.885ms
+2026-03-26 17:46:10.340 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/Itemmaster/GetAll - null null
+2026-03-26 17:46:10.340 -05:00 [INF] CORS policy execution successful.
+2026-03-26 17:46:10.340 -05:00 [INF] CorrelationID: ["1a578862-1a53-4ae6-9ce9-05e1182e5633"] - Request Path: /api/Itemmaster/GetAll
+2026-03-26 17:46:10.340 -05:00 [INF] Executing endpoint 'ProductApi.Controllers.ItemmasterController.GetAll (ProductApi)'
+2026-03-26 17:46:10.340 -05:00 [INF] Route matched with {action = "GetAll", controller = "Itemmaster"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller ProductApi.Controllers.ItemmasterController (ProductApi).
+2026-03-26 17:46:10.344 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC sp_Itemmaster_GetALL
+2026-03-26 17:46:10.346 -05:00 [INF] Executing OkObjectResult, writing value of type 'ProductApi.Models.ApiResponse`1[[System.Collections.Generic.IEnumerable`1[[ProductApi.DTOs.ItemmasterDto, ProductApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-26 17:46:10.346 -05:00 [INF] Executed action ProductApi.Controllers.ItemmasterController.GetAll (ProductApi) in 6.0074ms
+2026-03-26 17:46:10.346 -05:00 [INF] Executed endpoint 'ProductApi.Controllers.ItemmasterController.GetAll (ProductApi)'
+2026-03-26 17:46:10.347 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/Itemmaster/GetAll - 200 null application/json; charset=utf-8 7.0695ms
+2026-03-26 17:48:35.331 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/Itemmaster/GetAll - null null
+2026-03-26 17:48:35.331 -05:00 [INF] CORS policy execution successful.
+2026-03-26 17:48:35.331 -05:00 [INF] CorrelationID: ["31e8a932-ed08-4d9a-ac0a-3e22a10e7da2"] - Request Path: /api/Itemmaster/GetAll
+2026-03-26 17:48:35.331 -05:00 [INF] Executing endpoint 'ProductApi.Controllers.ItemmasterController.GetAll (ProductApi)'
+2026-03-26 17:48:35.332 -05:00 [INF] Route matched with {action = "GetAll", controller = "Itemmaster"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller ProductApi.Controllers.ItemmasterController (ProductApi).
+2026-03-26 17:48:35.342 -05:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC sp_Itemmaster_GetALL
+2026-03-26 17:48:35.345 -05:00 [INF] Executing OkObjectResult, writing value of type 'ProductApi.Models.ApiResponse`1[[System.Collections.Generic.IEnumerable`1[[ProductApi.DTOs.ItemmasterDto, ProductApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-26 17:48:35.346 -05:00 [INF] Executed action ProductApi.Controllers.ItemmasterController.GetAll (ProductApi) in 14.2279ms
+2026-03-26 17:48:35.346 -05:00 [INF] Executed endpoint 'ProductApi.Controllers.ItemmasterController.GetAll (ProductApi)'
+2026-03-26 17:48:35.346 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/Itemmaster/GetAll - 200 null application/json; charset=utf-8 15.5556ms
+2026-03-26 17:48:48.063 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/Itemmaster/GetAll - null null
+2026-03-26 17:48:48.064 -05:00 [INF] CORS policy execution successful.
+2026-03-26 17:48:48.064 -05:00 [INF] CorrelationID: ["6ee98a1c-6729-4ef9-89db-39067cc2ffe0"] - Request Path: /api/Itemmaster/GetAll
+2026-03-26 17:48:48.064 -05:00 [INF] Executing endpoint 'ProductApi.Controllers.ItemmasterController.GetAll (ProductApi)'
+2026-03-26 17:48:48.064 -05:00 [INF] Route matched with {action = "GetAll", controller = "Itemmaster"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller ProductApi.Controllers.ItemmasterController (ProductApi).
+2026-03-26 17:48:48.073 -05:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC sp_Itemmaster_GetALL
+2026-03-26 17:48:48.075 -05:00 [INF] Executing OkObjectResult, writing value of type 'ProductApi.Models.ApiResponse`1[[System.Collections.Generic.IEnumerable`1[[ProductApi.DTOs.ItemmasterDto, ProductApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-26 17:48:48.075 -05:00 [INF] Executed action ProductApi.Controllers.ItemmasterController.GetAll (ProductApi) in 10.4971ms
+2026-03-26 17:48:48.075 -05:00 [INF] Executed endpoint 'ProductApi.Controllers.ItemmasterController.GetAll (ProductApi)'
+2026-03-26 17:48:48.075 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/Itemmaster/GetAll - 200 null application/json; charset=utf-8 12.003ms
+2026-03-26 17:49:05.138 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5269/api/Itemmaster/update/1 - null null
+2026-03-26 17:49:05.138 -05:00 [INF] CORS policy execution successful.
+2026-03-26 17:49:05.138 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5269/api/Itemmaster/update/1 - 204 null null 0.4409ms
+2026-03-26 17:49:05.140 -05:00 [INF] Request starting HTTP/1.1 PUT http://localhost:5269/api/Itemmaster/update/1 - application/json 189
+2026-03-26 17:49:05.140 -05:00 [INF] CORS policy execution successful.
+2026-03-26 17:49:05.140 -05:00 [INF] CorrelationID: ["e05b84f6-f9d2-45d8-a718-dc049e896294"] - Request Path: /api/Itemmaster/update/1
+2026-03-26 17:49:05.140 -05:00 [INF] Executing endpoint 'ProductApi.Controllers.ItemmasterController.Update (ProductApi)'
+2026-03-26 17:49:05.140 -05:00 [INF] Route matched with {action = "Update", controller = "Itemmaster"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Update(ProductApi.DTOs.ItemmasterDto, Int32) on controller ProductApi.Controllers.ItemmasterController (ProductApi).
+2026-03-26 17:49:05.149 -05:00 [INF] Executed DbCommand (6ms) [Parameters=[@Id='?' (DbType = Int32), @CatCode='?' (Size = 5), @ItemBarCode='?' (Size = 6), @Itemcode='?' (Size = 10), @Itemname='?' (Size = 5), @Description='?' (Size = 9), @Uom='?' (Size = 3), @Rate='?' (DbType = Decimal), @Minimumstock='?' (DbType = Decimal), @Maximumstock='?' (DbType = Decimal), @IsActive='?' (DbType = Boolean)], CommandType='"Text"', CommandTimeout='30']
+EXEC sp_Itemmaster_Update
+                @Id,
+                @CatCode,
+                @ItemBarCode,
+                @Itemcode,
+                @Itemname,
+                @Description,
+                @Uom,
+                @Rate,
+                @Minimumstock,
+                @Maximumstock,
+                @IsActive
+2026-03-26 17:49:05.149 -05:00 [INF] Executing OkObjectResult, writing value of type 'ProductApi.Models.ApiResponse`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-26 17:49:05.150 -05:00 [INF] Executed action ProductApi.Controllers.ItemmasterController.Update (ProductApi) in 9.021ms
+2026-03-26 17:49:05.150 -05:00 [INF] Executed endpoint 'ProductApi.Controllers.ItemmasterController.Update (ProductApi)'
+2026-03-26 17:49:05.150 -05:00 [INF] Request finished HTTP/1.1 PUT http://localhost:5269/api/Itemmaster/update/1 - 200 null application/json; charset=utf-8 9.7387ms
+2026-03-26 17:49:05.253 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/Itemmaster/GetAll - null null
+2026-03-26 17:49:05.253 -05:00 [INF] CORS policy execution successful.
+2026-03-26 17:49:05.255 -05:00 [INF] CorrelationID: ["c83435fc-a9a4-4b8a-a4b4-4f5eb24f70a0"] - Request Path: /api/Itemmaster/GetAll
+2026-03-26 17:49:05.255 -05:00 [INF] Executing endpoint 'ProductApi.Controllers.ItemmasterController.GetAll (ProductApi)'
+2026-03-26 17:49:05.255 -05:00 [INF] Route matched with {action = "GetAll", controller = "Itemmaster"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller ProductApi.Controllers.ItemmasterController (ProductApi).
+2026-03-26 17:49:05.279 -05:00 [INF] Executed DbCommand (20ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC sp_Itemmaster_GetALL
+2026-03-26 17:49:05.280 -05:00 [INF] Executing OkObjectResult, writing value of type 'ProductApi.Models.ApiResponse`1[[System.Collections.Generic.IEnumerable`1[[ProductApi.DTOs.ItemmasterDto, ProductApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-26 17:49:05.280 -05:00 [INF] Executed action ProductApi.Controllers.ItemmasterController.GetAll (ProductApi) in 24.7189ms
+2026-03-26 17:49:05.280 -05:00 [INF] Executed endpoint 'ProductApi.Controllers.ItemmasterController.GetAll (ProductApi)'
+2026-03-26 17:49:05.281 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/Itemmaster/GetAll - 200 null application/json; charset=utf-8 27.8681ms
+2026-03-26 17:49:35.325 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5269/api/Itemmaster/Create - null null
+2026-03-26 17:49:35.325 -05:00 [INF] CORS policy execution successful.
+2026-03-26 17:49:35.325 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5269/api/Itemmaster/Create - 204 null null 0.3918ms
+2026-03-26 17:49:35.327 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5269/api/Itemmaster/Create - application/json 160
+2026-03-26 17:49:35.328 -05:00 [INF] CORS policy execution successful.
+2026-03-26 17:49:35.328 -05:00 [INF] CorrelationID: ["38697c83-61e2-4451-b636-daf2120aa94c"] - Request Path: /api/Itemmaster/Create
+2026-03-26 17:49:35.328 -05:00 [INF] Executing endpoint 'ProductApi.Controllers.ItemmasterController.Create (ProductApi)'
+2026-03-26 17:49:35.332 -05:00 [INF] Route matched with {action = "Create", controller = "Itemmaster"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(ProductApi.DTOs.ItemmasterDto) on controller ProductApi.Controllers.ItemmasterController (ProductApi).
+2026-03-26 17:49:35.348 -05:00 [INF] Executed DbCommand (5ms) [Parameters=[@CatCode='?' (Size = 2), @ItemBarCode='?' (Size = 2), @Itemcode='?' (Size = 2), @Itemname='?' (Size = 2), @Description='?' (Size = 2), @Uom='?' (Size = 3), @Rate='?' (DbType = Decimal), @Minimumstock='?' (DbType = Decimal), @Maximumstock='?' (DbType = Decimal), @IsActive='?' (DbType = Boolean)], CommandType='"Text"', CommandTimeout='30']
+EXEC sp_Itemmaster_Insert 
+                @CatCode,
+                @ItemBarCode,
+                @Itemcode,
+                @Itemname,
+                @Description,
+                @Uom,
+                @Rate,
+                @Minimumstock,
+                @Maximumstock,
+                @IsActive
+2026-03-26 17:49:35.358 -05:00 [INF] Executing OkObjectResult, writing value of type 'ProductApi.Models.ApiResponse`1[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-26 17:49:35.359 -05:00 [INF] Executed action ProductApi.Controllers.ItemmasterController.Create (ProductApi) in 26.546ms
+2026-03-26 17:49:35.359 -05:00 [INF] Executed endpoint 'ProductApi.Controllers.ItemmasterController.Create (ProductApi)'
+2026-03-26 17:49:35.360 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5269/api/Itemmaster/Create - 200 null application/json; charset=utf-8 32.3476ms
+2026-03-26 17:49:35.481 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/Itemmaster/GetAll - null null
+2026-03-26 17:49:35.481 -05:00 [INF] CORS policy execution successful.
+2026-03-26 17:49:35.482 -05:00 [INF] CorrelationID: ["59128a76-04c8-4922-9d5b-3bed9cecb8aa"] - Request Path: /api/Itemmaster/GetAll
+2026-03-26 17:49:35.482 -05:00 [INF] Executing endpoint 'ProductApi.Controllers.ItemmasterController.GetAll (ProductApi)'
+2026-03-26 17:49:35.482 -05:00 [INF] Route matched with {action = "GetAll", controller = "Itemmaster"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller ProductApi.Controllers.ItemmasterController (ProductApi).
+2026-03-26 17:49:35.497 -05:00 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC sp_Itemmaster_GetALL
+2026-03-26 17:49:35.508 -05:00 [INF] Executing OkObjectResult, writing value of type 'ProductApi.Models.ApiResponse`1[[System.Collections.Generic.IEnumerable`1[[ProductApi.DTOs.ItemmasterDto, ProductApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-26 17:49:35.508 -05:00 [INF] Executed action ProductApi.Controllers.ItemmasterController.GetAll (ProductApi) in 25.7651ms
+2026-03-26 17:49:35.508 -05:00 [INF] Executed endpoint 'ProductApi.Controllers.ItemmasterController.GetAll (ProductApi)'
+2026-03-26 17:49:35.508 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/Itemmaster/GetAll - 200 null application/json; charset=utf-8 34.028ms
+2026-03-26 17:49:55.305 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5269/api/Itemmaster/delete/29 - null null
+2026-03-26 17:49:55.305 -05:00 [INF] CORS policy execution successful.
+2026-03-26 17:49:55.306 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5269/api/Itemmaster/delete/29 - 204 null null 0.4733ms
+2026-03-26 17:49:55.312 -05:00 [INF] Request starting HTTP/1.1 DELETE http://localhost:5269/api/Itemmaster/delete/29 - null null
+2026-03-26 17:49:55.312 -05:00 [INF] CORS policy execution successful.
+2026-03-26 17:49:55.312 -05:00 [INF] CorrelationID: ["819b1246-0da5-4a0f-908e-d08f599a1534"] - Request Path: /api/Itemmaster/delete/29
+2026-03-26 17:49:55.312 -05:00 [INF] Executing endpoint 'ProductApi.Controllers.ItemmasterController.Delete (ProductApi)'
+2026-03-26 17:49:55.318 -05:00 [INF] Route matched with {action = "Delete", controller = "Itemmaster"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Delete(Int32) on controller ProductApi.Controllers.ItemmasterController (ProductApi).
+2026-03-26 17:49:55.330 -05:00 [INF] Executed DbCommand (7ms) [Parameters=[@Id='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+EXEC sp_Itemmaster_Delete @Id
+2026-03-26 17:49:55.331 -05:00 [INF] Executing OkObjectResult, writing value of type 'ProductApi.Models.ApiResponse`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-26 17:49:55.331 -05:00 [INF] Executed action ProductApi.Controllers.ItemmasterController.Delete (ProductApi) in 12.6486ms
+2026-03-26 17:49:55.331 -05:00 [INF] Executed endpoint 'ProductApi.Controllers.ItemmasterController.Delete (ProductApi)'
+2026-03-26 17:49:55.332 -05:00 [INF] Request finished HTTP/1.1 DELETE http://localhost:5269/api/Itemmaster/delete/29 - 200 null application/json; charset=utf-8 20.0118ms
+2026-03-26 17:49:55.348 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/Itemmaster/GetAll - null null
+2026-03-26 17:49:55.349 -05:00 [INF] CORS policy execution successful.
+2026-03-26 17:49:55.349 -05:00 [INF] CorrelationID: ["56825368-155e-4994-9f27-f61636b5b0cd"] - Request Path: /api/Itemmaster/GetAll
+2026-03-26 17:49:55.349 -05:00 [INF] Executing endpoint 'ProductApi.Controllers.ItemmasterController.GetAll (ProductApi)'
+2026-03-26 17:49:55.349 -05:00 [INF] Route matched with {action = "GetAll", controller = "Itemmaster"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller ProductApi.Controllers.ItemmasterController (ProductApi).
+2026-03-26 17:49:55.355 -05:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC sp_Itemmaster_GetALL
+2026-03-26 17:49:55.355 -05:00 [INF] Executing OkObjectResult, writing value of type 'ProductApi.Models.ApiResponse`1[[System.Collections.Generic.IEnumerable`1[[ProductApi.DTOs.ItemmasterDto, ProductApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-26 17:49:55.355 -05:00 [INF] Executed action ProductApi.Controllers.ItemmasterController.GetAll (ProductApi) in 6.1592ms
+2026-03-26 17:49:55.355 -05:00 [INF] Executed endpoint 'ProductApi.Controllers.ItemmasterController.GetAll (ProductApi)'
+2026-03-26 17:49:55.356 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/Itemmaster/GetAll - 200 null application/json; charset=utf-8 7.3997ms
+2026-03-26 18:53:35.627 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/Itemmaster/GetAll - null null
+2026-03-26 18:53:35.630 -05:00 [INF] CORS policy execution successful.
+2026-03-26 18:53:35.631 -05:00 [INF] CorrelationID: ["23b4863f-2a1d-4853-8c3c-c68556be1351"] - Request Path: /api/Itemmaster/GetAll
+2026-03-26 18:53:35.632 -05:00 [INF] Executing endpoint 'ProductApi.Controllers.ItemmasterController.GetAll (ProductApi)'
+2026-03-26 18:53:35.633 -05:00 [INF] Route matched with {action = "GetAll", controller = "Itemmaster"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller ProductApi.Controllers.ItemmasterController (ProductApi).
+2026-03-26 18:53:35.676 -05:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC sp_Itemmaster_GetALL
+2026-03-26 18:53:35.678 -05:00 [INF] Executing OkObjectResult, writing value of type 'ProductApi.Models.ApiResponse`1[[System.Collections.Generic.IEnumerable`1[[ProductApi.DTOs.ItemmasterDto, ProductApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-26 18:53:35.678 -05:00 [INF] Executed action ProductApi.Controllers.ItemmasterController.GetAll (ProductApi) in 45.7315ms
+2026-03-26 18:53:35.679 -05:00 [INF] Executed endpoint 'ProductApi.Controllers.ItemmasterController.GetAll (ProductApi)'
+2026-03-26 18:53:35.679 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/Itemmaster/GetAll - 200 null application/json; charset=utf-8 51.9421ms
+2026-03-26 18:54:33.043 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5269/api/Itemmaster/update/3 - null null
+2026-03-26 18:54:33.043 -05:00 [INF] CORS policy execution successful.
+2026-03-26 18:54:33.047 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5269/api/Itemmaster/update/3 - 204 null null 3.9217ms
+2026-03-26 18:54:33.051 -05:00 [INF] Request starting HTTP/1.1 PUT http://localhost:5269/api/Itemmaster/update/3 - application/json 188
+2026-03-26 18:54:33.053 -05:00 [INF] CORS policy execution successful.
+2026-03-26 18:54:33.053 -05:00 [INF] CorrelationID: ["2db70d06-f690-4a74-b7d1-67094e65a39a"] - Request Path: /api/Itemmaster/update/3
+2026-03-26 18:54:33.053 -05:00 [INF] Executing endpoint 'ProductApi.Controllers.ItemmasterController.Update (ProductApi)'
+2026-03-26 18:54:33.053 -05:00 [INF] Route matched with {action = "Update", controller = "Itemmaster"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Update(ProductApi.DTOs.ItemmasterDto, Int32) on controller ProductApi.Controllers.ItemmasterController (ProductApi).
+2026-03-26 18:54:33.071 -05:00 [INF] Executed DbCommand (12ms) [Parameters=[@Id='?' (DbType = Int32), @CatCode='?' (Size = 5), @ItemBarCode='?' (Size = 6), @Itemcode='?' (Size = 8), @Itemname='?' (Size = 6), @Description='?' (Size = 12), @Uom='?' (Size = 3), @Rate='?' (DbType = Decimal), @Minimumstock='?' (DbType = Decimal), @Maximumstock='?' (DbType = Decimal), @IsActive='?' (DbType = Boolean)], CommandType='"Text"', CommandTimeout='30']
+EXEC sp_Itemmaster_Update
+                @Id,
+                @CatCode,
+                @ItemBarCode,
+                @Itemcode,
+                @Itemname,
+                @Description,
+                @Uom,
+                @Rate,
+                @Minimumstock,
+                @Maximumstock,
+                @IsActive
+2026-03-26 18:54:33.071 -05:00 [INF] Executing OkObjectResult, writing value of type 'ProductApi.Models.ApiResponse`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-26 18:54:33.072 -05:00 [INF] Executed action ProductApi.Controllers.ItemmasterController.Update (ProductApi) in 19.0485ms
+2026-03-26 18:54:33.073 -05:00 [INF] Executed endpoint 'ProductApi.Controllers.ItemmasterController.Update (ProductApi)'
+2026-03-26 18:54:33.073 -05:00 [INF] Request finished HTTP/1.1 PUT http://localhost:5269/api/Itemmaster/update/3 - 200 null application/json; charset=utf-8 22.3472ms
+2026-03-26 18:54:33.207 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/Itemmaster/GetAll - null null
+2026-03-26 18:54:33.207 -05:00 [INF] CORS policy execution successful.
+2026-03-26 18:54:33.207 -05:00 [INF] CorrelationID: ["06f539bc-599d-4c56-83f2-4a6679196317"] - Request Path: /api/Itemmaster/GetAll
+2026-03-26 18:54:33.207 -05:00 [INF] Executing endpoint 'ProductApi.Controllers.ItemmasterController.GetAll (ProductApi)'
+2026-03-26 18:54:33.207 -05:00 [INF] Route matched with {action = "GetAll", controller = "Itemmaster"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller ProductApi.Controllers.ItemmasterController (ProductApi).
+2026-03-26 18:54:33.247 -05:00 [INF] Executed DbCommand (38ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC sp_Itemmaster_GetALL
+2026-03-26 18:54:33.248 -05:00 [INF] Executing OkObjectResult, writing value of type 'ProductApi.Models.ApiResponse`1[[System.Collections.Generic.IEnumerable`1[[ProductApi.DTOs.ItemmasterDto, ProductApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-26 18:54:33.248 -05:00 [INF] Executed action ProductApi.Controllers.ItemmasterController.GetAll (ProductApi) in 40.8001ms
+2026-03-26 18:54:33.248 -05:00 [INF] Executed endpoint 'ProductApi.Controllers.ItemmasterController.GetAll (ProductApi)'
+2026-03-26 18:54:33.249 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/Itemmaster/GetAll - 200 null application/json; charset=utf-8 42.0426ms
+2026-03-26 18:55:15.663 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5269/api/Itemmaster/Create - null null
+2026-03-26 18:55:15.664 -05:00 [INF] CORS policy execution successful.
+2026-03-26 18:55:15.666 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5269/api/Itemmaster/Create - 204 null null 2.1798ms
+2026-03-26 18:55:15.671 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5269/api/Itemmaster/Create - application/json 174
+2026-03-26 18:55:15.671 -05:00 [INF] CORS policy execution successful.
+2026-03-26 18:55:15.671 -05:00 [INF] CorrelationID: ["b31db236-d05b-45b5-8404-81544f5743b4"] - Request Path: /api/Itemmaster/Create
+2026-03-26 18:55:15.671 -05:00 [INF] Executing endpoint 'ProductApi.Controllers.ItemmasterController.Create (ProductApi)'
+2026-03-26 18:55:15.671 -05:00 [INF] Route matched with {action = "Create", controller = "Itemmaster"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(ProductApi.DTOs.ItemmasterDto) on controller ProductApi.Controllers.ItemmasterController (ProductApi).
+2026-03-26 18:55:15.682 -05:00 [INF] Executed DbCommand (4ms) [Parameters=[@CatCode='?' (Size = 4), @ItemBarCode='?' (Size = 4), @Itemcode='?' (Size = 5), @Itemname='?' (Size = 3), @Description='?' (Size = 8), @Uom='?' (Size = 3), @Rate='?' (DbType = Decimal), @Minimumstock='?' (DbType = Decimal), @Maximumstock='?' (DbType = Decimal), @IsActive='?' (DbType = Boolean)], CommandType='"Text"', CommandTimeout='30']
+EXEC sp_Itemmaster_Insert 
+                @CatCode,
+                @ItemBarCode,
+                @Itemcode,
+                @Itemname,
+                @Description,
+                @Uom,
+                @Rate,
+                @Minimumstock,
+                @Maximumstock,
+                @IsActive
+2026-03-26 18:55:15.682 -05:00 [INF] Executing OkObjectResult, writing value of type 'ProductApi.Models.ApiResponse`1[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-26 18:55:15.682 -05:00 [INF] Executed action ProductApi.Controllers.ItemmasterController.Create (ProductApi) in 11.0452ms
+2026-03-26 18:55:15.682 -05:00 [INF] Executed endpoint 'ProductApi.Controllers.ItemmasterController.Create (ProductApi)'
+2026-03-26 18:55:15.683 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5269/api/Itemmaster/Create - 200 null application/json; charset=utf-8 12.0402ms
+2026-03-26 18:55:15.782 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/Itemmaster/GetAll - null null
+2026-03-26 18:55:15.783 -05:00 [INF] CORS policy execution successful.
+2026-03-26 18:55:15.783 -05:00 [INF] CorrelationID: ["da6034ca-efa7-4bb8-9135-2798e879749a"] - Request Path: /api/Itemmaster/GetAll
+2026-03-26 18:55:15.783 -05:00 [INF] Executing endpoint 'ProductApi.Controllers.ItemmasterController.GetAll (ProductApi)'
+2026-03-26 18:55:15.783 -05:00 [INF] Route matched with {action = "GetAll", controller = "Itemmaster"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller ProductApi.Controllers.ItemmasterController (ProductApi).
+2026-03-26 18:55:15.834 -05:00 [INF] Executed DbCommand (50ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC sp_Itemmaster_GetALL
+2026-03-26 18:55:15.835 -05:00 [INF] Executing OkObjectResult, writing value of type 'ProductApi.Models.ApiResponse`1[[System.Collections.Generic.IEnumerable`1[[ProductApi.DTOs.ItemmasterDto, ProductApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-26 18:55:15.835 -05:00 [INF] Executed action ProductApi.Controllers.ItemmasterController.GetAll (ProductApi) in 52.0313ms
+2026-03-26 18:55:15.835 -05:00 [INF] Executed endpoint 'ProductApi.Controllers.ItemmasterController.GetAll (ProductApi)'
+2026-03-26 18:55:15.836 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/Itemmaster/GetAll - 200 null application/json; charset=utf-8 53.0941ms
+2026-03-26 18:55:39.945 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5269/api/Itemmaster/Create - null null
+2026-03-26 18:55:39.946 -05:00 [INF] CORS policy execution successful.
+2026-03-26 18:55:39.946 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5269/api/Itemmaster/Create - 204 null null 0.4761ms
+2026-03-26 18:55:39.949 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5269/api/Itemmaster/Create - application/json 174
+2026-03-26 18:55:39.949 -05:00 [INF] CORS policy execution successful.
+2026-03-26 18:55:39.950 -05:00 [INF] CorrelationID: ["0edb73ad-4e08-4c89-ab9e-5465694c0952"] - Request Path: /api/Itemmaster/Create
+2026-03-26 18:55:39.950 -05:00 [INF] Executing endpoint 'ProductApi.Controllers.ItemmasterController.Create (ProductApi)'
+2026-03-26 18:55:39.950 -05:00 [INF] Route matched with {action = "Create", controller = "Itemmaster"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(ProductApi.DTOs.ItemmasterDto) on controller ProductApi.Controllers.ItemmasterController (ProductApi).
+2026-03-26 18:55:39.959 -05:00 [INF] Executed DbCommand (8ms) [Parameters=[@CatCode='?' (Size = 2), @ItemBarCode='?' (Size = 5), @Itemcode='?' (Size = 3), @Itemname='?' (Size = 6), @Description='?' (Size = 8), @Uom='?' (Size = 3), @Rate='?' (DbType = Decimal), @Minimumstock='?' (DbType = Decimal), @Maximumstock='?' (DbType = Decimal), @IsActive='?' (DbType = Boolean)], CommandType='"Text"', CommandTimeout='30']
+EXEC sp_Itemmaster_Insert 
+                @CatCode,
+                @ItemBarCode,
+                @Itemcode,
+                @Itemname,
+                @Description,
+                @Uom,
+                @Rate,
+                @Minimumstock,
+                @Maximumstock,
+                @IsActive
+2026-03-26 18:55:39.960 -05:00 [INF] Executing OkObjectResult, writing value of type 'ProductApi.Models.ApiResponse`1[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-26 18:55:39.960 -05:00 [INF] Executed action ProductApi.Controllers.ItemmasterController.Create (ProductApi) in 9.6747ms
+2026-03-26 18:55:39.960 -05:00 [INF] Executed endpoint 'ProductApi.Controllers.ItemmasterController.Create (ProductApi)'
+2026-03-26 18:55:39.960 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5269/api/Itemmaster/Create - 200 null application/json; charset=utf-8 11.6079ms
+2026-03-26 18:55:40.062 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/Itemmaster/GetAll - null null
+2026-03-26 18:55:40.062 -05:00 [INF] CORS policy execution successful.
+2026-03-26 18:55:40.063 -05:00 [INF] CorrelationID: ["78571bad-fefc-4ddb-9f8d-0b8c31fe460e"] - Request Path: /api/Itemmaster/GetAll
+2026-03-26 18:55:40.063 -05:00 [INF] Executing endpoint 'ProductApi.Controllers.ItemmasterController.GetAll (ProductApi)'
+2026-03-26 18:55:40.063 -05:00 [INF] Route matched with {action = "GetAll", controller = "Itemmaster"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller ProductApi.Controllers.ItemmasterController (ProductApi).
+2026-03-26 18:55:40.069 -05:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC sp_Itemmaster_GetALL
+2026-03-26 18:55:40.070 -05:00 [INF] Executing OkObjectResult, writing value of type 'ProductApi.Models.ApiResponse`1[[System.Collections.Generic.IEnumerable`1[[ProductApi.DTOs.ItemmasterDto, ProductApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-26 18:55:40.070 -05:00 [INF] Executed action ProductApi.Controllers.ItemmasterController.GetAll (ProductApi) in 7.2561ms
+2026-03-26 18:55:40.070 -05:00 [INF] Executed endpoint 'ProductApi.Controllers.ItemmasterController.GetAll (ProductApi)'
+2026-03-26 18:55:40.070 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/Itemmaster/GetAll - 200 null application/json; charset=utf-8 8.1938ms
+2026-03-26 18:56:02.789 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5269/api/Itemmaster/Create - null null
+2026-03-26 18:56:02.789 -05:00 [INF] CORS policy execution successful.
+2026-03-26 18:56:02.789 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5269/api/Itemmaster/Create - 204 null null 0.2353ms
+2026-03-26 18:56:02.792 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5269/api/Itemmaster/Create - application/json 164
+2026-03-26 18:56:02.792 -05:00 [INF] CORS policy execution successful.
+2026-03-26 18:56:02.792 -05:00 [INF] CorrelationID: ["f8a285b1-1b4f-4cdb-a7ea-a72acf1afe2f"] - Request Path: /api/Itemmaster/Create
+2026-03-26 18:56:02.792 -05:00 [INF] Executing endpoint 'ProductApi.Controllers.ItemmasterController.Create (ProductApi)'
+2026-03-26 18:56:02.792 -05:00 [INF] Route matched with {action = "Create", controller = "Itemmaster"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(ProductApi.DTOs.ItemmasterDto) on controller ProductApi.Controllers.ItemmasterController (ProductApi).
+2026-03-26 18:56:02.802 -05:00 [INF] Executed DbCommand (8ms) [Parameters=[@CatCode='?' (Size = 2), @ItemBarCode='?' (Size = 2), @Itemcode='?' (Size = 2), @Itemname='?' (Size = 2), @Description='?' (Size = 6), @Uom='?' (Size = 3), @Rate='?' (DbType = Decimal), @Minimumstock='?' (DbType = Decimal), @Maximumstock='?' (DbType = Decimal), @IsActive='?' (DbType = Boolean)], CommandType='"Text"', CommandTimeout='30']
+EXEC sp_Itemmaster_Insert 
+                @CatCode,
+                @ItemBarCode,
+                @Itemcode,
+                @Itemname,
+                @Description,
+                @Uom,
+                @Rate,
+                @Minimumstock,
+                @Maximumstock,
+                @IsActive
+2026-03-26 18:56:02.802 -05:00 [INF] Executing OkObjectResult, writing value of type 'ProductApi.Models.ApiResponse`1[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-26 18:56:02.802 -05:00 [INF] Executed action ProductApi.Controllers.ItemmasterController.Create (ProductApi) in 10.0724ms
+2026-03-26 18:56:02.802 -05:00 [INF] Executed endpoint 'ProductApi.Controllers.ItemmasterController.Create (ProductApi)'
+2026-03-26 18:56:02.802 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5269/api/Itemmaster/Create - 200 null application/json; charset=utf-8 10.9179ms
+2026-03-26 18:56:02.901 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/Itemmaster/GetAll - null null
+2026-03-26 18:56:02.901 -05:00 [INF] CORS policy execution successful.
+2026-03-26 18:56:02.901 -05:00 [INF] CorrelationID: ["59b2f0b4-4fe6-40dd-b249-8859b09097ea"] - Request Path: /api/Itemmaster/GetAll
+2026-03-26 18:56:02.901 -05:00 [INF] Executing endpoint 'ProductApi.Controllers.ItemmasterController.GetAll (ProductApi)'
+2026-03-26 18:56:02.901 -05:00 [INF] Route matched with {action = "GetAll", controller = "Itemmaster"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller ProductApi.Controllers.ItemmasterController (ProductApi).
+2026-03-26 18:56:02.930 -05:00 [INF] Executed DbCommand (27ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC sp_Itemmaster_GetALL
+2026-03-26 18:56:02.930 -05:00 [INF] Executing OkObjectResult, writing value of type 'ProductApi.Models.ApiResponse`1[[System.Collections.Generic.IEnumerable`1[[ProductApi.DTOs.ItemmasterDto, ProductApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-26 18:56:02.931 -05:00 [INF] Executed action ProductApi.Controllers.ItemmasterController.GetAll (ProductApi) in 29.1311ms
+2026-03-26 18:56:02.931 -05:00 [INF] Executed endpoint 'ProductApi.Controllers.ItemmasterController.GetAll (ProductApi)'
+2026-03-26 18:56:02.931 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/Itemmaster/GetAll - 200 null application/json; charset=utf-8 30.555ms
+2026-03-26 18:56:27.830 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5269/api/Itemmaster/Create - null null
+2026-03-26 18:56:27.830 -05:00 [INF] CORS policy execution successful.
+2026-03-26 18:56:27.830 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5269/api/Itemmaster/Create - 204 null null 0.3549ms
+2026-03-26 18:56:27.832 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5269/api/Itemmaster/Create - application/json 171
+2026-03-26 18:56:27.837 -05:00 [INF] CORS policy execution successful.
+2026-03-26 18:56:27.840 -05:00 [INF] CorrelationID: ["5ccb432d-3a7a-4092-969e-3e2827383663"] - Request Path: /api/Itemmaster/Create
+2026-03-26 18:56:27.840 -05:00 [INF] Executing endpoint 'ProductApi.Controllers.ItemmasterController.Create (ProductApi)'
+2026-03-26 18:56:27.841 -05:00 [INF] Route matched with {action = "Create", controller = "Itemmaster"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(ProductApi.DTOs.ItemmasterDto) on controller ProductApi.Controllers.ItemmasterController (ProductApi).
+2026-03-26 18:56:27.848 -05:00 [INF] Executed DbCommand (4ms) [Parameters=[@CatCode='?' (Size = 4), @ItemBarCode='?' (Size = 4), @Itemcode='?' (Size = 5), @Itemname='?' (Size = 4), @Description='?' (Size = 4), @Uom='?' (Size = 3), @Rate='?' (DbType = Decimal), @Minimumstock='?' (DbType = Decimal), @Maximumstock='?' (DbType = Decimal), @IsActive='?' (DbType = Boolean)], CommandType='"Text"', CommandTimeout='30']
+EXEC sp_Itemmaster_Insert 
+                @CatCode,
+                @ItemBarCode,
+                @Itemcode,
+                @Itemname,
+                @Description,
+                @Uom,
+                @Rate,
+                @Minimumstock,
+                @Maximumstock,
+                @IsActive
+2026-03-26 18:56:27.848 -05:00 [INF] Executing OkObjectResult, writing value of type 'ProductApi.Models.ApiResponse`1[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-26 18:56:27.848 -05:00 [INF] Executed action ProductApi.Controllers.ItemmasterController.Create (ProductApi) in 7.7404ms
+2026-03-26 18:56:27.848 -05:00 [INF] Executed endpoint 'ProductApi.Controllers.ItemmasterController.Create (ProductApi)'
+2026-03-26 18:56:27.849 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5269/api/Itemmaster/Create - 200 null application/json; charset=utf-8 16.5168ms
+2026-03-26 18:56:27.952 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/Itemmaster/GetAll - null null
+2026-03-26 18:56:27.955 -05:00 [INF] CORS policy execution successful.
+2026-03-26 18:56:27.955 -05:00 [INF] CorrelationID: ["a64bd5c0-082f-40da-9e35-845152342faa"] - Request Path: /api/Itemmaster/GetAll
+2026-03-26 18:56:27.955 -05:00 [INF] Executing endpoint 'ProductApi.Controllers.ItemmasterController.GetAll (ProductApi)'
+2026-03-26 18:56:27.956 -05:00 [INF] Route matched with {action = "GetAll", controller = "Itemmaster"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller ProductApi.Controllers.ItemmasterController (ProductApi).
+2026-03-26 18:56:27.978 -05:00 [INF] Executed DbCommand (20ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC sp_Itemmaster_GetALL
+2026-03-26 18:56:27.979 -05:00 [INF] Executing OkObjectResult, writing value of type 'ProductApi.Models.ApiResponse`1[[System.Collections.Generic.IEnumerable`1[[ProductApi.DTOs.ItemmasterDto, ProductApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-26 18:56:27.980 -05:00 [INF] Executed action ProductApi.Controllers.ItemmasterController.GetAll (ProductApi) in 24.4759ms
+2026-03-26 18:56:27.980 -05:00 [INF] Executed endpoint 'ProductApi.Controllers.ItemmasterController.GetAll (ProductApi)'
+2026-03-26 18:56:27.980 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/Itemmaster/GetAll - 200 null application/json; charset=utf-8 28.8549ms
+2026-03-26 18:56:56.438 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5269/api/Itemmaster/Create - null null
+2026-03-26 18:56:56.438 -05:00 [INF] CORS policy execution successful.
+2026-03-26 18:56:56.438 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5269/api/Itemmaster/Create - 204 null null 0.3389ms
+2026-03-26 18:56:56.441 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5269/api/Itemmaster/Create - application/json 173
+2026-03-26 18:56:56.441 -05:00 [INF] CORS policy execution successful.
+2026-03-26 18:56:56.442 -05:00 [INF] CorrelationID: ["365fb670-91e4-43b2-a4a3-57a18b4112c7"] - Request Path: /api/Itemmaster/Create
+2026-03-26 18:56:56.442 -05:00 [INF] Executing endpoint 'ProductApi.Controllers.ItemmasterController.Create (ProductApi)'
+2026-03-26 18:56:56.442 -05:00 [INF] Route matched with {action = "Create", controller = "Itemmaster"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(ProductApi.DTOs.ItemmasterDto) on controller ProductApi.Controllers.ItemmasterController (ProductApi).
+2026-03-26 18:56:56.449 -05:00 [INF] Executed DbCommand (5ms) [Parameters=[@CatCode='?' (Size = 4), @ItemBarCode='?' (Size = 4), @Itemcode='?' (Size = 4), @Itemname='?' (Size = 5), @Description='?' (Size = 5), @Uom='?' (Size = 3), @Rate='?' (DbType = Decimal), @Minimumstock='?' (DbType = Decimal), @Maximumstock='?' (DbType = Decimal), @IsActive='?' (DbType = Boolean)], CommandType='"Text"', CommandTimeout='30']
+EXEC sp_Itemmaster_Insert 
+                @CatCode,
+                @ItemBarCode,
+                @Itemcode,
+                @Itemname,
+                @Description,
+                @Uom,
+                @Rate,
+                @Minimumstock,
+                @Maximumstock,
+                @IsActive
+2026-03-26 18:56:56.449 -05:00 [INF] Executing OkObjectResult, writing value of type 'ProductApi.Models.ApiResponse`1[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-26 18:56:56.449 -05:00 [INF] Executed action ProductApi.Controllers.ItemmasterController.Create (ProductApi) in 7.021ms
+2026-03-26 18:56:56.449 -05:00 [INF] Executed endpoint 'ProductApi.Controllers.ItemmasterController.Create (ProductApi)'
+2026-03-26 18:56:56.449 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5269/api/Itemmaster/Create - 200 null application/json; charset=utf-8 8.3976ms
+2026-03-26 18:56:56.544 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/Itemmaster/GetAll - null null
+2026-03-26 18:56:56.545 -05:00 [INF] CORS policy execution successful.
+2026-03-26 18:56:56.545 -05:00 [INF] CorrelationID: ["510b7ac0-01d8-43fb-bb72-0bfe1cce0912"] - Request Path: /api/Itemmaster/GetAll
+2026-03-26 18:56:56.545 -05:00 [INF] Executing endpoint 'ProductApi.Controllers.ItemmasterController.GetAll (ProductApi)'
+2026-03-26 18:56:56.545 -05:00 [INF] Route matched with {action = "GetAll", controller = "Itemmaster"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller ProductApi.Controllers.ItemmasterController (ProductApi).
+2026-03-26 18:56:56.550 -05:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC sp_Itemmaster_GetALL
+2026-03-26 18:56:56.551 -05:00 [INF] Executing OkObjectResult, writing value of type 'ProductApi.Models.ApiResponse`1[[System.Collections.Generic.IEnumerable`1[[ProductApi.DTOs.ItemmasterDto, ProductApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-26 18:56:56.551 -05:00 [INF] Executed action ProductApi.Controllers.ItemmasterController.GetAll (ProductApi) in 5.9789ms
+2026-03-26 18:56:56.551 -05:00 [INF] Executed endpoint 'ProductApi.Controllers.ItemmasterController.GetAll (ProductApi)'
+2026-03-26 18:56:56.551 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/Itemmaster/GetAll - 200 null application/json; charset=utf-8 6.8737ms
+2026-03-26 18:57:12.873 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/Itemmaster/GetAll - null null
+2026-03-26 18:57:12.874 -05:00 [INF] CORS policy execution successful.
+2026-03-26 18:57:12.874 -05:00 [INF] CorrelationID: ["0ea3df2a-21b4-41fa-b28f-d228576bc7c4"] - Request Path: /api/Itemmaster/GetAll
+2026-03-26 18:57:12.874 -05:00 [INF] Executing endpoint 'ProductApi.Controllers.ItemmasterController.GetAll (ProductApi)'
+2026-03-26 18:57:12.874 -05:00 [INF] Route matched with {action = "GetAll", controller = "Itemmaster"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller ProductApi.Controllers.ItemmasterController (ProductApi).
+2026-03-26 18:57:12.879 -05:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC sp_Itemmaster_GetALL
+2026-03-26 18:57:12.880 -05:00 [INF] Executing OkObjectResult, writing value of type 'ProductApi.Models.ApiResponse`1[[System.Collections.Generic.IEnumerable`1[[ProductApi.DTOs.ItemmasterDto, ProductApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-26 18:57:12.880 -05:00 [INF] Executed action ProductApi.Controllers.ItemmasterController.GetAll (ProductApi) in 5.809ms
+2026-03-26 18:57:12.881 -05:00 [INF] Executed endpoint 'ProductApi.Controllers.ItemmasterController.GetAll (ProductApi)'
+2026-03-26 18:57:12.882 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/Itemmaster/GetAll - 200 null application/json; charset=utf-8 9.0032ms

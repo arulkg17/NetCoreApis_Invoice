@@ -256,3 +256,34 @@ EXEC sp_Itemmaster_GetById @Id
 2026-03-14 19:14:08.299 -05:00 [INF] Executed action ProductApi.Controllers.ItemmasterController.GetById (ProductApi) in 9.6354ms
 2026-03-14 19:14:08.299 -05:00 [INF] Executed endpoint 'ProductApi.Controllers.ItemmasterController.GetById (ProductApi)'
 2026-03-14 19:14:08.300 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/Itemmaster/GetById/7 - 404 null application/json; charset=utf-8 12.3655ms
+2026-03-14 20:33:11.620 -05:00 [INF] User profile is available. Using 'C:\Users\arulg\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-03-14 20:33:12.142 -05:00 [INF] Now listening on: http://localhost:5269
+2026-03-14 20:33:12.535 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-14 20:33:12.540 -05:00 [INF] Hosting environment: Development
+2026-03-14 20:33:12.541 -05:00 [INF] Content root path: D:\Projects\NetCore\ApiBackend\NetCoreApis_Invoice\ProductApi
+2026-03-14 20:33:13.086 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/swagger/index.html - null null
+2026-03-14 20:33:13.849 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/swagger/index.html - 200 null text/html;charset=utf-8 778.023ms
+2026-03-14 20:33:13.894 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/_framework/aspnetcore-browser-refresh.js - null null
+2026-03-14 20:33:13.899 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/_framework/aspnetcore-browser-refresh.js - 200 13756 application/javascript; charset=utf-8 5.01ms
+2026-03-14 20:33:13.944 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/_vs/browserLink - null null
+2026-03-14 20:33:14.213 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/_vs/browserLink - 200 null text/javascript; charset=UTF-8 268.5505ms
+2026-03-14 20:33:14.364 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/swagger/v1/swagger.json - null null
+2026-03-14 20:33:14.446 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 81.1805ms
+2026-03-14 20:33:26.038 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/Itemmaster/GetAll - null null
+2026-03-14 20:33:26.265 -05:00 [INF] CorrelationID: ["7381720e-7891-4666-bf4a-d149db860537"] - Request Path: /api/Itemmaster/GetAll
+2026-03-14 20:33:26.286 -05:00 [WRN] Error unprotecting the session cookie.
+System.Security.Cryptography.CryptographicException: The payload was invalid. For more information go to https://aka.ms/aspnet/dataprotectionwarning
+   at Microsoft.AspNetCore.DataProtection.Cng.CbcAuthenticatedEncryptor.DecryptImpl(Byte* pbCiphertext, UInt32 cbCiphertext, Byte* pbAdditionalAuthenticatedData, UInt32 cbAdditionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.Cng.Internal.CngAuthenticatedEncryptorBase.Decrypt(ArraySegment`1 ciphertext, ArraySegment`1 additionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.UnprotectCore(Byte[] protectedData, Boolean allowOperationsOnRevokedKeys, UnprotectStatus& status)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.Unprotect(Byte[] protectedData)
+   at Microsoft.AspNetCore.Session.CookieProtection.Unprotect(IDataProtector protector, String protectedText, ILogger logger)
+2026-03-14 20:33:26.406 -05:00 [INF] Executing endpoint 'ProductApi.Controllers.ItemmasterController.GetAll (ProductApi)'
+2026-03-14 20:33:26.451 -05:00 [INF] Route matched with {action = "GetAll", controller = "Itemmaster"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller ProductApi.Controllers.ItemmasterController (ProductApi).
+2026-03-14 20:33:27.716 -05:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'ProductEntity'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-03-14 20:33:28.748 -05:00 [INF] Executed DbCommand (54ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC sp_Itemmaster_GetALL
+2026-03-14 20:33:28.982 -05:00 [INF] Executing OkObjectResult, writing value of type 'ProductApi.Models.ApiResponse`1[[System.Collections.Generic.IEnumerable`1[[ProductApi.DTOs.ItemmasterDto, ProductApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-14 20:33:29.038 -05:00 [INF] Executed action ProductApi.Controllers.ItemmasterController.GetAll (ProductApi) in 2579.1422ms
+2026-03-14 20:33:29.039 -05:00 [INF] Executed endpoint 'ProductApi.Controllers.ItemmasterController.GetAll (ProductApi)'
+2026-03-14 20:33:29.061 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/Itemmaster/GetAll - 200 null application/json; charset=utf-8 3022.4611ms
