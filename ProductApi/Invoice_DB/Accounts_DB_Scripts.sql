@@ -400,7 +400,7 @@ SET IDENTITY_INSERT [dbo].[Products] OFF
 GO
 
 
-ALTER PROCEDURE [dbo].[sp_Itemmaster_GetPaged]
+CREDATE PROCEDURE [dbo].[sp_Itemmaster_GetPaged]
 	@CatCode	VARCHAR(5) = NULL,
 	@ItemName	VARCHAR(100) = NULL,
 	@Uom		VARCHAR(3) = NULL,
