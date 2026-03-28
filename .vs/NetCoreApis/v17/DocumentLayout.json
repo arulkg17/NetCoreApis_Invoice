@@ -3,28 +3,12 @@
   "WorkspaceRootPath": "D:\\Projects\\NetCore\\ApiBackend\\NetCoreApis_Invoice\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DB6499DE-7D64-46E0-A493-FE1C6151B2B1}|ProductApi\\ProductApi.csproj|d:\\projects\\netcore\\apibackend\\netcoreapis_invoice\\productapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{DB6499DE-7D64-46E0-A493-FE1C6151B2B1}|ProductApi\\ProductApi.csproj|solutionrelative:productapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{DB6499DE-7D64-46E0-A493-FE1C6151B2B1}|ProductApi\\ProductApi.csproj|d:\\projects\\netcore\\apibackend\\netcoreapis_invoice\\productapi\\repositories\\itemmasterrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB6499DE-7D64-46E0-A493-FE1C6151B2B1}|ProductApi\\ProductApi.csproj|solutionrelative:productapi\\repositories\\itemmasterrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DB6499DE-7D64-46E0-A493-FE1C6151B2B1}|ProductApi\\ProductApi.csproj|d:\\projects\\netcore\\apibackend\\netcoreapis_invoice\\productapi\\controllers\\itemmastercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DB6499DE-7D64-46E0-A493-FE1C6151B2B1}|ProductApi\\ProductApi.csproj|solutionrelative:productapi\\controllers\\itemmastercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DB6499DE-7D64-46E0-A493-FE1C6151B2B1}|ProductApi\\ProductApi.csproj|d:\\projects\\netcore\\apibackend\\netcoreapis_invoice\\productapi\\dtos\\pagedresultdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DB6499DE-7D64-46E0-A493-FE1C6151B2B1}|ProductApi\\ProductApi.csproj|solutionrelative:productapi\\dtos\\pagedresultdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DB6499DE-7D64-46E0-A493-FE1C6151B2B1}|ProductApi\\ProductApi.csproj|d:\\projects\\netcore\\apibackend\\netcoreapis_invoice\\productapi\\services\\itemmasterservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DB6499DE-7D64-46E0-A493-FE1C6151B2B1}|ProductApi\\ProductApi.csproj|solutionrelative:productapi\\services\\itemmasterservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DB6499DE-7D64-46E0-A493-FE1C6151B2B1}|ProductApi\\ProductApi.csproj|d:\\projects\\netcore\\apibackend\\netcoreapis_invoice\\productapi\\contracts\\iitemmasterservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DB6499DE-7D64-46E0-A493-FE1C6151B2B1}|ProductApi\\ProductApi.csproj|solutionrelative:productapi\\contracts\\iitemmasterservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DB6499DE-7D64-46E0-A493-FE1C6151B2B1}|ProductApi\\ProductApi.csproj|d:\\projects\\netcore\\apibackend\\netcoreapis_invoice\\productapi\\repositories\\itemmasterrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DB6499DE-7D64-46E0-A493-FE1C6151B2B1}|ProductApi\\ProductApi.csproj|solutionrelative:productapi\\repositories\\itemmasterrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -47,14 +31,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "D:\\Projects\\NetCore\\ApiBackend\\NetCoreApis_Invoice\\ProductApi\\appsettings.json",
-              "RelativeDocumentMoniker": "ProductApi\\appsettings.json",
-              "ToolTip": "D:\\Projects\\NetCore\\ApiBackend\\NetCoreApis_Invoice\\ProductApi\\appsettings.json",
-              "RelativeToolTip": "ProductApi\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-03-27T18:51:35.175Z",
+              "Title": "ItemmasterRepository.cs",
+              "DocumentMoniker": "D:\\Projects\\NetCore\\ApiBackend\\NetCoreApis_Invoice\\ProductApi\\Repositories\\ItemmasterRepository.cs",
+              "RelativeDocumentMoniker": "ProductApi\\Repositories\\ItemmasterRepository.cs",
+              "ToolTip": "D:\\Projects\\NetCore\\ApiBackend\\NetCoreApis_Invoice\\ProductApi\\Repositories\\ItemmasterRepository.cs",
+              "RelativeToolTip": "ProductApi\\Repositories\\ItemmasterRepository.cs",
+              "ViewState": "AgIAAI0AAAAAAAAAAAAIwJgAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-27T23:10:27.006Z",
               "EditorCaption": ""
             },
             {
@@ -65,58 +49,10 @@
               "RelativeDocumentMoniker": "ProductApi\\Controllers\\ItemmasterController.cs",
               "ToolTip": "D:\\Projects\\NetCore\\ApiBackend\\NetCoreApis_Invoice\\ProductApi\\Controllers\\ItemmasterController.cs",
               "RelativeToolTip": "ProductApi\\Controllers\\ItemmasterController.cs",
-              "ViewState": "AgIAAC8AAAAAAAAAAAAowDcAAAAZAAAAAAAAAA==",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAkwD0AAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-27T01:30:07.323Z",
+              "WhenOpened": "2026-03-27T23:02:31.68Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "PagedResultDto.cs",
-              "DocumentMoniker": "D:\\Projects\\NetCore\\ApiBackend\\NetCoreApis_Invoice\\ProductApi\\DTOs\\PagedResultDto.cs",
-              "RelativeDocumentMoniker": "ProductApi\\DTOs\\PagedResultDto.cs",
-              "ToolTip": "D:\\Projects\\NetCore\\ApiBackend\\NetCoreApis_Invoice\\ProductApi\\DTOs\\PagedResultDto.cs",
-              "RelativeToolTip": "ProductApi\\DTOs\\PagedResultDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-27T01:28:40.806Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ItemmasterService.cs",
-              "DocumentMoniker": "D:\\Projects\\NetCore\\ApiBackend\\NetCoreApis_Invoice\\ProductApi\\Services\\ItemmasterService.cs",
-              "RelativeDocumentMoniker": "ProductApi\\Services\\ItemmasterService.cs",
-              "ToolTip": "D:\\Projects\\NetCore\\ApiBackend\\NetCoreApis_Invoice\\ProductApi\\Services\\ItemmasterService.cs",
-              "RelativeToolTip": "ProductApi\\Services\\ItemmasterService.cs",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAUwDgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-27T01:27:41.697Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "IItemmasterService.cs",
-              "DocumentMoniker": "D:\\Projects\\NetCore\\ApiBackend\\NetCoreApis_Invoice\\ProductApi\\Contracts\\IItemmasterService.cs",
-              "RelativeDocumentMoniker": "ProductApi\\Contracts\\IItemmasterService.cs",
-              "ToolTip": "D:\\Projects\\NetCore\\ApiBackend\\NetCoreApis_Invoice\\ProductApi\\Contracts\\IItemmasterService.cs",
-              "RelativeToolTip": "ProductApi\\Contracts\\IItemmasterService.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAUwBAAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-27T01:27:16.15Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ItemmasterRepository.cs",
-              "DocumentMoniker": "D:\\Projects\\NetCore\\ApiBackend\\NetCoreApis_Invoice\\ProductApi\\Repositories\\ItemmasterRepository.cs",
-              "RelativeDocumentMoniker": "ProductApi\\Repositories\\ItemmasterRepository.cs",
-              "ToolTip": "D:\\Projects\\NetCore\\ApiBackend\\NetCoreApis_Invoice\\ProductApi\\Repositories\\ItemmasterRepository.cs",
-              "RelativeToolTip": "ProductApi\\Repositories\\ItemmasterRepository.cs",
-              "ViewState": "AgIAAFoAAAAAAAAAAAAkwGgAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-27T01:25:54.128Z"
             }
           ]
         }

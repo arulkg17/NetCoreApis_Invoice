@@ -17,3 +17,20 @@ obj/
 
 # VS Code (optional)
 .vscode/
+/.vs/NetCoreApis/DesignTimeBuild/.dtbcache.v2
+/.vs/NetCoreApis/v17/.suo
+/.vs/NetCoreApis/v17/DocumentLayout.backup.json
+/.vs/NetCoreApis/v17/DocumentLayout.json
+/ProductApi/bin/Debug/net8.0/ProductApi.dll
+/ProductApi/bin/Debug/net8.0/ProductApi.exe
+/ProductApi/bin/Debug/net8.0/ProductApi.pdb
+/ProductApi/logs/log20260327.txt
+/ProductApi/obj/Debug/net8.0/ref/ProductApi.dll
+/ProductApi/obj/Debug/net8.0/refint/ProductApi.dll
+/ProductApi/obj/Debug/net8.0/apphost.exe
+/ProductApi/obj/Debug/net8.0/ProductApi.AssemblyInfoInputs.cache
+/ProductApi/obj/Debug/net8.0/ProductApi.dll
+/ProductApi/obj/Debug/net8.0/ProductApi.pdb
+/ProductApi/obj/Debug/net8.0/rjsmcshtml.dswa.cache.json
+/ProductApi/obj/Debug/net8.0/rjsmrazor.dswa.cache.json
+/ProductApi/obj/Debug/net8.0/ProductApi.AssemblyInfo.cs
