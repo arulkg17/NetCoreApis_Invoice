@@ -1,0 +1,11 @@
+environment: Development
+
+replicaCount: 1
+
+ingress:
+  host: productapi-dev.local
+
+appsettings:
+  connectionString: "Server=DEVSQL;Database=ProductDb;"
+  apiUrl: "https://api-dev.company.com"
+  logLevel: "Information"

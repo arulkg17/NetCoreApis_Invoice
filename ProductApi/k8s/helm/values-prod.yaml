@@ -1,0 +1,11 @@
+environment: Production
+
+replicaCount: 3
+
+ingress:
+  host: productapi.company.com
+
+appsettings:
+  connectionString: "Server=PRODSQL;Database=ProductDb;"
+  apiUrl: "https://api.company.com"
+  logLevel: "Error"

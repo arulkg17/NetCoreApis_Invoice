@@ -1,0 +1,11 @@
+environment: UAT
+
+replicaCount: 2
+
+ingress:
+  host: productapi-uat.company.com
+
+appsettings:
+  connectionString: "Server=UATSQL;Database=ProductDb;"
+  apiUrl: "https://api-uat.company.com"
+  logLevel: "Warning"

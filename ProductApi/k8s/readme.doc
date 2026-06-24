@@ -1,0 +1,355 @@
+﻿
+Docker Containerize API
+Verify Docker Desktop
+docker --version
+
+
+====dockerfile 
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+
+WORKDIR /src
+
+COPY . .
+
+RUN dotnet restore
+
+RUN dotnet publish -c Release -o /app/publish
+
+FROM mcr.microsoft.com/dotnet/aspnet:8.0
+
+WORKDIR /app
+
+COPY --from=build /app/publish .
+
+EXPOSE 8080
+
+ENTRYPOINT ["dotnet", "ProductApi.dll"]
+
+====
+.dockerignore
+
+Content:
+
+bin/
+obj/
+.vs/
+.git/
+logs/
+
+===================
+
+
+
+Docker Desktop start desktop is running
+docker build -t productapi:v1 
+docker ps
+wsl --status 
+
+docker images
+docker run -d -p 8080:8080 --name productapi productapi:v1
+verify it is running 
+docker ps
+
+docker logs productapi 
+docker stop productapi
+docker start productapi 
+
+Kubernetes = Minikube start kubernetes 
+----------------------
+minikube start 
+minikube get nodes 
+
+load image 
+---------------------
+minikube image load productapi:v1
+verify
+minikube image ls
+-------------------------------------------------
+Deployment 
+create deployment.yaml file  
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: productapi-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: productapi
+  template:
+    metadata:
+      labels:
+        app: productapi
+    spec:
+      containers:
+      - name: productapi
+        image: productapi:v1
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 8080
+------------------------------------
+create service and expose API
+service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: productapi-service
+spec:
+  type: NodePort
+  selector:
+    app: productapi
+  ports:
+    - port: 8080
+      targetPort: 8080
+      nodePort: 30080
+------------------------------
+Deploy to Kubernetes 
+
+kubectl apply -f deployment.yaml
+kubectl apply -f service.yaml
+
+Check deployment
+kubectl get pods
+
+You should see something like:
+
+productapi-deployment-xxxx   Running
+
+Check service:
+
+kubectl get svc
+--------------------
+
+Access your API
+
+Get Minikube URL:
+
+minikube service productapi-service
+
+OR manually:
+
+http://localhost:30080
+
+Swagger:
+
+http://localhost:30080/swagger
+---------------------
+
+Debug commands (VERY important)
+
+If something fails:
+
+Pods status
+kubectl describe pod <pod-name>
+Logs
+kubectl logs -l app=productapi
+------------------------------
+
+Fix issue for minikube start 
+minikube delete 
+docker ps -a 
+docker rm -f minikube 
+minikube start --driver=docker --cpus=2 --memory=4096
+
+
+Load your Docker image into Minikube
+
+Your image is local:
+
+productapi:v1
+
+Run:
+
+minikube image load productapi:v1
+
+Verify:
+
+minikube image ls 
+========================
+STEP 1 — Create Deployment
+
+Make sure your deployment.yaml has:
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: productapi-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: productapi
+  template:
+    metadata:
+      labels:
+        app: productapi
+    spec:
+      containers:
+      - name: productapi
+        image: productapi:v1
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 8080
+
+✅ STEP 2 — Apply Deployment
+kubectl apply -f deployment.yaml
+
+✅ STEP 3 — Create Service
+
+service.yaml:
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: productapi-service
+spec:
+  type: NodePort
+  selector:
+    app: productapi
+  ports:
+    - port: 8080
+      targetPort: 8080
+      nodePort: 30080
+
+Apply:
+
+kubectl apply -f service.yaml
+🚀 STEP 4 — Check pods
+kubectl get pods
+
+Expected:
+
+productapi-deployment-xxxxx   Running
+🌐 STEP 5 — Access your API
+minikube service productapi-service
+
+OR manually:
+
+http://localhost:30080
+
+Swagger:
+
+http://localhost:30080/swagger
+
+----------------------------
+
+minikube addons enable ingress
+kubectl get pods -n ingress-nginx 
+
+STEP 1 — Enable Ingress Controller
+
+Run:
+
+minikube addons enable ingress
+
+Check:
+
+kubectl get pods -n ingress-nginx
+
+You should see something like:
+
+ingress-nginx-controller
+🚀 STEP 2 — Keep your Service (NO CHANGE)
+
+Your service stays:
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: productapi-service
+spec:
+  selector:
+    app: productapi
+  ports:
+    - port: 8080
+      targetPort: 8080
+
+👉 IMPORTANT: Ingress routes to this service
+
+🚀 STEP 3 — Create Ingress YAML
+
+Create:
+
+📄 ingress.yaml
+
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: productapi-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  rules:
+  - host: productapi.local
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: productapi-service
+            port:
+              number: 8080
+🚀 STEP 4 — Apply Ingress
+kubectl apply -f ingress.yaml
+🚀 STEP 5 — Get Minikube IP
+minikube ip
+
+You already have:
+
+192.168.49.2
+🚀 STEP 6 — Map domain in Windows HOSTS file
+
+Open as ADMIN:
+
+C:\Windows\System32\drivers\etc\hosts
+
+Add this line:
+
+192.168.49.2   productapi.local
+🚀 STEP 7 — Test in browser
+
+Now open:
+=======================================
+http://productapi.local/swagger
+
+Kubernetes  URL
+http://127.0.0.1:8080/swagger/index.html
+>net Core Docker URL 
+http://localhost:8080/swagger/index.html  
+
+===============================
+Step 10: Deploy DEV
+helm install productapi-dev ./k8s/helm -f ./k8s/helm/values-dev.yaml
+Step 11: Deploy UAT
+helm install productapi-uat ./k8s/helm -f ./k8s/helm/values-uat.yaml
+Step 12: Deploy PROD
+helm install productapi-prod ./k8s/helm -f ./k8s/helm/values-prod.yaml
+Harness Integration
+
+This is likely what you remember.
+
+Harness has an environment variable:
+
+ENVIRONMENT=dev
+
+or
+
+ENVIRONMENT=uat
+
+or
+
+ENVIRONMENT=prod
+
+Then Harness executes:
+
+helm upgrade --install productapi \
+  ./k8s/helm \
+  -f ./k8s/helm/values-${ENVIRONMENT}.yaml
+
+Examples:
+
+helm upgrade --install productapi ./k8s/helm -f values-dev.yaml
+helm upgrade --install productapi ./k8s/helm -f values-uat.yaml
+helm upgrade --install productapi ./k8s/helm -f values-prod.yaml
