@@ -90,7 +90,7 @@ builder.Services.AddAuthentication(options =>
         IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtKey)) 
     };
 });
-
+builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c => {
     c.EnableAnnotations();
     c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
@@ -113,10 +113,6 @@ builder.Services.AddSwaggerGen(c => {
         }
     });
 });
-
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
 
 builder.Services.AddRateLimiter(options =>
 {
@@ -148,22 +144,49 @@ builder.Services.AddSession(options =>
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
+//if (app.Environment.IsDevelopment())
+//{
+//Console.WriteLine("Before Seagger");
     app.UseSwagger();
+//Console.WriteLine("After Swagger");
     app.UseSwaggerUI();
-}
+//Console.WriteLine("After Swagger UI");
+//}
 app.UseRouting();
+//Console.WriteLine("After Routing");
 app.UseCors(AllowReact);
+//Console.WriteLine("After Cors");
 app.UseAuthentication();
+//Console.WriteLine("After Authentication");
 app.UseAuthorization();
+//Console.WriteLine("After Authorization");
 
 app.UseRateLimiter();
+//Console.WriteLine("After Ratelimit");
 app.UseExceptionLogging();
+//Console.WriteLine("After ExceptionLogging");
 app.UseCorrelationIdLogging();
+//Console.WriteLine("After CorrelationIdLogging");
 app.UseSession();
+//Console.WriteLine("After Session");
 app.UseMiddleware<ConcvurrencyExcepyionMiddleware>();
+//Console.WriteLine("After ConcurrencyExceptionMiddleware");  
 
 app.MapControllers().RequireRateLimiting("FixedPolicy");
+//Console.WriteLine("After MapController");
+app.Lifetime.ApplicationStarted.Register(() =>
+{
+    //Console.WriteLine("Application Started Successfully");
+
+    foreach (var url in app.Urls)
+    {
+        //Console.WriteLine($"Listening On : {url}");
+    }
+});
+
+app.Lifetime.ApplicationStopping.Register(() =>
+{
+    //Console.WriteLine("Application Stopping");
+});
 
 app.Run();

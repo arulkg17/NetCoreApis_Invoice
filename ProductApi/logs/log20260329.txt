@@ -1,0 +1,183 @@
+2026-03-29 08:54:00.277 -05:00 [INF] User profile is available. Using 'C:\Users\arulg\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-03-29 08:54:01.207 -05:00 [INF] Now listening on: http://localhost:5269
+2026-03-29 08:54:01.552 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-29 08:54:01.553 -05:00 [INF] Hosting environment: Development
+2026-03-29 08:54:01.553 -05:00 [INF] Content root path: D:\Projects\NetCore\ApiBackend\NetCoreApis_Invoice\ProductApi
+2026-03-29 08:54:04.070 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/swagger/index.html - null null
+2026-03-29 08:54:04.586 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/swagger/index.html - 200 null text/html;charset=utf-8 530.3248ms
+2026-03-29 08:54:04.611 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/_framework/aspnetcore-browser-refresh.js - null null
+2026-03-29 08:54:04.617 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/_framework/aspnetcore-browser-refresh.js - 200 13756 application/javascript; charset=utf-8 5.9244ms
+2026-03-29 08:54:04.646 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/_vs/browserLink - null null
+2026-03-29 08:54:04.890 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/_vs/browserLink - 200 null text/javascript; charset=UTF-8 243.859ms
+2026-03-29 08:54:05.091 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/swagger/v1/swagger.json - null null
+2026-03-29 08:54:05.290 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 199.529ms
+2026-03-29 08:57:29.824 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5269/api/v1/Login/Login - application/json 51
+2026-03-29 08:57:29.905 -05:00 [INF] CORS policy execution failed.
+2026-03-29 08:57:29.906 -05:00 [INF] Request origin http://localhost:5269 does not have permission to access the resource.
+2026-03-29 08:57:32.661 -05:00 [INF] CorrelationID: ["4d86a3a1-d328-4cab-814d-1098aa761230"] - Request Path: /api/v1/Login/Login
+2026-03-29 08:57:32.671 -05:00 [INF] Executing endpoint 'ProductApi.Controllers.LoginController.Login (ProductApi)'
+2026-03-29 08:57:32.704 -05:00 [INF] Route matched with {action = "Login", controller = "Login"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(ProductApi.DTOs.LoginDto) on controller ProductApi.Controllers.LoginController (ProductApi).
+2026-03-29 08:57:32.754 -05:00 [INF] Accessing expired session, Key:84f42d6b-d361-58fd-b076-d0e00fe2db93
+2026-03-29 08:57:32.870 -05:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-29 08:57:32.894 -05:00 [INF] Executed action ProductApi.Controllers.LoginController.Login (ProductApi) in 183.4906ms
+2026-03-29 08:57:32.895 -05:00 [INF] Executed endpoint 'ProductApi.Controllers.LoginController.Login (ProductApi)'
+2026-03-29 08:57:32.896 -05:00 [INF] Session started; Key:84f42d6b-d361-58fd-b076-d0e00fe2db93, Id:f994ad2b-3ae5-6d4d-012a-839a59a2b024
+2026-03-29 08:57:32.899 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5269/api/v1/Login/Login - 200 null application/json; charset=utf-8 3075.1253ms
+2026-03-29 08:58:47.284 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/v1/Itemmaster/GetAllPaged?pageNumber=1&pageSize=10 - null null
+2026-03-29 08:58:47.311 -05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-03-29 08:58:47.318 -05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-03-29 08:58:47.318 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/v1/Itemmaster/GetAllPaged?pageNumber=1&pageSize=10 - 401 0 null 34.1386ms
+2026-03-29 08:59:30.543 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/v1/Itemmaster/GetAllPaged?pageNumber=1&pageSize=10 - null null
+2026-03-29 08:59:30.655 -05:00 [INF] CorrelationID: ["16a6f6d3-cb15-4d54-837c-e1f06f86af07"] - Request Path: /api/v1/Itemmaster/GetAllPaged
+2026-03-29 08:59:30.656 -05:00 [INF] Executing endpoint 'ProductApi.Controllers.ItemmasterController.GetAllPaged (ProductApi)'
+2026-03-29 08:59:30.666 -05:00 [INF] Route matched with {action = "GetAllPaged", controller = "Itemmaster"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllPaged(System.String, System.String, System.String, Int32, Int32) on controller ProductApi.Controllers.ItemmasterController (ProductApi).
+2026-03-29 08:59:33.658 -05:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'ProductEntity'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-03-29 08:59:35.825 -05:00 [INF] Executing OkObjectResult, writing value of type 'ProductApi.Models.ApiResponse`1[[System.Collections.Generic.IEnumerable`1[[ProductApi.DTOs.ItemmasterDto, ProductApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-29 08:59:35.890 -05:00 [INF] Executed action ProductApi.Controllers.ItemmasterController.GetAllPaged (ProductApi) in 5224.1434ms
+2026-03-29 08:59:35.891 -05:00 [INF] Executed endpoint 'ProductApi.Controllers.ItemmasterController.GetAllPaged (ProductApi)'
+2026-03-29 08:59:35.931 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/v1/Itemmaster/GetAllPaged?pageNumber=1&pageSize=10 - 200 null application/json; charset=utf-8 5388.1532ms
+2026-03-29 09:00:09.899 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Login/login - null null
+2026-03-29 09:00:09.900 -05:00 [INF] CORS policy execution successful.
+2026-03-29 09:00:09.902 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Login/login - 204 null null 2.4771ms
+2026-03-29 09:00:09.904 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5269/api/v1/Login/login - application/json 59
+2026-03-29 09:00:09.904 -05:00 [INF] CORS policy execution successful.
+2026-03-29 09:00:09.904 -05:00 [INF] CorrelationID: ["ccab2c9e-343e-4d63-8892-01d0ef53809a"] - Request Path: /api/v1/Login/login
+2026-03-29 09:00:09.906 -05:00 [INF] Executing endpoint 'ProductApi.Controllers.LoginController.Login (ProductApi)'
+2026-03-29 09:00:09.906 -05:00 [INF] Route matched with {action = "Login", controller = "Login"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(ProductApi.DTOs.LoginDto) on controller ProductApi.Controllers.LoginController (ProductApi).
+2026-03-29 09:00:09.908 -05:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2026-03-29 09:00:09.933 -05:00 [INF] Executed action ProductApi.Controllers.LoginController.Login (ProductApi) in 27.3001ms
+2026-03-29 09:00:09.933 -05:00 [INF] Executed endpoint 'ProductApi.Controllers.LoginController.Login (ProductApi)'
+2026-03-29 09:00:09.934 -05:00 [INF] Session started; Key:1f855497-7822-390f-37f5-81e466e592d5, Id:0c03e82d-3819-434a-f83f-cef4b38157df
+2026-03-29 09:00:09.934 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5269/api/v1/Login/login - 401 null application/problem+json; charset=utf-8 30.5842ms
+2026-03-29 09:00:38.024 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Login/login - null null
+2026-03-29 09:00:38.025 -05:00 [INF] CORS policy execution successful.
+2026-03-29 09:00:38.027 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Login/login - 204 null null 2.3656ms
+2026-03-29 09:00:38.029 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5269/api/v1/Login/login - application/json 42
+2026-03-29 09:00:38.030 -05:00 [INF] CORS policy execution successful.
+2026-03-29 09:00:38.030 -05:00 [INF] CorrelationID: ["13b8858b-41af-4823-8744-ae6ed09ff17b"] - Request Path: /api/v1/Login/login
+2026-03-29 09:00:38.031 -05:00 [INF] Executing endpoint 'ProductApi.Controllers.LoginController.Login (ProductApi)'
+2026-03-29 09:00:38.031 -05:00 [INF] Route matched with {action = "Login", controller = "Login"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(ProductApi.DTOs.LoginDto) on controller ProductApi.Controllers.LoginController (ProductApi).
+2026-03-29 09:00:38.033 -05:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-29 09:00:38.034 -05:00 [INF] Executed action ProductApi.Controllers.LoginController.Login (ProductApi) in 2.5463ms
+2026-03-29 09:00:38.034 -05:00 [INF] Executed endpoint 'ProductApi.Controllers.LoginController.Login (ProductApi)'
+2026-03-29 09:00:38.035 -05:00 [INF] Session started; Key:108b62aa-07c9-a9ed-85d5-83a2d6c92015, Id:bfa30a3c-dede-9f40-1630-53a97bc2368a
+2026-03-29 09:00:38.035 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5269/api/v1/Login/login - 200 null application/json; charset=utf-8 5.7116ms
+2026-03-29 09:00:45.460 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Itemmaster/GetAllPaged?catCode=&itemName=&uom=&pageNumber=1&pageSize=10 - null null
+2026-03-29 09:00:45.469 -05:00 [INF] CORS policy execution successful.
+2026-03-29 09:00:45.470 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Itemmaster/GetAllPaged?catCode=&itemName=&uom=&pageNumber=1&pageSize=10 - 204 null null 10.9428ms
+2026-03-29 09:00:45.482 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/v1/Itemmaster/GetAllPaged?catCode=&itemName=&uom=&pageNumber=1&pageSize=10 - null null
+2026-03-29 09:00:45.483 -05:00 [INF] CORS policy execution successful.
+2026-03-29 09:00:45.487 -05:00 [INF] CorrelationID: ["817af3ab-4960-4e4b-ad13-1e5cccbaef01"] - Request Path: /api/v1/Itemmaster/GetAllPaged
+2026-03-29 09:00:45.487 -05:00 [INF] Executing endpoint 'ProductApi.Controllers.ItemmasterController.GetAllPaged (ProductApi)'
+2026-03-29 09:00:45.487 -05:00 [INF] Route matched with {action = "GetAllPaged", controller = "Itemmaster"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllPaged(System.String, System.String, System.String, Int32, Int32) on controller ProductApi.Controllers.ItemmasterController (ProductApi).
+2026-03-29 09:00:45.666 -05:00 [INF] Executing OkObjectResult, writing value of type 'ProductApi.Models.ApiResponse`1[[System.Collections.Generic.IEnumerable`1[[ProductApi.DTOs.ItemmasterDto, ProductApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-29 09:00:45.667 -05:00 [INF] Executed action ProductApi.Controllers.ItemmasterController.GetAllPaged (ProductApi) in 178.9993ms
+2026-03-29 09:00:45.667 -05:00 [INF] Executed endpoint 'ProductApi.Controllers.ItemmasterController.GetAllPaged (ProductApi)'
+2026-03-29 09:00:45.667 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/v1/Itemmaster/GetAllPaged?catCode=&itemName=&uom=&pageNumber=1&pageSize=10 - 200 null application/json; charset=utf-8 187.177ms
+2026-03-29 09:00:54.678 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Itemmaster/GetAllPaged?catCode=&itemName=&uom=k&pageNumber=1&pageSize=10 - null null
+2026-03-29 09:00:54.678 -05:00 [INF] CORS policy execution successful.
+2026-03-29 09:00:54.679 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Itemmaster/GetAllPaged?catCode=&itemName=&uom=k&pageNumber=1&pageSize=10 - 204 null null 0.7724ms
+2026-03-29 09:00:54.683 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/v1/Itemmaster/GetAllPaged?catCode=&itemName=&uom=k&pageNumber=1&pageSize=10 - null null
+2026-03-29 09:00:54.683 -05:00 [INF] CORS policy execution successful.
+2026-03-29 09:00:54.684 -05:00 [INF] CorrelationID: ["7b5205a1-8749-4f57-b66b-6f2302f4735d"] - Request Path: /api/v1/Itemmaster/GetAllPaged
+2026-03-29 09:00:54.684 -05:00 [INF] Executing endpoint 'ProductApi.Controllers.ItemmasterController.GetAllPaged (ProductApi)'
+2026-03-29 09:00:54.685 -05:00 [INF] Route matched with {action = "GetAllPaged", controller = "Itemmaster"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllPaged(System.String, System.String, System.String, Int32, Int32) on controller ProductApi.Controllers.ItemmasterController (ProductApi).
+2026-03-29 09:00:54.788 -05:00 [INF] Executing OkObjectResult, writing value of type 'ProductApi.Models.ApiResponse`1[[System.Collections.Generic.IEnumerable`1[[ProductApi.DTOs.ItemmasterDto, ProductApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-29 09:00:54.788 -05:00 [INF] Executed action ProductApi.Controllers.ItemmasterController.GetAllPaged (ProductApi) in 103.259ms
+2026-03-29 09:00:54.788 -05:00 [INF] Executed endpoint 'ProductApi.Controllers.ItemmasterController.GetAllPaged (ProductApi)'
+2026-03-29 09:00:54.788 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/v1/Itemmaster/GetAllPaged?catCode=&itemName=&uom=k&pageNumber=1&pageSize=10 - 200 null application/json; charset=utf-8 105.9188ms
+2026-03-29 09:01:01.707 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Itemmaster/GetAllPaged?catCode=&itemName=&uom=n&pageNumber=1&pageSize=10 - null null
+2026-03-29 09:01:01.707 -05:00 [INF] CORS policy execution successful.
+2026-03-29 09:01:01.708 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Itemmaster/GetAllPaged?catCode=&itemName=&uom=n&pageNumber=1&pageSize=10 - 204 null null 0.4523ms
+2026-03-29 09:01:01.710 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/v1/Itemmaster/GetAllPaged?catCode=&itemName=&uom=n&pageNumber=1&pageSize=10 - null null
+2026-03-29 09:01:01.711 -05:00 [INF] CORS policy execution successful.
+2026-03-29 09:01:01.714 -05:00 [INF] CorrelationID: ["4ab7fb2f-03db-471a-acd0-4d94abcb9769"] - Request Path: /api/v1/Itemmaster/GetAllPaged
+2026-03-29 09:01:01.714 -05:00 [INF] Executing endpoint 'ProductApi.Controllers.ItemmasterController.GetAllPaged (ProductApi)'
+2026-03-29 09:01:01.714 -05:00 [INF] Route matched with {action = "GetAllPaged", controller = "Itemmaster"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllPaged(System.String, System.String, System.String, Int32, Int32) on controller ProductApi.Controllers.ItemmasterController (ProductApi).
+2026-03-29 09:01:01.722 -05:00 [INF] Executing OkObjectResult, writing value of type 'ProductApi.Models.ApiResponse`1[[System.Collections.Generic.IEnumerable`1[[ProductApi.DTOs.ItemmasterDto, ProductApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-29 09:01:01.722 -05:00 [INF] Executed action ProductApi.Controllers.ItemmasterController.GetAllPaged (ProductApi) in 7.998ms
+2026-03-29 09:01:01.722 -05:00 [INF] Executed endpoint 'ProductApi.Controllers.ItemmasterController.GetAllPaged (ProductApi)'
+2026-03-29 09:01:01.723 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/v1/Itemmaster/GetAllPaged?catCode=&itemName=&uom=n&pageNumber=1&pageSize=10 - 200 null application/json; charset=utf-8 12.5678ms
+2026-03-29 09:01:07.616 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Itemmaster/GetAllPaged?catCode=&itemName=&uom=l&pageNumber=1&pageSize=10 - null null
+2026-03-29 09:01:07.616 -05:00 [INF] CORS policy execution successful.
+2026-03-29 09:01:07.617 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Itemmaster/GetAllPaged?catCode=&itemName=&uom=l&pageNumber=1&pageSize=10 - 204 null null 0.3706ms
+2026-03-29 09:01:07.626 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/v1/Itemmaster/GetAllPaged?catCode=&itemName=&uom=l&pageNumber=1&pageSize=10 - null null
+2026-03-29 09:01:07.627 -05:00 [INF] CORS policy execution successful.
+2026-03-29 09:01:07.627 -05:00 [INF] CorrelationID: ["c58f2126-cb87-4247-b62b-a62e3a99cbe5"] - Request Path: /api/v1/Itemmaster/GetAllPaged
+2026-03-29 09:01:07.627 -05:00 [INF] Executing endpoint 'ProductApi.Controllers.ItemmasterController.GetAllPaged (ProductApi)'
+2026-03-29 09:01:07.628 -05:00 [INF] Route matched with {action = "GetAllPaged", controller = "Itemmaster"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllPaged(System.String, System.String, System.String, Int32, Int32) on controller ProductApi.Controllers.ItemmasterController (ProductApi).
+2026-03-29 09:01:07.635 -05:00 [INF] Executing OkObjectResult, writing value of type 'ProductApi.Models.ApiResponse`1[[System.Collections.Generic.IEnumerable`1[[ProductApi.DTOs.ItemmasterDto, ProductApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-29 09:01:07.635 -05:00 [INF] Executed action ProductApi.Controllers.ItemmasterController.GetAllPaged (ProductApi) in 7.4701ms
+2026-03-29 09:01:07.636 -05:00 [INF] Executed endpoint 'ProductApi.Controllers.ItemmasterController.GetAllPaged (ProductApi)'
+2026-03-29 09:01:07.637 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/v1/Itemmaster/GetAllPaged?catCode=&itemName=&uom=l&pageNumber=1&pageSize=10 - 200 null application/json; charset=utf-8 11.3047ms
+2026-03-29 09:01:18.384 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Itemmaster/GetAllPaged?catCode=&itemName=&uom=&pageNumber=1&pageSize=10 - null null
+2026-03-29 09:01:18.384 -05:00 [INF] CORS policy execution successful.
+2026-03-29 09:01:18.384 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Itemmaster/GetAllPaged?catCode=&itemName=&uom=&pageNumber=1&pageSize=10 - 204 null null 0.5105ms
+2026-03-29 09:01:18.390 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/v1/Itemmaster/GetAllPaged?catCode=&itemName=&uom=&pageNumber=1&pageSize=10 - null null
+2026-03-29 09:01:18.390 -05:00 [INF] CORS policy execution successful.
+2026-03-29 09:01:18.391 -05:00 [INF] CorrelationID: ["6ed27042-a4bd-4d24-af9f-f0487077a37b"] - Request Path: /api/v1/Itemmaster/GetAllPaged
+2026-03-29 09:01:18.391 -05:00 [INF] Executing endpoint 'ProductApi.Controllers.ItemmasterController.GetAllPaged (ProductApi)'
+2026-03-29 09:01:18.391 -05:00 [INF] Route matched with {action = "GetAllPaged", controller = "Itemmaster"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllPaged(System.String, System.String, System.String, Int32, Int32) on controller ProductApi.Controllers.ItemmasterController (ProductApi).
+2026-03-29 09:01:18.404 -05:00 [INF] Executing OkObjectResult, writing value of type 'ProductApi.Models.ApiResponse`1[[System.Collections.Generic.IEnumerable`1[[ProductApi.DTOs.ItemmasterDto, ProductApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-29 09:01:18.405 -05:00 [INF] Executed action ProductApi.Controllers.ItemmasterController.GetAllPaged (ProductApi) in 14.0828ms
+2026-03-29 09:01:18.405 -05:00 [INF] Executed endpoint 'ProductApi.Controllers.ItemmasterController.GetAllPaged (ProductApi)'
+2026-03-29 09:01:18.406 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/v1/Itemmaster/GetAllPaged?catCode=&itemName=&uom=&pageNumber=1&pageSize=10 - 200 null application/json; charset=utf-8 15.8459ms
+2026-03-29 09:01:18.784 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/v1/Itemmaster/GetAllPaged?catCode=&itemName=&uom=&pageNumber=1&pageSize=10 - null null
+2026-03-29 09:01:18.785 -05:00 [INF] CORS policy execution successful.
+2026-03-29 09:01:18.785 -05:00 [INF] CorrelationID: ["0cd4dc3f-d731-4973-a658-82c79d203488"] - Request Path: /api/v1/Itemmaster/GetAllPaged
+2026-03-29 09:01:18.785 -05:00 [INF] Executing endpoint 'ProductApi.Controllers.ItemmasterController.GetAllPaged (ProductApi)'
+2026-03-29 09:01:18.785 -05:00 [INF] Route matched with {action = "GetAllPaged", controller = "Itemmaster"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllPaged(System.String, System.String, System.String, Int32, Int32) on controller ProductApi.Controllers.ItemmasterController (ProductApi).
+2026-03-29 09:01:18.805 -05:00 [INF] Executing OkObjectResult, writing value of type 'ProductApi.Models.ApiResponse`1[[System.Collections.Generic.IEnumerable`1[[ProductApi.DTOs.ItemmasterDto, ProductApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-29 09:01:18.806 -05:00 [INF] Executed action ProductApi.Controllers.ItemmasterController.GetAllPaged (ProductApi) in 20.2984ms
+2026-03-29 09:01:18.806 -05:00 [INF] Executed endpoint 'ProductApi.Controllers.ItemmasterController.GetAllPaged (ProductApi)'
+2026-03-29 09:01:18.806 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/v1/Itemmaster/GetAllPaged?catCode=&itemName=&uom=&pageNumber=1&pageSize=10 - 200 null application/json; charset=utf-8 21.7585ms
+2026-03-29 09:01:31.376 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Itemmaster/GetAllPaged?catCode=&itemName=&uom=&pageNumber=2&pageSize=10 - null null
+2026-03-29 09:01:31.376 -05:00 [INF] CORS policy execution successful.
+2026-03-29 09:01:31.376 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Itemmaster/GetAllPaged?catCode=&itemName=&uom=&pageNumber=2&pageSize=10 - 204 null null 0.8093ms
+2026-03-29 09:01:31.381 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/v1/Itemmaster/GetAllPaged?catCode=&itemName=&uom=&pageNumber=2&pageSize=10 - null null
+2026-03-29 09:01:31.382 -05:00 [INF] CORS policy execution successful.
+2026-03-29 09:01:31.383 -05:00 [INF] CorrelationID: ["205d6260-d29f-49cb-852c-7223f37481da"] - Request Path: /api/v1/Itemmaster/GetAllPaged
+2026-03-29 09:01:31.384 -05:00 [INF] Executing endpoint 'ProductApi.Controllers.ItemmasterController.GetAllPaged (ProductApi)'
+2026-03-29 09:01:31.384 -05:00 [INF] Route matched with {action = "GetAllPaged", controller = "Itemmaster"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllPaged(System.String, System.String, System.String, Int32, Int32) on controller ProductApi.Controllers.ItemmasterController (ProductApi).
+2026-03-29 09:01:31.397 -05:00 [INF] Executing OkObjectResult, writing value of type 'ProductApi.Models.ApiResponse`1[[System.Collections.Generic.IEnumerable`1[[ProductApi.DTOs.ItemmasterDto, ProductApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-29 09:01:31.397 -05:00 [INF] Executed action ProductApi.Controllers.ItemmasterController.GetAllPaged (ProductApi) in 13.4221ms
+2026-03-29 09:01:31.397 -05:00 [INF] Executed endpoint 'ProductApi.Controllers.ItemmasterController.GetAllPaged (ProductApi)'
+2026-03-29 09:01:31.398 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/v1/Itemmaster/GetAllPaged?catCode=&itemName=&uom=&pageNumber=2&pageSize=10 - 200 null application/json; charset=utf-8 16.239ms
+2026-03-29 09:01:36.634 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Itemmaster/GetAllPaged?catCode=&itemName=&uom=&pageNumber=1&pageSize=10 - null null
+2026-03-29 09:01:36.634 -05:00 [INF] CORS policy execution successful.
+2026-03-29 09:01:36.634 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Itemmaster/GetAllPaged?catCode=&itemName=&uom=&pageNumber=1&pageSize=10 - 204 null null 0.731ms
+2026-03-29 09:01:36.639 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/v1/Itemmaster/GetAllPaged?catCode=&itemName=&uom=&pageNumber=1&pageSize=10 - null null
+2026-03-29 09:01:36.640 -05:00 [INF] CORS policy execution successful.
+2026-03-29 09:01:36.640 -05:00 [INF] CorrelationID: ["cc764525-bb78-4369-8b25-930b4a4b5d51"] - Request Path: /api/v1/Itemmaster/GetAllPaged
+2026-03-29 09:01:36.640 -05:00 [INF] Executing endpoint 'ProductApi.Controllers.ItemmasterController.GetAllPaged (ProductApi)'
+2026-03-29 09:01:36.641 -05:00 [INF] Route matched with {action = "GetAllPaged", controller = "Itemmaster"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllPaged(System.String, System.String, System.String, Int32, Int32) on controller ProductApi.Controllers.ItemmasterController (ProductApi).
+2026-03-29 09:01:36.665 -05:00 [INF] Executing OkObjectResult, writing value of type 'ProductApi.Models.ApiResponse`1[[System.Collections.Generic.IEnumerable`1[[ProductApi.DTOs.ItemmasterDto, ProductApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-29 09:01:36.665 -05:00 [INF] Executed action ProductApi.Controllers.ItemmasterController.GetAllPaged (ProductApi) in 24.453ms
+2026-03-29 09:01:36.665 -05:00 [INF] Executed endpoint 'ProductApi.Controllers.ItemmasterController.GetAllPaged (ProductApi)'
+2026-03-29 09:01:36.666 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/v1/Itemmaster/GetAllPaged?catCode=&itemName=&uom=&pageNumber=1&pageSize=10 - 200 null application/json; charset=utf-8 26.8225ms
+2026-03-29 09:01:59.867 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Login/login - null null
+2026-03-29 09:01:59.867 -05:00 [INF] CORS policy execution successful.
+2026-03-29 09:01:59.867 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Login/login - 204 null null 0.4646ms
+2026-03-29 09:01:59.869 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5269/api/v1/Login/login - application/json 42
+2026-03-29 09:01:59.870 -05:00 [INF] CORS policy execution successful.
+2026-03-29 09:01:59.870 -05:00 [INF] CorrelationID: ["ed4b7701-0cda-4d9e-8998-7bf6abd4ef50"] - Request Path: /api/v1/Login/login
+2026-03-29 09:01:59.870 -05:00 [INF] Executing endpoint 'ProductApi.Controllers.LoginController.Login (ProductApi)'
+2026-03-29 09:01:59.870 -05:00 [INF] Route matched with {action = "Login", controller = "Login"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(ProductApi.DTOs.LoginDto) on controller ProductApi.Controllers.LoginController (ProductApi).
+2026-03-29 09:01:59.871 -05:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-29 09:01:59.872 -05:00 [INF] Executed action ProductApi.Controllers.LoginController.Login (ProductApi) in 1.1688ms
+2026-03-29 09:01:59.872 -05:00 [INF] Executed endpoint 'ProductApi.Controllers.LoginController.Login (ProductApi)'
+2026-03-29 09:01:59.872 -05:00 [INF] Session started; Key:02ca479b-1a79-cc48-bd38-8dcce7aead13, Id:fdd5af68-f540-aeb1-e987-8ecf2d24ed71
+2026-03-29 09:01:59.872 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5269/api/v1/Login/login - 200 null application/json; charset=utf-8 2.8277ms
+2026-03-29 09:02:03.744 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Itemmaster/GetAllPaged?catCode=&itemName=&uom=&pageNumber=1&pageSize=10 - null null
+2026-03-29 09:02:03.744 -05:00 [INF] CORS policy execution successful.
+2026-03-29 09:02:03.745 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5269/api/v1/Itemmaster/GetAllPaged?catCode=&itemName=&uom=&pageNumber=1&pageSize=10 - 204 null null 0.3798ms
+2026-03-29 09:02:03.748 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5269/api/v1/Itemmaster/GetAllPaged?catCode=&itemName=&uom=&pageNumber=1&pageSize=10 - null null
+2026-03-29 09:02:03.749 -05:00 [INF] CORS policy execution successful.
+2026-03-29 09:02:03.749 -05:00 [INF] CorrelationID: ["017f75d0-e214-493f-a223-db42da42da78"] - Request Path: /api/v1/Itemmaster/GetAllPaged
+2026-03-29 09:02:03.750 -05:00 [INF] Executing endpoint 'ProductApi.Controllers.ItemmasterController.GetAllPaged (ProductApi)'
+2026-03-29 09:02:03.751 -05:00 [INF] Route matched with {action = "GetAllPaged", controller = "Itemmaster"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllPaged(System.String, System.String, System.String, Int32, Int32) on controller ProductApi.Controllers.ItemmasterController (ProductApi).
+2026-03-29 09:02:03.834 -05:00 [INF] Executing OkObjectResult, writing value of type 'ProductApi.Models.ApiResponse`1[[System.Collections.Generic.IEnumerable`1[[ProductApi.DTOs.ItemmasterDto, ProductApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-29 09:02:03.834 -05:00 [INF] Executed action ProductApi.Controllers.ItemmasterController.GetAllPaged (ProductApi) in 82.8034ms
+2026-03-29 09:02:03.834 -05:00 [INF] Executed endpoint 'ProductApi.Controllers.ItemmasterController.GetAllPaged (ProductApi)'
+2026-03-29 09:02:03.835 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5269/api/v1/Itemmaster/GetAllPaged?catCode=&itemName=&uom=&pageNumber=1&pageSize=10 - 200 null application/json; charset=utf-8 86.4069ms
