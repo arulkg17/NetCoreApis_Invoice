@@ -1,0 +1,33 @@
+Step 10: Deploy DEV
+helm install productapi-dev ./k8s/helm -f ./k8s/helm/values-dev.yaml
+Step 11: Deploy UAT
+helm install productapi-uat ./k8s/helm -f ./k8s/helm/values-uat.yaml
+Step 12: Deploy PROD
+helm install productapi-prod ./k8s/helm -f ./k8s/helm/values-prod.yaml
+Harness Integration
+
+This is likely what you remember.
+
+Harness has an environment variable:
+
+ENVIRONMENT=dev
+
+or
+
+ENVIRONMENT=uat
+
+or
+
+ENVIRONMENT=prod
+
+Then Harness executes:
+
+helm upgrade --install productapi \
+  ./k8s/helm \
+  -f ./k8s/helm/values-${ENVIRONMENT}.yaml
+
+Examples:
+
+helm upgrade --install productapi ./k8s/helm -f values-dev.yaml
+helm upgrade --install productapi ./k8s/helm -f values-uat.yaml
+helm upgrade --install productapi ./k8s/helm -f values-prod.yaml

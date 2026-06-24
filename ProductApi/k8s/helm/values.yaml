@@ -1,0 +1,13 @@
+replicaCount: 1
+
+image:
+  repository: productapi
+  tag: v1
+
+service:
+  port: 8080
+
+ingress:
+  enabled: true
+
+environment: Development
