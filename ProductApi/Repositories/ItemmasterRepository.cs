@@ -4,6 +4,8 @@ using ProductApi.Contracts;
 using ProductApi.Data;
 using ProductApi.DTOs;
 using ProductApi.Entities;
+using System.Data;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
 
 namespace ProductApi.Repositories;
 
@@ -106,25 +108,75 @@ public class ItemmasterRepository : IItemmasterRepository
     int pageNumber,
     int pageSize)
     {
-        var catParam = new SqlParameter("@CatCode", (object?)catCode ?? DBNull.Value);
-        var itemParam = new SqlParameter("@ItemName", (object?)itemName ?? DBNull.Value);
-        var uomParam = new SqlParameter("@Uom", (object?)uom ?? DBNull.Value);
-        var pageParam = new SqlParameter("@PageNumber", pageNumber);
-        var sizeParam = new SqlParameter("@PageSize", pageSize);
+        using (var connection = _dbContext.Database.GetDbConnection())
+        { 
+            await connection.OpenAsync();
+            using var command = connection.CreateCommand();
+            command.CommandText = "sp_Itemmaster_GetPaged";
+            
+            command.CommandType = CommandType.StoredProcedure;
+            command.Parameters.Add(new SqlParameter("@CatCode", (object?)catCode ?? DBNull.Value));
+            command.Parameters.Add(new SqlParameter("@ItemName", (object?)itemName ?? DBNull.Value));
+            command.Parameters.Add(new SqlParameter("@Uom", (object?)uom ?? DBNull.Value));
+            command.Parameters.Add(new SqlParameter("@PageNumber", pageNumber));
+            command.Parameters.Add(new SqlParameter("@PageSize", pageSize));
 
-        var data = await _dbContext.Itemmasters
-            .FromSqlRaw("EXEC sp_Itemmaster_GetPaged @CatCode, @ItemName, @Uom, @PageNumber, @PageSize",
-                catParam, itemParam, uomParam, pageParam, sizeParam)
-            .ToListAsync();
+            using var reader = await command.ExecuteReaderAsync();
 
-        // 🔥 total count (separate SP or simple query)
-        var totalRecords = await _dbContext.Itemmasters.CountAsync();
+            var items = new List<Itemmaster>();
 
-        return new PagedResultDto<Itemmaster>
-        {
-            Data = data,
-            TotalRecords = totalRecords
-        };
+            while (await reader.ReadAsync())
+            {
+                items.Add(new Itemmaster
+                {
+                    Id = reader.GetInt32(0),
+                    CatCode = reader.GetString(1),
+                    ItemBarCode = reader.GetString(2),
+                    ItemCode = reader.GetString(3),
+                    ItemName = reader.GetString(4),
+                    Description = reader.GetString(5),
+                    Uom = reader.GetString(6),
+                    Rate = reader.GetDecimal(7),
+                    MinimumStock = reader.GetDecimal(8),
+                    MaximumStock = reader.GetDecimal(9)
+                });
+            }
+
+            await reader.NextResultAsync();
+
+            int totalRecords = 0;
+            if (await reader.ReadAsync())
+            {
+                totalRecords = reader.GetInt32(0);
+            }
+
+            return new PagedResultDto<Itemmaster>
+            {
+                Data = items,
+                TotalRecords = totalRecords
+            };
+
+        }
+
+        //var catParam = new SqlParameter("@CatCode", (object?)catCode ?? DBNull.Value);
+        //var itemParam = new SqlParameter("@ItemName", (object?)itemName ?? DBNull.Value);
+        //var uomParam = new SqlParameter("@Uom", (object?)uom ?? DBNull.Value);
+        //var pageParam = new SqlParameter("@PageNumber", pageNumber);
+        //var sizeParam = new SqlParameter("@PageSize", pageSize);
+
+        //var data = await _dbContext.Itemmasters
+        //    .FromSqlRaw("EXEC sp_Itemmaster_GetPaged @CatCode, @ItemName, @Uom, @PageNumber, @PageSize",
+        //        catParam, itemParam, uomParam, pageParam, sizeParam)
+        //    .ToListAsync();
+
+        //// 🔥 total count (separate SP or simple query)
+        //var totalRecords = data.FirstOrDefault()?.TotalRecords ?? 0;
+
+        //return new PagedResultDto<Itemmaster>
+        //{
+        //    Data = data,
+        //    TotalRecords = totalRecords
+        //};
     }
 
 }

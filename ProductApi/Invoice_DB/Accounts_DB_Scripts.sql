@@ -400,7 +400,7 @@ SET IDENTITY_INSERT [dbo].[Products] OFF
 GO
 
 
-CREDATE PROCEDURE [dbo].[sp_Itemmaster_GetPaged]
+ALTER PROCEDURE [dbo].[sp_Itemmaster_GetPaged]
 	@CatCode	VARCHAR(5) = NULL,
 	@ItemName	VARCHAR(100) = NULL,
 	@Uom		VARCHAR(3) = NULL,
@@ -417,39 +417,32 @@ BEGIN
     DECLARE @Offset INT = (@PageNumber - 1) * @PageSize;
 
     -- Main data
-    SELECT 
-        Id,
-        CatCode,
-        ItemBarCode,
-        Itemcode,
-        Itemname,
-        Description,
-        Uom,
-        Rate,
-        Minimumstock,
-        Maximumstock,
-        IsActive,
-        Createdby,
-        Createddate,
-        Updatedby,
-        Updateddate
-    FROM dbo.Itemmaster
-    WHERE 
-        (@CatCode IS NULL OR CatCode LIKE '%' + @CatCode + '%')
-        AND (@ItemName IS NULL OR ItemName LIKE  '%'+@ItemName+'%')
-        AND (@Uom IS NULL OR Uom LIKE '%'+@Uom+'%')
-    ORDER BY Id DESC
-    OFFSET @Offset ROWS
-    FETCH NEXT @PageSize ROWS ONLY;
+	SELECT 
+		Id,
+		CatCode,
+		ItemBarCode,
+		Itemcode,
+		Itemname,
+		Description,
+		Uom,
+		Rate,
+		Minimumstock,
+		Maximumstock,
+		IsActive,
+		Createdby,
+		Createddate,
+		Updatedby,
+		Updateddate,
+		COUNT(*) OVER() AS TotalRecords
+	FROM dbo.Itemmaster
+	WHERE 
+		(@CatCode IS NULL OR CatCode LIKE '%' + @CatCode + '%')
+		AND (@ItemName IS NULL OR ItemName LIKE '%' + @ItemName + '%')
+		AND (@Uom IS NULL OR Uom LIKE '%' + @Uom + '%')
+	ORDER BY Id DESC
+	OFFSET @Offset ROWS
+	FETCH NEXT @PageSize ROWS ONLY;
 
-    -- Total count (for pagination UI)
-    SELECT 
-        COUNT(1) AS TotalRecords
-    FROM dbo.Itemmaster
-    WHERE 
-        (@CatCode IS NULL OR CatCode LIKE '%' + @CatCode + '%')
-        AND (@ItemName IS NULL OR ItemName LIKE  '%'+@ItemName+'%')
-        AND (@Uom IS NULL OR Uom LIKE '%'+@Uom+'%');
 END
 
 
@@ -457,7 +450,9 @@ END
 DECLARE	@return_value int
 
 EXEC	@return_value = [dbo].[sp_Itemmaster_GetPaged]
-		@CatCode = N'S',
+		@CatCode = N's',
+		@ItemName = N'b',
+		@Uom = N'n',
 		@PageNumber = 1,
 		@PageSize = 10
 
