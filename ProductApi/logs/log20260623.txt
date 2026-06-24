@@ -1,0 +1,125 @@
+2026-06-23 15:35:04.873 -05:00 [INF] User profile is available. Using 'C:\Users\arulg\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-06-23 15:35:07.479 -05:00 [INF] Now listening on: http://localhost:5000
+2026-06-23 15:35:07.483 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-23 15:35:07.484 -05:00 [INF] Hosting environment: Development
+2026-06-23 15:35:07.484 -05:00 [INF] Content root path: D:\Projects\NetCore\ApiBackend\NetCoreApis_Invoice\ProductApi
+2026-06-23 15:51:18.091 -05:00 [INF] User profile is available. Using 'C:\Users\arulg\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-06-23 15:51:18.861 -05:00 [INF] Now listening on: http://localhost:5000
+2026-06-23 15:51:18.862 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-23 15:51:18.863 -05:00 [INF] Hosting environment: Development
+2026-06-23 15:51:18.863 -05:00 [INF] Content root path: D:\Projects\NetCore\ApiBackend\NetCoreApis_Invoice\ProductApi
+2026-06-23 15:52:37.372 -05:00 [INF] User profile is available. Using 'C:\Users\arulg\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-06-23 15:52:37.762 -05:00 [INF] Now listening on: http://localhost:5000
+2026-06-23 15:52:37.766 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-23 15:52:37.766 -05:00 [INF] Hosting environment: Development
+2026-06-23 15:52:37.766 -05:00 [INF] Content root path: D:\Projects\NetCore\ApiBackend\NetCoreApis_Invoice\ProductApi
+2026-06-23 15:55:48.180 -05:00 [INF] User profile is available. Using 'C:\Users\arulg\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-06-23 15:55:48.476 -05:00 [INF] Now listening on: http://localhost:5000
+2026-06-23 15:55:48.479 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-23 15:55:48.480 -05:00 [INF] Hosting environment: Development
+2026-06-23 15:55:48.480 -05:00 [INF] Content root path: D:\Projects\NetCore\ApiBackend\NetCoreApis_Invoice\ProductApi
+2026-06-23 15:59:05.753 -05:00 [INF] User profile is available. Using 'C:\Users\arulg\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-06-23 15:59:06.306 -05:00 [INF] Now listening on: http://localhost:5000
+2026-06-23 15:59:06.310 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-23 15:59:06.316 -05:00 [INF] Hosting environment: Development
+2026-06-23 15:59:06.316 -05:00 [INF] Content root path: D:\Projects\NetCore\ApiBackend\NetCoreApis_Invoice\ProductApi
+2026-06-23 19:41:02.528 -05:00 [INF] User profile is available. Using 'C:\Users\arulg\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-06-23 19:41:02.822 -05:00 [INF] Now listening on: http://localhost:5000
+2026-06-23 19:41:02.824 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-23 19:41:02.824 -05:00 [INF] Hosting environment: Development
+2026-06-23 19:41:02.824 -05:00 [INF] Content root path: D:\Projects\NetCore\ApiBackend\NetCoreApis_Invoice\ProductApi
+2026-06-23 19:45:23.207 -05:00 [INF] User profile is available. Using 'C:\Users\arulg\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-06-23 19:45:23.575 -05:00 [INF] Now listening on: http://localhost:5000
+2026-06-23 19:45:23.578 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-23 19:45:23.578 -05:00 [INF] Hosting environment: Development
+2026-06-23 19:45:23.578 -05:00 [INF] Content root path: D:\Projects\NetCore\ApiBackend\NetCoreApis_Invoice\ProductApi
+2026-06-23 19:46:00.956 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger - null null
+2026-06-23 19:46:00.996 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/swagger - 301 0 null 47.5906ms
+2026-06-23 19:46:01.001 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/index.html - null null
+2026-06-23 19:46:01.093 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/swagger/index.html - 200 null text/html;charset=utf-8 92.8511ms
+2026-06-23 19:46:01.142 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/swagger-ui.css - null null
+2026-06-23 19:46:01.145 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/swagger-ui-bundle.js - null null
+2026-06-23 19:46:01.146 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/swagger-ui-standalone-preset.js - null null
+2026-06-23 19:46:01.213 -05:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2026-06-23 19:46:01.214 -05:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2026-06-23 19:46:01.216 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/swagger/swagger-ui-standalone-preset.js - 200 230280 text/javascript 69.374ms
+2026-06-23 19:46:01.217 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/swagger/swagger-ui.css - 200 152034 text/css 74.6742ms
+2026-06-23 19:46:01.262 -05:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2026-06-23 19:46:01.263 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/swagger/swagger-ui-bundle.js - 200 1456926 text/javascript 117.7572ms
+2026-06-23 19:46:01.635 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/v1/swagger.json - null null
+2026-06-23 19:46:01.652 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/favicon-32x32.png - null null
+2026-06-23 19:46:01.652 -05:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2026-06-23 19:46:01.653 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/swagger/favicon-32x32.png - 200 628 image/png 3.8673ms
+2026-06-23 19:46:01.904 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 269.6553ms
+2026-06-23 20:00:54.395 -05:00 [INF] User profile is available. Using 'C:\Users\arulg\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-06-23 20:00:54.721 -05:00 [INF] Now listening on: http://localhost:5000
+2026-06-23 20:00:54.724 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-23 20:00:54.724 -05:00 [INF] Hosting environment: Development
+2026-06-23 20:00:54.725 -05:00 [INF] Content root path: D:\Projects\NetCore\ApiBackend\NetCoreApis_Invoice\ProductApi
+2026-06-23 20:01:12.368 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/index.html - null null
+2026-06-23 20:01:12.515 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/swagger/index.html - 200 null text/html;charset=utf-8 154.9429ms
+2026-06-23 20:01:13.015 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/v1/swagger.json - null null
+2026-06-23 20:01:13.753 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 737.4168ms
+2026-06-23 20:01:39.450 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5000/api/v1/Login/Login - application/json 51
+2026-06-23 20:01:39.519 -05:00 [INF] CORS policy execution failed.
+2026-06-23 20:01:39.520 -05:00 [INF] Request origin http://localhost:5000 does not have permission to access the resource.
+2026-06-23 20:01:42.503 -05:00 [INF] CorrelationID: ["3129cf48-b1cd-4b49-8af7-42d629b722f4"] - Request Path: /api/v1/Login/Login
+2026-06-23 20:01:42.531 -05:00 [INF] Executing endpoint 'ProductApi.Controllers.LoginController.Login (ProductApi)'
+2026-06-23 20:01:42.588 -05:00 [INF] Route matched with {action = "Login", controller = "Login"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(ProductApi.DTOs.LoginDto) on controller ProductApi.Controllers.LoginController (ProductApi).
+2026-06-23 20:01:42.868 -05:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-06-23 20:01:42.894 -05:00 [INF] Executed action ProductApi.Controllers.LoginController.Login (ProductApi) in 297.6237ms
+2026-06-23 20:01:42.894 -05:00 [INF] Executed endpoint 'ProductApi.Controllers.LoginController.Login (ProductApi)'
+2026-06-23 20:01:42.896 -05:00 [INF] Session started; Key:560317aa-1a3e-0ec8-6d61-e58185ee886d, Id:12619fca-a9da-1ab9-a3d5-56798bdc8341
+2026-06-23 20:01:42.899 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5000/api/v1/Login/Login - 200 null application/json; charset=utf-8 3449.9729ms
+2026-06-23 20:02:22.564 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/index.html - null null
+2026-06-23 20:02:22.566 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/swagger/index.html - 200 null text/html;charset=utf-8 2.4412ms
+2026-06-23 20:02:22.876 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/v1/swagger.json - null null
+2026-06-23 20:02:22.933 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 56.6527ms
+2026-06-23 20:32:42.294 -05:00 [INF] User profile is available. Using 'C:\Users\arulg\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-06-23 20:32:42.641 -05:00 [INF] Now listening on: http://localhost:5000
+2026-06-23 20:32:42.644 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-23 20:32:42.645 -05:00 [INF] Hosting environment: Development
+2026-06-23 20:32:42.645 -05:00 [INF] Content root path: D:\Projects\NetCore\ApiBackend\NetCoreApis_Invoice\ProductApi
+2026-06-23 20:33:08.497 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/index.html - null null
+2026-06-23 20:33:08.612 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/swagger/index.html - 200 null text/html;charset=utf-8 120.6863ms
+2026-06-23 20:33:08.846 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/v1/swagger.json - null null
+2026-06-23 20:33:09.132 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 285.6702ms
+2026-06-23 20:49:01.196 -05:00 [INF] User profile is available. Using 'C:\Users\arulg\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-06-23 20:49:01.554 -05:00 [INF] Now listening on: http://localhost:5000
+2026-06-23 20:49:01.557 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-23 20:49:01.557 -05:00 [INF] Hosting environment: Development
+2026-06-23 20:49:01.557 -05:00 [INF] Content root path: D:\Projects\NetCore\ApiBackend\NetCoreApis_Invoice\ProductApi
+2026-06-23 20:49:08.713 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/index.html - null null
+2026-06-23 20:49:08.815 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/swagger/index.html - 200 null text/html;charset=utf-8 106.8859ms
+2026-06-23 20:49:09.048 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/v1/swagger.json - null null
+2026-06-23 20:49:09.427 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 379.1682ms
+2026-06-23 20:58:08.818 -05:00 [INF] User profile is available. Using 'C:\Users\arulg\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-06-23 20:58:09.261 -05:00 [INF] Now listening on: http://localhost:5000
+2026-06-23 20:58:09.265 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-23 20:58:09.266 -05:00 [INF] Hosting environment: Development
+2026-06-23 20:58:09.266 -05:00 [INF] Content root path: D:\Projects\NetCore\ApiBackend\NetCoreApis_Invoice\ProductApi
+2026-06-23 20:58:22.422 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/index.html - null null
+2026-06-23 20:58:22.548 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/swagger/index.html - 200 null text/html;charset=utf-8 132.8319ms
+2026-06-23 20:58:22.776 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/v1/swagger.json - null null
+2026-06-23 20:58:23.106 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 331.0767ms
+2026-06-23 21:00:15.955 -05:00 [INF] User profile is available. Using 'C:\Users\arulg\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-06-23 21:00:16.204 -05:00 [INF] Now listening on: http://localhost:5000
+2026-06-23 21:00:16.206 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-23 21:00:16.206 -05:00 [INF] Hosting environment: Development
+2026-06-23 21:00:16.206 -05:00 [INF] Content root path: D:\Projects\NetCore\ApiBackend\NetCoreApis_Invoice\ProductApi
+2026-06-23 21:00:24.301 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/index.html - null null
+2026-06-23 21:00:24.429 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/swagger/index.html - 200 null text/html;charset=utf-8 136.1552ms
+2026-06-23 21:00:24.591 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/v1/swagger.json - null null
+2026-06-23 21:00:24.922 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 331.3869ms
+2026-06-23 21:01:01.130 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5000/api/v1/Login/Login - application/json 51
+2026-06-23 21:01:01.198 -05:00 [INF] CORS policy execution failed.
+2026-06-23 21:01:01.199 -05:00 [INF] Request origin http://localhost:5000 does not have permission to access the resource.
+2026-06-23 21:01:03.741 -05:00 [INF] CorrelationID: ["acde439a-b94f-41e0-a4ed-e9319a08ef31"] - Request Path: /api/v1/Login/Login
+2026-06-23 21:01:03.752 -05:00 [INF] Executing endpoint 'ProductApi.Controllers.LoginController.Login (ProductApi)'
+2026-06-23 21:01:03.788 -05:00 [INF] Route matched with {action = "Login", controller = "Login"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(ProductApi.DTOs.LoginDto) on controller ProductApi.Controllers.LoginController (ProductApi).
+2026-06-23 21:01:03.830 -05:00 [INF] Accessing expired session, Key:560317aa-1a3e-0ec8-6d61-e58185ee886d
+2026-06-23 21:01:03.913 -05:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-06-23 21:01:03.924 -05:00 [INF] Executed action ProductApi.Controllers.LoginController.Login (ProductApi) in 132.5892ms
+2026-06-23 21:01:03.925 -05:00 [INF] Executed endpoint 'ProductApi.Controllers.LoginController.Login (ProductApi)'
+2026-06-23 21:01:03.927 -05:00 [INF] Session started; Key:560317aa-1a3e-0ec8-6d61-e58185ee886d, Id:1f20d46a-b9a2-4af6-0d62-a2e623fd379b
+2026-06-23 21:01:03.928 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5000/api/v1/Login/Login - 200 null application/json; charset=utf-8 2798.835ms
