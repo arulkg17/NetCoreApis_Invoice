@@ -1,0 +1,15 @@
+{
+  "isSuccess": true,
+  "message": "Login Successful",
+  "token": {
+    "accessToken": "eyJhbGciOiJIUzI1NiIs...",
+    "expiration": "2026-07-18T03:30:00",
+    "tokenType": "Bearer"
+  },
+  "user": {
+    "userId": 1,
+    "userName": "Arul",
+    "emailId": "arul@gmail.com",
+    "role": "Administrator"
+  }
+}

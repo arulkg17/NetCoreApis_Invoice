@@ -13,6 +13,9 @@ using ProductApi.Middleware;
 using Microsoft.AspNetCore.RateLimiting;
 using System.Threading.RateLimiting;
 using customerApi.Services;
+using Invoice.Authentication.Extensions;
+using Invoice.Models;
+using Invoice.Authentication.Configurations;
 
 Log.Logger = new LoggerConfiguration()
     .WriteTo.File("logs/log.txt", rollingInterval: RollingInterval.Day)
@@ -45,7 +48,11 @@ var conn = builder.Configuration.GetConnectionString("DefaultConnection")
            ?? "Server=LAPTOP-BIG8QIRC;Database=Accounts;Trusted_Connection=True;Encrypt=False;TrustServerCertificate=True;";
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlServer(conn));
-
+//Reference if Invoiuce.Authentication library 
+//builder.Services.AddAuthenticationLibrary();
+//builder.Services.Configure<JwtOptions>(
+//    builder.Configuration.GetSection("Jwt")
+//    );
 builder.Services.AddApiVersioning(options =>
 {
     options.DefaultApiVersion = new ApiVersion(1, 0);
