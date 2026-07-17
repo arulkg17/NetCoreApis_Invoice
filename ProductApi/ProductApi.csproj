@@ -34,4 +34,9 @@
     <Folder Include="Mocks\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Invoice.Authentication\Invoice.Authentication.csproj" />
+    <ProjectReference Include="..\Invoice.Models\Invoice.Models.csproj" />
+  </ItemGroup>
+
 </Project>
