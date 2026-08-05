@@ -53,7 +53,7 @@ namespace ProductApi.Controllers
                 expires: DateTime.Now.AddHours(2),
                 signingCredentials: cre
                 );
-            return Ok(new { token = new JwtSecurityTokenHandler().WriteToken(token) });
+            return Ok(new { token = new JwtSecurityTokenHandler().WriteToken(token), expiration = token.ValidTo });
 
         }
     }
