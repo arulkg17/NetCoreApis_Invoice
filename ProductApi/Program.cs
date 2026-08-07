@@ -40,6 +40,9 @@ builder.Services.AddScoped<ICustomerService, CustomerService>();
 builder.Services.AddScoped<IProductSPRepository, ProductSPRepository>();
 builder.Services.AddScoped<IProductSPService, ProductSPService>();
 
+builder.Services.AddScoped<ICategoryRepository, CategoryRepositories>();
+builder.Services.AddScoped<ICategoryService, CategoryService>();
+
 builder.Services.AddScoped<IItemmasterRepository, ItemmasterRepository>();
 builder.Services.AddScoped<IItemmasterService, ItemmasterService>();
 
@@ -48,6 +51,7 @@ var conn = builder.Configuration.GetConnectionString("DefaultConnection")
            ?? "Server=LAPTOP-BIG8QIRC;Database=Accounts;Trusted_Connection=True;Encrypt=False;TrustServerCertificate=True;";
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlServer(conn));
+
 //Reference if Invoiuce.Authentication library 
 //builder.Services.AddAuthenticationLibrary();
 //builder.Services.Configure<JwtOptions>(
