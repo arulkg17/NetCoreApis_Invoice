@@ -1,21 +1,23 @@
-using ProductApi.Contracts;
-using ProductApi.Repositories;
-using ProductApi.Services;
-using Microsoft.AspNetCore.Mvc;
-using ProductApi.Data;
-using Microsoft.EntityFrameworkCore;
-using Serilog;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.IdentityModel.Tokens;
-using System.Text;
-using Microsoft.OpenApi.Models;
-using ProductApi.Middleware;
-using Microsoft.AspNetCore.RateLimiting;
-using System.Threading.RateLimiting;
 using customerApi.Services;
+using Invoice.Authentication.Configurations;
 using Invoice.Authentication.Extensions;
 using Invoice.Models;
-using Invoice.Authentication.Configurations;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.RateLimiting;
+using Microsoft.Data.SqlClient;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
+using Microsoft.OpenApi.Models;
+using ProductApi.Contracts;
+using ProductApi.Data;
+using ProductApi.Middleware;
+using ProductApi.Repositories;
+using ProductApi.Services;
+using Serilog;
+using System.Data;
+using System.Text;
+using System.Threading.RateLimiting;
 
 Log.Logger = new LoggerConfiguration()
     .WriteTo.File("logs/log.txt", rollingInterval: RollingInterval.Day)
@@ -45,6 +47,18 @@ builder.Services.AddScoped<ICategoryService, CategoryService>();
 
 builder.Services.AddScoped<IItemmasterRepository, ItemmasterRepository>();
 builder.Services.AddScoped<IItemmasterService, ItemmasterService>();
+
+builder.Services.AddScoped<IDbConnection>(sp =>
+{
+    var configuration = sp.GetRequiredService<IConfiguration>();
+    var connectionString =
+        configuration.GetConnectionString("DefaultConnection");
+
+    return new SqlConnection(connectionString);
+});
+
+builder.Services.AddScoped<IUserRepository, UserRepositorySpDap>();
+builder.Services.AddScoped<IUserService, UserServiceSpDap>();
 
 // configure EF Core with SQL Server LocalDB (change to your SQL Server if needed)
 var conn = builder.Configuration.GetConnectionString("DefaultConnection")
