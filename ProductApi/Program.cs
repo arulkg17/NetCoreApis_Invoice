@@ -45,8 +45,8 @@ builder.Services.AddScoped<IProductSPService, ProductSPService>();
 builder.Services.AddScoped<ICategoryRepository, CategoryRepositories>();
 builder.Services.AddScoped<ICategoryService, CategoryService>();
 
-builder.Services.AddScoped<IItemmasterRepository, ItemmasterRepository>();
-builder.Services.AddScoped<IItemmasterService, ItemmasterService>();
+builder.Services.AddScoped<IItemmasterRepository, ItemmasterRepositoryEFSp>();
+builder.Services.AddScoped<IItemmasterService, ItemmasterServiceEFSp>();
 
 builder.Services.AddScoped<IDbConnection>(sp =>
 {

@@ -17,50 +17,14 @@ namespace ProductApi.Controllers
             _service = service;
         }
 
-        //[HttpGet("GetAllPaged")]
-        //public async Task<IActionResult> GetAllPaged(
-        //                string? catCode,
-        //                string? itemName,
-        //                string? uom,
-        //                int pageNumber = 1,
-        //                int pageSize = 10)
-        //{
-        //    var query = _context.ItemMasters.AsQueryable();
 
-        //    if (!string.IsNullOrEmpty(catCode))
-        //        query = query.Where(x => x.CatCode.Contains(catCode));
-
-        //    if (!string.IsNullOrEmpty(itemName))
-        //        query = query.Where(x => x.ItemName.Contains(itemName));
-
-        //    if (!string.IsNullOrEmpty(uom))
-        //        query = query.Where(x => x.Uom.Contains(uom));
-
-        //    var totalRecords = await query.CountAsync();
-
-        //    var data = await query
-        //        .Skip((pageNumber - 1) * pageSize)
-        //        .Take(pageSize)
-        //        .ToListAsync();
-
-        //    return Ok(new
-        //    {
-        //        data,
-        //        totalRecords
-        //    });
-        //}
         [HttpGet("GetAllPaged")]
         public async Task<IActionResult> GetAllPaged(
-                string? catCode,
-                string? itemName,
-                string? uom,
-                int pageNumber = 1,
-                int pageSize = 10)
+    [FromQuery] ItemmasterFilterDto search)
         {
             try
             {
-                var result = await _service.GetAllPagedAsync(
-                    catCode, itemName, uom, pageNumber, pageSize);
+                var result = await _service.GetAllPagedAsync(search);
 
                 return Ok(new ApiResponse<PagedResultDto<ItemmasterDto>>
                 {
