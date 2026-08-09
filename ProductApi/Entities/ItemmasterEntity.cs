@@ -4,14 +4,13 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace ProductApi.Entities;
 
 [Table("Itemmaster")]
-public class Itemmaster
+public class ItemmasterEntity
 {
     [Key]
     public int Id { get; set; }
 
     [Required]
-    [StringLength(5)]
-    public required string CatCode { get; set; }
+    public required int CategoryId { get; set; }
 
     [Required]
     [StringLength(25)]

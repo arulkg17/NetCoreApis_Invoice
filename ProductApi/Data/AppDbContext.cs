@@ -10,7 +10,7 @@ namespace ProductApi.Data
         public DbSet<ProductEntity> Products => Set<ProductEntity>();
         public DbSet<CustomerEntity> Customers => Set<CustomerEntity>();
         public DbSet<CategoryEntity> Category => Set<CategoryEntity>();
-        public DbSet<Itemmaster> Itemmasters => Set<Itemmaster>();
+        public DbSet<ItemmasterEntity> Itemmasters => Set<ItemmasterEntity>();
         public DbSet<UserEntity> Users => Set<UserEntity>();
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
