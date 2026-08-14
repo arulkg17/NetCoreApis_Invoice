@@ -48,11 +48,32 @@ builder.Services.AddScoped<ICategoryService, CategoryService>();
 builder.Services.AddScoped<IItemmasterRepository, ItemmasterRepositoryEFSp>();
 builder.Services.AddScoped<IItemmasterService, ItemmasterServiceEFSp>();
 
+//builder.Services.AddScoped<IDbConnection>(sp =>
+//{
+//    var configuration = sp.GetRequiredService<IConfiguration>();
+//    var connectionString =
+//        configuration.GetConnectionString("DefaultConnection");
+
+//    return new SqlConnection(connectionString);
+//});
+
 builder.Services.AddScoped<IDbConnection>(sp =>
 {
     var configuration = sp.GetRequiredService<IConfiguration>();
+
     var connectionString =
         configuration.GetConnectionString("DefaultConnection");
+
+    //var sqlBuilder =
+    //    new SqlConnectionStringBuilder(connectionString);
+
+    //Log.Information(
+    //    "DB CONFIG - Server: {Server}, Database: {Database}, User: {User}, Encrypt: {Encrypt}, TrustServerCertificate: {TrustServerCertificate}",
+    //    sqlBuilder.DataSource,
+    //    sqlBuilder.InitialCatalog,
+    //    sqlBuilder.UserID,
+    //    sqlBuilder.Encrypt,
+    //    sqlBuilder.TrustServerCertificate);
 
     return new SqlConnection(connectionString);
 });
