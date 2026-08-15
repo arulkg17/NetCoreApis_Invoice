@@ -107,13 +107,16 @@ builder.Services.AddVersionedApiExplorer(options =>
 
 // configure CORS so React (localhost:3000) can call API
 var AllowReact = "_allowReact";
+var allowOrigin = builder.Configuration
+                .GetSection("Cors:AllowedOrigins")
+                .Get<string[]>() ?? Array.Empty<string>();
+
 builder.Services.AddCors(options =>
 {
     options.AddPolicy(name: AllowReact,
         policy =>
         {
-            policy.WithOrigins("http://localhost:3000", "http://localhost:4200", 
-                "http://localhost:5173")
+            policy.WithOrigins(allowOrigin)
                   .AllowAnyHeader()
                   .AllowAnyMethod();
         });

@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using ProductApi.Contracts;
 using ProductApi.DTOs;
@@ -6,15 +7,18 @@ using ProductApi.Models;
 
 namespace ProductApi.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/v{version:apiVersion}/[controller]")]
     [ApiController]
+    [ApiVersion("1.0")]
+    [Authorize]
     public class ItemmasterController : ControllerBase
     {
         private readonly IItemmasterService _service;
-
-        public ItemmasterController(IItemmasterService service)
+        private readonly ILogger<ItemmasterController> _logger;
+        public ItemmasterController(IItemmasterService service, ILogger<ItemmasterController> logger)
         {
             _service = service;
+            _logger = logger;
         }
 
 
