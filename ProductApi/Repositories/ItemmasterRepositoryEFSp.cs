@@ -244,4 +244,29 @@ public class ItemmasterRepositoryEFSp : IItemmasterRepository
             TotalRecords = totalRecords
         };
     }
+    public async Task<int> GetActiveItemCountByCategoryAsync(int categoryId)
+    {
+        using var connection = _dbContext.Database.GetDbConnection();
+
+        if (connection.State != ConnectionState.Open)
+        {
+            await connection.OpenAsync();
+        }
+
+        using var command = connection.CreateCommand();
+
+        command.CommandText = "dbo.sp_Itemmaster_GetActiveCountByCategory";
+        command.CommandType = CommandType.StoredProcedure;
+
+        command.Parameters.Add(
+            new SqlParameter("@CategoryId", categoryId));
+
+        var result = await command.ExecuteScalarAsync();
+
+        return result == null || result == DBNull.Value
+            ? 0
+            : Convert.ToInt32(result);
+    }
+   
+
 }

@@ -9,6 +9,7 @@ using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using OpenAI;
 using ProductApi.Contracts;
 using ProductApi.Data;
 using ProductApi.Middleware;
@@ -26,6 +27,15 @@ Log.Logger = new LoggerConfiguration()
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Host.UseSerilog();
+
+//var openAiApiKey = builder.Configuration["OpenAI:ApiKey"];
+
+//if (string.IsNullOrWhiteSpace(openAiApiKey))
+//{
+//    throw new InvalidOperationException("OpenAI API key is not configured.");
+//}
+
+//builder.Services.AddSingleton(new OpenAIClient(openAiApiKey));
 
 builder.Services.AddAutoMapper(typeof(Program));
 
@@ -47,6 +57,9 @@ builder.Services.AddScoped<ICategoryService, CategoryService>();
 
 builder.Services.AddScoped<IItemmasterRepository, ItemmasterRepositoryEFSp>();
 builder.Services.AddScoped<IItemmasterService, ItemmasterServiceEFSp>();
+
+builder.Services.AddScoped<IMockAIProvider, MockAIProvider>();
+builder.Services.AddScoped<IAIService, AIService>();
 
 //builder.Services.AddScoped<IDbConnection>(sp =>
 //{

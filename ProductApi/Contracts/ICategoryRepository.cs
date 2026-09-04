@@ -1,5 +1,6 @@
 ﻿using ProductApi.DTOs;
 using ProductApi.Entities;
+using ProductApi.Models.AI;
 
 namespace ProductApi.Contracts;
 
@@ -15,4 +16,10 @@ public interface ICategoryRepository
     string? Name,
     int pageNumber,
     int pageSize);
+    Task<CategoryEntity?> GetByNameAsync(string name);
+    Task<CategoryItemCountResult?> GetCategoryItemCountAsync(
+    string categoryName,
+    bool categoryActiveOnly,
+    bool itemActiveOnly);
+
 }

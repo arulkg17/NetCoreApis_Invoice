@@ -17,4 +17,6 @@ public interface IItemmasterRepository
 
     Task<PagedResultDto<ItemmasterEntity>> GetAllPagedAsync(
         ItemmasterFilterDto search);
+    Task<int> GetActiveItemCountByCategoryAsync(int categoryId);
+
 }

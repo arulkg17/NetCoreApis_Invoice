@@ -66,4 +66,12 @@ public class ItemmasterServiceEFSp : IItemmasterService
             TotalRecords = result.TotalRecords
         };
     }
+    public async Task<int> GetActiveItemCountByCategoryAsync(int categoryId)
+    {
+        var items = await _repository.GetAllAsync();
+
+        return items.Count(x =>
+            x.CategoryId == categoryId &&
+            x.IsActive == true);
+    }
 }
