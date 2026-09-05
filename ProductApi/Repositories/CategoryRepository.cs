@@ -139,7 +139,7 @@ int pageSize)
     public async Task<CategoryItemCountResult?> GetCategoryItemCountAsync(
     string categoryName,
     bool categoryActiveOnly,
-    bool itemActiveOnly)
+    bool? itemActiveOnly)
     {
         using var connection = _dbContext.Database.GetDbConnection();
 
@@ -160,7 +160,10 @@ int pageSize)
             new SqlParameter("@CategoryActiveOnly", categoryActiveOnly));
 
         command.Parameters.Add(
-            new SqlParameter("@ItemActiveOnly", itemActiveOnly));
+            new SqlParameter("@ItemActiveOnly",
+                itemActiveOnly.HasValue
+                    ? itemActiveOnly.Value
+                    : DBNull.Value));
 
         using var reader = await command.ExecuteReaderAsync();
 
@@ -177,8 +180,8 @@ int pageSize)
             CategoryIsActive = reader.GetBoolean(
                 reader.GetOrdinal("CategoryIsActive")),
 
-            ActiveItemCount = reader.GetInt32(
-                reader.GetOrdinal("ActiveItemCount"))
+            ItemCount = reader.GetInt32(
+                reader.GetOrdinal("ItemCount"))
         };
     }
 

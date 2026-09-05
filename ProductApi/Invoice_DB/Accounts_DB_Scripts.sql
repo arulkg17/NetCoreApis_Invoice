@@ -457,3 +457,67 @@ EXEC	@return_value = [dbo].[sp_Itemmaster_GetPaged]
 		@PageSize = 10
 
 SELECT	'Return Value' = @return_value
+
+
+--============================
+USE [Accounts]
+GO
+
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+ALTER PROCEDURE [dbo].[sp_AI_CategoryItemCount]
+    @CategoryName NVARCHAR(25),
+    @CategoryActiveOnly BIT,
+    @ItemActiveOnly BIT
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    SELECT
+        c.Name AS CategoryName,
+        c.IsActive AS CategoryIsActive,
+        COUNT(i.Id) AS ItemCount
+    FROM Category c
+    LEFT JOIN Itemmaster i
+        ON i.CategoryId = c.Id
+        AND (
+            @ItemActiveOnly IS NULL
+            OR i.IsActive = @ItemActiveOnly
+        )
+    WHERE
+        c.Name = @CategoryName
+        AND (
+            @CategoryActiveOnly = 0
+            OR c.IsActive = 1
+        )
+    GROUP BY
+        c.Name,
+        c.IsActive;
+END
+GO
+
+EXEC dbo.sp_AI_CategoryItemCount
+    @CategoryName = N'Rice',
+    @CategoryActiveOnly = 1,
+    @ItemActiveOnly = 1;
+
+	EXEC dbo.sp_AI_CategoryItemCount
+    @CategoryName = N'Rice',
+    @CategoryActiveOnly = 1,
+    @ItemActiveOnly = 0;
+
+
+	EXEC dbo.sp_AI_CategoryItemCount
+    @CategoryName = N'Rice',
+    @CategoryActiveOnly = 1,
+    @ItemActiveOnly = NULL;
+
+
+	EXEC dbo.sp_AI_CategoryItemCount
+    @CategoryName = N'Rice',
+    @CategoryActiveOnly = 1,
+    @ItemActiveOnly = 0;

@@ -20,6 +20,6 @@ public interface ICategoryRepository
     Task<CategoryItemCountResult?> GetCategoryItemCountAsync(
     string categoryName,
     bool categoryActiveOnly,
-    bool itemActiveOnly);
+    bool? itemActiveOnly);
 
 }

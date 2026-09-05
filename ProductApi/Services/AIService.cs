@@ -8,18 +8,15 @@ public class AIService : IAIService
 {
     private readonly ILogger<AIService> _logger;
     private readonly ICategoryRepository _categoryRepository;
-    private readonly IItemmasterRepository _itemmasterRepository;
     private readonly IMockAIProvider _mockAIProvider;
 
     public AIService(
         ILogger<AIService> logger,
         ICategoryRepository categoryRepository,
-        IItemmasterRepository itemmasterRepository,
         IMockAIProvider mockAIProvider)
     {
         _logger = logger;
         _categoryRepository = categoryRepository;
-        _itemmasterRepository = itemmasterRepository;
         _mockAIProvider = mockAIProvider;
     }
 
@@ -113,7 +110,6 @@ public class AIService : IAIService
                          requestedCategoryName,
                          StringComparison.OrdinalIgnoreCase));
 
-
         if (category == null)
         {
             return new AIAskResponse
@@ -143,25 +139,53 @@ public class AIService : IAIService
         // Get actual database data
         // ============================================
 
-        var itemCount =
-            await _itemmasterRepository
-                .GetActiveItemCountByCategoryAsync(
-                    category.Id);
+        var result =
+            await _categoryRepository
+                .GetCategoryItemCountAsync(
+                    category.Name.Trim(),
+                    intent.CategoryActiveOnly ?? false,
+                    intent.ItemActiveOnly);
+
+        if (result == null)
+        {
+            return new AIAskResponse
+            {
+                Answer =
+                    $"I could not retrieve item information for the category '{category.Name}'."
+            };
+        }
 
         _logger.LogInformation(
-            "Database result - Category: {Category}, Active Items: {Count}",
-            category.Name,
-            itemCount);
+            "Database result - Category: {Category}, ItemActiveOnly: {ItemActiveOnly}, Count: {Count}",
+            result.CategoryName,
+            intent.ItemActiveOnly,
+            result.ItemCount);
 
         // ============================================
         // STEP 8
         // Build answer
         // ============================================
 
-        var cleanCategoryName = category.Name.Trim();
+        var cleanCategoryName =
+            category.Name.Trim();
+
+        string itemDescription;
+
+        if (intent.ItemActiveOnly == true)
+        {
+            itemDescription = "active items";
+        }
+        else if (intent.ItemActiveOnly == false)
+        {
+            itemDescription = "inactive items";
+        }
+        else
+        {
+            itemDescription = "items";
+        }
 
         var answer =
-            $"The {cleanCategoryName} category is active and has {itemCount} active items.";
+            $"The {cleanCategoryName} category is active and has {result.ItemCount} {itemDescription}.";
 
         return new AIAskResponse
         {

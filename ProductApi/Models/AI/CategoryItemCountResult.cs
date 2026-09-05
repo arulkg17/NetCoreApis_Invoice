@@ -6,5 +6,5 @@ public class CategoryItemCountResult
 
     public bool CategoryIsActive { get; set; }
 
-    public int ActiveItemCount { get; set; }
+    public int ItemCount { get; set; }
 }

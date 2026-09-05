@@ -64,14 +64,26 @@ public class MockAIProvider : IMockAIProvider
             {
                 categoryName = "Pulses";
             }
+            bool? itemActiveOnly;
 
+            if (normalizedQuestion.Contains("inactive"))
+            {
+                itemActiveOnly = false;
+            }
+            else if (normalizedQuestion.Contains("active"))
+            {
+                itemActiveOnly = true;
+            }
+            else
+            {
+                itemActiveOnly = null;
+            }
             var intent = new
             {
                 intent = "CategoryItemCount",
                 categoryName = categoryName,
                 categoryActiveOnly = true,
-                itemActiveOnly =
-                    normalizedQuestion.Contains("active")
+                itemActiveOnly = itemActiveOnly
             };
 
             var json =
