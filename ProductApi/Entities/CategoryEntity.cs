@@ -12,14 +12,13 @@ public class CategoryEntity
     [StringLength(10)]
     public string Code { get; set; }
     [Required]
-    [StringLength(5)]
+    [StringLength(25)]
 
     public string Name { get; set; }
 
     [StringLength(25)]
     public string? Description { get; set; }
     [Required]
-    [StringLength(100)]
     public bool? IsActive { get; set; }
 
     [StringLength(100)]
