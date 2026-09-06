@@ -1,113 +1,268 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using ProductApi.Contracts;
 using ProductApi.DTOs;
-using Microsoft.AspNetCore.Authentication;
-using System.IdentityModel.Tokens.Jwt;
-using System.Security.Claims;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc.Infrastructure;
-using System.Text;
-using Microsoft.IdentityModel.Tokens;
-using Microsoft.Extensions.Caching.Memory;
+using ProductApi.Models;
 
-namespace ProductApi.Controllers
+namespace ProductApi.Controllers;
+
+[Route("api/v{version:apiVersion}/[controller]")]
+[ApiVersion("1.0")]
+[ApiController]
+[Authorize]
+public class CustomerController : ControllerBase
 {
-    [Route("api/v{version:apiVersion}/[controller]")]
-    [ApiController]
-    [ApiVersion("1.0")]
-    public class CustomerController : ControllerBase
+    private readonly ICustomerService _service;
+    private readonly ILogger<CustomerController> _logger;
+
+    public CustomerController(
+        ICustomerService service,
+        ILogger<CustomerController> logger)
     {
-        private readonly ICustomerService _customerService;
-        private readonly ILogger<CustomerController> _logger;
-        private readonly IConfiguration _configuration;
-        private readonly IMemoryCache _cache;
-            
-        public CustomerController(ICustomerService customerService, ILogger<CustomerController> logger, IConfiguration configuration, IMemoryCache cache)
+        _service = service;
+        _logger = logger;
+    }
+
+    [HttpGet("GetAll")]
+    public async Task<IActionResult> GetAll()
+    {
+        try
         {
-            _customerService = customerService;
-            _logger = logger;
-            _configuration = configuration;
-            _cache = cache;
-        }
-               
-        [Authorize]
-        [HttpGet("GetCustomers")]
-        public async Task<IActionResult> GetCustomers()
-        {
-            //var sessionVal = HttpContext.Session.GetString("MyTest");
-            //const string cacheKey = "GetCustomersCache";
-            //if (_cache.TryGetValue(cacheKey, out List<CustomerDto> getCustomers))
-            //{
-            //    _logger.LogInformation("Retrieve customer from Cache");
-            //    return Ok(getCustomers);
-            //}
+            var data = await _service.GetAllAsync();
 
-            _logger.LogInformation("Fetching customers from database.");
-            var products = await _customerService.GetAllAsync();
-
-            //var cacheOptions = new MemoryCacheEntryOptions
-            //{
-            //    AbsoluteExpirationRelativeToNow = TimeSpan.FromMinutes(5),
-            //    SlidingExpiration = TimeSpan.FromMinutes(2)
-            //};
-
-            //_cache.Set(cacheKey, products, cacheOptions);
-            return Ok(products);
-
-        }
-        [Authorize]
-        [HttpGet("GetCustomer/{id}")]
-        public async Task<IActionResult> GetCustomer(int id)
-        { 
-            _logger.LogInformation($" Fetching Customer by Id : {id}",id);
-            var customer = await _customerService.GetByIdAsync(id);
-            if (customer == null)
+            return Ok(new ApiResponse<IEnumerable<CustomerDto>>
             {
-                _logger.LogInformation($"Customer not found : {id}", id);
-                return NotFound();
+                Success = true,
+                Message = "Customers retrieved successfully",
+                Data = data
+            });
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(
+                ex,
+                "Error retrieving Customers");
+
+            return StatusCode(500, new ApiResponse<string>
+            {
+                Success = false,
+                Message = "Error retrieving Customer",
+                Error = new ApiError
+                {
+                    Code = "500",
+                    Details = ex.Message
+                }
+            });
+        }
+    }
+
+    [HttpGet("GetById/{id}")]
+    public async Task<IActionResult> GetById(int id)
+    {
+        try
+        {
+            var item = await _service.GetByIdAsync(id);
+
+            if (item == null)
+            {
+                return NotFound(new ApiResponse<string>
+                {
+                    Success = false,
+                    Message = "Customer not found"
+                });
             }
 
-            return Ok(customer);
+            return Ok(new ApiResponse<CustomerDto>
+            {
+                Success = true,
+                Message = "Customer retrieved successfully",
+                Data = item
+            });
         }
-        [Authorize]
-        [HttpPost("CreateCustomer")]
-        public async Task<IActionResult> CreateCustomer(CustomerDto dto)
+        catch (Exception ex)
         {
-            _logger.LogInformation("Creating Customer");
-            var created = await _customerService.CreateAsync(dto);
-            return CreatedAtAction(nameof(GetCustomers), new { Id = created.Id, Version = "1.0" }, created);
-        }
-        [Authorize]
-        [HttpPut("UpdateCustomer/{id}")]
-        public async Task<IActionResult> UpdateCustomer(int id, CustomerDto dto)
-        {
-            if (id != dto.Id)
-            {
-                _logger.LogWarning("ID missmatch in update request");
-                return BadRequest("Customer ID missmatch");
-            }
-            var result = await _customerService.UpdateAsync(dto);
-            if (!result)
-            {
-                _logger.LogError("Failed to update customer id : {id}", id);
-                return NotFound();
-            }
-            return NoContent();
-        }
-        [Authorize]
-        [HttpDelete("DeleteCustomer/{id}")]
-        //[SwaggerOperation(Summary="DeleteCustomer/Id")]
-        public async Task<IActionResult> DeleteCustomer(int id)
-        { 
-            var result = await _customerService.DeleteAsync(id);
-            if (!result)
-            {
-                _logger.LogError("Failed to delete customer id : {id}",id);
-                return NotFound();
-            }
-            return NoContent();
-        }
+            _logger.LogError(
+                ex,
+                "Error retrieving Customer with Id {Id}",
+                id);
 
-       
+            return StatusCode(500, new ApiResponse<string>
+            {
+                Success = false,
+                Message = "Error retrieving Customer",
+                Error = new ApiError
+                {
+                    Code = "500",
+                    Details = ex.Message
+                }
+            });
+        }
+    }
+
+    [HttpPost("Create")]
+    public async Task<IActionResult> Create(CustomerDto dto)
+    {
+        try
+        {
+            var id = await _service.AddAsync(dto);
+
+            return Ok(new ApiResponse<int>
+            {
+                Success = true,
+                Message = "Customer created successfully",
+                Data = id
+            });
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(
+                ex,
+                "Error creating Customer");
+
+            return StatusCode(500, new ApiResponse<string>
+            {
+                Success = false,
+                Message = "Error creating Customer",
+                Error = new ApiError
+                {
+                    Code = "500",
+                    Details = ex.Message
+                }
+            });
+        }
+    }
+
+    [HttpPut("Update/{id}")]
+    public async Task<IActionResult> Update(
+        int id,
+        CustomerDto dto)
+    {
+        try
+        {
+            dto.Id = id;
+
+            var updated = await _service.UpdateAsync(dto);
+
+            if (!updated)
+            {
+                return NotFound(new ApiResponse<string>
+                {
+                    Success = false,
+                    Message = "Customer not found"
+                });
+            }
+
+            return Ok(new ApiResponse<string>
+            {
+                Success = true,
+                Message = "Customer updated successfully"
+            });
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(
+                ex,
+                "Error updating Customer with Id {Id}",
+                id);
+
+            return StatusCode(500, new ApiResponse<string>
+            {
+                Success = false,
+                Message = "Error updating Customer",
+                Error = new ApiError
+                {
+                    Code = "500",
+                    Details = ex.Message
+                }
+            });
+        }
+    }
+
+    [HttpDelete("Delete/{id}")]
+    public async Task<IActionResult> Delete(int id)
+    {
+        try
+        {
+            var deleted = await _service.DeleteAsync(id);
+
+            if (!deleted)
+            {
+                return NotFound(new ApiResponse<string>
+                {
+                    Success = false,
+                    Message = "Customer not found"
+                });
+            }
+
+            return Ok(new ApiResponse<string>
+            {
+                Success = true,
+                Message = "Customer deleted successfully"
+            });
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(
+                ex,
+                "Error deleting Customer with Id {Id}",
+                id);
+
+            return StatusCode(500, new ApiResponse<string>
+            {
+                Success = false,
+                Message = "Error deleting Customer",
+                Error = new ApiError
+                {
+                    Code = "500",
+                    Details = ex.Message
+                }
+            });
+        }
+    }
+
+    [HttpGet("GetAllPaged")]
+    public async Task<IActionResult> GetAllPaged(
+        string? CustomerCode,
+        string? CustomerName,
+        string? MobileNo,
+        string? City,
+        int pageNumber = 1,
+        int pageSize = 10)
+    {
+        try
+        {
+            var result = await _service.GetAllPagedAsync(
+                CustomerCode,
+                CustomerName,
+                MobileNo,
+                City,
+                pageNumber,
+                pageSize);
+
+            return Ok(new ApiResponse<IEnumerable<CustomerDto>>
+            {
+                Success = true,
+                Message = "Customers retrieved successfully",
+                Data = result.Data,
+                TotalRecords = result.TotalRecords
+            });
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(
+                ex,
+                "Error retrieving paged Customers");
+
+            return StatusCode(500, new ApiResponse<string>
+            {
+                Success = false,
+                Message = "Error retrieving Customer",
+                Error = new ApiError
+                {
+                    Code = "500",
+                    Details = ex.Message
+                }
+            });
+        }
     }
 }

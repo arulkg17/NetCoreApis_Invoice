@@ -1,5 +1,7 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Castle.Core.Resource;
+using Microsoft.EntityFrameworkCore;
 using ProductApi.Entities;
+using System.Numerics;
 
 namespace ProductApi.Data
 {
@@ -8,7 +10,8 @@ namespace ProductApi.Data
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
 
         public DbSet<ProductEntity> Products => Set<ProductEntity>();
-        public DbSet<CustomerEntity> Customers => Set<CustomerEntity>();
+        public DbSet<CustomerEntity> Customers { get; set; }
+        public DbSet<VendorEntity> Vendors { get; set; }
         public DbSet<CategoryEntity> Category => Set<CategoryEntity>();
         public DbSet<ItemmasterEntity> Itemmasters => Set<ItemmasterEntity>();
         public DbSet<UserEntity> Users => Set<UserEntity>();
@@ -20,10 +23,10 @@ namespace ProductApi.Data
                new ProductEntity { Id = 1, Name = "Sample A", Description = "Sample product A", Price = 9.99m, Stock = 100 },
                new ProductEntity { Id = 2, Name = "Sample B", Description = "Sample product B", Price = 19.99m, Stock = 50 }
             );
-            modelBuilder.Entity<CustomerEntity>().HasData(
-               new CustomerEntity { Id = 1, Name = "Sample A", Email = "arulkg@gmail.com", Phone = "6035608952" },
-               new CustomerEntity { Id = 2, Name = "Sample B", Email = "arulkg1@gmail.com", Phone = "6035608953" }
-           );
+           // modelBuilder.Entity<CustomerEntity>().HasData(
+           //    new CustomerEntity { Id = 1, Name = "Sample A", Email = "arulkg@gmail.com", Phone = "6035608952" },
+           //    new CustomerEntity { Id = 2, Name = "Sample B", Email = "arulkg1@gmail.com", Phone = "6035608953" }
+           //);
 
 
         }
