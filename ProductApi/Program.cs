@@ -9,6 +9,7 @@ using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using Microsoft.SemanticKernel;
 using OpenAI;
 using ProductApi.Contracts;
 using ProductApi.Data;
@@ -59,7 +60,28 @@ builder.Services.AddScoped<ICategoryService, CategoryService>();
 builder.Services.AddScoped<IItemmasterRepository, ItemmasterRepositoryEFSp>();
 builder.Services.AddScoped<IItemmasterService, ItemmasterServiceEFSp>();
 
-builder.Services.AddScoped<IMockAIProvider, MockAIProvider>();
+// Toggle between MockAIProvider (regex-based) and OllamaAIProvider (real LLM)
+var useRealAI = builder.Configuration.GetValue<bool>("UseRealAI");
+
+if (useRealAI)
+{
+    builder.Services.AddSingleton(sp =>
+    {
+        var kernelBuilder = Microsoft.SemanticKernel.Kernel.CreateBuilder();
+        kernelBuilder.AddOpenAIChatCompletion(
+            modelId: builder.Configuration["Ollama:Model"] ?? "llama3.2",
+            endpoint: new Uri(builder.Configuration["Ollama:Endpoint"] ?? "http://localhost:11434/v1"),
+            apiKey: "not-needed");
+        return kernelBuilder.Build();
+    });
+
+    builder.Services.AddScoped<IMockAIProvider, OllamaAIProvider>();
+}
+else
+{
+    builder.Services.AddScoped<IMockAIProvider, MockAIProvider>();
+}
+
 builder.Services.AddScoped<IAIService, AIService>();
 
 //builder.Services.AddScoped<IDbConnection>(sp =>
