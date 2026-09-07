@@ -7,14 +7,14 @@ using ProductApi.Models.AI;
 
 namespace ProductApi.Services;
 
-public class AIService_forOpenAI_LLN : IAIService
+public class AIService_ForOpenAI_LLM : IAIService
 {
-    private readonly ILogger<AIService_forOpenAI_LLN> _logger;
+    private readonly ILogger<AIService_ForOpenAI_LLM> _logger;
     private readonly OpenAISettings _settings;
     private readonly ResponsesClient _client;
 
-    public AIService_forOpenAI_LLN(
-        ILogger<AIService_forOpenAI_LLN> logger,
+    public AIService_ForOpenAI_LLM(
+        ILogger<AIService_ForOpenAI_LLM> logger,
         IConfiguration configuration)
     {
         _logger = logger;
