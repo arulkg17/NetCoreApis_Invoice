@@ -18,6 +18,11 @@ namespace ProductApi.Data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
+            
+            modelBuilder.Entity<ProductEntity>()
+            .Property(p => p.Price)
+            .HasPrecision(18, 2);
+
             // optional seed sample data
             modelBuilder.Entity<ProductEntity>().HasData(
                new ProductEntity { Id = 1, Name = "Sample A", Description = "Sample product A", Price = 9.99m, Stock = 100 },
