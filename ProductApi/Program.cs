@@ -48,7 +48,8 @@ builder.Services.AddScoped<IProductRepository, ProductRepository>();
 builder.Services.AddScoped<IProductService, ProductService>();
 builder.Services.AddScoped<ICustomerRepository, CustomerRepository>();
 builder.Services.AddScoped<ICustomerService, CustomerService>();
-
+builder.Services.AddScoped<IVendorRepository, VendorRepositoryEFSp>();
+builder.Services.AddScoped<IVendorService, VendorServiceEFSp>();
 builder.Services.AddScoped<IProductSPRepository, ProductSPRepository>();
 builder.Services.AddScoped<IProductSPService, ProductSPService>();
 

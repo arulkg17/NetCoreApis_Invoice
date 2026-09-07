@@ -222,5 +222,11 @@ namespace ProductApi.Controllers
                 });
             }
         }
+        [HttpGet("TestException")]
+        public IActionResult TestException()
+        {
+            throw new Exception("This is a test exception");
+        }
+
     }
 }

@@ -1,8 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using ProductApi.Data;
 using ProductApi.Contracts;
+using ProductApi.Data;
+using ProductApi.DTOs;
 using ProductApi.Entities;
-using System.Diagnostics.Eventing.Reader;
 
 namespace ProductApi.Repositories
 {
@@ -15,36 +15,95 @@ namespace ProductApi.Repositories
             _dbContext = dbContext;
         }
 
-        public async Task<IEnumerable<CustomerEntity>> GetAllAsync()
-        { 
-            return await _dbContext.Customers.ToListAsync();
-        }
-        public async Task<CustomerEntity?> GetByIdAsync(int id)
+        public async Task<int> AddAsync(CustomerEntity customer)
         {
-            return await _dbContext.Customers.FindAsync(id);
+            _dbContext.Customers.Add(customer);
+
+            await _dbContext.SaveChangesAsync();
+
+            return customer.Id;
         }
 
-        public async Task<CustomerEntity> CreateAsync(CustomerEntity entiry)
-        { 
-            _dbContext.Customers.Add(entiry);    
-            await _dbContext.SaveChangesAsync();
-            return entiry;
-        }
-        public async Task<bool> UpdateAsync(CustomerEntity entity)
+        public async Task<IEnumerable<CustomerEntity>> GetAllAsync()
         {
-            _dbContext.Customers.Update(entity);
+            return await _dbContext.Customers
+                .ToListAsync();
+        }
+
+        public async Task<CustomerEntity?> GetByIdAsync(int id)
+        {
+            return await _dbContext.Customers
+                .FindAsync(id);
+        }
+
+        public async Task<bool> UpdateAsync(CustomerEntity customer)
+        {
+            _dbContext.Customers.Update(customer);
+
             return await _dbContext.SaveChangesAsync() > 0;
         }
 
         public async Task<bool> DeleteAsync(int id)
         {
-            var entity = await _dbContext.Customers.FindAsync(id);
-            if (entity == null) 
+            var entity = await _dbContext.Customers
+                .FindAsync(id);
+
+            if (entity == null)
                 return false;
 
             _dbContext.Customers.Remove(entity);
-            return await _dbContext.SaveChangesAsync() > 0;             
+
+            return await _dbContext.SaveChangesAsync() > 0;
+        }
+
+        public async Task<PagedResultDto<CustomerEntity>> GetAllPagedAsync(
+     string? CustomerCode,
+     string? CustomerName,
+     string? MobileNo,
+     string? City,
+     int PageNumber,
+     int PageSize)
+        {
+            var query = _dbContext.Customers.AsQueryable();
+
+            if (!string.IsNullOrWhiteSpace(CustomerCode))
+            {
+                query = query.Where(x =>
+                    x.CustomerCode.Contains(CustomerCode));
+            }
+
+            if (!string.IsNullOrWhiteSpace(CustomerName))
+            {
+                query = query.Where(x =>
+                    x.CustomerName.Contains(CustomerName));
+            }
+
+            if (!string.IsNullOrWhiteSpace(MobileNo))
+            {
+                query = query.Where(x =>
+                    x.MobileNo != null &&
+                    x.MobileNo.Contains(MobileNo));
+            }
+
+            if (!string.IsNullOrWhiteSpace(City))
+            {
+                query = query.Where(x =>
+                    x.City != null &&
+                    x.City.Contains(City));
+            }
+
+            var totalRecords = await query.CountAsync();
+
+            var data = await query
+                .Skip((PageNumber - 1) * PageSize)
+                .Take(PageSize)
+                .ToListAsync();
+
+            return new PagedResultDto<CustomerEntity>
+            {
+                Data = data,
+                TotalRecords = totalRecords
+            };
         }
     }
-
 }
