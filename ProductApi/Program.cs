@@ -65,14 +65,24 @@ var useRealAI = builder.Configuration.GetValue<bool>("UseRealAI");
 
 if (useRealAI)
 {
-    builder.Services.AddSingleton(sp =>
+    builder.Services.AddScoped(sp =>
     {
-        var kernelBuilder = Microsoft.SemanticKernel.Kernel.CreateBuilder();
+        var kernelBuilder = Kernel.CreateBuilder();
         kernelBuilder.AddOpenAIChatCompletion(
             modelId: builder.Configuration["Ollama:Model"] ?? "llama3.2",
             endpoint: new Uri(builder.Configuration["Ollama:Endpoint"] ?? "http://localhost:11434/v1"),
             apiKey: "not-needed");
-        return kernelBuilder.Build();
+
+        var kernel = kernelBuilder.Build();
+
+        // Add plugins AFTER building - kernel.Plugins is the collection
+        // AddFromType actually targets.
+        kernel.Plugins.AddFromType<ProductApi.Plugins.CustomerPlugin>("CustomerPlugin", sp);
+        kernel.Plugins.AddFromType<ProductApi.Plugins.VendorPlugin>("VendorPlugin", sp);
+        kernel.Plugins.AddFromType<ProductApi.Plugins.UserPlugin>("UserPlugin", sp);
+        kernel.Plugins.AddFromType<ProductApi.Plugins.ItemMasterPlugin>("ItemMasterPlugin", sp);
+
+        return kernel;
     });
 
     builder.Services.AddScoped<IMockAIProvider, OllamaAIProvider>();

@@ -42,6 +42,24 @@ var systemPrompt =
     A: {"intent":"CategoryItemCount","categoryName":"Rice","categoryActiveOnly":true,"itemActiveOnly":null}
     """;
 
+    AIMulti Test 
+    Test it with things like:
+
+"How many active customers are there?" (single, new entity)
+"How many active items are in Rice and how many vendors are inactive?"
+3. Test matrix for both endpoints
+
+Run these against /api/ai/ask and /api/ai/ask-multi:
+
+#	Question	Endpoint	Expects
+1	"How many active items are in Rice?"	ask	itemActiveOnly=true
+2	"How many inactive items are in Rice?"	ask	itemActiveOnly=false
+3	"How many items are in Rice?"	ask	itemActiveOnly=null
+4	"How many active customers are there?"	ask-multi	single entity
+5	"How many inactive vendors are there?"	ask-multi	single entity
+6	"How many users are there?"	ask-multi	null filter
+7	"How many active items are in Rice and how many inactive vendors are there?"	ask-multi	mixed active/inactive, 2 entities
+8	"How many active customers, inactive vendors, and total users are there?"	ask-multi	3 entities, 3 different filter states
 
 AI endpoint test
 
