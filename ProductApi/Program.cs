@@ -77,6 +77,7 @@ if (useRealAI)
 
         // Add plugins AFTER building - kernel.Plugins is the collection
         // AddFromType actually targets.
+        kernel.Plugins.AddFromType<ProductApi.Plugins.CustomerPlugin>("CategoryPlugin", sp);
         kernel.Plugins.AddFromType<ProductApi.Plugins.CustomerPlugin>("CustomerPlugin", sp);
         kernel.Plugins.AddFromType<ProductApi.Plugins.VendorPlugin>("VendorPlugin", sp);
         kernel.Plugins.AddFromType<ProductApi.Plugins.UserPlugin>("UserPlugin", sp);
@@ -93,6 +94,7 @@ else
 }
 
 builder.Services.AddScoped<IAIService, AIService>();
+builder.Services.AddScoped<IMultiIntentAIProvider, MockMultiIntentAIProvider>();
 
 //builder.Services.AddScoped<IDbConnection>(sp =>
 //{

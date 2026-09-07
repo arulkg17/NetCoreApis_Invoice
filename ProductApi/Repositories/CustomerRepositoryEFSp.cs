@@ -172,4 +172,17 @@ public class CustomerRepositories : ICustomerRepository
             };
         }
     }
+    public async Task<int> GetCustomerCountAsync(bool? activeOnly)
+    {
+        var query = _dbContext.Customers
+            .Where(x => x.IsDeleted != true);
+
+        if (activeOnly.HasValue)
+        {
+            query = query.Where(x =>
+                x.IsActive == activeOnly.Value);
+        }
+
+        return await query.CountAsync();
+    }
 }
