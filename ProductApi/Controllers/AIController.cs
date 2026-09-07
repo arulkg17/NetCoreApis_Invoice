@@ -7,7 +7,7 @@ namespace ProductApi.Controllers;
 
 [Route("api/ai")]
 [ApiController]
-[Authorize]
+//[Authorize]
 [ApiVersion("1.0")]
 public class AIController : ControllerBase
 {
