@@ -21,4 +21,5 @@ public interface IVendorService
         string? City,
         int pageNumber,
         int pageSize);
+
 }
