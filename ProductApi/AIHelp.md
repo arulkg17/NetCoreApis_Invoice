@@ -2,6 +2,211 @@
 Pllama --version 
 ollama pull llama3.2
 
+Single Intent and Multi Intent test questions
+Single-intent (sanity check each function fires correctly):
+
+"How many customers do we have in Chennai?"
+"How many vendors are there in Tamil Nadu?"
+"How many items are measured in KG?"
+"Give me the customer count by city for all cities."
+"Show me vendor counts for every state."
+"Break down item counts by unit of measure."
+
+Multi-intent (combines 2+ plugins in one message — this is the real test):
+7. "How many customers are in Chennai and how many vendors are in Karnataka?"
+8. "Give me the total customer count and item count for the Rice category."
+9. "How many active vendors do we have, and how many items are measured in LTR?"
+10. "What's the customer count in Mumbai, vendor count in Gujarat, and item count in PCS?" (tests all three plugins at once)
+
+Not-found / -1 handling (confirms the sentinel logic works end-to-end):
+11. "How many customers are in Atlantis?" (fake city — should say it doesn't exist, not report 0)
+12. "How many vendors are in Wakanda?"
+13. "How many items use the UOM 'XYZ'?"
+14. "How many items are in the 'Electronics' category?" (if that category doesn't exist in your data)
+
+//====================================
+Run Model in the command prompt with question
+PS C:\Users\arulg> ollama run qwen2.5:7b-instruct
+⠸ >>> What is the capital of France?
+The capital of France is Paris.
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Try the new cross-platform PowerShell https://aka.ms/pscore6
+
+PS C:\Users\arulg> ollama list
+NAME                   ID              SIZE      MODIFIED
+qwen2.5:7b-instruct    845dbda0ea48    4.7 GB    2 days ago
+llama3.2:latest        a80c4f17acd5    2.0 GB    5 days ago
+PS C:\Users\arulg> ollama run qwen2.5:7b-instruct
+>>> expect with exactly: Ollama is working
+It seems you might have intended to say "Ollama is working" but want to ensure it's exactly as stated. If you
+meant to compare or check if something is exactly "Ollama is working," then your statement is clear. However, if
+you're looking for a specific context or need assistance with something related, please provide more details. For
+example:
+
+- Are you checking the status of a system named Ollama?
+- Do you need help with a task related to Ollama?
+- Is there a specific format or context you need this in?
+
+Feel free to elaborate, and I'll be happy to help!
+
+PS C:\Users\arulg> $body = @{
+>>     model = "qwen2.5:7b-instruct"
+>>     messages = @(
+>>         @{
+>>             role = "user"
+>>             content = "Respond with exactly: Ollama API is working."
+>>         }
+>>     )
+>>     stream = $false
+>> } | ConvertTo-Json -Depth 10
+>>
+>> Invoke-RestMethod `
+>>     -Uri "http://localhost:11434/v1/chat/completions" `
+>>     -Method Post `
+>>     -ContentType "application/json" `
+>>     -Body $body
+
+
+id                 : chatcmpl-694
+object             : chat.completion
+created            : 1789238859
+model              : qwen2.5:7b-instruct
+system_fingerprint : fp_ollama
+choices            : {@{index=0; message=; finish_reason=stop}}
+usage              : @{prompt_tokens=40; prompt_tokens_details=; completion_tokens=8; total_tokens=48}
+
+
+
+PS C:\Users\arulg> $response = Invoke-RestMethod `
+>>     -Uri "http://localhost:11434/v1/chat/completions" `
+>>     -Method Post `
+>>     -ContentType "application/json" `
+>>     -Body $body
+>>
+>> $response.choices[0].message.content
+Ollama API is working.
+//=======================
+Our next move: bypass Semantic Kernel for one test
+
+I don't want to change your application architecture yet. Let's directly test whether Ollama/Qwen accepts an OpenAI tool definition.
+
+Run this in PowerShell:
+
+$body = @{
+    model = "qwen2.5:7b-instruct"
+    messages = @(
+        @{
+            role = "user"
+            content = "How many customers are there?"
+        }
+    )
+    tools = @(
+        @{
+            type = "function"
+            function = @{
+                name = "get_customer_count"
+                description = "Gets the count of customers."
+                parameters = @{
+                    type = "object"
+                    properties = @{
+                        isActive = @{
+                            type = "boolean"
+                            description = "true for active customers, false for inactive customers"
+                        }
+                    }
+                }
+            }
+        }
+    )
+    stream = $false
+} | ConvertTo-Json -Depth 20
+
+$sw = [System.Diagnostics.Stopwatch]::StartNew()
+
+$response = Invoke-RestMethod `
+    -Uri "http://localhost:11434/v1/chat/completions" `
+    -Method Post `
+    -ContentType "application/json" `
+    -Body $body
+
+$sw.Stop()
+
+Write-Host "Elapsed: $($sw.Elapsed.TotalSeconds) seconds"
+$response.choices[0].message | Format-List *
+What we're looking for
+
+If Qwen supports the tool request correctly, we should see something resembling:
+
+tool_calls : ...
+
+with a function name such as:
+
+get_customer_count
+//====
+Next test — inspect the actual tool call
+
+Run:
+$response.choices[0].message.tool_calls[0].function | Format-List *
+Then also run:
+
+$response.choices[0].message.tool_calls[0] | ConvertTo-Json -Depth 20
+PS C:\Users\arulg> $response.choices[0].message.tool_calls[0].function | Format-List *
+
+
+name      : get_customer_count
+arguments : {"isActive":true}
+
+
+
+PS C:\Users\arulg> $response.choices[0].message.tool_calls[0] | ConvertTo-Json -Depth 20
+{
+    "id":  "call_1dhlckdx",
+    "index":  0,
+    "type":  "function",
+    "function":  {
+                     "name":  "get_customer_count",
+                     "arguments":  "{\"isActive\":true}"
+                 }
+
+
+                 Excellent, my friend. This is the breakthrough we needed. ✅
+
+Your direct Ollama test proves that Qwen is generating a valid OpenAI-compatible function/tool call:
+
+{
+  "id": "call_1dhlckdx",
+  "index": 0,
+  "type": "function",
+  "function": {
+    "name": "get_customer_count",
+    "arguments": "{\"isActive\":true}"
+  }
+}
+
+And even better:
+
+Function name: get_customer_count ✅
+Argument name: isActive ✅
+Argument value: true ✅
+Ollama returns the tool call successfully ✅
+Direct call takes ~16 seconds ✅
+
+So CustomerPlugin itself is not the problem, and Ollama/Qwen tool calling itself is not the problem.
+
+
+What I need from you
+
+Send me one of these two things:
+
+The response from /api/ai/test-sk-normal and the contents of ollama-http-debug.txt, or
+If ollama-http-debug.txt doesn't exist, just tell me:
+
+ollama-http-debug.txt does not exist
+
+//=============================================================
+
 Ollama rules
 var systemPrompt =
     $$"""

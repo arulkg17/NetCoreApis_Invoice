@@ -26,7 +26,12 @@ Log.Logger = new LoggerConfiguration()
     .CreateLogger();
 
 var builder = WebApplication.CreateBuilder(args);
-
+// Kestrel timeout config — must come before Build()
+builder.WebHost.ConfigureKestrel(options =>
+{
+    options.Limits.KeepAliveTimeout = TimeSpan.FromMinutes(10);
+    options.Limits.RequestHeadersTimeout = TimeSpan.FromMinutes(10);
+});
 builder.Host.UseSerilog();
 
 //var openAiApiKey = builder.Configuration["OpenAI:ApiKey"];
@@ -60,28 +65,53 @@ builder.Services.AddScoped<ICategoryService, CategoryService>();
 builder.Services.AddScoped<IItemmasterRepository, ItemmasterRepositoryEFSp>();
 builder.Services.AddScoped<IItemmasterService, ItemmasterServiceEFSp>();
 
-// Toggle between MockAIProvider (regex-based) and OllamaAIProvider (real LLM)
 var useRealAI = builder.Configuration.GetValue<bool>("UseRealAI");
 
 if (useRealAI)
 {
     builder.Services.AddScoped(sp =>
     {
+        var handler = new ProductApi.AI.OllamaLoggingHandler
+        {
+            InnerHandler = new HttpClientHandler()
+        };
+
+        var ollamaHttpClient = new HttpClient(handler)
+        {
+            Timeout = TimeSpan.FromMinutes(10)
+        };
+
         var kernelBuilder = Kernel.CreateBuilder();
+
         kernelBuilder.AddOpenAIChatCompletion(
-            modelId: builder.Configuration["Ollama:Model"] ?? "llama3.2",
-            endpoint: new Uri(builder.Configuration["Ollama:Endpoint"] ?? "http://localhost:11434/v1"),
-            apiKey: "not-needed");
+            modelId: builder.Configuration["Ollama:Model"] ?? "qwen2.5:7b-instruct",
+            endpoint: new Uri(
+                builder.Configuration["Ollama:Endpoint"]
+                ?? "http://localhost:11434/v1"),
+            apiKey: "not-needed",
+            httpClient: ollamaHttpClient);
 
         var kernel = kernelBuilder.Build();
 
-        // Add plugins AFTER building - kernel.Plugins is the collection
-        // AddFromType actually targets.
-        kernel.Plugins.AddFromType<ProductApi.Plugins.CustomerPlugin>("CategoryPlugin", sp);
-        kernel.Plugins.AddFromType<ProductApi.Plugins.CustomerPlugin>("CustomerPlugin", sp);
-        kernel.Plugins.AddFromType<ProductApi.Plugins.VendorPlugin>("VendorPlugin", sp);
-        kernel.Plugins.AddFromType<ProductApi.Plugins.UserPlugin>("UserPlugin", sp);
-        kernel.Plugins.AddFromType<ProductApi.Plugins.ItemMasterPlugin>("ItemMasterPlugin", sp);
+        kernel.FunctionInvocationFilters.Add(
+            new FunctionLoggingFilter(
+                sp.GetRequiredService<
+                    ILogger<FunctionLoggingFilter>>()));
+
+        //kernel.Plugins.AddFromType<ProductApi.Plugins.CategoryPlugin>(
+        //    "CategoryPlugin", sp);
+
+        kernel.Plugins.AddFromType<ProductApi.Plugins.CustomerPlugin>(
+            "CustomerPlugin", sp);
+
+        //kernel.Plugins.AddFromType<ProductApi.Plugins.VendorPlugin>(
+        //    "VendorPlugin", sp);
+
+        //kernel.Plugins.AddFromType<ProductApi.Plugins.UserPlugin>(
+        //    "UserPlugin", sp);
+
+        //kernel.Plugins.AddFromType<ProductApi.Plugins.ItemMasterPlugin>(
+        //    "ItemMasterPlugin", sp);
 
         return kernel;
     });
@@ -288,3 +318,39 @@ app.Lifetime.ApplicationStopping.Register(() =>
 });
 
 app.Run();
+
+
+public sealed class OllamaLoggingHandler : DelegatingHandler
+{
+    protected override async Task<HttpResponseMessage> SendAsync(
+        HttpRequestMessage request,
+        CancellationToken cancellationToken)
+    {
+        var stopwatch = System.Diagnostics.Stopwatch.StartNew();
+
+        var requestBody = request.Content == null
+            ? ""
+            : await request.Content.ReadAsStringAsync(cancellationToken);
+
+        Console.WriteLine("========== OLLAMA REQUEST ==========");
+        Console.WriteLine($"{request.Method} {request.RequestUri}");
+        Console.WriteLine(requestBody);
+
+        var response = await base.SendAsync(request, cancellationToken);
+
+        var responseBody = response.Content == null
+            ? ""
+            : await response.Content.ReadAsStringAsync(cancellationToken);
+
+        stopwatch.Stop();
+
+        Console.WriteLine("========== OLLAMA RESPONSE ==========");
+        Console.WriteLine($"Status: {(int)response.StatusCode}");
+        Console.WriteLine($"Elapsed: {stopwatch.ElapsedMilliseconds} ms");
+        Console.WriteLine(responseBody);
+        Console.WriteLine("====================================");
+
+        return response;
+    }
+}
+
