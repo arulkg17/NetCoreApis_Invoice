@@ -98,20 +98,20 @@ if (useRealAI)
                 sp.GetRequiredService<
                     ILogger<FunctionLoggingFilter>>()));
 
-        //kernel.Plugins.AddFromType<ProductApi.Plugins.CategoryPlugin>(
-        //    "CategoryPlugin", sp);
+        kernel.Plugins.AddFromType<ProductApi.Plugins.CategoryPlugin>(
+            "CategoryPlugin", sp);
 
         kernel.Plugins.AddFromType<ProductApi.Plugins.CustomerPlugin>(
             "CustomerPlugin", sp);
 
-        //kernel.Plugins.AddFromType<ProductApi.Plugins.VendorPlugin>(
-        //    "VendorPlugin", sp);
+        kernel.Plugins.AddFromType<ProductApi.Plugins.VendorPlugin>(
+            "VendorPlugin", sp);
 
-        //kernel.Plugins.AddFromType<ProductApi.Plugins.UserPlugin>(
-        //    "UserPlugin", sp);
+        kernel.Plugins.AddFromType<ProductApi.Plugins.UserPlugin>(
+            "UserPlugin", sp);
 
-        //kernel.Plugins.AddFromType<ProductApi.Plugins.ItemMasterPlugin>(
-        //    "ItemMasterPlugin", sp);
+        kernel.Plugins.AddFromType<ProductApi.Plugins.ItemMasterPlugin>(
+            "ItemMasterPlugin", sp);
 
         return kernel;
     });
