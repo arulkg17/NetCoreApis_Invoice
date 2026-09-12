@@ -22,4 +22,39 @@ public class VendorPlugin
             ? all.Count()
             : all.Count(v => v.IsActive == isActive);
     }
+    [KernelFunction("get_vendor_count_by_state")]
+    [Description("Gets the number of vendors in a specific state. " +
+                "Returns -1 if the state name is not found in the system.")]
+    public async Task<int> GetVendorCountByState(
+       [Description("The state name to count vendors for")] string state)
+    {
+        var normalized = state.Trim().ToLower();
+        var all = await _repo.GetAllAsync();
+
+        var exists = all.Any(v => v.State?.Trim().ToLower() == normalized);
+        if (!exists) return -1;
+
+        return all.Count(v => v.State?.Trim().ToLower() == normalized);
+    }
+
+    [KernelFunction("get_vendor_count_all_states")]
+    [Description("Gets vendor counts grouped by every state, when the user " +
+                 "wants a full statewise breakdown rather than a single state.")]
+    public async Task<List<StateCount>> GetAllStateCounts()
+    {
+        var all = await _repo.GetAllAsync();
+
+        return all
+            .GroupBy(v => v.State?.Trim())
+            .Select(g => new StateCount { State = g.Key, Count = g.Count() })
+            .ToList();
+    }
 }
+
+
+public class StateCount
+{
+    public string State { get; set; } = "";
+    public int Count { get; set; }
+}
+

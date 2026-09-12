@@ -5,6 +5,7 @@ using Microsoft.SemanticKernel.Connectors.OpenAI;
 using ProductApi.Contracts;
 using ProductApi.Models.AI;
 using ProductApi.Repositories;
+using Microsoft.SemanticKernel.ChatCompletion;
 namespace ProductApi.Controllers;
 
 [ApiController]
@@ -147,47 +148,139 @@ public class AIMultiController : ControllerBase
             });
         }
 
-        _logger.LogInformation("AskMulti processing question: {Question}", request.Question);
-
-        var settings = new OpenAIPromptExecutionSettings
-        {
-            ToolCallBehavior = ToolCallBehavior.AutoInvokeKernelFunctions
-        };
-
-        var systemPrompt =
-            """
-            You are a helpful assistant for an Invoice Management System.
-            Use the available functions to answer the user's question(s).
-            If the user asks more than one question in a single message,
-            call whichever functions are needed for EACH part, then combine
-            everything into one clear, natural-language answer covering all parts.
-            If a function returns -1 for an item count, it means the category
-            name wasn't found - tell the user that category doesn't exist
-            instead of reporting a count.
-            """;
+        _logger.LogInformation(
+     "AskMulti processing question: {Question}",
+     request.Question);
 
         try
         {
-            var result = await _kernel.InvokePromptAsync(
-                $"{systemPrompt}\n\nUser question: {request.Question}",
-                new KernelArguments(settings));
+            var chatService =
+                _kernel.GetRequiredService<IChatCompletionService>();
+
+            var history = new ChatHistory();
+
+            history.AddSystemMessage("""
+        You are an assistant for an Invoice Management System.
+
+        CUSTOMER FUNCTIONS:
+
+        - If the user asks for the number of active customers,
+          use CustomerPlugin.get_customer_count with isActive=true.
+
+        - If the user asks for the customer count for a specific city,
+          use CustomerPlugin.get_customer_count_by_city.
+
+        - If the user asks for customer counts by city,
+          all cities, every city, or a citywise breakdown,
+          use CustomerPlugin.get_customer_count_all_cities.
+
+        Always use an available function when it can answer
+        the user's question.
+
+        After the function returns, provide a clear natural-language
+        answer to the user.
+        """);
+
+            history.AddUserMessage(request.Question);
+
+            var settings = new OpenAIPromptExecutionSettings
+            {
+                FunctionChoiceBehavior = FunctionChoiceBehavior.Auto()
+            };
+
+            _logger.LogInformation(
+                "Calling IChatCompletionService for AskMulti...");
+
+            var result = await chatService.GetChatMessageContentAsync(
+                history,
+                settings,
+                _kernel);
+
+            _logger.LogInformation(
+                "=== ASK-MULTI SK RESULT: {Result} ===",
+                result.Content);
 
             return Ok(new
             {
                 success = true,
                 message = "AI response generated successfully",
-                data = new { answer = result.ToString() }
+                data = new
+                {
+                    answer = result.Content ?? ""
+                }
             });
         }
         catch (Exception ex)
         {
-            _logger.LogError(ex, "Error processing AskMulti request");
+            _logger.LogError(
+                ex,
+                "Error processing AskMulti request");
+
             return StatusCode(500, new
             {
                 success = false,
                 message = "Error processing AI request",
-                error = ex.Message
+                error = ex.Message,
+                innerError = ex.InnerException?.Message
             });
         }
     }
+
+    [HttpPost("test-sk-function")]
+    public async Task<IActionResult> TestSemanticKernelFunction()
+    {
+        try
+        {
+            _logger.LogInformation("=== DIRECT SK FUNCTION TEST START ===");
+
+            var chatService = _kernel.GetRequiredService<IChatCompletionService>();
+
+            var history = new ChatHistory();
+
+            history.AddSystemMessage("""
+            You are an assistant for an Invoice Management System.
+
+            When the user asks for the number of active customers,
+            use CustomerPlugin.get_customer_count with isActive=true.
+
+            Return the final answer after calling the function.
+            """);
+
+            history.AddUserMessage("How many active customers are there?");
+
+            var settings = new OpenAIPromptExecutionSettings
+            {
+                FunctionChoiceBehavior = FunctionChoiceBehavior.Auto()
+            };
+
+            _logger.LogInformation("Calling IChatCompletionService directly...");
+
+            var result = await chatService.GetChatMessageContentAsync(
+                history,
+                settings,
+                _kernel);
+
+            _logger.LogInformation(
+                "=== DIRECT SK RESULT: {Result} ===",
+                result.Content);
+
+            return Ok(new
+            {
+                success = true,
+                answer = result.Content
+            });
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "Direct Semantic Kernel function test failed");
+
+            return StatusCode(500, new
+            {
+                success = false,
+                error = ex.Message,
+                innerError = ex.InnerException?.Message
+            });
+        }
+    }
+
 }

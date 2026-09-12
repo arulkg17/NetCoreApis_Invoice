@@ -1,0 +1,256 @@
+============================================================
+OLLAMA HTTP REQUEST
+Time: 2026-09-12 15:47:04.894
+Method: POST
+URL: http://localhost:11434/v1/chat/completions
+
+Headers:
+Accept: application/json
+User-Agent: Semantic-Kernel OpenAI/2.13.0 (.NET 8.0.31; Microsoft Windows 10.0.19045)
+X-Stainless-Lang: csharp
+X-Stainless-Package-Version: 2.13.0
+X-Stainless-Runtime: dotnet
+X-Stainless-Runtime-Version: 8.0.31
+X-Stainless-OS: Windows
+X-Stainless-Arch: x64
+Semantic-Kernel-Version: 1.80.1.0
+Authorization: Bearer not-needed
+
+
+Body:
+{"messages":[{"role":"system","content":"You are an assistant for an Invoice Management System.\r\n\r\nWhen the user asks for the number of active customers,\r\nuse CustomerPlugin.get_customer_count with isActive=true.\r\n\r\nReturn the final answer after calling the function."},{"role":"user","content":"How many active customers are there?"}],"model":"qwen2.5:7b-instruct","tools":[{"type":"function","function":{"description":"Gets the count of categories. Pass isActive=true for active only, isActive=false for inactive only, or omit isActive for the total count.","name":"CategoryPlugin-get_category_count","parameters":{"type":"object","required":[],"properties":{"isActive":{"description":"true for active only, false for inactive only, null for all","type":["boolean","null"]}}},"strict":false}},{"type":"function","function":{"description":"Gets the count of items within a specific category. Reuses the existing GetCategoryItemCountAsync logic used by the original /api/ai/ask endpoint.","name":"CategoryPlugin-get_item_count_by_category","parameters":{"type":"object","required":["categoryName"],"properties":{"categoryName":{"description":"Category name, e.g. \u0027Rice\u0027","type":"string"},"itemActiveOnly":{"description":"true for active only, false for inactive only, null for all","type":["boolean","null"]}}},"strict":false}},{"type":"function","function":{"description":"Gets the count of customers. Pass isActive=true for active only, isActive=false for inactive only, or omit isActive for the total count.","name":"CustomerPlugin-get_customer_count","parameters":{"type":"object","required":[],"properties":{"isActive":{"description":"true for active only, false for inactive only, null for all","type":["boolean","null"]}}},"strict":false}},{"type":"function","function":{"description":"Gets the number of customers in a specific city. Returns -1 if the city name is not found in the system.","name":"CustomerPlugin-get_customer_count_by_city","parameters":{"type":"object","required":["city"],"properties":{"city":{"description":"The city name to count customers for","type":"string"}}},"strict":false}},{"type":"function","function":{"description":"Gets customer counts grouped by every city. Use this function when the user asks for customer counts for all cities or a citywise customer count breakdown.","name":"CustomerPlugin-get_customer_count_all_cities","parameters":{"type":"object","required":[],"properties":{}},"strict":false}},{"type":"function","function":{"description":"Gets the count of vendors. Pass isActive=true for active only, isActive=false for inactive only, or omit isActive for the total count.","name":"VendorPlugin-get_vendor_count","parameters":{"type":"object","required":[],"properties":{"isActive":{"description":"true for active only, false for inactive only, null for all","type":["boolean","null"]}}},"strict":false}},{"type":"function","function":{"description":"Gets the number of vendors in a specific state. Returns -1 if the state name is not found in the system.","name":"VendorPlugin-get_vendor_count_by_state","parameters":{"type":"object","required":["state"],"properties":{"state":{"description":"The state name to count vendors for","type":"string"}}},"strict":false}},{"type":"function","function":{"description":"Gets vendor counts grouped by every state, when the user wants a full statewise breakdown rather than a single state.","name":"VendorPlugin-get_vendor_count_all_states","parameters":{"type":"object","required":[],"properties":{}},"strict":false}},{"type":"function","function":{"description":"Gets the count of system users. Pass isActive=true for active only, isActive=false for inactive only, or omit isActive for the total count.","name":"UserPlugin-get_user_count","parameters":{"type":"object","required":[],"properties":{"isActive":{"description":"true for active only, false for inactive only, null for all","type":["boolean","null"]}}},"strict":false}},{"type":"function","function":{"description":"Gets the count of items in ItemMaster, optionally filtered by category name and/or active status. Omit categoryName to count across all categories.","name":"ItemMasterPlugin-get_item_count","parameters":{"type":"object","required":[],"properties":{"categoryName":{"description":"Category name, e.g. \u0027Rice\u0027. Omit or pass null for all categories.","type":"string"},"isActive":{"description":"true for active only, false for inactive only, null for all","type":["boolean","null"]}}},"strict":false}},{"type":"function","function":{"description":"Gets the number of items that use a specific unit of measure (e.g. KG, PCS, LTR). Returns -1 if the UOM is not found.","name":"ItemMasterPlugin-get_item_count_by_uom","parameters":{"type":"object","required":["uom"],"properties":{"uom":{"description":"The unit of measure code, e.g. KG, PCS, LTR","type":"string"}}},"strict":false}},{"type":"function","function":{"description":"Gets item counts grouped by every unit of measure, when the user wants a full breakdown rather than a single UOM.","name":"ItemMasterPlugin-get_item_count_all_uom","parameters":{"type":"object","required":[],"properties":{}},"strict":false}}],"tool_choice":"auto"}
+============================================================
+============================================================
+OLLAMA HTTP RESPONSE
+Time: 2026-09-12 15:50:08.093
+Status: 200
+Elapsed: 183245 ms
+
+Body:
+{"id":"chatcmpl-630","object":"chat.completion","created":1789246207,"model":"qwen2.5:7b-instruct","system_fingerprint":"fp_ollama","choices":[{"index":0,"message":{"role":"assistant","content":""},"finish_reason":"stop"}],"usage":{"prompt_tokens":1069,"prompt_tokens_details":{"cached_tokens":0},"completion_tokens":22,"total_tokens":1091}}
+
+============================================================
+============================================================
+OLLAMA HTTP REQUEST
+Time: 2026-09-12 15:57:23.924
+Method: POST
+URL: http://localhost:11434/v1/chat/completions
+
+Headers:
+Accept: application/json
+User-Agent: Semantic-Kernel OpenAI/2.13.0 (.NET 8.0.31; Microsoft Windows 10.0.19045)
+X-Stainless-Lang: csharp
+X-Stainless-Package-Version: 2.13.0
+X-Stainless-Runtime: dotnet
+X-Stainless-Runtime-Version: 8.0.31
+X-Stainless-OS: Windows
+X-Stainless-Arch: x64
+Semantic-Kernel-Version: 1.80.1.0
+Authorization: Bearer not-needed
+
+
+Body:
+{"messages":[{"role":"system","content":"You are an assistant for an Invoice Management System.\r\n\r\nWhen the user asks for the number of active customers,\r\nuse CustomerPlugin.get_customer_count with isActive=true.\r\n\r\nReturn the final answer after calling the function."},{"role":"user","content":"How many active customers are there?"}],"model":"qwen2.5:7b-instruct","tools":[{"type":"function","function":{"description":"Gets the count of customers. Pass isActive=true for active only, isActive=false for inactive only, or omit isActive for the total count.","name":"CustomerPlugin-get_customer_count","parameters":{"type":"object","required":[],"properties":{"isActive":{"description":"true for active only, false for inactive only, null for all","type":["boolean","null"]}}},"strict":false}},{"type":"function","function":{"description":"Gets the number of customers in a specific city. Returns -1 if the city name is not found in the system.","name":"CustomerPlugin-get_customer_count_by_city","parameters":{"type":"object","required":["city"],"properties":{"city":{"description":"The city name to count customers for","type":"string"}}},"strict":false}},{"type":"function","function":{"description":"Gets customer counts grouped by every city. Use this function when the user asks for customer counts for all cities or a citywise customer count breakdown.","name":"CustomerPlugin-get_customer_count_all_cities","parameters":{"type":"object","required":[],"properties":{}},"strict":false}}],"tool_choice":"auto"}
+============================================================
+============================================================
+OLLAMA HTTP RESPONSE
+Time: 2026-09-12 15:58:33.363
+Status: 200
+Elapsed: 69483 ms
+
+Body:
+{"id":"chatcmpl-652","object":"chat.completion","created":1789246713,"model":"qwen2.5:7b-instruct","system_fingerprint":"fp_ollama","choices":[{"index":0,"message":{"role":"assistant","content":""},"finish_reason":"stop"}],"usage":{"prompt_tokens":345,"prompt_tokens_details":{"cached_tokens":0},"completion_tokens":22,"total_tokens":367}}
+
+============================================================
+============================================================
+OLLAMA HTTP REQUEST
+Time: 2026-09-12 16:06:33.205
+Method: POST
+URL: http://localhost:11434/v1/chat/completions
+
+Headers:
+Accept: application/json
+User-Agent: Semantic-Kernel OpenAI/2.13.0 (.NET 8.0.31; Microsoft Windows 10.0.19045)
+X-Stainless-Lang: csharp
+X-Stainless-Package-Version: 2.13.0
+X-Stainless-Runtime: dotnet
+X-Stainless-Runtime-Version: 8.0.31
+X-Stainless-OS: Windows
+X-Stainless-Arch: x64
+Semantic-Kernel-Version: 1.80.1.0
+Authorization: Bearer not-needed
+
+
+Body:
+{"messages":[{"role":"system","content":"You are an assistant for an Invoice Management System.\r\n\r\nWhen the user asks for the number of active customers,\r\nuse CustomerPlugin.get_customer_count with isActive=true.\r\n\r\nReturn the final answer after calling the function."},{"role":"user","content":"How many active customers are there?"}],"model":"qwen2.5:7b-instruct","tools":[{"type":"function","function":{"description":"Gets the count of active customers.","name":"CustomerPlugin-get_customer_count","parameters":{"type":"object","required":[],"properties":{"isActive":{"description":"Must be true to count active customers. (default value: True)","type":"boolean"}}},"strict":false}},{"type":"function","function":{"description":"Gets the number of customers in a specific city. Returns -1 if the city name is not found in the system.","name":"CustomerPlugin-get_customer_count_by_city","parameters":{"type":"object","required":["city"],"properties":{"city":{"description":"The city name to count customers for","type":"string"}}},"strict":false}},{"type":"function","function":{"description":"Gets customer counts grouped by every city. Use this function when the user asks for customer counts for all cities or a citywise customer count breakdown.","name":"CustomerPlugin-get_customer_count_all_cities","parameters":{"type":"object","required":[],"properties":{}},"strict":false}}],"tool_choice":"auto"}
+============================================================
+============================================================
+OLLAMA HTTP RESPONSE
+Time: 2026-09-12 16:07:30.794
+Status: 200
+Elapsed: 57639 ms
+
+Body:
+{"id":"chatcmpl-130","object":"chat.completion","created":1789247250,"model":"qwen2.5:7b-instruct","system_fingerprint":"fp_ollama","choices":[{"index":0,"message":{"role":"assistant","content":"","tool_calls":[{"id":"call_ytmjbcnx","index":0,"type":"function","function":{"name":"CustomerPlugin-get_customer_count","arguments":"{\"isActive\":true}"}}]},"finish_reason":"tool_calls"}],"usage":{"prompt_tokens":324,"prompt_tokens_details":{"cached_tokens":0},"completion_tokens":22,"total_tokens":346}}
+
+============================================================
+============================================================
+OLLAMA HTTP REQUEST
+Time: 2026-09-12 16:07:36.861
+Method: POST
+URL: http://localhost:11434/v1/chat/completions
+
+Headers:
+Accept: application/json
+User-Agent: Semantic-Kernel OpenAI/2.13.0 (.NET 8.0.31; Microsoft Windows 10.0.19045)
+X-Stainless-Lang: csharp
+X-Stainless-Package-Version: 2.13.0
+X-Stainless-Runtime: dotnet
+X-Stainless-Runtime-Version: 8.0.31
+X-Stainless-OS: Windows
+X-Stainless-Arch: x64
+Semantic-Kernel-Version: 1.80.1.0
+Authorization: Bearer not-needed
+
+
+Body:
+{"messages":[{"role":"system","content":"You are an assistant for an Invoice Management System.\r\n\r\nWhen the user asks for the number of active customers,\r\nuse CustomerPlugin.get_customer_count with isActive=true.\r\n\r\nReturn the final answer after calling the function."},{"role":"user","content":"How many active customers are there?"},{"role":"assistant","content":"","tool_calls":[{"id":"call_ytmjbcnx","type":"function","function":{"name":"CustomerPlugin-get_customer_count","arguments":"{\"isActive\":true}"},"index":0}]},{"role":"tool","tool_call_id":"call_ytmjbcnx","content":"11"}],"model":"qwen2.5:7b-instruct","tools":[{"type":"function","function":{"description":"Gets the count of active customers.","name":"CustomerPlugin-get_customer_count","parameters":{"type":"object","required":[],"properties":{"isActive":{"description":"Must be true to count active customers. (default value: True)","type":"boolean"}}},"strict":false}},{"type":"function","function":{"description":"Gets the number of customers in a specific city. Returns -1 if the city name is not found in the system.","name":"CustomerPlugin-get_customer_count_by_city","parameters":{"type":"object","required":["city"],"properties":{"city":{"description":"The city name to count customers for","type":"string"}}},"strict":false}},{"type":"function","function":{"description":"Gets customer counts grouped by every city. Use this function when the user asks for customer counts for all cities or a citywise customer count breakdown.","name":"CustomerPlugin-get_customer_count_all_cities","parameters":{"type":"object","required":[],"properties":{}},"strict":false}}],"tool_choice":"auto"}
+============================================================
+============================================================
+OLLAMA HTTP RESPONSE
+Time: 2026-09-12 16:07:44.748
+Status: 200
+Elapsed: 7897 ms
+
+Body:
+{"id":"chatcmpl-520","object":"chat.completion","created":1789247264,"model":"qwen2.5:7b-instruct","system_fingerprint":"fp_ollama","choices":[{"index":0,"message":{"role":"assistant","content":"There are 11 active customers."},"finish_reason":"stop"}],"usage":{"prompt_tokens":366,"prompt_tokens_details":{"cached_tokens":342},"completion_tokens":9,"total_tokens":375}}
+
+============================================================
+============================================================
+OLLAMA HTTP REQUEST
+Time: 2026-09-12 16:10:46.643
+Method: POST
+URL: http://localhost:11434/v1/chat/completions
+
+Headers:
+Accept: application/json
+User-Agent: Semantic-Kernel OpenAI/2.13.0 (.NET 8.0.31; Microsoft Windows 10.0.19045)
+X-Stainless-Lang: csharp
+X-Stainless-Package-Version: 2.13.0
+X-Stainless-Runtime: dotnet
+X-Stainless-Runtime-Version: 8.0.31
+X-Stainless-OS: Windows
+X-Stainless-Arch: x64
+Semantic-Kernel-Version: 1.80.1.0
+Authorization: Bearer not-needed
+
+
+Body:
+{"messages":[{"role":"user","content":"You are an Invoice Management assistant.\r\n\r\nIf the user asks for the number of customers,\r\nuse the CustomerPlugin.get_customer_count function.\r\n\r\nUser question:\r\nHow many customers are there?"}],"model":"qwen2.5:7b-instruct","tools":[{"type":"function","function":{"description":"Gets the count of active customers.","name":"CustomerPlugin-get_customer_count","parameters":{"type":"object","required":[],"properties":{"isActive":{"description":"Must be true to count active customers. (default value: True)","type":"boolean"}}},"strict":false}},{"type":"function","function":{"description":"Gets the number of customers in a specific city. Returns -1 if the city name is not found in the system.","name":"CustomerPlugin-get_customer_count_by_city","parameters":{"type":"object","required":["city"],"properties":{"city":{"description":"The city name to count customers for","type":"string"}}},"strict":false}},{"type":"function","function":{"description":"Gets customer counts grouped by every city. Use this function when the user asks for customer counts for all cities or a citywise customer count breakdown.","name":"CustomerPlugin-get_customer_count_all_cities","parameters":{"type":"object","required":[],"properties":{}},"strict":false}}],"tool_choice":"auto"}
+============================================================
+============================================================
+OLLAMA HTTP RESPONSE
+Time: 2026-09-12 16:11:27.466
+Status: 200
+Elapsed: 40822 ms
+
+Body:
+{"id":"chatcmpl-37","object":"chat.completion","created":1789247487,"model":"qwen2.5:7b-instruct","system_fingerprint":"fp_ollama","choices":[{"index":0,"message":{"role":"assistant","content":""},"finish_reason":"stop"}],"usage":{"prompt_tokens":328,"prompt_tokens_details":{"cached_tokens":5},"completion_tokens":22,"total_tokens":350}}
+
+============================================================
+============================================================
+OLLAMA HTTP REQUEST
+Time: 2026-09-12 16:12:33.926
+Method: POST
+URL: http://localhost:11434/v1/chat/completions
+
+Headers:
+Accept: application/json
+User-Agent: Semantic-Kernel OpenAI/2.13.0 (.NET 8.0.31; Microsoft Windows 10.0.19045)
+X-Stainless-Lang: csharp
+X-Stainless-Package-Version: 2.13.0
+X-Stainless-Runtime: dotnet
+X-Stainless-Runtime-Version: 8.0.31
+X-Stainless-OS: Windows
+X-Stainless-Arch: x64
+Semantic-Kernel-Version: 1.80.1.0
+Authorization: Bearer not-needed
+
+
+Body:
+{"messages":[{"role":"user","content":"You are an Invoice Management assistant.\r\n\r\nIf the user asks for the number of customers,\r\nuse the CustomerPlugin.get_customer_count function.\r\n\r\nUser question:\r\nHow many customers are there?"}],"model":"qwen2.5:7b-instruct","tools":[{"type":"function","function":{"description":"Gets the count of active customers.","name":"CustomerPlugin-get_customer_count","parameters":{"type":"object","required":[],"properties":{"isActive":{"description":"Must be true to count active customers. (default value: True)","type":"boolean"}}},"strict":false}},{"type":"function","function":{"description":"Gets the number of customers in a specific city. Returns -1 if the city name is not found in the system.","name":"CustomerPlugin-get_customer_count_by_city","parameters":{"type":"object","required":["city"],"properties":{"city":{"description":"The city name to count customers for","type":"string"}}},"strict":false}},{"type":"function","function":{"description":"Gets customer counts grouped by every city. Use this function when the user asks for customer counts for all cities or a citywise customer count breakdown.","name":"CustomerPlugin-get_customer_count_all_cities","parameters":{"type":"object","required":[],"properties":{}},"strict":false}}],"tool_choice":"auto"}
+============================================================
+============================================================
+OLLAMA HTTP RESPONSE
+Time: 2026-09-12 16:12:41.809
+Status: 200
+Elapsed: 7883 ms
+
+Body:
+{"id":"chatcmpl-41","object":"chat.completion","created":1789247561,"model":"qwen2.5:7b-instruct","system_fingerprint":"fp_ollama","choices":[{"index":0,"message":{"role":"assistant","content":""},"finish_reason":"stop"}],"usage":{"prompt_tokens":328,"prompt_tokens_details":{"cached_tokens":327},"completion_tokens":22,"total_tokens":350}}
+
+============================================================
+============================================================
+OLLAMA HTTP REQUEST
+Time: 2026-09-12 16:18:19.717
+Method: POST
+URL: http://localhost:11434/v1/chat/completions
+
+Headers:
+Accept: application/json
+User-Agent: Semantic-Kernel OpenAI/2.13.0 (.NET 8.0.31; Microsoft Windows 10.0.19045)
+X-Stainless-Lang: csharp
+X-Stainless-Package-Version: 2.13.0
+X-Stainless-Runtime: dotnet
+X-Stainless-Runtime-Version: 8.0.31
+X-Stainless-OS: Windows
+X-Stainless-Arch: x64
+Semantic-Kernel-Version: 1.80.1.0
+Authorization: Bearer not-needed
+
+
+Body:
+{"messages":[{"role":"system","content":"You are an assistant for an Invoice Management System.\r\n\r\nCUSTOMER FUNCTIONS:\r\n\r\n- If the user asks for the number of active customers,\r\n  use CustomerPlugin.get_customer_count with isActive=true.\r\n\r\n- If the user asks for the customer count for a specific city,\r\n  use CustomerPlugin.get_customer_count_by_city.\r\n\r\n- If the user asks for customer counts by city,\r\n  all cities, every city, or a citywise breakdown,\r\n  use CustomerPlugin.get_customer_count_all_cities.\r\n\r\nAlways use an available function when it can answer\r\nthe user's question.\r\n\r\nAfter the function returns, provide a clear natural-language\r\nanswer to the user."},{"role":"user","content":"Give me the customer count by city for all cities."}],"model":"qwen2.5:7b-instruct","tools":[{"type":"function","function":{"description":"Gets the count of active customers.","name":"CustomerPlugin-get_customer_count","parameters":{"type":"object","required":[],"properties":{"isActive":{"description":"Must be true to count active customers. (default value: True)","type":"boolean"}}},"strict":false}},{"type":"function","function":{"description":"Gets the number of customers in a specific city. Returns -1 if the city name is not found in the system.","name":"CustomerPlugin-get_customer_count_by_city","parameters":{"type":"object","required":["city"],"properties":{"city":{"description":"The city name to count customers for","type":"string"}}},"strict":false}},{"type":"function","function":{"description":"Gets customer counts grouped by every city. Use this function when the user asks for customer counts for all cities or a citywise customer count breakdown.","name":"CustomerPlugin-get_customer_count_all_cities","parameters":{"type":"object","required":[],"properties":{}},"strict":false}}],"tool_choice":"auto"}
+============================================================
+============================================================
+OLLAMA HTTP RESPONSE
+Time: 2026-09-12 16:19:36.085
+Status: 200
+Elapsed: 76417 ms
+
+Body:
+{"id":"chatcmpl-204","object":"chat.completion","created":1789247976,"model":"qwen2.5:7b-instruct","system_fingerprint":"fp_ollama","choices":[{"index":0,"message":{"role":"assistant","content":"","tool_calls":[{"id":"call_lst79ck6","index":0,"type":"function","function":{"name":"CustomerPlugin-get_customer_count_all_cities","arguments":"{}"}}]},"finish_reason":"tool_calls"}],"usage":{"prompt_tokens":415,"prompt_tokens_details":{"cached_tokens":0},"completion_tokens":22,"total_tokens":437}}
+
+============================================================
+============================================================
+OLLAMA HTTP REQUEST
+Time: 2026-09-12 16:19:38.391
+Method: POST
+URL: http://localhost:11434/v1/chat/completions
+
+Headers:
+Accept: application/json
+User-Agent: Semantic-Kernel OpenAI/2.13.0 (.NET 8.0.31; Microsoft Windows 10.0.19045)
+X-Stainless-Lang: csharp
+X-Stainless-Package-Version: 2.13.0
+X-Stainless-Runtime: dotnet
+X-Stainless-Runtime-Version: 8.0.31
+X-Stainless-OS: Windows
+X-Stainless-Arch: x64
+Semantic-Kernel-Version: 1.80.1.0
+Authorization: Bearer not-needed
+
+
+Body:
+{"messages":[{"role":"system","content":"You are an assistant for an Invoice Management System.\r\n\r\nCUSTOMER FUNCTIONS:\r\n\r\n- If the user asks for the number of active customers,\r\n  use CustomerPlugin.get_customer_count with isActive=true.\r\n\r\n- If the user asks for the customer count for a specific city,\r\n  use CustomerPlugin.get_customer_count_by_city.\r\n\r\n- If the user asks for customer counts by city,\r\n  all cities, every city, or a citywise breakdown,\r\n  use CustomerPlugin.get_customer_count_all_cities.\r\n\r\nAlways use an available function when it can answer\r\nthe user's question.\r\n\r\nAfter the function returns, provide a clear natural-language\r\nanswer to the user."},{"role":"user","content":"Give me the customer count by city for all cities."},{"role":"assistant","content":"","tool_calls":[{"id":"call_lst79ck6","type":"function","function":{"name":"CustomerPlugin-get_customer_count_all_cities","arguments":"{}"},"index":0}]},{"role":"tool","tool_call_id":"call_lst79ck6","content":"[{\"City\":\"Bengaluru\",\"Count\":1},{\"City\":\"Chennai\",\"Count\":1},{\"City\":\"Coimbatore\",\"Count\":1},{\"City\":\"Erode\",\"Count\":1},{\"City\":\"Hosur\",\"Count\":1},{\"City\":\"Madurai\",\"Count\":1},{\"City\":\"Salem\",\"Count\":1},{\"City\":\"Tirunelveli\",\"Count\":1},{\"City\":\"Trichy\",\"Count\":1},{\"City\":\"Vellore\",\"Count\":1},{\"City\":\"Villupuram\",\"Count\":1}]"}],"model":"qwen2.5:7b-instruct","tools":[{"type":"function","function":{"description":"Gets the count of active customers.","name":"CustomerPlugin-get_customer_count","parameters":{"type":"object","required":[],"properties":{"isActive":{"description":"Must be true to count active customers. (default value: True)","type":"boolean"}}},"strict":false}},{"type":"function","function":{"description":"Gets the number of customers in a specific city. Returns -1 if the city name is not found in the system.","name":"CustomerPlugin-get_customer_count_by_city","parameters":{"type":"object","required":["city"],"properties":{"city":{"description":"The city name to count customers for","type":"string"}}},"strict":false}},{"type":"function","function":{"description":"Gets customer counts grouped by every city. Use this function when the user asks for customer counts for all cities or a citywise customer count breakdown.","name":"CustomerPlugin-get_customer_count_all_cities","parameters":{"type":"object","required":[],"properties":{}},"strict":false}}],"tool_choice":"auto"}
+============================================================
+============================================================
+OLLAMA HTTP RESPONSE
+Time: 2026-09-12 16:20:47.306
+Status: 200
+Elapsed: 68923 ms
+
+Body:
+{"id":"chatcmpl-103","object":"chat.completion","created":1789248047,"model":"qwen2.5:7b-instruct","system_fingerprint":"fp_ollama","choices":[{"index":0,"message":{"role":"assistant","content":"Here is the breakdown of active customers by city:\n- Bengaluru: 1 customer\n- Chennai: 1 customer\n- Coimbatore: 1 customer\n- Erode: 1 customer\n- Hosur: 1 customer\n- Madurai: 1 customer\n- Salem: 1 customer\n- Tirunelveli: 1 customer\n- Trichy: 1 customer\n- Vellore: 1 customer\n- Villupuram: 1 customer"},"finish_reason":"stop"}],"usage":{"prompt_tokens":570,"prompt_tokens_details":{"cached_tokens":436},"completion_tokens":106,"total_tokens":676}}
+
+============================================================
